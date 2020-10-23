@@ -1,0 +1,952 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+    <head prefix="og: http://ogp.me/ns# article: http://ogp.me/ns/article#">
+    <meta charset="UTF-8" />
+
+    <meta name="generator" content="Hugo 0.76.5" /><meta name="theme-color" content="#fff" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    
+    <meta name="format-detection" content="telephone=no, date=no, address=no, email=no" />
+    
+    <meta http-equiv="Cache-Control" content="no-transform" />
+    
+    <meta http-equiv="Cache-Control" content="no-siteapp" />
+
+    <title>【计算几何 01】叉积 | RioTianの小窝</title>
+
+    <link rel="stylesheet" href="/css/meme.min.e185c3d764df5994c336fa7f06fd6ecaa767d35fb10a8abf59498c340425c6cf.css" integrity="sha256-4YXD12TfWZTDNvp/Bv1uyqdn01&#43;xCoq/WUmMNAQlxs8=" />
+
+    
+    
+        <script src="/js/meme.min.bd823eaa12dcc965447db278a2abb9c7872a408efda36f18810f1401060b0ae1.js" integrity="sha256-vYI&#43;qhLcyWVEfbJ4oqu5x4cqQI79o28YgQ8UAQYLCuE="></script>
+
+    
+
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=EB&#43;Garamond:ital,wght@0,400;0,500;0,700;1,400;1,700&amp;family=Noto&#43;Serif&#43;SC:wght@400;500;700&amp;family=Source&#43;Code&#43;Pro:ital,wght@0,400;0,700;1,400;1,700&amp;display=swap" media="print" onload="this.media='all'" />
+        <noscript><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=EB&#43;Garamond:ital,wght@0,400;0,500;0,700;1,400;1,700&amp;family=Noto&#43;Serif&#43;SC:wght@400;500;700&amp;family=Source&#43;Code&#43;Pro:ital,wght@0,400;0,700;1,400;1,700&amp;display=swap" /></noscript>
+
+    <meta name="author" content="RioTian" /><meta name="description" content="这几天闲来无事去学习了一下计算几何，发现其实不（sang）是（xin）太（bing）……" />
+
+    <link rel="shortcut icon" href="/favicon.ico" type="image/x-icon" />
+    <link rel="mask-icon" href="/icons/safari-pinned-tab.svg" color="#2a6df4" />
+    <link rel="apple-touch-icon" sizes="180x180" href="/icons/apple-touch-icon.png" />
+    <meta name="apple-mobile-web-app-capable" content="yes" />
+    <meta name="apple-mobile-web-app-title" content="RioTianの小窝" />
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
+    <meta name="mobile-web-app-capable" content="yes" />
+    <meta name="application-name" content="RioTianの小窝" />
+    <meta name="msapplication-starturl" content="../../" />
+    <meta name="msapplication-TileColor" content="#fff" />
+    <meta name="msapplication-TileImage" content="../../icons/mstile-150x150.png" />
+    <link rel="manifest" href="/manifest.json" />
+
+    
+    
+
+    
+    <link rel="canonical" href="https://rivtian.github.io/tech/%E8%AE%A1%E7%AE%97%E5%87%A0%E4%BD%95-01%E5%8F%89%E7%A7%AF/" />
+    
+
+<script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "BlogPosting",
+        "datePublished": "2020-09-21T15:13:32+08:00",
+        "dateModified": "2020-10-23T15:04:34+00:00",
+        "url": "https://rivtian.github.io/tech/%E8%AE%A1%E7%AE%97%E5%87%A0%E4%BD%95-01%E5%8F%89%E7%A7%AF/",
+        "headline": "【计算几何 01】叉积",
+        "description": "这几天闲来无事去学习了一下计算几何，发现其实不（sang）是（xin）太（bing）……",
+        "inLanguage" : "zh-CN",
+        "articleSection": "tech",
+        "wordCount":  3474 ,
+        "image": ["https://gitee.com//riotian/blogimage/raw/master/img/20200923022200.png","https://gitee.com//riotian/blogimage/raw/master/img/20200923022302.png","https://gitee.com//riotian/blogimage/raw/master/img/20200923022318.png","https://gitee.com//riotian/blogimage/raw/master/img/20200923022334.png","https://gitee.com//riotian/blogimage/raw/master/img/20200923022349.png","https://gitee.com//riotian/blogimage/raw/master/img/20200923022411.png","https://gitee.com//riotian/blogimage/raw/master/img/20200923022427.png","https://gitee.com//riotian/blogimage/raw/master/img/20200923022441.png","https://gitee.com//riotian/blogimage/raw/master/img/20200923022457.png","https://jvruo.com/usr/uploads/2018/01/2820856144.png"],
+        "author": {
+            "@type": "Person",
+            "description": "Time will solve everthing",
+            "email": "kannajiahe@gmail.com",
+            "image": "https://rivtian.github.io/icons/Rio",
+            "url": "https://rivtian.github.io/",
+            "name": "RioTian"
+        },
+        "license": "[CC BY-NC-SA 4.0](https://creativecommons.org/licenses/by-nc-sa/4.0/deed.zh)",
+        "publisher": {
+            "@type": "Organization",
+            "name": "RioTianの小窝",
+            "logo": {
+                "@type": "ImageObject",
+                "url": "https://rivtian.github.io/icons/favicon.ico"
+            },
+            "url": "https://rivtian.github.io/"
+        },
+        "mainEntityOfPage": {
+            "@type": "WebSite",
+            "@id": "https://rivtian.github.io/"
+        }
+    }
+</script>
+
+    
+
+<meta name="twitter:card" content="summary_large_image" />
+
+
+<meta name="twitter:site" content="@shirahasaigao" />
+<meta name="twitter:creator" content="@shirahasaigao" />
+
+    
+
+
+
+<meta property="og:title" content="【计算几何 01】叉积" />
+<meta property="og:description" content="这几天闲来无事去学习了一下计算几何，发现其实不（sang）是（xin）太（bing）……" />
+<meta property="og:url" content="https://rivtian.github.io/tech/%E8%AE%A1%E7%AE%97%E5%87%A0%E4%BD%95-01%E5%8F%89%E7%A7%AF/" />
+<meta property="og:site_name" content="RioTianの小窝" />
+<meta property="og:locale" content="zh" /><meta property="og:image" content="https://gitee.com//riotian/blogimage/raw/master/img/20200923022200.png" />
+<meta property="og:type" content="article" />
+    <meta property="article:published_time" content="2020-09-21T15:13:32&#43;08:00" />
+    <meta property="article:modified_time" content="2020-10-23T15:04:34&#43;00:00" />
+    
+    <meta property="article:section" content="tech" />
+
+
+        <link rel="preconnect" href="https://www.google-analytics.com" crossorigin />
+
+        
+
+
+    
+    <script async src="https://www.googletagmanager.com/gtag/js?id="></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
+
+        gtag('config', '');
+    </script>
+
+
+
+
+    
+</head>
+
+    <body>
+        <div class="container">
+            
+    <header class="header">
+        
+            <div class="header-wrapper">
+                <div class="header-inner single">
+                    
+    <div class="site-brand">
+        
+            <a href="/" class="brand">RioTianの小窝</a>
+        
+    </div>
+
+                    <nav class="nav">
+    <ul class="menu" id="menu">
+        
+            
+        
+        
+        
+        
+            
+                <li class="menu-item"><a href="/life/"><span class="menu-item-name">生活</span></a>
+                </li>
+            
+        
+            
+                <li class="menu-item"><a href="/tech/"><span class="menu-item-name">技术</span></a>
+                </li>
+            
+        
+            
+                <li class="menu-item"><a href="/archives/"><span class="menu-item-name">归档</span></a>
+                </li>
+            
+        
+            
+                
+                    
+                    
+                        <li class="menu-item">
+                            <a id="theme-switcher" href="#"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" class="icon theme-icon-light"><path d="M193.2 104.5l48.8-97.5a18 18 0 0128 0l48.8 97.5 103.4 -34.5a18 18 0 0119.8 19.8l-34.5 103.4l97.5 48.8a18 18 0 010 28l-97.5 48.8 34.5 103.4a18 18 0 01-19.8 19.8l-103.4-34.5-48.8 97.5a18 18 0 01-28 0l-48.8-97.5l-103.4 34.5a18 18 0 01-19.8-19.8l34.5-103.4-97.5-48.8a18 18 0 010-28l97.5-48.8-34.5-103.4a18 18 0 0119.8-19.8zM256 128a128 128 0 10.01 0M256 160a96 96 0 10.01 0"/></svg><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" class="icon theme-icon-dark"><path d="M27 412a256 256 0 10154-407a11.5 11.5 0 00-5 20a201.5 201.5 0 01-134 374a11.5 11.5 0 00-15 13"/></svg></a>
+                        </li>
+                    
+                
+            
+        
+            
+                <li class="menu-item"><a href="/about/"><span class="menu-item-name">关于</span></a>
+                </li>
+            
+        
+            
+                
+            
+        
+    </ul>
+</nav>
+
+                    
+                </div>
+            </div>
+            
+    <input type="checkbox" id="nav-toggle" aria-hidden="true" />
+    <label for="nav-toggle" class="nav-toggle"></label>
+    <label for="nav-toggle" class="nav-curtain"></label>
+
+
+        
+    </header>
+
+
+
+
+            
+            
+    <main class="main single" id="main">
+    <div class="main-inner">
+
+        
+
+        <article class="content post h-entry" data-align="justify" data-type="tech" data-toc-num="true">
+
+            <h1 class="post-title p-name">【计算几何 01】叉积</h1>
+
+            
+
+            
+                
+            
+
+            
+                
+
+<div class="post-meta">
+    
+        
+        <time datetime="2020-09-21T15:13:32&#43;08:00" class="post-meta-item published dt-published"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512" class="icon post-meta-icon"><path d="M148 288h-40c-6.6 0-12-5.4-12-12v-40c0-6.6 5.4-12 12-12h40c6.6 0 12 5.4 12 12v40c0 6.6-5.4 12-12 12zm108-12v-40c0-6.6-5.4-12-12-12h-40c-6.6 0-12 5.4-12 12v40c0 6.6 5.4 12 12 12h40c6.6 0 12-5.4 12-12zm96 0v-40c0-6.6-5.4-12-12-12h-40c-6.6 0-12 5.4-12 12v40c0 6.6 5.4 12 12 12h40c6.6 0 12-5.4 12-12zm-96 96v-40c0-6.6-5.4-12-12-12h-40c-6.6 0-12 5.4-12 12v40c0 6.6 5.4 12 12 12h40c6.6 0 12-5.4 12-12zm-96 0v-40c0-6.6-5.4-12-12-12h-40c-6.6 0-12 5.4-12 12v40c0 6.6 5.4 12 12 12h40c6.6 0 12-5.4 12-12zm192 0v-40c0-6.6-5.4-12-12-12h-40c-6.6 0-12 5.4-12 12v40c0 6.6 5.4 12 12 12h40c6.6 0 12-5.4 12-12zm96-260v352c0 26.5-21.5 48-48 48H48c-26.5 0-48-21.5-48-48V112c0-26.5 21.5-48 48-48h48V12c0-6.6 5.4-12 12-12h40c6.6 0 12 5.4 12 12v52h128V12c0-6.6 5.4-12 12-12h40c6.6 0 12 5.4 12 12v52h48c26.5 0 48 21.5 48 48zm-48 346V160H48v298c0 3.3 2.7 6 6 6h340c3.3 0 6-2.7 6-6z"/></svg>&nbsp;2020.9.21</time>
+    
+    
+        
+        <time datetime="2020-10-23T15:04:34&#43;00:00" class="post-meta-item modified dt-updated"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512" class="icon post-meta-icon"><path d="M400 64h-48V12c0-6.627-5.373-12-12-12h-40c-6.627 0-12 5.373-12 12v52H160V12c0-6.627-5.373-12-12-12h-40c-6.627 0-12 5.373-12 12v52H48C21.49 64 0 85.49 0 112v352c0 26.51 21.49 48 48 48h352c26.51 0 48-21.49 48-48V112c0-26.51-21.49-48-48-48zm-6 400H54a6 6 0 0 1-6-6V160h352v298a6 6 0 0 1-6 6zm-52.849-200.65L198.842 404.519c-4.705 4.667-12.303 4.637-16.971-.068l-75.091-75.699c-4.667-4.705-4.637-12.303.068-16.971l22.719-22.536c4.705-4.667 12.303-4.637 16.97.069l44.104 44.461 111.072-110.181c4.705-4.667 12.303-4.637 16.971.068l22.536 22.718c4.667 4.705 4.636 12.303-.069 16.97z"/></svg>&nbsp;2020.10.23</time>
+    
+    
+    
+        
+        
+        
+            
+        
+    
+    
+        
+        <span class="post-meta-item wordcount"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" class="icon post-meta-icon"><path d="M497.9 142.1l-46.1 46.1c-4.7 4.7-12.3 4.7-17 0l-111-111c-4.7-4.7-4.7-12.3 0-17l46.1-46.1c18.7-18.7 49.1-18.7 67.9 0l60.1 60.1c18.8 18.7 18.8 49.1 0 67.9zM284.2 99.8L21.6 362.4.4 483.9c-2.9 16.4 11.4 30.6 27.8 27.8l121.5-21.3 262.6-262.6c4.7-4.7 4.7-12.3 0-17l-111-111c-4.8-4.7-12.4-4.7-17.1 0zM124.1 339.9c-5.5-5.5-5.5-14.3 0-19.8l154-154c5.5-5.5 14.3-5.5 19.8 0s5.5 14.3 0 19.8l-154 154c-5.5 5.5-14.3 5.5-19.8 0zM88 424h48v36.3l-64.5 11.3-31.1-31.1L51.7 376H88v48z"/></svg>&nbsp;3474</span>
+    
+    
+        
+        <span class="post-meta-item reading-time"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" class="icon post-meta-icon"><path d="M256 8C119 8 8 119 8 256s111 248 248 248 248-111 248-248S393 8 256 8zm0 448c-110.5 0-200-89.5-200-200S145.5 56 256 56s200 89.5 200 200-89.5 200-200 200zm61.8-104.4l-84.9-61.7c-3.1-2.3-4.9-5.9-4.9-9.7V116c0-6.6 5.4-12 12-12h32c6.6 0 12 5.4 12 12v141.7l66.8 48.6c5.4 3.9 6.5 11.4 2.6 16.8L334.6 349c-3.9 5.3-11.4 6.5-16.8 2.6z"/></svg>&nbsp;7&nbsp;分钟</span>
+    
+    
+        
+            
+            <span class="post-meta-item busuanzi-page-pv" id="busuanzi_container_page_pv"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 576 512" class="icon post-meta-icon"><path d="M288 144a110.94 110.94 0 0 0-31.24 5 55.4 55.4 0 0 1 7.24 27 56 56 0 0 1-56 56 55.4 55.4 0 0 1-27-7.24A111.71 111.71 0 1 0 288 144zm284.52 97.4C518.29 135.59 410.93 64 288 64S57.68 135.64 3.48 241.41a32.35 32.35 0 0 0 0 29.19C57.71 376.41 165.07 448 288 448s230.32-71.64 284.52-177.41a32.35 32.35 0 0 0 0-29.19zM288 400c-98.65 0-189.09-55-237.93-144C98.91 167 189.34 112 288 112s189.09 55 237.93 144C477.1 345 386.66 400 288 400z"/></svg>&nbsp;<span id="busuanzi_value_page_pv"></span></span>
+        
+    
+    
+</div>
+
+            
+
+            <div class="post-body e-content">
+              <blockquote>
+<p>这几天闲来无事去学习了一下计算几何，发现其实不（sang）是（xin）太（bing）难（kuang）:stuck_out_tongue:
+今天就重点介绍一下简单的叉积及其简单的运用（毕竟作为蒟蒻，难的搞不来啊）</p>
+</blockquote>
+<h2 id="什么是计算几何"><a href="#什么是计算几何" class="anchor-link"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" class="icon anchor-icon"><path d="M326.612 185.391c59.747 59.809 58.927 155.698.36 214.59-.11.12-.24.25-.36.37l-67.2 67.2c-59.27 59.27-155.699 59.262-214.96 0-59.27-59.26-59.27-155.7 0-214.96l37.106-37.106c9.84-9.84 26.786-3.3 27.294 10.606.648 17.722 3.826 35.527 9.69 52.721 1.986 5.822.567 12.262-3.783 16.612l-13.087 13.087c-28.026 28.026-28.905 73.66-1.155 101.96 28.024 28.579 74.086 28.749 102.325.51l67.2-67.19c28.191-28.191 28.073-73.757 0-101.83-3.701-3.694-7.429-6.564-10.341-8.569a16.037 16.037 0 0 1-6.947-12.606c-.396-10.567 3.348-21.456 11.698-29.806l21.054-21.055c5.521-5.521 14.182-6.199 20.584-1.731a152.482 152.482 0 0 1 20.522 17.197zM467.547 44.449c-59.261-59.262-155.69-59.27-214.96 0l-67.2 67.2c-.12.12-.25.25-.36.37-58.566 58.892-59.387 154.781.36 214.59a152.454 152.454 0 0 0 20.521 17.196c6.402 4.468 15.064 3.789 20.584-1.731l21.054-21.055c8.35-8.35 12.094-19.239 11.698-29.806a16.037 16.037 0 0 0-6.947-12.606c-2.912-2.005-6.64-4.875-10.341-8.569-28.073-28.073-28.191-73.639 0-101.83l67.2-67.19c28.239-28.239 74.3-28.069 102.325.51 27.75 28.3 26.872 73.934-1.155 101.96l-13.087 13.087c-4.35 4.35-5.769 10.79-3.783 16.612 5.864 17.194 9.042 34.999 9.69 52.721.509 13.906 17.454 20.446 27.294 10.606l37.106-37.106c59.271-59.259 59.271-155.699.001-214.959z"/></svg></a>什么是计算几何？</h2>
+<h5 id="对几何外形信息的计算机表示分析和综合福雷斯特"><a href="#对几何外形信息的计算机表示分析和综合福雷斯特" class="anchor-link"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" class="icon anchor-icon"><path d="M326.612 185.391c59.747 59.809 58.927 155.698.36 214.59-.11.12-.24.25-.36.37l-67.2 67.2c-59.27 59.27-155.699 59.262-214.96 0-59.27-59.26-59.27-155.7 0-214.96l37.106-37.106c9.84-9.84 26.786-3.3 27.294 10.606.648 17.722 3.826 35.527 9.69 52.721 1.986 5.822.567 12.262-3.783 16.612l-13.087 13.087c-28.026 28.026-28.905 73.66-1.155 101.96 28.024 28.579 74.086 28.749 102.325.51l67.2-67.19c28.191-28.191 28.073-73.757 0-101.83-3.701-3.694-7.429-6.564-10.341-8.569a16.037 16.037 0 0 1-6.947-12.606c-.396-10.567 3.348-21.456 11.698-29.806l21.054-21.055c5.521-5.521 14.182-6.199 20.584-1.731a152.482 152.482 0 0 1 20.522 17.197zM467.547 44.449c-59.261-59.262-155.69-59.27-214.96 0l-67.2 67.2c-.12.12-.25.25-.36.37-58.566 58.892-59.387 154.781.36 214.59a152.454 152.454 0 0 0 20.521 17.196c6.402 4.468 15.064 3.789 20.584-1.731l21.054-21.055c8.35-8.35 12.094-19.239 11.698-29.806a16.037 16.037 0 0 0-6.947-12.606c-2.912-2.005-6.64-4.875-10.341-8.569-28.073-28.073-28.191-73.639 0-101.83l67.2-67.19c28.239-28.239 74.3-28.069 102.325.51 27.75 28.3 26.872 73.934-1.155 101.96l-13.087 13.087c-4.35 4.35-5.769 10.79-3.783 16.612 5.864 17.194 9.042 34.999 9.69 52.721.509 13.906 17.454 20.446 27.294 10.606l37.106-37.106c59.271-59.259 59.271-155.699.001-214.959z"/></svg></a>“对几何外形信息的计算机表示、分析和综合”——福雷斯特</h5>
+<p>其实所谓计算几何，就是用计算机去解决不同维度上的几何问题，而我们要做的，就是设计一套算法，让计算机去分析和解决一系列的几何问题。</p>
+<h2 id="一些基本知识"><a href="#一些基本知识" class="anchor-link"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" class="icon anchor-icon"><path d="M326.612 185.391c59.747 59.809 58.927 155.698.36 214.59-.11.12-.24.25-.36.37l-67.2 67.2c-59.27 59.27-155.699 59.262-214.96 0-59.27-59.26-59.27-155.7 0-214.96l37.106-37.106c9.84-9.84 26.786-3.3 27.294 10.606.648 17.722 3.826 35.527 9.69 52.721 1.986 5.822.567 12.262-3.783 16.612l-13.087 13.087c-28.026 28.026-28.905 73.66-1.155 101.96 28.024 28.579 74.086 28.749 102.325.51l67.2-67.19c28.191-28.191 28.073-73.757 0-101.83-3.701-3.694-7.429-6.564-10.341-8.569a16.037 16.037 0 0 1-6.947-12.606c-.396-10.567 3.348-21.456 11.698-29.806l21.054-21.055c5.521-5.521 14.182-6.199 20.584-1.731a152.482 152.482 0 0 1 20.522 17.197zM467.547 44.449c-59.261-59.262-155.69-59.27-214.96 0l-67.2 67.2c-.12.12-.25.25-.36.37-58.566 58.892-59.387 154.781.36 214.59a152.454 152.454 0 0 0 20.521 17.196c6.402 4.468 15.064 3.789 20.584-1.731l21.054-21.055c8.35-8.35 12.094-19.239 11.698-29.806a16.037 16.037 0 0 0-6.947-12.606c-2.912-2.005-6.64-4.875-10.341-8.569-28.073-28.073-28.191-73.639 0-101.83l67.2-67.19c28.239-28.239 74.3-28.069 102.325.51 27.75 28.3 26.872 73.934-1.155 101.96l-13.087 13.087c-4.35 4.35-5.769 10.79-3.783 16.612 5.864 17.194 9.042 34.999 9.69 52.721.509 13.906 17.454 20.446 27.294 10.606l37.106-37.106c59.271-59.259 59.271-155.699.001-214.959z"/></svg></a>一些基本知识</h2>
+<h5 id="坐标的存储"><a href="#坐标的存储" class="anchor-link"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" class="icon anchor-icon"><path d="M326.612 185.391c59.747 59.809 58.927 155.698.36 214.59-.11.12-.24.25-.36.37l-67.2 67.2c-59.27 59.27-155.699 59.262-214.96 0-59.27-59.26-59.27-155.7 0-214.96l37.106-37.106c9.84-9.84 26.786-3.3 27.294 10.606.648 17.722 3.826 35.527 9.69 52.721 1.986 5.822.567 12.262-3.783 16.612l-13.087 13.087c-28.026 28.026-28.905 73.66-1.155 101.96 28.024 28.579 74.086 28.749 102.325.51l67.2-67.19c28.191-28.191 28.073-73.757 0-101.83-3.701-3.694-7.429-6.564-10.341-8.569a16.037 16.037 0 0 1-6.947-12.606c-.396-10.567 3.348-21.456 11.698-29.806l21.054-21.055c5.521-5.521 14.182-6.199 20.584-1.731a152.482 152.482 0 0 1 20.522 17.197zM467.547 44.449c-59.261-59.262-155.69-59.27-214.96 0l-67.2 67.2c-.12.12-.25.25-.36.37-58.566 58.892-59.387 154.781.36 214.59a152.454 152.454 0 0 0 20.521 17.196c6.402 4.468 15.064 3.789 20.584-1.731l21.054-21.055c8.35-8.35 12.094-19.239 11.698-29.806a16.037 16.037 0 0 0-6.947-12.606c-2.912-2.005-6.64-4.875-10.341-8.569-28.073-28.073-28.191-73.639 0-101.83l67.2-67.19c28.239-28.239 74.3-28.069 102.325.51 27.75 28.3 26.872 73.934-1.155 101.96l-13.087 13.087c-4.35 4.35-5.769 10.79-3.783 16.612 5.864 17.194 9.042 34.999 9.69 52.721.509 13.906 17.454 20.446 27.294 10.606l37.106-37.106c59.271-59.259 59.271-155.699.001-214.959z"/></svg></a>坐标的存储</h5>
+<p>一般来说，计算几何都涉及到了小数坐标，这时开一个含两个double类型的结构体就比较稳健，我一般的定义如下：</p>
+<pre><code>struct node//定义一个点 
+{
+    double x,y;
+}a[11000];
+</code></pre><h5 id="线段的存储"><a href="#线段的存储" class="anchor-link"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" class="icon anchor-icon"><path d="M326.612 185.391c59.747 59.809 58.927 155.698.36 214.59-.11.12-.24.25-.36.37l-67.2 67.2c-59.27 59.27-155.699 59.262-214.96 0-59.27-59.26-59.27-155.7 0-214.96l37.106-37.106c9.84-9.84 26.786-3.3 27.294 10.606.648 17.722 3.826 35.527 9.69 52.721 1.986 5.822.567 12.262-3.783 16.612l-13.087 13.087c-28.026 28.026-28.905 73.66-1.155 101.96 28.024 28.579 74.086 28.749 102.325.51l67.2-67.19c28.191-28.191 28.073-73.757 0-101.83-3.701-3.694-7.429-6.564-10.341-8.569a16.037 16.037 0 0 1-6.947-12.606c-.396-10.567 3.348-21.456 11.698-29.806l21.054-21.055c5.521-5.521 14.182-6.199 20.584-1.731a152.482 152.482 0 0 1 20.522 17.197zM467.547 44.449c-59.261-59.262-155.69-59.27-214.96 0l-67.2 67.2c-.12.12-.25.25-.36.37-58.566 58.892-59.387 154.781.36 214.59a152.454 152.454 0 0 0 20.521 17.196c6.402 4.468 15.064 3.789 20.584-1.731l21.054-21.055c8.35-8.35 12.094-19.239 11.698-29.806a16.037 16.037 0 0 0-6.947-12.606c-2.912-2.005-6.64-4.875-10.341-8.569-28.073-28.073-28.191-73.639 0-101.83l67.2-67.19c28.239-28.239 74.3-28.069 102.325.51 27.75 28.3 26.872 73.934-1.155 101.96l-13.087 13.087c-4.35 4.35-5.769 10.79-3.783 16.612 5.864 17.194 9.042 34.999 9.69 52.721.509 13.906 17.454 20.446 27.294 10.606l37.106-37.106c59.271-59.259 59.271-155.699.001-214.959z"/></svg></a>线段的存储</h5>
+<p>聪明绝顶的你肯定已经想到了，线段就是包含两个点的一个结构体，所以我一般的定义如下</p>
+<pre><code>struct line//定义一条线
+{
+    node p1,p2;
+} list[11000];
+</code></pre><h2 id="叉积"><a href="#叉积" class="anchor-link"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" class="icon anchor-icon"><path d="M326.612 185.391c59.747 59.809 58.927 155.698.36 214.59-.11.12-.24.25-.36.37l-67.2 67.2c-59.27 59.27-155.699 59.262-214.96 0-59.27-59.26-59.27-155.7 0-214.96l37.106-37.106c9.84-9.84 26.786-3.3 27.294 10.606.648 17.722 3.826 35.527 9.69 52.721 1.986 5.822.567 12.262-3.783 16.612l-13.087 13.087c-28.026 28.026-28.905 73.66-1.155 101.96 28.024 28.579 74.086 28.749 102.325.51l67.2-67.19c28.191-28.191 28.073-73.757 0-101.83-3.701-3.694-7.429-6.564-10.341-8.569a16.037 16.037 0 0 1-6.947-12.606c-.396-10.567 3.348-21.456 11.698-29.806l21.054-21.055c5.521-5.521 14.182-6.199 20.584-1.731a152.482 152.482 0 0 1 20.522 17.197zM467.547 44.449c-59.261-59.262-155.69-59.27-214.96 0l-67.2 67.2c-.12.12-.25.25-.36.37-58.566 58.892-59.387 154.781.36 214.59a152.454 152.454 0 0 0 20.521 17.196c6.402 4.468 15.064 3.789 20.584-1.731l21.054-21.055c8.35-8.35 12.094-19.239 11.698-29.806a16.037 16.037 0 0 0-6.947-12.606c-2.912-2.005-6.64-4.875-10.341-8.569-28.073-28.073-28.191-73.639 0-101.83l67.2-67.19c28.239-28.239 74.3-28.069 102.325.51 27.75 28.3 26.872 73.934-1.155 101.96l-13.087 13.087c-4.35 4.35-5.769 10.79-3.783 16.612 5.864 17.194 9.042 34.999 9.69 52.721.509 13.906 17.454 20.446 27.294 10.606l37.106-37.106c59.271-59.259 59.271-155.699.001-214.959z"/></svg></a>叉积</h2>
+<p>终于到今天的主角—叉积了！:stuck_out_tongue_closed_eyes:
+那么什么是叉积呢？叉积其实是两个矢量模的乘积再乘夹角正弦，经过推导可以发现两个向量$A(x1,y1),B(x2,y2)$的叉积为：
+$$
+x1<em>y2-x2</em>y1
+$$</p>
+<p>先丢出代码：</p>
+<pre><code>double multi(node p1,node p2,node p0)//计算叉积，p1，p2，p0都为点
+{
+    double x1,y1,x2,y2;
+    x1=p1.x-p0.x;
+    y1=p1.y-p0.y;
+    x2=p2.x-p0.x;
+    y2=p2.y-p0.y;
+    return x1*y2-x2*y1;
+}
+</code></pre><p>这就是传说中的叉积计算了！是不是很短呢，那就让我们来理解一下这个multi函数吧。</p>
+<p>由于叉积是向量间的运算，大家都知道向量可以用末坐标减去首坐标得到，那么其实multi函数计算的就是向量A(x1,y1)与向量B(x2,y2)的叉积。</p>
+<p>对于multi函数的意义，首先multi的正负是有特殊含义的：以p0为参考点，如果multi大于0，则p2在p1的逆时针方向，反正，如果multi小于0，则p2在p1的顺时针方向，特殊的，当multi等于0，p1、p2、p0三点共线。
+<img src="https://gitee.com//riotian/blogimage/raw/master/img/20200923022200.png" alt=""></p>
+<p>其次，multi的值也是有含义的！通过后面的学习你就会发现，multi的绝对值就是以p0、p1、p2三点构成的三角形的面积的两倍！利用这个规律，可以完成很多与计算几何有关的题目。</p>
+<hr>
+<h2 id="一些简单的运用"><a href="#一些简单的运用" class="anchor-link"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" class="icon anchor-icon"><path d="M326.612 185.391c59.747 59.809 58.927 155.698.36 214.59-.11.12-.24.25-.36.37l-67.2 67.2c-59.27 59.27-155.699 59.262-214.96 0-59.27-59.26-59.27-155.7 0-214.96l37.106-37.106c9.84-9.84 26.786-3.3 27.294 10.606.648 17.722 3.826 35.527 9.69 52.721 1.986 5.822.567 12.262-3.783 16.612l-13.087 13.087c-28.026 28.026-28.905 73.66-1.155 101.96 28.024 28.579 74.086 28.749 102.325.51l67.2-67.19c28.191-28.191 28.073-73.757 0-101.83-3.701-3.694-7.429-6.564-10.341-8.569a16.037 16.037 0 0 1-6.947-12.606c-.396-10.567 3.348-21.456 11.698-29.806l21.054-21.055c5.521-5.521 14.182-6.199 20.584-1.731a152.482 152.482 0 0 1 20.522 17.197zM467.547 44.449c-59.261-59.262-155.69-59.27-214.96 0l-67.2 67.2c-.12.12-.25.25-.36.37-58.566 58.892-59.387 154.781.36 214.59a152.454 152.454 0 0 0 20.521 17.196c6.402 4.468 15.064 3.789 20.584-1.731l21.054-21.055c8.35-8.35 12.094-19.239 11.698-29.806a16.037 16.037 0 0 0-6.947-12.606c-2.912-2.005-6.64-4.875-10.341-8.569-28.073-28.073-28.191-73.639 0-101.83l67.2-67.19c28.239-28.239 74.3-28.069 102.325.51 27.75 28.3 26.872 73.934-1.155 101.96l-13.087 13.087c-4.35 4.35-5.769 10.79-3.783 16.612 5.864 17.194 9.042 34.999 9.69 52.721.509 13.906 17.454 20.446 27.294 10.606l37.106-37.106c59.271-59.259 59.271-155.699.001-214.959z"/></svg></a>一些简单的运用</h2>
+<h4 id="caioj-1212-判断线段相交跨立实验"><a href="#caioj-1212-判断线段相交跨立实验" class="anchor-link"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" class="icon anchor-icon"><path d="M326.612 185.391c59.747 59.809 58.927 155.698.36 214.59-.11.12-.24.25-.36.37l-67.2 67.2c-59.27 59.27-155.699 59.262-214.96 0-59.27-59.26-59.27-155.7 0-214.96l37.106-37.106c9.84-9.84 26.786-3.3 27.294 10.606.648 17.722 3.826 35.527 9.69 52.721 1.986 5.822.567 12.262-3.783 16.612l-13.087 13.087c-28.026 28.026-28.905 73.66-1.155 101.96 28.024 28.579 74.086 28.749 102.325.51l67.2-67.19c28.191-28.191 28.073-73.757 0-101.83-3.701-3.694-7.429-6.564-10.341-8.569a16.037 16.037 0 0 1-6.947-12.606c-.396-10.567 3.348-21.456 11.698-29.806l21.054-21.055c5.521-5.521 14.182-6.199 20.584-1.731a152.482 152.482 0 0 1 20.522 17.197zM467.547 44.449c-59.261-59.262-155.69-59.27-214.96 0l-67.2 67.2c-.12.12-.25.25-.36.37-58.566 58.892-59.387 154.781.36 214.59a152.454 152.454 0 0 0 20.521 17.196c6.402 4.468 15.064 3.789 20.584-1.731l21.054-21.055c8.35-8.35 12.094-19.239 11.698-29.806a16.037 16.037 0 0 0-6.947-12.606c-2.912-2.005-6.64-4.875-10.341-8.569-28.073-28.073-28.191-73.639 0-101.83l67.2-67.19c28.239-28.239 74.3-28.069 102.325.51 27.75 28.3 26.872 73.934-1.155 101.96l-13.087 13.087c-4.35 4.35-5.769 10.79-3.783 16.612 5.864 17.194 9.042 34.999 9.69 52.721.509 13.906 17.454 20.446 27.294 10.606l37.106-37.106c59.271-59.259 59.271-155.699.001-214.959z"/></svg></a>【caioj 1212 判断线段相交（跨立实验）】</h4>
+<blockquote>
+<p>题目描述
+【题意】
+有n条线段（编号为1~n），按1~n的顺序放在二维坐标系上（就是先放1号，再放2号……），
+要求输出最上面的那些线段的编号（就是没有其他线段压在它上面的那些线段）
+【输入格式】
+第一行第一个数n（ 1 &lt;= n &lt;= 10000）表示这组数据有n条线段。
+下来n行，每行两个坐标，表示第i条线段的两个端点。
+【输出格式】
+一行。输出最上面的线段的编号（从小到大）。相邻两个编号用空格隔开，最后一个编号没有空格。
+【样例1输入】
+5
+1 1 4 2
+2 3 3 1
+1 -2.0 8 4
+1 4 8 2
+3 3 6 -2.0
+【样例1输出】
+2 4 5
+【样例2输入】
+3
+0 0 1 1
+1 0 2 1
+2 0 3 1
+【样例2输出】
+1 2 3</p>
+</blockquote>
+<p>这道题很明显要让我们判断任意两条线段是否相交，这就要用到刚刚讲到的叉积的第一种用法了!</p>
+<p>很明显，相交有两种情况，相交且穿过和相交但不穿过（如下图）<img src="https://gitee.com//riotian/blogimage/raw/master/img/20200923022302.png" alt=""></p>
+<p>我们首先先讨论第一种情况，如何判断两条直线相交且穿过？
+<img src="https://gitee.com//riotian/blogimage/raw/master/img/20200923022318.png" alt="">
+如上图，先假设两条直线为L1和L2，每条直线的两个端点分别为p1和p2，那么如果以
+L1.p1为一个参考点，如果L1.p2在L2.p1与L2.p2中间；再以L2.p1为参考点，如果L2.p2在L1.p1与L1.p2中间，那么就可以判断L1与L2相交且穿过（如下图）
+<img src="https://gitee.com//riotian/blogimage/raw/master/img/20200923022334.png" alt=""></p>
+<p>这种情况非常好理解吧，下一种情况就更加简单了，仅需讨论哪三个点在一条“直线”上（毕竟不穿过，所以必有三点共线），然后判断一下
+不穿过的那个点是否在一条“线段”上（如下图）
+<img src="https://gitee.com//riotian/blogimage/raw/master/img/20200923022349.png" alt="">
+具体代码如下</p>
+<div class="highlight"><div class="chroma">
+<div class="table-container"><table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><code><span class="lnt"> 1
+</span><span class="lnt"> 2
+</span><span class="lnt"> 3
+</span><span class="lnt"> 4
+</span><span class="lnt"> 5
+</span><span class="lnt"> 6
+</span><span class="lnt"> 7
+</span><span class="lnt"> 8
+</span><span class="lnt"> 9
+</span><span class="lnt">10
+</span><span class="lnt">11
+</span><span class="lnt">12
+</span></code></pre></td>
+<td class="lntd">
+<pre class="chroma"><code class="language-cpp" data-lang="cpp"><span class="kt">double</span> <span class="nf">check</span><span class="p">(</span><span class="n">line</span> <span class="n">l1</span><span class="p">,</span><span class="n">line</span> <span class="n">l2</span><span class="p">)</span><span class="c1">//判断是否相交 
+</span><span class="c1"></span><span class="p">{</span>
+    <span class="k">if</span><span class="p">(</span><span class="n">multi</span><span class="p">(</span><span class="n">l2</span><span class="p">.</span><span class="n">p1</span><span class="p">,</span><span class="n">l1</span><span class="p">.</span><span class="n">p2</span><span class="p">,</span><span class="n">l1</span><span class="p">.</span><span class="n">p1</span><span class="p">)</span><span class="o">*</span><span class="n">multi</span><span class="p">(</span><span class="n">l1</span><span class="p">.</span><span class="n">p2</span><span class="p">,</span><span class="n">l2</span><span class="p">.</span><span class="n">p2</span><span class="p">,</span><span class="n">l1</span><span class="p">.</span><span class="n">p1</span><span class="p">)</span><span class="o">&gt;</span><span class="mi">0</span><span class="p">)</span><span class="c1">//判断以L1.p1为基准，L1.p2是否在L2.p1与L2.p2中间
+</span><span class="c1"></span>    <span class="k">if</span><span class="p">(</span><span class="n">multi</span><span class="p">(</span><span class="n">l1</span><span class="p">.</span><span class="n">p1</span><span class="p">,</span><span class="n">l2</span><span class="p">.</span><span class="n">p2</span><span class="p">,</span><span class="n">l2</span><span class="p">.</span><span class="n">p1</span><span class="p">)</span><span class="o">*</span><span class="n">multi</span><span class="p">(</span><span class="n">l2</span><span class="p">.</span><span class="n">p2</span><span class="p">,</span><span class="n">l1</span><span class="p">.</span><span class="n">p2</span><span class="p">,</span><span class="n">l2</span><span class="p">.</span><span class="n">p1</span><span class="p">)</span><span class="o">&gt;</span><span class="mi">0</span><span class="p">)</span><span class="c1">//判断以L2.p1为基准,L2.p2是否在L1.p1与L2.p2中间
+</span><span class="c1"></span>    <span class="k">return</span> <span class="nb">true</span><span class="p">;</span><span class="c1">//大部分情况下，能判断两直线相交   
+</span><span class="c1"></span>    <span class="k">if</span><span class="p">(</span><span class="n">multi</span><span class="p">(</span><span class="n">l1</span><span class="p">.</span><span class="n">p1</span><span class="p">,</span><span class="n">l1</span><span class="p">.</span><span class="n">p2</span><span class="p">,</span><span class="n">l2</span><span class="p">.</span><span class="n">p1</span><span class="p">)</span><span class="o">==</span><span class="mi">0</span><span class="p">)</span><span class="k">if</span><span class="p">(</span><span class="n">mymin</span><span class="p">(</span><span class="n">l1</span><span class="p">.</span><span class="n">p1</span><span class="p">.</span><span class="n">x</span><span class="p">,</span><span class="n">l1</span><span class="p">.</span><span class="n">p2</span><span class="p">.</span><span class="n">x</span><span class="p">)</span><span class="o">&lt;=</span><span class="n">l2</span><span class="p">.</span><span class="n">p1</span><span class="p">.</span><span class="n">x</span><span class="p">)</span><span class="k">if</span><span class="p">(</span><span class="n">mymax</span><span class="p">(</span><span class="n">l1</span><span class="p">.</span><span class="n">p1</span><span class="p">.</span><span class="n">x</span><span class="p">,</span><span class="n">l1</span><span class="p">.</span><span class="n">p2</span><span class="p">.</span><span class="n">x</span><span class="p">)</span><span class="o">&gt;=</span><span class="n">l2</span><span class="p">.</span><span class="n">p1</span><span class="p">.</span><span class="n">x</span><span class="p">)</span><span class="k">if</span><span class="p">(</span><span class="n">mymin</span><span class="p">(</span><span class="n">l1</span><span class="p">.</span><span class="n">p1</span><span class="p">.</span><span class="n">y</span><span class="p">,</span><span class="n">l1</span><span class="p">.</span><span class="n">p2</span><span class="p">.</span><span class="n">y</span><span class="p">)</span><span class="o">&lt;=</span><span class="n">l2</span><span class="p">.</span><span class="n">p1</span><span class="p">.</span><span class="n">y</span><span class="p">)</span><span class="k">if</span><span class="p">(</span><span class="n">mymax</span><span class="p">(</span><span class="n">l1</span><span class="p">.</span><span class="n">p1</span><span class="p">.</span><span class="n">y</span><span class="p">,</span><span class="n">l1</span><span class="p">.</span><span class="n">p2</span><span class="p">.</span><span class="n">y</span><span class="p">)</span><span class="o">&gt;=</span><span class="n">l2</span><span class="p">.</span><span class="n">p1</span><span class="p">.</span><span class="n">y</span><span class="p">)</span><span class="k">return</span> <span class="nb">true</span><span class="p">;</span>
+    <span class="k">if</span><span class="p">(</span><span class="n">multi</span><span class="p">(</span><span class="n">l1</span><span class="p">.</span><span class="n">p1</span><span class="p">,</span><span class="n">l1</span><span class="p">.</span><span class="n">p2</span><span class="p">,</span><span class="n">l2</span><span class="p">.</span><span class="n">p2</span><span class="p">)</span><span class="o">==</span><span class="mi">0</span><span class="p">)</span><span class="k">if</span><span class="p">(</span><span class="n">mymin</span><span class="p">(</span><span class="n">l1</span><span class="p">.</span><span class="n">p1</span><span class="p">.</span><span class="n">x</span><span class="p">,</span><span class="n">l1</span><span class="p">.</span><span class="n">p2</span><span class="p">.</span><span class="n">x</span><span class="p">)</span><span class="o">&lt;=</span><span class="n">l2</span><span class="p">.</span><span class="n">p2</span><span class="p">.</span><span class="n">x</span><span class="p">)</span><span class="k">if</span><span class="p">(</span><span class="n">mymax</span><span class="p">(</span><span class="n">l1</span><span class="p">.</span><span class="n">p1</span><span class="p">.</span><span class="n">x</span><span class="p">,</span><span class="n">l1</span><span class="p">.</span><span class="n">p2</span><span class="p">.</span><span class="n">x</span><span class="p">)</span><span class="o">&gt;=</span><span class="n">l2</span><span class="p">.</span><span class="n">p2</span><span class="p">.</span><span class="n">x</span><span class="p">)</span><span class="k">if</span><span class="p">(</span><span class="n">mymin</span><span class="p">(</span><span class="n">l1</span><span class="p">.</span><span class="n">p1</span><span class="p">.</span><span class="n">y</span><span class="p">,</span><span class="n">l1</span><span class="p">.</span><span class="n">p2</span><span class="p">.</span><span class="n">y</span><span class="p">)</span><span class="o">&lt;=</span><span class="n">l2</span><span class="p">.</span><span class="n">p2</span><span class="p">.</span><span class="n">y</span><span class="p">)</span><span class="k">if</span><span class="p">(</span><span class="n">mymax</span><span class="p">(</span><span class="n">l1</span><span class="p">.</span><span class="n">p1</span><span class="p">.</span><span class="n">y</span><span class="p">,</span><span class="n">l1</span><span class="p">.</span><span class="n">p2</span><span class="p">.</span><span class="n">y</span><span class="p">)</span><span class="o">&gt;=</span><span class="n">l2</span><span class="p">.</span><span class="n">p2</span><span class="p">.</span><span class="n">y</span><span class="p">)</span><span class="k">return</span> <span class="nb">true</span><span class="p">;</span>
+    <span class="k">if</span><span class="p">(</span><span class="n">multi</span><span class="p">(</span><span class="n">l2</span><span class="p">.</span><span class="n">p1</span><span class="p">,</span><span class="n">l2</span><span class="p">.</span><span class="n">p2</span><span class="p">,</span><span class="n">l1</span><span class="p">.</span><span class="n">p1</span><span class="p">)</span><span class="o">==</span><span class="mi">0</span><span class="p">)</span><span class="k">if</span><span class="p">(</span><span class="n">mymin</span><span class="p">(</span><span class="n">l2</span><span class="p">.</span><span class="n">p1</span><span class="p">.</span><span class="n">x</span><span class="p">,</span><span class="n">l2</span><span class="p">.</span><span class="n">p2</span><span class="p">.</span><span class="n">x</span><span class="p">)</span><span class="o">&lt;=</span><span class="n">l1</span><span class="p">.</span><span class="n">p1</span><span class="p">.</span><span class="n">x</span><span class="p">)</span><span class="k">if</span><span class="p">(</span><span class="n">mymax</span><span class="p">(</span><span class="n">l2</span><span class="p">.</span><span class="n">p1</span><span class="p">.</span><span class="n">x</span><span class="p">,</span><span class="n">l2</span><span class="p">.</span><span class="n">p2</span><span class="p">.</span><span class="n">x</span><span class="p">)</span><span class="o">&gt;=</span><span class="n">l1</span><span class="p">.</span><span class="n">p1</span><span class="p">.</span><span class="n">x</span><span class="p">)</span><span class="k">if</span><span class="p">(</span><span class="n">mymin</span><span class="p">(</span><span class="n">l2</span><span class="p">.</span><span class="n">p1</span><span class="p">.</span><span class="n">y</span><span class="p">,</span><span class="n">l2</span><span class="p">.</span><span class="n">p2</span><span class="p">.</span><span class="n">y</span><span class="p">)</span><span class="o">&lt;=</span><span class="n">l1</span><span class="p">.</span><span class="n">p1</span><span class="p">.</span><span class="n">y</span><span class="p">)</span><span class="k">if</span><span class="p">(</span><span class="n">mymax</span><span class="p">(</span><span class="n">l2</span><span class="p">.</span><span class="n">p1</span><span class="p">.</span><span class="n">y</span><span class="p">,</span><span class="n">l2</span><span class="p">.</span><span class="n">p2</span><span class="p">.</span><span class="n">y</span><span class="p">)</span><span class="o">&gt;=</span><span class="n">l1</span><span class="p">.</span><span class="n">p1</span><span class="p">.</span><span class="n">y</span><span class="p">)</span><span class="k">return</span> <span class="nb">true</span><span class="p">;</span>
+    <span class="k">if</span><span class="p">(</span><span class="n">multi</span><span class="p">(</span><span class="n">l2</span><span class="p">.</span><span class="n">p1</span><span class="p">,</span><span class="n">l2</span><span class="p">.</span><span class="n">p2</span><span class="p">,</span><span class="n">l1</span><span class="p">.</span><span class="n">p2</span><span class="p">)</span><span class="o">==</span><span class="mi">0</span><span class="p">)</span><span class="k">if</span><span class="p">(</span><span class="n">mymin</span><span class="p">(</span><span class="n">l2</span><span class="p">.</span><span class="n">p1</span><span class="p">.</span><span class="n">x</span><span class="p">,</span><span class="n">l2</span><span class="p">.</span><span class="n">p2</span><span class="p">.</span><span class="n">x</span><span class="p">)</span><span class="o">&lt;=</span><span class="n">l1</span><span class="p">.</span><span class="n">p2</span><span class="p">.</span><span class="n">x</span><span class="p">)</span><span class="k">if</span><span class="p">(</span><span class="n">mymax</span><span class="p">(</span><span class="n">l2</span><span class="p">.</span><span class="n">p1</span><span class="p">.</span><span class="n">x</span><span class="p">,</span><span class="n">l2</span><span class="p">.</span><span class="n">p2</span><span class="p">.</span><span class="n">x</span><span class="p">)</span><span class="o">&gt;=</span><span class="n">l1</span><span class="p">.</span><span class="n">p2</span><span class="p">.</span><span class="n">x</span><span class="p">)</span><span class="k">if</span><span class="p">(</span><span class="n">mymin</span><span class="p">(</span><span class="n">l2</span><span class="p">.</span><span class="n">p1</span><span class="p">.</span><span class="n">y</span><span class="p">,</span><span class="n">l2</span><span class="p">.</span><span class="n">p2</span><span class="p">.</span><span class="n">y</span><span class="p">)</span><span class="o">&lt;=</span><span class="n">l1</span><span class="p">.</span><span class="n">p2</span><span class="p">.</span><span class="n">y</span><span class="p">)</span><span class="k">if</span><span class="p">(</span><span class="n">mymax</span><span class="p">(</span><span class="n">l2</span><span class="p">.</span><span class="n">p1</span><span class="p">.</span><span class="n">y</span><span class="p">,</span><span class="n">l2</span><span class="p">.</span><span class="n">p2</span><span class="p">.</span><span class="n">y</span><span class="p">)</span><span class="o">&gt;=</span><span class="n">l1</span><span class="p">.</span><span class="n">p2</span><span class="p">.</span><span class="n">y</span><span class="p">)</span><span class="k">return</span> <span class="nb">true</span><span class="p">;</span>
+    <span class="c1">//判断两条直线相交且一条直线端点在另一条直线上 
+</span><span class="c1"></span>    <span class="k">return</span> <span class="nb">false</span><span class="p">;</span>
+<span class="p">}</span>
+</code></pre></td></tr></table></div>
+</div>
+</div><p>在之前的版本里，我在判断两条直线相交且一条直线端点在另一条直线上的情况中忽略了两条直线互相一条与x轴垂直，一条与y轴垂直，且某一条延伸出去恰好交于另一条直线交点的情况，于是在一次比赛中WA了十多发QwQ，下面放上错误代码以作为警示：</p>
+<div class="highlight"><div class="chroma">
+<div class="table-container"><table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><code><span class="lnt"> 1
+</span><span class="lnt"> 2
+</span><span class="lnt"> 3
+</span><span class="lnt"> 4
+</span><span class="lnt"> 5
+</span><span class="lnt"> 6
+</span><span class="lnt"> 7
+</span><span class="lnt"> 8
+</span><span class="lnt"> 9
+</span><span class="lnt">10
+</span><span class="lnt">11
+</span></code></pre></td>
+<td class="lntd">
+<pre class="chroma"><code class="language-cpp" data-lang="cpp"><span class="kt">double</span> <span class="nf">check</span><span class="p">(</span><span class="n">line</span> <span class="n">l1</span><span class="p">,</span><span class="n">line</span> <span class="n">l2</span><span class="p">)</span><span class="c1">//判断是否相交 
+</span><span class="c1"></span><span class="p">{</span>
+    <span class="k">if</span><span class="p">(</span><span class="n">multi</span><span class="p">(</span><span class="n">l2</span><span class="p">.</span><span class="n">p1</span><span class="p">,</span><span class="n">l1</span><span class="p">.</span><span class="n">p2</span><span class="p">,</span><span class="n">l1</span><span class="p">.</span><span class="n">p1</span><span class="p">)</span><span class="o">*</span><span class="n">multi</span><span class="p">(</span><span class="n">l1</span><span class="p">.</span><span class="n">p2</span><span class="p">,</span><span class="n">l2</span><span class="p">.</span><span class="n">p2</span><span class="p">,</span><span class="n">l1</span><span class="p">.</span><span class="n">p1</span><span class="p">)</span><span class="o">&gt;</span><span class="mi">0</span><span class="p">)</span><span class="c1">//判断以L1.p1为基准，L1.p2是否在L2.p1与L2.p2中间
+</span><span class="c1"></span>    <span class="k">if</span><span class="p">(</span><span class="n">multi</span><span class="p">(</span><span class="n">l1</span><span class="p">.</span><span class="n">p1</span><span class="p">,</span><span class="n">l2</span><span class="p">.</span><span class="n">p2</span><span class="p">,</span><span class="n">l2</span><span class="p">.</span><span class="n">p1</span><span class="p">)</span><span class="o">*</span><span class="n">multi</span><span class="p">(</span><span class="n">l2</span><span class="p">.</span><span class="n">p2</span><span class="p">,</span><span class="n">l1</span><span class="p">.</span><span class="n">p2</span><span class="p">,</span><span class="n">l2</span><span class="p">.</span><span class="n">p1</span><span class="p">)</span><span class="o">&gt;</span><span class="mi">0</span><span class="p">)</span><span class="c1">//判断以L2.p1为基准,L2.p2是否在L1.p1与L2.p2中间
+</span><span class="c1"></span>    <span class="k">return</span> <span class="nb">true</span><span class="p">;</span><span class="c1">//大部分情况下，能判断两直线相交   if(multi(l2.p1,l1.p1,l1.p2)==0)if(mymin(l1.p1.x,l1.p2.x&lt;=l2.p1.x)if(mymax(l1.p1.x,l1.p2.x)&gt;=l2.p1.x)return true;
+</span><span class="c1"></span>    <span class="k">if</span><span class="p">(</span><span class="n">multi</span><span class="p">(</span><span class="n">l2</span><span class="p">.</span><span class="n">p2</span><span class="p">,</span><span class="n">l1</span><span class="p">.</span><span class="n">p1</span><span class="p">,</span><span class="n">l1</span><span class="p">.</span><span class="n">p2</span><span class="p">)</span><span class="o">==</span><span class="mi">0</span><span class="p">)</span><span class="k">if</span><span class="p">(</span><span class="n">mymin</span><span class="p">(</span><span class="n">l1</span><span class="p">.</span><span class="n">p1</span><span class="p">.</span><span class="n">x</span><span class="p">,</span><span class="n">l1</span><span class="p">.</span><span class="n">p2</span><span class="p">.</span><span class="n">x</span><span class="o">&lt;=</span><span class="n">l2</span><span class="p">.</span><span class="n">p2</span><span class="p">.</span><span class="n">x</span><span class="p">)</span><span class="k">if</span><span class="p">(</span><span class="n">mymax</span><span class="p">(</span><span class="n">l1</span><span class="p">.</span><span class="n">p1</span><span class="p">.</span><span class="n">x</span><span class="p">,</span><span class="n">l1</span><span class="p">.</span><span class="n">p2</span><span class="p">.</span><span class="n">x</span><span class="p">)</span><span class="o">&gt;=</span><span class="n">l2</span><span class="p">.</span><span class="n">p2</span><span class="p">.</span><span class="n">x</span><span class="p">)</span><span class="k">return</span> <span class="nb">true</span><span class="p">;</span>
+    <span class="k">if</span><span class="p">(</span><span class="n">multi</span><span class="p">(</span><span class="n">l1</span><span class="p">.</span><span class="n">p1</span><span class="p">,</span><span class="n">l2</span><span class="p">.</span><span class="n">p1</span><span class="p">,</span><span class="n">l2</span><span class="p">.</span><span class="n">p2</span><span class="p">)</span><span class="o">==</span><span class="mi">0</span><span class="p">)</span><span class="k">if</span><span class="p">(</span><span class="n">mymin</span><span class="p">(</span><span class="n">l2</span><span class="p">.</span><span class="n">p1</span><span class="p">.</span><span class="n">x</span><span class="p">,</span><span class="n">l2</span><span class="p">.</span><span class="n">p2</span><span class="p">.</span><span class="n">x</span><span class="o">&lt;=</span><span class="n">l1</span><span class="p">.</span><span class="n">p1</span><span class="p">.</span><span class="n">x</span><span class="p">)</span><span class="k">if</span><span class="p">(</span><span class="n">mymax</span><span class="p">(</span><span class="n">l2</span><span class="p">.</span><span class="n">p1</span><span class="p">.</span><span class="n">x</span><span class="p">,</span><span class="n">l2</span><span class="p">.</span><span class="n">p2</span><span class="p">.</span><span class="n">x</span><span class="p">)</span><span class="o">&gt;=</span><span class="n">l1</span><span class="p">.</span><span class="n">p1</span><span class="p">.</span><span class="n">x</span><span class="p">)</span><span class="k">return</span> <span class="nb">true</span><span class="p">;</span>
+    <span class="k">if</span><span class="p">(</span><span class="n">multi</span><span class="p">(</span><span class="n">l1</span><span class="p">.</span><span class="n">p2</span><span class="p">,</span><span class="n">l2</span><span class="p">.</span><span class="n">p1</span><span class="p">,</span><span class="n">l2</span><span class="p">.</span><span class="n">p2</span><span class="p">)</span><span class="o">==</span><span class="mi">0</span><span class="p">)</span><span class="k">if</span><span class="p">(</span><span class="n">mymin</span><span class="p">(</span><span class="n">l2</span><span class="p">.</span><span class="n">p1</span><span class="p">.</span><span class="n">x</span><span class="p">,</span><span class="n">l2</span><span class="p">.</span><span class="n">p2</span><span class="p">.</span><span class="n">x</span><span class="o">&lt;=</span><span class="n">l1</span><span class="p">.</span><span class="n">p2</span><span class="p">.</span><span class="n">x</span><span class="p">)</span><span class="k">if</span><span class="p">(</span><span class="n">mymax</span><span class="p">(</span><span class="n">l2</span><span class="p">.</span><span class="n">p1</span><span class="p">.</span><span class="n">x</span><span class="p">,</span><span class="n">l2</span><span class="p">.</span><span class="n">p2</span><span class="p">.</span><span class="n">x</span><span class="p">)</span><span class="o">&gt;=</span><span class="n">l1</span><span class="p">.</span><span class="n">p2</span><span class="p">.</span><span class="n">x</span><span class="p">)</span><span class="k">return</span> <span class="nb">true</span><span class="p">;</span>
+    <span class="c1">//判断两条直线相交且一条直线端点在另一条直线上 
+</span><span class="c1"></span>    <span class="k">return</span> <span class="nb">false</span><span class="p">;</span>
+<span class="p">}</span>
+</code></pre></td></tr></table></div>
+</div>
+</div><p>主程序就很简单了，一条一条边读入，读入第i条边时判断他与前i-1条边是否相交，若相交，这之前的边j被盖住，判断数组bo【j】=1。最后统计bo【i】==0的边就好啦
+附上完整代码：</p>
+<div class="highlight"><div class="chroma">
+<div class="table-container"><table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><code><span class="lnt"> 1
+</span><span class="lnt"> 2
+</span><span class="lnt"> 3
+</span><span class="lnt"> 4
+</span><span class="lnt"> 5
+</span><span class="lnt"> 6
+</span><span class="lnt"> 7
+</span><span class="lnt"> 8
+</span><span class="lnt"> 9
+</span><span class="lnt">10
+</span><span class="lnt">11
+</span><span class="lnt">12
+</span><span class="lnt">13
+</span><span class="lnt">14
+</span><span class="lnt">15
+</span><span class="lnt">16
+</span><span class="lnt">17
+</span><span class="lnt">18
+</span><span class="lnt">19
+</span><span class="lnt">20
+</span><span class="lnt">21
+</span><span class="lnt">22
+</span><span class="lnt">23
+</span><span class="lnt">24
+</span><span class="lnt">25
+</span><span class="lnt">26
+</span><span class="lnt">27
+</span><span class="lnt">28
+</span><span class="lnt">29
+</span><span class="lnt">30
+</span><span class="lnt">31
+</span><span class="lnt">32
+</span><span class="lnt">33
+</span><span class="lnt">34
+</span><span class="lnt">35
+</span><span class="lnt">36
+</span><span class="lnt">37
+</span><span class="lnt">38
+</span><span class="lnt">39
+</span><span class="lnt">40
+</span><span class="lnt">41
+</span><span class="lnt">42
+</span><span class="lnt">43
+</span><span class="lnt">44
+</span><span class="lnt">45
+</span><span class="lnt">46
+</span><span class="lnt">47
+</span><span class="lnt">48
+</span><span class="lnt">49
+</span><span class="lnt">50
+</span><span class="lnt">51
+</span><span class="lnt">52
+</span><span class="lnt">53
+</span><span class="lnt">54
+</span><span class="lnt">55
+</span><span class="lnt">56
+</span><span class="lnt">57
+</span><span class="lnt">58
+</span><span class="lnt">59
+</span><span class="lnt">60
+</span><span class="lnt">61
+</span><span class="lnt">62
+</span><span class="lnt">63
+</span><span class="lnt">64
+</span><span class="lnt">65
+</span><span class="lnt">66
+</span><span class="lnt">67
+</span><span class="lnt">68
+</span><span class="lnt">69
+</span><span class="lnt">70
+</span><span class="lnt">71
+</span><span class="lnt">72
+</span><span class="lnt">73
+</span><span class="lnt">74
+</span><span class="lnt">75
+</span><span class="lnt">76
+</span></code></pre></td>
+<td class="lntd">
+<pre class="chroma"><code class="language-cpp" data-lang="cpp"><span class="cp">#include</span><span class="cpf">&lt;cmath&gt;</span><span class="cp">
+</span><span class="cp">#include</span><span class="cpf">&lt;cstdlib&gt;</span><span class="cp">
+</span><span class="cp">#include</span><span class="cpf">&lt;cstdio&gt;</span><span class="cp">
+</span><span class="cp">#include</span><span class="cpf">&lt;cstring&gt;</span><span class="cp">
+</span><span class="cp"></span><span class="k">using</span> <span class="k">namespace</span> <span class="n">std</span><span class="p">;</span>
+<span class="k">struct</span> <span class="nc">node</span><span class="c1">//定义一个点 
+</span><span class="c1"></span><span class="p">{</span>
+        <span class="kt">double</span> <span class="n">x</span><span class="p">,</span><span class="n">y</span><span class="p">;</span>
+<span class="p">};</span>
+
+<span class="k">struct</span> <span class="nc">line</span><span class="c1">//定义一条线 
+</span><span class="c1"></span><span class="p">{</span>
+    <span class="n">node</span> <span class="n">p1</span><span class="p">,</span><span class="n">p2</span><span class="p">;</span>
+<span class="p">}</span> <span class="n">list</span><span class="p">[</span><span class="mi">11000</span><span class="p">];</span>
+
+<span class="kt">int</span> <span class="n">a</span><span class="p">[</span><span class="mi">11000</span><span class="p">]</span><span class="o">=</span><span class="p">{</span><span class="mi">0</span><span class="p">};</span>
+<span class="kt">bool</span> <span class="n">bo</span><span class="p">[</span><span class="mi">11000</span><span class="p">]</span><span class="o">=</span><span class="p">{</span><span class="mi">0</span><span class="p">};</span>
+<span class="kt">int</span> <span class="n">i</span><span class="p">,</span><span class="n">j</span><span class="p">,</span><span class="n">k</span><span class="p">,</span><span class="n">m</span><span class="p">,</span><span class="n">n</span><span class="p">,</span><span class="n">o</span><span class="p">,</span><span class="n">p</span><span class="p">,</span><span class="n">js</span><span class="p">,</span><span class="n">jl</span><span class="p">,</span><span class="n">jk</span><span class="p">,</span><span class="n">len</span><span class="p">;</span>
+
+    <span class="c1">//================================
+</span><span class="c1"></span><span class="kt">double</span> <span class="nf">mymax</span><span class="p">(</span><span class="kt">double</span> <span class="n">x</span><span class="p">,</span><span class="kt">double</span> <span class="n">y</span><span class="p">)</span><span class="c1">//求max 
+</span><span class="c1"></span><span class="p">{</span>
+    <span class="k">if</span><span class="p">(</span><span class="n">x</span><span class="o">&gt;</span><span class="n">y</span><span class="p">)</span><span class="k">return</span> <span class="n">x</span><span class="p">;</span>
+    <span class="k">else</span> <span class="k">return</span> <span class="n">y</span><span class="p">;</span>
+<span class="p">}</span>
+
+<span class="kt">double</span> <span class="nf">mymin</span><span class="p">(</span><span class="kt">double</span> <span class="n">x</span><span class="p">,</span><span class="kt">double</span> <span class="n">y</span><span class="p">)</span><span class="c1">//求min 
+</span><span class="c1"></span><span class="p">{</span>
+    <span class="k">if</span><span class="p">(</span><span class="n">x</span><span class="o">&lt;</span><span class="n">y</span><span class="p">)</span><span class="k">return</span> <span class="n">x</span><span class="p">;</span>
+    <span class="k">else</span> <span class="k">return</span> <span class="n">y</span><span class="p">;</span>
+<span class="p">}</span>
+
+    <span class="c1">//=================================
+</span><span class="c1"></span>
+<span class="kt">double</span> <span class="nf">multi</span><span class="p">(</span><span class="n">node</span> <span class="n">p1</span><span class="p">,</span><span class="n">node</span> <span class="n">p2</span><span class="p">,</span><span class="n">node</span> <span class="n">p0</span><span class="p">)</span><span class="c1">//计算叉积：而且值为三点构成三角形的面积的两倍 
+</span><span class="c1"></span><span class="p">{</span>
+    <span class="kt">double</span> <span class="n">x1</span><span class="p">,</span><span class="n">y1</span><span class="p">,</span><span class="n">x2</span><span class="p">,</span><span class="n">y2</span><span class="p">;</span>
+    <span class="n">x1</span><span class="o">=</span><span class="n">p1</span><span class="p">.</span><span class="n">x</span><span class="o">-</span><span class="n">p0</span><span class="p">.</span><span class="n">x</span><span class="p">;</span>
+    <span class="n">y1</span><span class="o">=</span><span class="n">p1</span><span class="p">.</span><span class="n">y</span><span class="o">-</span><span class="n">p0</span><span class="p">.</span><span class="n">y</span><span class="p">;</span>
+    <span class="n">x2</span><span class="o">=</span><span class="n">p2</span><span class="p">.</span><span class="n">x</span><span class="o">-</span><span class="n">p0</span><span class="p">.</span><span class="n">x</span><span class="p">;</span>
+    <span class="n">y2</span><span class="o">=</span><span class="n">p2</span><span class="p">.</span><span class="n">y</span><span class="o">-</span><span class="n">p0</span><span class="p">.</span><span class="n">y</span><span class="p">;</span>
+    <span class="k">return</span> <span class="n">x1</span><span class="o">*</span><span class="n">y2</span><span class="o">-</span><span class="n">x2</span><span class="o">*</span><span class="n">y1</span><span class="p">;</span>
+<span class="p">}</span>
+
+<span class="kt">double</span> <span class="nf">check</span><span class="p">(</span><span class="n">line</span> <span class="n">l1</span><span class="p">,</span><span class="n">line</span> <span class="n">l2</span><span class="p">)</span><span class="c1">//判断是否相交 
+</span><span class="c1"></span><span class="p">{</span>
+    <span class="k">if</span><span class="p">(</span><span class="n">multi</span><span class="p">(</span><span class="n">l2</span><span class="p">.</span><span class="n">p1</span><span class="p">,</span><span class="n">l1</span><span class="p">.</span><span class="n">p2</span><span class="p">,</span><span class="n">l1</span><span class="p">.</span><span class="n">p1</span><span class="p">)</span><span class="o">*</span><span class="n">multi</span><span class="p">(</span><span class="n">l1</span><span class="p">.</span><span class="n">p2</span><span class="p">,</span><span class="n">l2</span><span class="p">.</span><span class="n">p2</span><span class="p">,</span><span class="n">l1</span><span class="p">.</span><span class="n">p1</span><span class="p">)</span><span class="o">&gt;</span><span class="mi">0</span><span class="p">)</span><span class="c1">//判断以L1.p1为基准，L1.p2是否在L2.p1与L2.p2中间
+</span><span class="c1"></span>    <span class="k">if</span><span class="p">(</span><span class="n">multi</span><span class="p">(</span><span class="n">l1</span><span class="p">.</span><span class="n">p1</span><span class="p">,</span><span class="n">l2</span><span class="p">.</span><span class="n">p2</span><span class="p">,</span><span class="n">l2</span><span class="p">.</span><span class="n">p1</span><span class="p">)</span><span class="o">*</span><span class="n">multi</span><span class="p">(</span><span class="n">l2</span><span class="p">.</span><span class="n">p2</span><span class="p">,</span><span class="n">l1</span><span class="p">.</span><span class="n">p2</span><span class="p">,</span><span class="n">l2</span><span class="p">.</span><span class="n">p1</span><span class="p">)</span><span class="o">&gt;</span><span class="mi">0</span><span class="p">)</span><span class="c1">//判断以L2.p1为基准,L2.p2是否在L1.p1与L2.p2中间
+</span><span class="c1"></span>    <span class="k">return</span> <span class="nb">true</span><span class="p">;</span><span class="c1">//大部分情况下，能判断两直线相交   
+</span><span class="c1"></span>    <span class="k">if</span><span class="p">(</span><span class="n">multi</span><span class="p">(</span><span class="n">l1</span><span class="p">.</span><span class="n">p1</span><span class="p">,</span><span class="n">l1</span><span class="p">.</span><span class="n">p2</span><span class="p">,</span><span class="n">l2</span><span class="p">.</span><span class="n">p1</span><span class="p">)</span><span class="o">==</span><span class="mi">0</span><span class="p">)</span><span class="k">if</span><span class="p">(</span><span class="n">mymin</span><span class="p">(</span><span class="n">l1</span><span class="p">.</span><span class="n">p1</span><span class="p">.</span><span class="n">x</span><span class="p">,</span><span class="n">l1</span><span class="p">.</span><span class="n">p2</span><span class="p">.</span><span class="n">x</span><span class="p">)</span><span class="o">&lt;=</span><span class="n">l2</span><span class="p">.</span><span class="n">p1</span><span class="p">.</span><span class="n">x</span><span class="p">)</span><span class="k">if</span><span class="p">(</span><span class="n">mymax</span><span class="p">(</span><span class="n">l1</span><span class="p">.</span><span class="n">p1</span><span class="p">.</span><span class="n">x</span><span class="p">,</span><span class="n">l1</span><span class="p">.</span><span class="n">p2</span><span class="p">.</span><span class="n">x</span><span class="p">)</span><span class="o">&gt;=</span><span class="n">l2</span><span class="p">.</span><span class="n">p1</span><span class="p">.</span><span class="n">x</span><span class="p">)</span><span class="k">if</span><span class="p">(</span><span class="n">mymin</span><span class="p">(</span><span class="n">l1</span><span class="p">.</span><span class="n">p1</span><span class="p">.</span><span class="n">y</span><span class="p">,</span><span class="n">l1</span><span class="p">.</span><span class="n">p2</span><span class="p">.</span><span class="n">y</span><span class="p">)</span><span class="o">&lt;=</span><span class="n">l2</span><span class="p">.</span><span class="n">p1</span><span class="p">.</span><span class="n">y</span><span class="p">)</span><span class="k">if</span><span class="p">(</span><span class="n">mymax</span><span class="p">(</span><span class="n">l1</span><span class="p">.</span><span class="n">p1</span><span class="p">.</span><span class="n">y</span><span class="p">,</span><span class="n">l1</span><span class="p">.</span><span class="n">p2</span><span class="p">.</span><span class="n">y</span><span class="p">)</span><span class="o">&gt;=</span><span class="n">l2</span><span class="p">.</span><span class="n">p1</span><span class="p">.</span><span class="n">y</span><span class="p">)</span><span class="k">return</span> <span class="nb">true</span><span class="p">;</span>
+    <span class="k">if</span><span class="p">(</span><span class="n">multi</span><span class="p">(</span><span class="n">l1</span><span class="p">.</span><span class="n">p1</span><span class="p">,</span><span class="n">l1</span><span class="p">.</span><span class="n">p2</span><span class="p">,</span><span class="n">l2</span><span class="p">.</span><span class="n">p2</span><span class="p">)</span><span class="o">==</span><span class="mi">0</span><span class="p">)</span><span class="k">if</span><span class="p">(</span><span class="n">mymin</span><span class="p">(</span><span class="n">l1</span><span class="p">.</span><span class="n">p1</span><span class="p">.</span><span class="n">x</span><span class="p">,</span><span class="n">l1</span><span class="p">.</span><span class="n">p2</span><span class="p">.</span><span class="n">x</span><span class="p">)</span><span class="o">&lt;=</span><span class="n">l2</span><span class="p">.</span><span class="n">p2</span><span class="p">.</span><span class="n">x</span><span class="p">)</span><span class="k">if</span><span class="p">(</span><span class="n">mymax</span><span class="p">(</span><span class="n">l1</span><span class="p">.</span><span class="n">p1</span><span class="p">.</span><span class="n">x</span><span class="p">,</span><span class="n">l1</span><span class="p">.</span><span class="n">p2</span><span class="p">.</span><span class="n">x</span><span class="p">)</span><span class="o">&gt;=</span><span class="n">l2</span><span class="p">.</span><span class="n">p2</span><span class="p">.</span><span class="n">x</span><span class="p">)</span><span class="k">if</span><span class="p">(</span><span class="n">mymin</span><span class="p">(</span><span class="n">l1</span><span class="p">.</span><span class="n">p1</span><span class="p">.</span><span class="n">y</span><span class="p">,</span><span class="n">l1</span><span class="p">.</span><span class="n">p2</span><span class="p">.</span><span class="n">y</span><span class="p">)</span><span class="o">&lt;=</span><span class="n">l2</span><span class="p">.</span><span class="n">p2</span><span class="p">.</span><span class="n">y</span><span class="p">)</span><span class="k">if</span><span class="p">(</span><span class="n">mymax</span><span class="p">(</span><span class="n">l1</span><span class="p">.</span><span class="n">p1</span><span class="p">.</span><span class="n">y</span><span class="p">,</span><span class="n">l1</span><span class="p">.</span><span class="n">p2</span><span class="p">.</span><span class="n">y</span><span class="p">)</span><span class="o">&gt;=</span><span class="n">l2</span><span class="p">.</span><span class="n">p2</span><span class="p">.</span><span class="n">y</span><span class="p">)</span><span class="k">return</span> <span class="nb">true</span><span class="p">;</span>
+    <span class="k">if</span><span class="p">(</span><span class="n">multi</span><span class="p">(</span><span class="n">l2</span><span class="p">.</span><span class="n">p1</span><span class="p">,</span><span class="n">l2</span><span class="p">.</span><span class="n">p2</span><span class="p">,</span><span class="n">l1</span><span class="p">.</span><span class="n">p1</span><span class="p">)</span><span class="o">==</span><span class="mi">0</span><span class="p">)</span><span class="k">if</span><span class="p">(</span><span class="n">mymin</span><span class="p">(</span><span class="n">l2</span><span class="p">.</span><span class="n">p1</span><span class="p">.</span><span class="n">x</span><span class="p">,</span><span class="n">l2</span><span class="p">.</span><span class="n">p2</span><span class="p">.</span><span class="n">x</span><span class="p">)</span><span class="o">&lt;=</span><span class="n">l1</span><span class="p">.</span><span class="n">p1</span><span class="p">.</span><span class="n">x</span><span class="p">)</span><span class="k">if</span><span class="p">(</span><span class="n">mymax</span><span class="p">(</span><span class="n">l2</span><span class="p">.</span><span class="n">p1</span><span class="p">.</span><span class="n">x</span><span class="p">,</span><span class="n">l2</span><span class="p">.</span><span class="n">p2</span><span class="p">.</span><span class="n">x</span><span class="p">)</span><span class="o">&gt;=</span><span class="n">l1</span><span class="p">.</span><span class="n">p1</span><span class="p">.</span><span class="n">x</span><span class="p">)</span><span class="k">if</span><span class="p">(</span><span class="n">mymin</span><span class="p">(</span><span class="n">l2</span><span class="p">.</span><span class="n">p1</span><span class="p">.</span><span class="n">y</span><span class="p">,</span><span class="n">l2</span><span class="p">.</span><span class="n">p2</span><span class="p">.</span><span class="n">y</span><span class="p">)</span><span class="o">&lt;=</span><span class="n">l1</span><span class="p">.</span><span class="n">p1</span><span class="p">.</span><span class="n">y</span><span class="p">)</span><span class="k">if</span><span class="p">(</span><span class="n">mymax</span><span class="p">(</span><span class="n">l2</span><span class="p">.</span><span class="n">p1</span><span class="p">.</span><span class="n">y</span><span class="p">,</span><span class="n">l2</span><span class="p">.</span><span class="n">p2</span><span class="p">.</span><span class="n">y</span><span class="p">)</span><span class="o">&gt;=</span><span class="n">l1</span><span class="p">.</span><span class="n">p1</span><span class="p">.</span><span class="n">y</span><span class="p">)</span><span class="k">return</span> <span class="nb">true</span><span class="p">;</span>
+    <span class="k">if</span><span class="p">(</span><span class="n">multi</span><span class="p">(</span><span class="n">l2</span><span class="p">.</span><span class="n">p1</span><span class="p">,</span><span class="n">l2</span><span class="p">.</span><span class="n">p2</span><span class="p">,</span><span class="n">l1</span><span class="p">.</span><span class="n">p2</span><span class="p">)</span><span class="o">==</span><span class="mi">0</span><span class="p">)</span><span class="k">if</span><span class="p">(</span><span class="n">mymin</span><span class="p">(</span><span class="n">l2</span><span class="p">.</span><span class="n">p1</span><span class="p">.</span><span class="n">x</span><span class="p">,</span><span class="n">l2</span><span class="p">.</span><span class="n">p2</span><span class="p">.</span><span class="n">x</span><span class="p">)</span><span class="o">&lt;=</span><span class="n">l1</span><span class="p">.</span><span class="n">p2</span><span class="p">.</span><span class="n">x</span><span class="p">)</span><span class="k">if</span><span class="p">(</span><span class="n">mymax</span><span class="p">(</span><span class="n">l2</span><span class="p">.</span><span class="n">p1</span><span class="p">.</span><span class="n">x</span><span class="p">,</span><span class="n">l2</span><span class="p">.</span><span class="n">p2</span><span class="p">.</span><span class="n">x</span><span class="p">)</span><span class="o">&gt;=</span><span class="n">l1</span><span class="p">.</span><span class="n">p2</span><span class="p">.</span><span class="n">x</span><span class="p">)</span><span class="k">if</span><span class="p">(</span><span class="n">mymin</span><span class="p">(</span><span class="n">l2</span><span class="p">.</span><span class="n">p1</span><span class="p">.</span><span class="n">y</span><span class="p">,</span><span class="n">l2</span><span class="p">.</span><span class="n">p2</span><span class="p">.</span><span class="n">y</span><span class="p">)</span><span class="o">&lt;=</span><span class="n">l1</span><span class="p">.</span><span class="n">p2</span><span class="p">.</span><span class="n">y</span><span class="p">)</span><span class="k">if</span><span class="p">(</span><span class="n">mymax</span><span class="p">(</span><span class="n">l2</span><span class="p">.</span><span class="n">p1</span><span class="p">.</span><span class="n">y</span><span class="p">,</span><span class="n">l2</span><span class="p">.</span><span class="n">p2</span><span class="p">.</span><span class="n">y</span><span class="p">)</span><span class="o">&gt;=</span><span class="n">l1</span><span class="p">.</span><span class="n">p2</span><span class="p">.</span><span class="n">y</span><span class="p">)</span><span class="k">return</span> <span class="nb">true</span><span class="p">;</span>
+    <span class="c1">//判断两条直线相交且一条直线端点在另一条直线上 
+</span><span class="c1"></span>    <span class="k">return</span> <span class="nb">false</span><span class="p">;</span>
+<span class="p">}</span>
+    <span class="c1">//==================================
+</span><span class="c1"></span><span class="kt">int</span> <span class="nf">main</span><span class="p">()</span>
+<span class="p">{</span>
+    <span class="n">scanf</span><span class="p">(</span><span class="s">&#34;%d&#34;</span><span class="p">,</span><span class="o">&amp;</span><span class="n">n</span><span class="p">);</span>
+    <span class="k">for</span><span class="p">(</span><span class="kt">int</span> <span class="n">i</span><span class="o">=</span><span class="mi">1</span><span class="p">;</span><span class="n">i</span><span class="o">&lt;=</span><span class="n">n</span><span class="p">;</span><span class="n">i</span><span class="o">++</span><span class="p">)</span><span class="n">scanf</span><span class="p">(</span><span class="s">&#34;%lf%lf%lf%lf&#34;</span><span class="p">,</span><span class="o">&amp;</span><span class="n">list</span><span class="p">[</span><span class="n">i</span><span class="p">].</span><span class="n">p1</span><span class="p">.</span><span class="n">x</span><span class="p">,</span><span class="o">&amp;</span><span class="n">list</span><span class="p">[</span><span class="n">i</span><span class="p">].</span><span class="n">p1</span><span class="p">.</span><span class="n">y</span><span class="p">,</span><span class="o">&amp;</span><span class="n">list</span><span class="p">[</span><span class="n">i</span><span class="p">].</span><span class="n">p2</span><span class="p">.</span><span class="n">x</span><span class="p">,</span><span class="o">&amp;</span><span class="n">list</span><span class="p">[</span><span class="n">i</span><span class="p">].</span><span class="n">p2</span><span class="p">.</span><span class="n">y</span><span class="p">);</span>
+    <span class="k">for</span><span class="p">(</span><span class="kt">int</span> <span class="n">i</span><span class="o">=</span><span class="mi">1</span><span class="p">;</span><span class="n">i</span><span class="o">&lt;</span><span class="n">n</span><span class="p">;</span><span class="n">i</span><span class="o">++</span><span class="p">)</span>
+    <span class="k">for</span><span class="p">(</span><span class="kt">int</span> <span class="n">j</span><span class="o">=</span><span class="n">i</span><span class="o">+</span><span class="mi">1</span><span class="p">;</span><span class="n">j</span><span class="o">&lt;=</span><span class="n">n</span><span class="p">;</span><span class="n">j</span><span class="o">++</span><span class="p">)</span>
+    <span class="p">{</span>
+        <span class="k">if</span><span class="p">(</span><span class="n">check</span><span class="p">(</span><span class="n">list</span><span class="p">[</span><span class="n">i</span><span class="p">],</span><span class="n">list</span><span class="p">[</span><span class="n">j</span><span class="p">]))</span><span class="c1">//判断相交 
+</span><span class="c1"></span>        <span class="p">{</span>
+            <span class="n">bo</span><span class="p">[</span><span class="n">i</span><span class="p">]</span><span class="o">=</span><span class="mi">1</span><span class="p">;</span>
+            <span class="k">break</span><span class="p">;</span>
+        <span class="p">}</span>
+    <span class="p">}</span>
+    <span class="n">len</span><span class="o">=</span><span class="mi">0</span><span class="p">;</span>
+    <span class="k">for</span><span class="p">(</span><span class="kt">int</span> <span class="n">i</span><span class="o">=</span><span class="mi">1</span><span class="p">;</span><span class="n">i</span><span class="o">&lt;=</span><span class="n">n</span><span class="p">;</span><span class="n">i</span><span class="o">++</span><span class="p">)</span><span class="k">if</span><span class="p">(</span><span class="n">bo</span><span class="p">[</span><span class="n">i</span><span class="p">]</span><span class="o">==</span><span class="mi">0</span><span class="p">)</span><span class="n">a</span><span class="p">[</span><span class="o">++</span><span class="n">len</span><span class="p">]</span><span class="o">=</span><span class="n">i</span><span class="p">;</span>
+    <span class="k">for</span><span class="p">(</span><span class="kt">int</span> <span class="n">i</span><span class="o">=</span><span class="mi">1</span><span class="p">;</span><span class="n">i</span><span class="o">&lt;</span><span class="n">len</span><span class="p">;</span><span class="n">i</span><span class="o">++</span><span class="p">)</span><span class="n">printf</span><span class="p">(</span><span class="s">&#34;%d &#34;</span><span class="p">,</span><span class="n">a</span><span class="p">[</span><span class="n">i</span><span class="p">]);</span>
+    <span class="n">printf</span><span class="p">(</span><span class="s">&#34;%d</span><span class="se">\n</span><span class="s">&#34;</span><span class="p">,</span><span class="n">a</span><span class="p">[</span><span class="n">len</span><span class="p">]);</span>
+    <span class="k">return</span> <span class="mi">0</span><span class="p">;</span>
+<span class="p">}</span>
+</code></pre></td></tr></table></div>
+</div>
+</div><h4 id="caioj-1213-面积"><a href="#caioj-1213-面积" class="anchor-link"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" class="icon anchor-icon"><path d="M326.612 185.391c59.747 59.809 58.927 155.698.36 214.59-.11.12-.24.25-.36.37l-67.2 67.2c-59.27 59.27-155.699 59.262-214.96 0-59.27-59.26-59.27-155.7 0-214.96l37.106-37.106c9.84-9.84 26.786-3.3 27.294 10.606.648 17.722 3.826 35.527 9.69 52.721 1.986 5.822.567 12.262-3.783 16.612l-13.087 13.087c-28.026 28.026-28.905 73.66-1.155 101.96 28.024 28.579 74.086 28.749 102.325.51l67.2-67.19c28.191-28.191 28.073-73.757 0-101.83-3.701-3.694-7.429-6.564-10.341-8.569a16.037 16.037 0 0 1-6.947-12.606c-.396-10.567 3.348-21.456 11.698-29.806l21.054-21.055c5.521-5.521 14.182-6.199 20.584-1.731a152.482 152.482 0 0 1 20.522 17.197zM467.547 44.449c-59.261-59.262-155.69-59.27-214.96 0l-67.2 67.2c-.12.12-.25.25-.36.37-58.566 58.892-59.387 154.781.36 214.59a152.454 152.454 0 0 0 20.521 17.196c6.402 4.468 15.064 3.789 20.584-1.731l21.054-21.055c8.35-8.35 12.094-19.239 11.698-29.806a16.037 16.037 0 0 0-6.947-12.606c-2.912-2.005-6.64-4.875-10.341-8.569-28.073-28.073-28.191-73.639 0-101.83l67.2-67.19c28.239-28.239 74.3-28.069 102.325.51 27.75 28.3 26.872 73.934-1.155 101.96l-13.087 13.087c-4.35 4.35-5.769 10.79-3.783 16.612 5.864 17.194 9.042 34.999 9.69 52.721.509 13.906 17.454 20.446 27.294 10.606l37.106-37.106c59.271-59.259 59.271-155.699.001-214.959z"/></svg></a>【caioj 1213 面积】</h4>
+<blockquote>
+<p>题目描述
+【题意】
+在一个平面坐标系上随意画一条有n个点的封闭折线（按画线的顺序给出点的坐标），保证封闭折线的任意两条边都不相交。最后要计算这条路线包围的面积。</p>
+<p><img src="https://gitee.com//riotian/blogimage/raw/master/img/20200923022411.png" alt=""></p>
+<p>【输入格式】
+第一行整数 n (3 &lt;= n &lt;= 1000),表示有n个点。
+下来n行，每行两个整数x（横坐标）和y（纵坐标），表示点坐标（-10000&lt;x,y&lt;=10000）。
+【输出格式】
+一行一个实数，即封闭折线所包围的面积（保留4位小数）。
+【样例1输入】
+4
+2 1
+5 1
+5 5
+2 5
+【样例1输出】
+12.0000
+【样例2输入】
+5
+2 1
+5 1
+3 2
+5 3
+2 3
+【样例2输出】
+4.0000</p>
+</blockquote>
+<p>这道题对比上一道题就简单很多了，这道题要用到叉积的第二种用法——计算面积！对于任意一个多边形，只要以一号点p1为参考点，枚举任意两个相邻的点pi和pi-1（i&gt;=3）,带符号计算p1和pi、pi-1所构成的三角形的面积（multi（pi，pi-1，p1）/2），累加取绝对值就是答案了。</p>
+<p>至于为什么要带符号运算，请看我用下面这幅图演示</p>
+<p><img src="https://gitee.com//riotian/blogimage/raw/master/img/20200923022427.png" alt=""></p>
+<p>对于这个多边形，首先先加上multi(p3,p2,p1)/2的值（由于p3在p2的逆时针方向，所以为正）即为加上了红色部分<img src="https://gitee.com//riotian/blogimage/raw/master/img/20200923022441.png" alt="">
+然后再加上multi(p4,p3,p1)/2的值（由于p4在p3的顺时针方向，所以为负）即为减去了绿色部分
+<img src="https://gitee.com//riotian/blogimage/raw/master/img/20200923022457.png" alt="">
+然后再加上multi(p5,p4,p1)/2的值（由于p5在p4的逆时针方向，所以为正）即为加上了黄色部分，就是答案了<img src="https://jvruo.com/usr/uploads/2018/01/2820856144.png" alt=""></p>
+<p>最后附上代码</p>
+<pre><code>#include&lt;cmath&gt;
+#include&lt;cstdio&gt;
+#include&lt;cstdlib&gt;
+#include&lt;cstring&gt;
+#include&lt;algorithm&gt;
+using namespace std;
+struct node
+{
+    double x,y;
+}a[11000];
+
+int i,j,k,m,n,o,p,js,jl;
+double ans;
+
+double multi(node p1,node p2, node p0)
+{
+    double x1=p1.x-p0.x;
+    double y1=p1.y-p0.y; 
+
+    double x2=p2.x-p0.x;
+    double y2=p2.y-p0.y;
+
+    return(x1*y2-x2*y1); 
+}
+
+int main()
+{
+    scanf(&quot;%d&quot;,&amp;n);
+    for(int i=1;i&lt;=n;i++)scanf(&quot;%lf%lf&quot;,&amp;a[i].x,&amp;a[i].y);
+
+    for(int i=2;i&lt;=n;i++)
+    {
+        ans=ans+multi(a[i],a[i-1],a[1]);
+    }
+    ans=ans/2.0;
+    if(ans&lt;0)ans=-ans;
+
+    printf(&quot;%0.4lf&quot;,ans);
+    return 0;
+}
+</code></pre><h2 id="结语"><a href="#结语" class="anchor-link"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" class="icon anchor-icon"><path d="M326.612 185.391c59.747 59.809 58.927 155.698.36 214.59-.11.12-.24.25-.36.37l-67.2 67.2c-59.27 59.27-155.699 59.262-214.96 0-59.27-59.26-59.27-155.7 0-214.96l37.106-37.106c9.84-9.84 26.786-3.3 27.294 10.606.648 17.722 3.826 35.527 9.69 52.721 1.986 5.822.567 12.262-3.783 16.612l-13.087 13.087c-28.026 28.026-28.905 73.66-1.155 101.96 28.024 28.579 74.086 28.749 102.325.51l67.2-67.19c28.191-28.191 28.073-73.757 0-101.83-3.701-3.694-7.429-6.564-10.341-8.569a16.037 16.037 0 0 1-6.947-12.606c-.396-10.567 3.348-21.456 11.698-29.806l21.054-21.055c5.521-5.521 14.182-6.199 20.584-1.731a152.482 152.482 0 0 1 20.522 17.197zM467.547 44.449c-59.261-59.262-155.69-59.27-214.96 0l-67.2 67.2c-.12.12-.25.25-.36.37-58.566 58.892-59.387 154.781.36 214.59a152.454 152.454 0 0 0 20.521 17.196c6.402 4.468 15.064 3.789 20.584-1.731l21.054-21.055c8.35-8.35 12.094-19.239 11.698-29.806a16.037 16.037 0 0 0-6.947-12.606c-2.912-2.005-6.64-4.875-10.341-8.569-28.073-28.073-28.191-73.639 0-101.83l67.2-67.19c28.239-28.239 74.3-28.069 102.325.51 27.75 28.3 26.872 73.934-1.155 101.96l-13.087 13.087c-4.35 4.35-5.769 10.79-3.783 16.612 5.864 17.194 9.042 34.999 9.69 52.721.509 13.906 17.454 20.446 27.294 10.606l37.106-37.106c59.271-59.259 59.271-155.699.001-214.959z"/></svg></a>结语</h2>
+<p>通过上面的学习和例题，是不是已经初步了解了计算几何的一点点精（皮）髓（毛）呢，希望你能有所收获，在计算几何的路上越走越远吧（蒟蒻的我可能是走不下去了）
+最后Orz各位大佬，写的不好请各位神犇提出建议和意见，感谢你的阅读:neckbeard:</p>
+
+            </div>
+
+            
+    
+    
+        <ul class="post-copyright">
+            <li class="copyright-item author"><span class="copyright-item-text">作者</span>：<a href="https://rivtian.github.io/" class="p-author h-card" target="_blank" rel="noopener">RioTian</a></li>
+            
+                
+                
+                
+                
+                <li class="copyright-item link"><span class="copyright-item-text">链接</span>：<a href="/tech/%E8%AE%A1%E7%AE%97%E5%87%A0%E4%BD%95-01%E5%8F%89%E7%A7%AF/" target="_blank" rel="noopener">https://rivtian.github.io/tech/计算几何-01叉积/</a></li>
+            
+            <li class="copyright-item license"><span class="copyright-item-text">许可</span>：<a href="https://creativecommons.org/licenses/by-nc-sa/4.0/deed.zh" target="_blank" rel="noopener">CC BY-NC-SA 4.0</a></li>
+            
+        </ul>
+    
+
+
+
+        </article>
+
+        
+
+        
+    <div class="updated-badge-container">
+        <span title="Updated @ 2020-10-23 15:04:34 UTC" style="cursor:help">
+
+<svg xmlns="http://www.w3.org/2000/svg" width="130" height="20" class="updated-badge"><linearGradient id="b" x2="0" y2="100%"><stop offset="0" stop-color="#bbb" stop-opacity=".1"/><stop offset="1" stop-opacity=".1"/></linearGradient><clipPath id="a"><rect width="130" height="20" rx="3" fill="#fff"/></clipPath><g clip-path="url(#a)"><path class="updated-badge-left" d="M0 0h55v20H0z"/><path class="updated-badge-right" d="M55 0h75v20H55z"/><path fill="url(#b)" d="M0 0h130v20H0z"/></g><g fill="#fff" text-anchor="middle" font-size="110"><text x="285" y="150" fill="#010101" fill-opacity=".3" textLength="450" transform="scale(.1)">updated</text><text x="285" y="140" textLength="450" transform="scale(.1)">updated</text><text x="915" y="150" fill="#010101" fill-opacity=".3" textLength="650" transform="scale(.1)">2020-10-23</text><text x="915" y="140" textLength="650" transform="scale(.1)">2020-10-23</text></g></svg>
+        </span></div>
+
+
+
+        
+
+
+        
+
+
+        
+    
+    
+        <div class="related-posts">
+            <h2 class="related-title">相关文章：<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" class="icon related-icon"><path d="M256 8C119 8 8 119 8 256s111 248 248 248 248-111 248-248S393 8 256 8zm144 276c0 6.6-5.4 12-12 12h-92v92c0 6.6-5.4 12-12 12h-56c-6.6 0-12-5.4-12-12v-92h-92c-6.6 0-12-5.4-12-12v-56c0-6.6 5.4-12 12-12h92v-92c0-6.6 5.4-12 12-12h56c6.6 0 12 5.4 12 12v92h92c6.6 0 12 5.4 12 12v56z"/></svg></h2>
+            <ul class="related-list">
+                
+                    <li class="related-item">
+                        <a href="/tech/%E8%AE%A1%E7%AE%97%E5%87%A0%E4%BD%95-05pick%E5%AE%9A%E7%90%86/" class="related-link">【计算几何 05】Pick定理</a>
+                    </li>
+                
+                    <li class="related-item">
+                        <a href="/tech/%E8%AE%A1%E7%AE%97%E5%87%A0%E4%BD%95-04%E8%B7%9D%E7%A6%BB%E8%AE%A1%E7%AE%97/" class="related-link">【计算几何 04】距离计算</a>
+                    </li>
+                
+                    <li class="related-item">
+                        <a href="/tech/%E8%AE%A1%E7%AE%97%E5%87%A0%E4%BD%95-03%E6%97%8B%E8%BD%AC%E5%8D%A1%E5%A3%B3%E7%AE%97%E6%B3%95/" class="related-link">【计算几何 03】旋转卡壳算法</a>
+                    </li>
+                
+                    <li class="related-item">
+                        <a href="/tech/%E8%AE%A1%E7%AE%97%E5%87%A0%E4%BD%95-02%E5%87%B8%E5%8C%85%E9%97%AE%E9%A2%98/" class="related-link">【计算几何 02】凸包问题</a>
+                    </li>
+                
+            </ul>
+        </div>
+    
+
+
+
+        
+    
+        <div class="post-tags">
+            
+                
+                
+                
+                
+                    
+                    <a href="/tags/%E8%AE%A1%E7%AE%97%E5%87%A0%E4%BD%95/" rel="tag" class="post-tags-link"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" class="icon tag-icon"><path d="M0 252.118V48C0 21.49 21.49 0 48 0h204.118a48 48 0 0 1 33.941 14.059l211.882 211.882c18.745 18.745 18.745 49.137 0 67.882L293.823 497.941c-18.745 18.745-49.137 18.745-67.882 0L14.059 286.059A48 48 0 0 1 0 252.118zM112 64c-26.51 0-48 21.49-48 48s21.49 48 48 48 48-21.49 48-48-21.49-48-48-48z"/></svg>计算几何</a>
+                
+            
+        </div>
+    
+
+
+
+        
+    <footer class="minimal-footer">
+        
+            <div class="post-tag"><a href="/tags/%E8%AE%A1%E7%AE%97%E5%87%A0%E4%BD%95/" rel="tag" class="post-tag-link">#计算几何</a></div>
+        
+        
+        
+            
+        
+    </footer>
+
+
+
+        
+
+
+        
+    
+        
+        
+    
+    
+    
+    
+        <ul class="post-nav">
+            
+                <li class="post-nav-prev">
+                    <a href="/tech/%E6%95%B0%E8%AE%BA6%E5%8D%A1%E7%89%B9%E5%85%B0%E6%95%B0/" rel="prev">&lt; 数论（6）：卡特兰数</a>
+                </li>
+            
+            
+                <li class="post-nav-next">
+                    <a href="/tech/web%E5%BC%80%E5%8F%91%E5%88%9D%E6%8E%A2%E4%BA%8Cjavascript-%E5%BF%AB%E9%80%9F%E5%85%A5%E9%97%A8/" rel="next">Web开发初探（二）：JavaScript 快速入门 &gt;</a>
+                </li>
+            
+        </ul>
+    
+
+
+
+        
+    
+
+        <div class="load-comments">
+            <div id="load-comments">加载评论</div>
+        </div>
+
+        
+
+        
+            <div id="vcomments"></div>
+        
+
+        
+
+    
+
+
+
+    </div>
+</main>
+
+
+            
+    <div id="back-to-top" class="back-to-top">
+        <a href="#"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512" class="icon arrow-up"><path d="M34.9 289.5l-22.2-22.2c-9.4-9.4-9.4-24.6 0-33.9L207 39c9.4-9.4 24.6-9.4 33.9 0l194.3 194.3c9.4 9.4 9.4 24.6 0 33.9L413 289.4c-9.5 9.5-25 9.3-34.3-.4L264 168.6V456c0 13.3-10.7 24-24 24h-32c-13.3 0-24-10.7-24-24V168.6L69.2 289.1c-9.3 9.8-24.8 10-34.3.4z"/></svg></a>
+    </div>
+
+
+            
+    <footer id="footer" class="footer">
+        <div class="footer-inner">
+            <div class="site-info">©&nbsp;2020–2020&nbsp;<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" class="icon footer-icon"><path d="M462.3 62.6C407.5 15.9 326 24.3 275.7 76.2L256 96.5l-19.7-20.3C186.1 24.3 104.5 15.9 49.7 62.6c-62.8 53.6-66.1 149.8-9.9 207.9l193.5 199.8c12.5 12.9 32.8 12.9 45.3 0l193.5-199.8c56.3-58.1 53-154.3-9.8-207.9z"/></svg>&nbsp;RioTian</div><div class="site-copyright"><a href="https://creativecommons.org/licenses/by-nc-sa/4.0/deed.zh" target="_blank" rel="noopener">CC BY-NC-SA 4.0</a></div>
+                <div class="busuanzi-site-uv-and-pv">
+                    <span id="busuanzi_container_site_uv">本站访客数&nbsp;<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512" class="icon busuanzi-site-uv"><path d="M224 256c70.7 0 128-57.3 128-128S294.7 0 224 0 96 57.3 96 128s57.3 128 128 128zm89.6 32h-16.7c-22.2 10.2-46.9 16-72.9 16s-50.6-5.8-72.9-16h-16.7C60.2 288 0 348.2 0 422.4V464c0 26.5 21.5 48 48 48h352c26.5 0 48-21.5 48-48v-41.6c0-74.2-60.2-134.4-134.4-134.4z"/></svg>&nbsp;<span id="busuanzi_value_site_uv"></span></span>&nbsp;|&nbsp;<span id="busuanzi_container_site_pv">本站访问量&nbsp;<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 576 512" class="icon busuanzi-site-pv"><path d="M288 144a110.94 110.94 0 0 0-31.24 5 55.4 55.4 0 0 1 7.24 27 56 56 0 0 1-56 56 55.4 55.4 0 0 1-27-7.24A111.71 111.71 0 1 0 288 144zm284.52 97.4C518.29 135.59 410.93 64 288 64S57.68 135.64 3.48 241.41a32.35 32.35 0 0 0 0 29.19C57.71 376.41 165.07 448 288 448s230.32-71.64 284.52-177.41a32.35 32.35 0 0 0 0-29.19zM288 400c-98.65 0-189.09-55-237.93-144C98.91 167 189.34 112 288 112s189.09 55 237.93 144C477.1 345 386.66 400 288 400z"/></svg>&nbsp;<span id="busuanzi_value_site_pv"></span></span>
+                </div>
+
+            
+
+
+            
+        </div>
+    </footer>
+
+
+        </div>
+        
+
+        
+
+
+    <script>
+    if (typeof MathJax === 'undefined') {
+        window.MathJax = {
+            loader: {
+                load: ['[tex]/mhchem']
+            },
+            
+            tex: {
+                inlineMath: {'[+]': [['$', '$']]},
+                tags: 'ams',
+                packages: {'[+]': ['mhchem']}
+            }
+        };
+        (function() {
+            var script = document.createElement('script');
+            script.src = 'https://cdn.jsdelivr.net/npm/mathjax@3.0.1/es5/tex-mml-chtml.js';
+            script.defer = true;
+            document.head.appendChild(script);
+        })();
+    } else {
+        MathJax.texReset();
+        MathJax.typeset();
+    }
+</script>
+
+
+
+
+    <script src="https://cdn.jsdelivr.net/npm/mermaid@8.5.2/dist/mermaid.min.js"></script>
+<script>
+    let mermaidConfig = {
+        startOnLoad: true,
+        flowchart: {
+            useMaxWidth: false,
+            htmlLabels: true
+        },
+        theme: 'default'
+    };
+    mermaid.initialize(mermaidConfig);
+</script>
+
+
+
+    
+
+        
+
+        
+            <script>
+    function loadComments() {
+        if (typeof Valine === 'undefined') {
+            var getScript = (options) => {
+                var script = document.createElement('script');
+                script.defer = true;
+                script.crossOrigin = 'anonymous';
+                Object.keys(options).forEach((key) => {
+                    script[key] = options[key];
+                });
+                document.body.appendChild(script);
+            };
+            getScript({
+                src: 'https://cdn.jsdelivr.net/npm/valine@1.4.14/dist/Valine.min.js',
+                onload: () => {
+                    newValine();
+                }
+            });
+        } else {
+            newValine();
+        }
+    }
+    function newValine() {
+        new Valine({
+            el: '#vcomments',
+            appId: '',
+            appKey: '',
+            placeholder: 'Just go go',
+            path: location.pathname,
+            avatar: 'mm',
+            meta: ["nick","mail","link"],
+            pageSize:  10 ,
+            lang: 'zh-cn',
+            visitor:  false ,
+            highlight:  true ,
+            avatarForce:  false ,
+            recordIP:  false ,
+            serverURLs: '',
+            emojiCDN: '',
+            emojiMaps: {},
+            enableQQ:  false ,
+            requiredFields: []
+        });
+    }
+</script>
+
+        
+
+        
+
+    
+
+
+
+    <script src="https://cdn.jsdelivr.net/npm/medium-zoom@latest/dist/medium-zoom.min.js"></script>
+
+<script>
+    mediumZoom(document.querySelectorAll('div.post-body img'), {
+        background: 'hsla(var(--color-bg-h), var(--color-bg-s), var(--color-bg-l), 0.95)'
+    })
+</script>
+
+
+
+
+    <script src="https://cdn.jsdelivr.net/npm/instant.page@3.0.0/instantpage.min.js" type="module" defer></script>
+
+
+
+
+    
+        <script async src="https://busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script>
+    
+
+
+
+
+    </body>
+</html>

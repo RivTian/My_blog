@@ -1,0 +1,1858 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+    <head prefix="og: http://ogp.me/ns# article: http://ogp.me/ns/article#">
+    <meta charset="UTF-8" />
+
+    <meta name="generator" content="Hugo 0.76.5" /><meta name="theme-color" content="#fff" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    
+    <meta name="format-detection" content="telephone=no, date=no, address=no, email=no" />
+    
+    <meta http-equiv="Cache-Control" content="no-transform" />
+    
+    <meta http-equiv="Cache-Control" content="no-siteapp" />
+
+    <title>C&#43;&#43;与正则表达式 | RioTianの小窝</title>
+
+    <link rel="stylesheet" href="/css/meme.min.e185c3d764df5994c336fa7f06fd6ecaa767d35fb10a8abf59498c340425c6cf.css" integrity="sha256-4YXD12TfWZTDNvp/Bv1uyqdn01&#43;xCoq/WUmMNAQlxs8=" />
+
+    
+    
+        <script src="/js/meme.min.bd823eaa12dcc965447db278a2abb9c7872a408efda36f18810f1401060b0ae1.js" integrity="sha256-vYI&#43;qhLcyWVEfbJ4oqu5x4cqQI79o28YgQ8UAQYLCuE="></script>
+
+    
+
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=EB&#43;Garamond:ital,wght@0,400;0,500;0,700;1,400;1,700&amp;family=Noto&#43;Serif&#43;SC:wght@400;500;700&amp;family=Source&#43;Code&#43;Pro:ital,wght@0,400;0,700;1,400;1,700&amp;display=swap" media="print" onload="this.media='all'" />
+        <noscript><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=EB&#43;Garamond:ital,wght@0,400;0,500;0,700;1,400;1,700&amp;family=Noto&#43;Serif&#43;SC:wght@400;500;700&amp;family=Source&#43;Code&#43;Pro:ital,wght@0,400;0,700;1,400;1,700&amp;display=swap" /></noscript>
+
+    <meta name="author" content="RioTian" /><meta name="description" content="什么是正则表达式? 正则表达式是一组由字母和符号组成的特殊文本, 当你想要判断许多字符串……" />
+
+    <link rel="shortcut icon" href="/favicon.ico" type="image/x-icon" />
+    <link rel="mask-icon" href="/icons/safari-pinned-tab.svg" color="#2a6df4" />
+    <link rel="apple-touch-icon" sizes="180x180" href="/icons/apple-touch-icon.png" />
+    <meta name="apple-mobile-web-app-capable" content="yes" />
+    <meta name="apple-mobile-web-app-title" content="RioTianの小窝" />
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
+    <meta name="mobile-web-app-capable" content="yes" />
+    <meta name="application-name" content="RioTianの小窝" />
+    <meta name="msapplication-starturl" content="../../" />
+    <meta name="msapplication-TileColor" content="#fff" />
+    <meta name="msapplication-TileImage" content="../../icons/mstile-150x150.png" />
+    <link rel="manifest" href="/manifest.json" />
+
+    
+    
+
+    
+    <link rel="canonical" href="https://rivtian.github.io/tech/c&#43;&#43;%E4%B8%8E%E6%AD%A3%E5%88%99%E8%A1%A8%E8%BE%BE%E5%BC%8F/" />
+    
+
+<script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "BlogPosting",
+        "datePublished": "2020-08-04T14:21:10+08:00",
+        "dateModified": "2020-10-23T15:04:34+00:00",
+        "url": "https://rivtian.github.io/tech/c++%E4%B8%8E%E6%AD%A3%E5%88%99%E8%A1%A8%E8%BE%BE%E5%BC%8F/",
+        "headline": "C++与正则表达式",
+        "description": "什么是正则表达式? 正则表达式是一组由字母和符号组成的特殊文本, 当你想要判断许多字符串……",
+        "inLanguage" : "zh-CN",
+        "articleSection": "tech",
+        "wordCount":  10229 ,
+        "image": ["https://gitee.com//riotian/blogimage/raw/master/img/20200723134118.png","https://gitee.com//riotian/blogimage/raw/master/img/20200723134932.png","https://gitee.com//riotian/blogimage/raw/master/img/20200723135814.png","https://gitee.com//riotian/blogimage/raw/master/img/20200723145244.png","https://gitee.com//riotian/blogimage/raw/master/img/20200723145422.png","https://gitee.com//riotian/blogimage/raw/master/img/20200723145429.png","https://gitee.com//riotian/blogimage/raw/master/img/20200723145446.png","https://gitee.com//riotian/blogimage/raw/master/img/20200723145520.png","https://gitee.com//riotian/blogimage/raw/master/img/20200723145517.png"],
+        "author": {
+            "@type": "Person",
+            "description": "Time will solve everthing",
+            "email": "kannajiahe@gmail.com",
+            "image": "https://rivtian.github.io/icons/Rio",
+            "url": "https://rivtian.github.io/",
+            "name": "RioTian"
+        },
+        "license": "[CC BY-NC-SA 4.0](https://creativecommons.org/licenses/by-nc-sa/4.0/deed.zh)",
+        "publisher": {
+            "@type": "Organization",
+            "name": "RioTianの小窝",
+            "logo": {
+                "@type": "ImageObject",
+                "url": "https://rivtian.github.io/icons/favicon.ico"
+            },
+            "url": "https://rivtian.github.io/"
+        },
+        "mainEntityOfPage": {
+            "@type": "WebSite",
+            "@id": "https://rivtian.github.io/"
+        }
+    }
+</script>
+
+    
+
+<meta name="twitter:card" content="summary_large_image" />
+
+
+<meta name="twitter:site" content="@shirahasaigao" />
+<meta name="twitter:creator" content="@shirahasaigao" />
+
+    
+
+
+
+<meta property="og:title" content="C&#43;&#43;与正则表达式" />
+<meta property="og:description" content="什么是正则表达式? 正则表达式是一组由字母和符号组成的特殊文本, 当你想要判断许多字符串……" />
+<meta property="og:url" content="https://rivtian.github.io/tech/c&#43;&#43;%E4%B8%8E%E6%AD%A3%E5%88%99%E8%A1%A8%E8%BE%BE%E5%BC%8F/" />
+<meta property="og:site_name" content="RioTianの小窝" />
+<meta property="og:locale" content="zh" /><meta property="og:image" content="https://gitee.com//riotian/blogimage/raw/master/img/20200723134118.png" />
+<meta property="og:type" content="article" />
+    <meta property="article:published_time" content="2020-08-04T14:21:10&#43;08:00" />
+    <meta property="article:modified_time" content="2020-10-23T15:04:34&#43;00:00" />
+    
+    <meta property="article:section" content="tech" />
+
+
+        <link rel="preconnect" href="https://www.google-analytics.com" crossorigin />
+
+        
+
+
+    
+    <script async src="https://www.googletagmanager.com/gtag/js?id="></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
+
+        gtag('config', '');
+    </script>
+
+
+
+
+    
+</head>
+
+    <body>
+        <div class="container">
+            
+    <header class="header">
+        
+            <div class="header-wrapper">
+                <div class="header-inner single">
+                    
+    <div class="site-brand">
+        
+            <a href="/" class="brand">RioTianの小窝</a>
+        
+    </div>
+
+                    <nav class="nav">
+    <ul class="menu" id="menu">
+        
+            
+        
+        
+        
+        
+            
+                <li class="menu-item"><a href="/life/"><span class="menu-item-name">生活</span></a>
+                </li>
+            
+        
+            
+                <li class="menu-item"><a href="/tech/"><span class="menu-item-name">技术</span></a>
+                </li>
+            
+        
+            
+                <li class="menu-item"><a href="/archives/"><span class="menu-item-name">归档</span></a>
+                </li>
+            
+        
+            
+                
+                    
+                    
+                        <li class="menu-item">
+                            <a id="theme-switcher" href="#"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" class="icon theme-icon-light"><path d="M193.2 104.5l48.8-97.5a18 18 0 0128 0l48.8 97.5 103.4 -34.5a18 18 0 0119.8 19.8l-34.5 103.4l97.5 48.8a18 18 0 010 28l-97.5 48.8 34.5 103.4a18 18 0 01-19.8 19.8l-103.4-34.5-48.8 97.5a18 18 0 01-28 0l-48.8-97.5l-103.4 34.5a18 18 0 01-19.8-19.8l34.5-103.4-97.5-48.8a18 18 0 010-28l97.5-48.8-34.5-103.4a18 18 0 0119.8-19.8zM256 128a128 128 0 10.01 0M256 160a96 96 0 10.01 0"/></svg><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" class="icon theme-icon-dark"><path d="M27 412a256 256 0 10154-407a11.5 11.5 0 00-5 20a201.5 201.5 0 01-134 374a11.5 11.5 0 00-15 13"/></svg></a>
+                        </li>
+                    
+                
+            
+        
+            
+                <li class="menu-item"><a href="/about/"><span class="menu-item-name">关于</span></a>
+                </li>
+            
+        
+            
+                
+            
+        
+    </ul>
+</nav>
+
+                    
+                </div>
+            </div>
+            
+    <input type="checkbox" id="nav-toggle" aria-hidden="true" />
+    <label for="nav-toggle" class="nav-toggle"></label>
+    <label for="nav-toggle" class="nav-curtain"></label>
+
+
+        
+    </header>
+
+
+
+
+            
+            
+    <main class="main single" id="main">
+    <div class="main-inner">
+
+        
+
+        <article class="content post h-entry" data-align="justify" data-type="tech" data-toc-num="true">
+
+            <h1 class="post-title p-name">C++与正则表达式</h1>
+
+            
+
+            
+                
+            
+
+            
+                
+
+<div class="post-meta">
+    
+        
+        <time datetime="2020-08-04T14:21:10&#43;08:00" class="post-meta-item published dt-published"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512" class="icon post-meta-icon"><path d="M148 288h-40c-6.6 0-12-5.4-12-12v-40c0-6.6 5.4-12 12-12h40c6.6 0 12 5.4 12 12v40c0 6.6-5.4 12-12 12zm108-12v-40c0-6.6-5.4-12-12-12h-40c-6.6 0-12 5.4-12 12v40c0 6.6 5.4 12 12 12h40c6.6 0 12-5.4 12-12zm96 0v-40c0-6.6-5.4-12-12-12h-40c-6.6 0-12 5.4-12 12v40c0 6.6 5.4 12 12 12h40c6.6 0 12-5.4 12-12zm-96 96v-40c0-6.6-5.4-12-12-12h-40c-6.6 0-12 5.4-12 12v40c0 6.6 5.4 12 12 12h40c6.6 0 12-5.4 12-12zm-96 0v-40c0-6.6-5.4-12-12-12h-40c-6.6 0-12 5.4-12 12v40c0 6.6 5.4 12 12 12h40c6.6 0 12-5.4 12-12zm192 0v-40c0-6.6-5.4-12-12-12h-40c-6.6 0-12 5.4-12 12v40c0 6.6 5.4 12 12 12h40c6.6 0 12-5.4 12-12zm96-260v352c0 26.5-21.5 48-48 48H48c-26.5 0-48-21.5-48-48V112c0-26.5 21.5-48 48-48h48V12c0-6.6 5.4-12 12-12h40c6.6 0 12 5.4 12 12v52h128V12c0-6.6 5.4-12 12-12h40c6.6 0 12 5.4 12 12v52h48c26.5 0 48 21.5 48 48zm-48 346V160H48v298c0 3.3 2.7 6 6 6h340c3.3 0 6-2.7 6-6z"/></svg>&nbsp;2020.8.4</time>
+    
+    
+        
+        <time datetime="2020-10-23T15:04:34&#43;00:00" class="post-meta-item modified dt-updated"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512" class="icon post-meta-icon"><path d="M400 64h-48V12c0-6.627-5.373-12-12-12h-40c-6.627 0-12 5.373-12 12v52H160V12c0-6.627-5.373-12-12-12h-40c-6.627 0-12 5.373-12 12v52H48C21.49 64 0 85.49 0 112v352c0 26.51 21.49 48 48 48h352c26.51 0 48-21.49 48-48V112c0-26.51-21.49-48-48-48zm-6 400H54a6 6 0 0 1-6-6V160h352v298a6 6 0 0 1-6 6zm-52.849-200.65L198.842 404.519c-4.705 4.667-12.303 4.637-16.971-.068l-75.091-75.699c-4.667-4.705-4.637-12.303.068-16.971l22.719-22.536c4.705-4.667 12.303-4.637 16.97.069l44.104 44.461 111.072-110.181c4.705-4.667 12.303-4.637 16.971.068l22.536 22.718c4.667 4.705 4.636 12.303-.069 16.97z"/></svg>&nbsp;2020.10.23</time>
+    
+    
+    
+        
+        
+        
+            
+        
+    
+    
+        
+        <span class="post-meta-item wordcount"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" class="icon post-meta-icon"><path d="M497.9 142.1l-46.1 46.1c-4.7 4.7-12.3 4.7-17 0l-111-111c-4.7-4.7-4.7-12.3 0-17l46.1-46.1c18.7-18.7 49.1-18.7 67.9 0l60.1 60.1c18.8 18.7 18.8 49.1 0 67.9zM284.2 99.8L21.6 362.4.4 483.9c-2.9 16.4 11.4 30.6 27.8 27.8l121.5-21.3 262.6-262.6c4.7-4.7 4.7-12.3 0-17l-111-111c-4.8-4.7-12.4-4.7-17.1 0zM124.1 339.9c-5.5-5.5-5.5-14.3 0-19.8l154-154c5.5-5.5 14.3-5.5 19.8 0s5.5 14.3 0 19.8l-154 154c-5.5 5.5-14.3 5.5-19.8 0zM88 424h48v36.3l-64.5 11.3-31.1-31.1L51.7 376H88v48z"/></svg>&nbsp;10229</span>
+    
+    
+        
+        <span class="post-meta-item reading-time"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" class="icon post-meta-icon"><path d="M256 8C119 8 8 119 8 256s111 248 248 248 248-111 248-248S393 8 256 8zm0 448c-110.5 0-200-89.5-200-200S145.5 56 256 56s200 89.5 200 200-89.5 200-200 200zm61.8-104.4l-84.9-61.7c-3.1-2.3-4.9-5.9-4.9-9.7V116c0-6.6 5.4-12 12-12h32c6.6 0 12 5.4 12 12v141.7l66.8 48.6c5.4 3.9 6.5 11.4 2.6 16.8L334.6 349c-3.9 5.3-11.4 6.5-16.8 2.6z"/></svg>&nbsp;21&nbsp;分钟</span>
+    
+    
+        
+            
+            <span class="post-meta-item busuanzi-page-pv" id="busuanzi_container_page_pv"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 576 512" class="icon post-meta-icon"><path d="M288 144a110.94 110.94 0 0 0-31.24 5 55.4 55.4 0 0 1 7.24 27 56 56 0 0 1-56 56 55.4 55.4 0 0 1-27-7.24A111.71 111.71 0 1 0 288 144zm284.52 97.4C518.29 135.59 410.93 64 288 64S57.68 135.64 3.48 241.41a32.35 32.35 0 0 0 0 29.19C57.71 376.41 165.07 448 288 448s230.32-71.64 284.52-177.41a32.35 32.35 0 0 0 0-29.19zM288 400c-98.65 0-189.09-55-237.93-144C98.91 167 189.34 112 288 112s189.09 55 237.93 144C477.1 345 386.66 400 288 400z"/></svg>&nbsp;<span id="busuanzi_value_page_pv"></span></span>
+        
+    
+    
+</div>
+
+            
+
+            <div class="post-body e-content">
+              <h1 id="什么是正则表达式"><a href="#什么是正则表达式" class="anchor-link"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" class="icon anchor-icon"><path d="M326.612 185.391c59.747 59.809 58.927 155.698.36 214.59-.11.12-.24.25-.36.37l-67.2 67.2c-59.27 59.27-155.699 59.262-214.96 0-59.27-59.26-59.27-155.7 0-214.96l37.106-37.106c9.84-9.84 26.786-3.3 27.294 10.606.648 17.722 3.826 35.527 9.69 52.721 1.986 5.822.567 12.262-3.783 16.612l-13.087 13.087c-28.026 28.026-28.905 73.66-1.155 101.96 28.024 28.579 74.086 28.749 102.325.51l67.2-67.19c28.191-28.191 28.073-73.757 0-101.83-3.701-3.694-7.429-6.564-10.341-8.569a16.037 16.037 0 0 1-6.947-12.606c-.396-10.567 3.348-21.456 11.698-29.806l21.054-21.055c5.521-5.521 14.182-6.199 20.584-1.731a152.482 152.482 0 0 1 20.522 17.197zM467.547 44.449c-59.261-59.262-155.69-59.27-214.96 0l-67.2 67.2c-.12.12-.25.25-.36.37-58.566 58.892-59.387 154.781.36 214.59a152.454 152.454 0 0 0 20.521 17.196c6.402 4.468 15.064 3.789 20.584-1.731l21.054-21.055c8.35-8.35 12.094-19.239 11.698-29.806a16.037 16.037 0 0 0-6.947-12.606c-2.912-2.005-6.64-4.875-10.341-8.569-28.073-28.073-28.191-73.639 0-101.83l67.2-67.19c28.239-28.239 74.3-28.069 102.325.51 27.75 28.3 26.872 73.934-1.155 101.96l-13.087 13.087c-4.35 4.35-5.769 10.79-3.783 16.612 5.864 17.194 9.042 34.999 9.69 52.721.509 13.906 17.454 20.446 27.294 10.606l37.106-37.106c59.271-59.259 59.271-155.699.001-214.959z"/></svg></a>什么是正则表达式?</h1>
+<p>正则表达式是一组由字母和符号组成的特殊文本, 当你想要判断许多字符串是否符合某个特定格式；当你想在一大段文本中查找出所有的日期和时间；当你想要修改大量日志中所有的时间格式，在这些情况下，正则表达式都能帮上忙。</p>
+<p>简单来说，正则表达式描述了一系列规则，通过这些规则，可以在字符串中找到相关的内容，规则使得搜索的能力更加强大。匹配的过程由正则表达式引擎完成。开发者通常不需要关心正则表达式引擎的实现细节，直接使用其提供的能力即可。</p>
+<p>大家可以先想象你正在写一个应用, 然后你想设定一个用户命名的规则, 让用户名包含字符,数字,下划线和连字符,以及限制字符的个数,好让名字看起来没那么丑. 我们使用以下正则表达式来验证一个用户名:</p>
+<p><img src="https://gitee.com//riotian/blogimage/raw/master/img/20200723134118.png" alt="learn-regex"></p>
+<p>以上的正则表达式可以接受 john_doe , john12_as . 但不匹配 Jo , 因为它包含了大写的字母而且太短了.</p>
+<p>本文将以C++语言为例，介绍其中的正则表达式相关知识。</p>
+</br>
+<hr>
+<p>**C++<strong>中正则表达式的API基本上都位于</strong>&lt;regex&gt;**头文件中。</p>
+<p>部分代码为了简化书写，都已经默认做了以下操作：</p>
+<div class="highlight"><div class="chroma">
+<div class="table-container"><table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span><span class="lnt">3
+</span><span class="lnt">4
+</span></code></pre></td>
+<td class="lntd">
+<pre class="chroma"><code class="language-cpp" data-lang="cpp"><span class="cp">#include</span> <span class="cpf">&lt;iostream&gt;</span><span class="cp">
+</span><span class="cp">#include</span> <span class="cpf">&lt;regex&gt;</span><span class="cp">
+</span><span class="cp"></span>
+<span class="k">using</span> <span class="k">namespace</span> <span class="n">std</span><span class="p">;</span>
+</code></pre></td></tr></table></div>
+</div>
+</div><h2 id="入门示例"><a href="#入门示例" class="anchor-link"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" class="icon anchor-icon"><path d="M326.612 185.391c59.747 59.809 58.927 155.698.36 214.59-.11.12-.24.25-.36.37l-67.2 67.2c-59.27 59.27-155.699 59.262-214.96 0-59.27-59.26-59.27-155.7 0-214.96l37.106-37.106c9.84-9.84 26.786-3.3 27.294 10.606.648 17.722 3.826 35.527 9.69 52.721 1.986 5.822.567 12.262-3.783 16.612l-13.087 13.087c-28.026 28.026-28.905 73.66-1.155 101.96 28.024 28.579 74.086 28.749 102.325.51l67.2-67.19c28.191-28.191 28.073-73.757 0-101.83-3.701-3.694-7.429-6.564-10.341-8.569a16.037 16.037 0 0 1-6.947-12.606c-.396-10.567 3.348-21.456 11.698-29.806l21.054-21.055c5.521-5.521 14.182-6.199 20.584-1.731a152.482 152.482 0 0 1 20.522 17.197zM467.547 44.449c-59.261-59.262-155.69-59.27-214.96 0l-67.2 67.2c-.12.12-.25.25-.36.37-58.566 58.892-59.387 154.781.36 214.59a152.454 152.454 0 0 0 20.521 17.196c6.402 4.468 15.064 3.789 20.584-1.731l21.054-21.055c8.35-8.35 12.094-19.239 11.698-29.806a16.037 16.037 0 0 0-6.947-12.606c-2.912-2.005-6.64-4.875-10.341-8.569-28.073-28.073-28.191-73.639 0-101.83l67.2-67.19c28.239-28.239 74.3-28.069 102.325.51 27.75 28.3 26.872 73.934-1.155 101.96l-13.087 13.087c-4.35 4.35-5.769 10.79-3.783 16.612 5.864 17.194 9.042 34.999 9.69 52.721.509 13.906 17.454 20.446 27.294 10.606l37.106-37.106c59.271-59.259 59.271-155.699.001-214.959z"/></svg></a>入门示例</h2>
+<p>为了使大家有一个直观的感受，文章的开头先通过一些入门示例给大家一个直观的感受。在这个基础之上，再详细讲解其中的细节。</p>
+<p>使用正则表达式的大致流程如下：首先你有一段需要处理的文本。这可能是一个字符串对象，也可能是一个文本文件，或者是一大堆日志。接下来你会有特定的目标，例如：找出文本中所有的时间和日期。这个时候你就需要根据可能的格式写出具体的正则表达式，例如，日期的格式是：2020-01-01，那么你的正则表达式可能是这样：<code>\d{4}-\d{2}-\d{2}</code>。（你现在不必纠结与这个正则表达式是什么意思，因为这是本文接下来要讲解的内容。）</p>
+<p>有了正则表达式之后，你需要将你的文本和正则表达式交给正则表达式引擎 – 由C++语言（或者其他语言）提供。引擎会在文本中搜索到匹配的结果。这个结果的格式可能是包含了多个组，例如：你可能需要分离出年份和月份。有了引擎返回的结果之后，你就可以进一步处理了。</p>
+<p><img src="https://gitee.com//riotian/blogimage/raw/master/img/20200723134932.png" alt="img"></p>
+<p>使用正则表达式的流程大体都是一致的，下面是最常见（其他形式大多为其变种）的三种使用方式。</p>
+<h2 id="匹配"><a href="#匹配" class="anchor-link"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" class="icon anchor-icon"><path d="M326.612 185.391c59.747 59.809 58.927 155.698.36 214.59-.11.12-.24.25-.36.37l-67.2 67.2c-59.27 59.27-155.699 59.262-214.96 0-59.27-59.26-59.27-155.7 0-214.96l37.106-37.106c9.84-9.84 26.786-3.3 27.294 10.606.648 17.722 3.826 35.527 9.69 52.721 1.986 5.822.567 12.262-3.783 16.612l-13.087 13.087c-28.026 28.026-28.905 73.66-1.155 101.96 28.024 28.579 74.086 28.749 102.325.51l67.2-67.19c28.191-28.191 28.073-73.757 0-101.83-3.701-3.694-7.429-6.564-10.341-8.569a16.037 16.037 0 0 1-6.947-12.606c-.396-10.567 3.348-21.456 11.698-29.806l21.054-21.055c5.521-5.521 14.182-6.199 20.584-1.731a152.482 152.482 0 0 1 20.522 17.197zM467.547 44.449c-59.261-59.262-155.69-59.27-214.96 0l-67.2 67.2c-.12.12-.25.25-.36.37-58.566 58.892-59.387 154.781.36 214.59a152.454 152.454 0 0 0 20.521 17.196c6.402 4.468 15.064 3.789 20.584-1.731l21.054-21.055c8.35-8.35 12.094-19.239 11.698-29.806a16.037 16.037 0 0 0-6.947-12.606c-2.912-2.005-6.64-4.875-10.341-8.569-28.073-28.073-28.191-73.639 0-101.83l67.2-67.19c28.239-28.239 74.3-28.069 102.325.51 27.75 28.3 26.872 73.934-1.155 101.96l-13.087 13.087c-4.35 4.35-5.769 10.79-3.783 16.612 5.864 17.194 9.042 34.999 9.69 52.721.509 13.906 17.454 20.446 27.294 10.606l37.106-37.106c59.271-59.259 59.271-155.699.001-214.959z"/></svg></a>匹配</h2>
+<p>匹配是判断给定的字符串是否符合某个正则表达式。例如：你想判断当前文本是否全部由数字构成。</p>
+<p>下面是一段代码示例：</p>
+<div class="highlight"><div class="chroma">
+<div class="table-container"><table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span><span class="lnt">3
+</span><span class="lnt">4
+</span><span class="lnt">5
+</span><span class="lnt">6
+</span><span class="lnt">7
+</span></code></pre></td>
+<td class="lntd">
+<pre class="chroma"><code class="language-cpp" data-lang="cpp"><span class="n">string</span> <span class="n">s1</span> <span class="o">=</span> <span class="s">&#34;ab123cdef&#34;</span><span class="p">;</span> <span class="c1">// ①
+</span><span class="c1"></span><span class="n">string</span> <span class="n">s2</span> <span class="o">=</span> <span class="s">&#34;123456789&#34;</span><span class="p">;</span> <span class="c1">// ②
+</span><span class="c1"></span>
+<span class="n">regex</span> <span class="nf">ex</span><span class="p">(</span><span class="s">&#34;</span><span class="se">\\</span><span class="s">d+&#34;</span><span class="p">);</span> <span class="c1">// ③
+</span><span class="c1"></span>
+<span class="n">cout</span> <span class="o">&lt;&lt;</span> <span class="n">s1</span> <span class="o">&lt;&lt;</span> <span class="s">&#34; is all digit: &#34;</span> <span class="o">&lt;&lt;</span> <span class="n">regex_match</span><span class="p">(</span><span class="n">s1</span><span class="p">,</span> <span class="n">ex</span><span class="p">)</span> <span class="o">&lt;&lt;</span> <span class="n">endl</span><span class="p">;</span> <span class="c1">// ④
+</span><span class="c1"></span><span class="n">cout</span> <span class="o">&lt;&lt;</span> <span class="n">s2</span> <span class="o">&lt;&lt;</span> <span class="s">&#34; is all digit: &#34;</span> <span class="o">&lt;&lt;</span> <span class="n">regex_match</span><span class="p">(</span><span class="n">s2</span><span class="p">,</span> <span class="n">ex</span><span class="p">)</span> <span class="o">&lt;&lt;</span> <span class="n">endl</span><span class="p">;</span> <span class="c1">// ⑤
+</span></code></pre></td></tr></table></div>
+</div>
+</div><p>在这段代码中：</p>
+<ol>
+<li>这是一个包含了数字和字母的字符串</li>
+<li>这是一个只包含了数字的字符串</li>
+<li>这是我们的正则表达式，它表示：有多个数字cpp</li>
+<li>通过<code>regex_match</code>判断第一个字符串是否匹配，这里将返回false</li>
+<li>通过<code>regex_match</code>判断第二个字符串是否匹配，这里将返回true</li>
+</ol>
+<p>这段代码输出如下：</p>
+<pre><code class="language-pascal" data-lang="pascal">ab123cdef is all digit: 0
+123456789 is all digit: 1
+</code></pre><blockquote>
+<p>请注意，正则表达式有它自身的语法。这与C++的语法是两回事。C++编译器只会检查C++代码的语法。因此，即便你的代码通过了C++编译器的语法检查，但在运行的时候，由于正则表达式的语义，还可能出现正则表达式的错误。正则表达式的错看起来类似这样：<code>terminating with uncaught exception of type std::__1::regex_error: The expression contained an invalid escaped character, or a trailing escape.</code>。</p>
+</blockquote>
+<h2 id="搜索"><a href="#搜索" class="anchor-link"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" class="icon anchor-icon"><path d="M326.612 185.391c59.747 59.809 58.927 155.698.36 214.59-.11.12-.24.25-.36.37l-67.2 67.2c-59.27 59.27-155.699 59.262-214.96 0-59.27-59.26-59.27-155.7 0-214.96l37.106-37.106c9.84-9.84 26.786-3.3 27.294 10.606.648 17.722 3.826 35.527 9.69 52.721 1.986 5.822.567 12.262-3.783 16.612l-13.087 13.087c-28.026 28.026-28.905 73.66-1.155 101.96 28.024 28.579 74.086 28.749 102.325.51l67.2-67.19c28.191-28.191 28.073-73.757 0-101.83-3.701-3.694-7.429-6.564-10.341-8.569a16.037 16.037 0 0 1-6.947-12.606c-.396-10.567 3.348-21.456 11.698-29.806l21.054-21.055c5.521-5.521 14.182-6.199 20.584-1.731a152.482 152.482 0 0 1 20.522 17.197zM467.547 44.449c-59.261-59.262-155.69-59.27-214.96 0l-67.2 67.2c-.12.12-.25.25-.36.37-58.566 58.892-59.387 154.781.36 214.59a152.454 152.454 0 0 0 20.521 17.196c6.402 4.468 15.064 3.789 20.584-1.731l21.054-21.055c8.35-8.35 12.094-19.239 11.698-29.806a16.037 16.037 0 0 0-6.947-12.606c-2.912-2.005-6.64-4.875-10.341-8.569-28.073-28.073-28.191-73.639 0-101.83l67.2-67.19c28.239-28.239 74.3-28.069 102.325.51 27.75 28.3 26.872 73.934-1.155 101.96l-13.087 13.087c-4.35 4.35-5.769 10.79-3.783 16.612 5.864 17.194 9.042 34.999 9.69 52.721.509 13.906 17.454 20.446 27.294 10.606l37.106-37.106c59.271-59.259 59.271-155.699.001-214.959z"/></svg></a>搜索</h2>
+<p>还有一些时候，我们要判断的并非是文本的全体是否匹配。而是在一大段文本中搜索匹配的目标。</p>
+<p>下面是一段代码示例，这段示例演示了在一个字符串中查找数字：</p>
+<div class="highlight"><div class="chroma">
+<div class="table-container"><table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span><span class="lnt">3
+</span><span class="lnt">4
+</span><span class="lnt">5
+</span><span class="lnt">6
+</span><span class="lnt">7
+</span></code></pre></td>
+<td class="lntd">
+<pre class="chroma"><code class="language-cpp" data-lang="cpp"><span class="n">string</span> <span class="n">s</span> <span class="o">=</span> <span class="s">&#34;ab123cdef&#34;</span><span class="p">;</span> <span class="c1">// ①
+</span><span class="c1"></span><span class="n">regex</span> <span class="nf">ex</span><span class="p">(</span><span class="s">&#34;</span><span class="se">\\</span><span class="s">d+&#34;</span><span class="p">);</span>    <span class="c1">// ②
+</span><span class="c1"></span>
+<span class="n">smatch</span> <span class="n">match</span><span class="p">;</span> <span class="c1">// ③
+</span><span class="c1"></span><span class="n">regex_search</span><span class="p">(</span><span class="n">s</span><span class="p">,</span> <span class="n">match</span><span class="p">,</span> <span class="n">ex</span><span class="p">);</span> <span class="c1">// ④
+</span><span class="c1"></span>
+<span class="n">cout</span> <span class="o">&lt;&lt;</span> <span class="n">s</span> <span class="o">&lt;&lt;</span> <span class="s">&#34; contains digit: &#34;</span> <span class="o">&lt;&lt;</span> <span class="n">match</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span> <span class="o">&lt;&lt;</span> <span class="n">endl</span><span class="p">;</span> <span class="c1">// ⑤
+</span></code></pre></td></tr></table></div>
+</div>
+</div><ol>
+<li>这是一个包含了数字和字母的字符串</li>
+<li>和前面一样的正则表达式</li>
+<li>通过<code>std::smatch</code>来保存匹配的结果。除了<code>std::smatch</code>，还有<code>std::cmatch</code>也很常用。前者是以<code>std::string</code>的形式返回结果，后者是以<code>const char*</code>的形式返回结果。</li>
+<li>通过<code>regex_search</code>函数搜索结果</li>
+<li>打印出匹配的结果</li>
+</ol>
+<p>这段代码输出如下：</p>
+<pre><code class="language-pascal" data-lang="pascal">ab123cdef contains digit: 123
+</code></pre><h2 id="替换"><a href="#替换" class="anchor-link"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" class="icon anchor-icon"><path d="M326.612 185.391c59.747 59.809 58.927 155.698.36 214.59-.11.12-.24.25-.36.37l-67.2 67.2c-59.27 59.27-155.699 59.262-214.96 0-59.27-59.26-59.27-155.7 0-214.96l37.106-37.106c9.84-9.84 26.786-3.3 27.294 10.606.648 17.722 3.826 35.527 9.69 52.721 1.986 5.822.567 12.262-3.783 16.612l-13.087 13.087c-28.026 28.026-28.905 73.66-1.155 101.96 28.024 28.579 74.086 28.749 102.325.51l67.2-67.19c28.191-28.191 28.073-73.757 0-101.83-3.701-3.694-7.429-6.564-10.341-8.569a16.037 16.037 0 0 1-6.947-12.606c-.396-10.567 3.348-21.456 11.698-29.806l21.054-21.055c5.521-5.521 14.182-6.199 20.584-1.731a152.482 152.482 0 0 1 20.522 17.197zM467.547 44.449c-59.261-59.262-155.69-59.27-214.96 0l-67.2 67.2c-.12.12-.25.25-.36.37-58.566 58.892-59.387 154.781.36 214.59a152.454 152.454 0 0 0 20.521 17.196c6.402 4.468 15.064 3.789 20.584-1.731l21.054-21.055c8.35-8.35 12.094-19.239 11.698-29.806a16.037 16.037 0 0 0-6.947-12.606c-2.912-2.005-6.64-4.875-10.341-8.569-28.073-28.073-28.191-73.639 0-101.83l67.2-67.19c28.239-28.239 74.3-28.069 102.325.51 27.75 28.3 26.872 73.934-1.155 101.96l-13.087 13.087c-4.35 4.35-5.769 10.79-3.783 16.612 5.864 17.194 9.042 34.999 9.69 52.721.509 13.906 17.454 20.446 27.294 10.606l37.106-37.106c59.271-59.259 59.271-155.699.001-214.959z"/></svg></a>替换</h2>
+<p>最后，使用正则表达式的还有一个常见功能是文本替换。很多的编辑器都有这样的功能。</p>
+<p>例如，下图是我的Visual Studio编译器，在搜索替换文本的时候，可以使用正则表达式，这时搜索的能力就更加强大了。“Find：”部分可以通过正则表达式来描述待替换的字符串，“Replace:”部分填写替换的字符串。</p>
+<p><img src="https://gitee.com//riotian/blogimage/raw/master/img/20200723135814.png" alt="image-20200723135813276"></p>
+<p>下面是在C++中使用正则表达式完成字符串替换的代码示例：</p>
+<div class="highlight"><div class="chroma">
+<div class="table-container"><table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span><span class="lnt">3
+</span><span class="lnt">4
+</span><span class="lnt">5
+</span><span class="lnt">6
+</span></code></pre></td>
+<td class="lntd">
+<pre class="chroma"><code class="language-cpp" data-lang="cpp"><span class="n">string</span> <span class="n">s</span> <span class="o">=</span> <span class="s">&#34;ab123cdef&#34;</span><span class="p">;</span> <span class="c1">// ①
+</span><span class="c1"></span><span class="n">regex</span> <span class="nf">ex</span><span class="p">(</span><span class="s">&#34;</span><span class="se">\\</span><span class="s">d+&#34;</span><span class="p">);</span>    <span class="c1">// ②
+</span><span class="c1"></span>
+<span class="n">string</span> <span class="n">r</span> <span class="o">=</span> <span class="n">regex_replace</span><span class="p">(</span><span class="n">s</span><span class="p">,</span> <span class="n">ex</span><span class="p">,</span> <span class="s">&#34;xxx&#34;</span><span class="p">);</span> <span class="c1">// ③
+</span><span class="c1"></span>
+<span class="n">cout</span> <span class="o">&lt;&lt;</span> <span class="n">r</span> <span class="o">&lt;&lt;</span> <span class="n">endl</span><span class="p">;</span> <span class="c1">// ④
+</span></code></pre></td></tr></table></div>
+</div>
+</div><ol>
+<li>仍然是前面这个字符串</li>
+<li>仍然是同样的正则表达式</li>
+<li>通过<code>regex_replace</code>完成替换</li>
+<li>通过<code>cout</code>输出结果</li>
+</ol>
+<p><strong>最终输出的字符串如下：</strong></p>
+<pre><code class="language-pascal" data-lang="pascal">abxxxcdef
+</code></pre><p>通过上面的三个示例我们看到，<code>regex_match</code>，<code>regex_search</code>和<code>regex_replace</code>三个函数是正则表达式的核心，它们会运行正则表达式引擎完成匹配，查找和替换任务。</p>
+<h1 id="正则表达式文法"><a href="#正则表达式文法" class="anchor-link"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" class="icon anchor-icon"><path d="M326.612 185.391c59.747 59.809 58.927 155.698.36 214.59-.11.12-.24.25-.36.37l-67.2 67.2c-59.27 59.27-155.699 59.262-214.96 0-59.27-59.26-59.27-155.7 0-214.96l37.106-37.106c9.84-9.84 26.786-3.3 27.294 10.606.648 17.722 3.826 35.527 9.69 52.721 1.986 5.822.567 12.262-3.783 16.612l-13.087 13.087c-28.026 28.026-28.905 73.66-1.155 101.96 28.024 28.579 74.086 28.749 102.325.51l67.2-67.19c28.191-28.191 28.073-73.757 0-101.83-3.701-3.694-7.429-6.564-10.341-8.569a16.037 16.037 0 0 1-6.947-12.606c-.396-10.567 3.348-21.456 11.698-29.806l21.054-21.055c5.521-5.521 14.182-6.199 20.584-1.731a152.482 152.482 0 0 1 20.522 17.197zM467.547 44.449c-59.261-59.262-155.69-59.27-214.96 0l-67.2 67.2c-.12.12-.25.25-.36.37-58.566 58.892-59.387 154.781.36 214.59a152.454 152.454 0 0 0 20.521 17.196c6.402 4.468 15.064 3.789 20.584-1.731l21.054-21.055c8.35-8.35 12.094-19.239 11.698-29.806a16.037 16.037 0 0 0-6.947-12.606c-2.912-2.005-6.64-4.875-10.341-8.569-28.073-28.073-28.191-73.639 0-101.83l67.2-67.19c28.239-28.239 74.3-28.069 102.325.51 27.75 28.3 26.872 73.934-1.155 101.96l-13.087 13.087c-4.35 4.35-5.769 10.79-3.783 16.612 5.864 17.194 9.042 34.999 9.69 52.721.509 13.906 17.454 20.446 27.294 10.606l37.106-37.106c59.271-59.259 59.271-155.699.001-214.959z"/></svg></a>正则表达式文法</h1>
+<h2 id="文法"><a href="#文法" class="anchor-link"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" class="icon anchor-icon"><path d="M326.612 185.391c59.747 59.809 58.927 155.698.36 214.59-.11.12-.24.25-.36.37l-67.2 67.2c-59.27 59.27-155.699 59.262-214.96 0-59.27-59.26-59.27-155.7 0-214.96l37.106-37.106c9.84-9.84 26.786-3.3 27.294 10.606.648 17.722 3.826 35.527 9.69 52.721 1.986 5.822.567 12.262-3.783 16.612l-13.087 13.087c-28.026 28.026-28.905 73.66-1.155 101.96 28.024 28.579 74.086 28.749 102.325.51l67.2-67.19c28.191-28.191 28.073-73.757 0-101.83-3.701-3.694-7.429-6.564-10.341-8.569a16.037 16.037 0 0 1-6.947-12.606c-.396-10.567 3.348-21.456 11.698-29.806l21.054-21.055c5.521-5.521 14.182-6.199 20.584-1.731a152.482 152.482 0 0 1 20.522 17.197zM467.547 44.449c-59.261-59.262-155.69-59.27-214.96 0l-67.2 67.2c-.12.12-.25.25-.36.37-58.566 58.892-59.387 154.781.36 214.59a152.454 152.454 0 0 0 20.521 17.196c6.402 4.468 15.064 3.789 20.584-1.731l21.054-21.055c8.35-8.35 12.094-19.239 11.698-29.806a16.037 16.037 0 0 0-6.947-12.606c-2.912-2.005-6.64-4.875-10.341-8.569-28.073-28.073-28.191-73.639 0-101.83l67.2-67.19c28.239-28.239 74.3-28.069 102.325.51 27.75 28.3 26.872 73.934-1.155 101.96l-13.087 13.087c-4.35 4.35-5.769 10.79-3.783 16.612 5.864 17.194 9.042 34.999 9.69 52.721.509 13.906 17.454 20.446 27.294 10.606l37.106-37.106c59.271-59.259 59.271-155.699.001-214.959z"/></svg></a>文法</h2>
+<p>**C++**中内置了多种正则表达式文法，在创建正则表达式的时候可以通过参数来选择。</p>
+<div class="table-container"><table>
+<thead>
+<tr>
+<th style="text-align:left">文法</th>
+<th style="text-align:left">说明</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:left">ECMAScript</td>
+<td style="text-align:left"><a href="https://en.cppreference.com/w/cpp/regex/ecmascript" target="_blank" rel="noopener">ECMAScript正则表达式语法</a>，默认选项</td>
+</tr>
+<tr>
+<td style="text-align:left">basic</td>
+<td style="text-align:left"><a href="http://pubs.opengroup.org/onlinepubs/9699919799/basedefs/V1_chap09.html#tag_09_03" target="_blank" rel="noopener">基础POSIX正则表达式语法</a></td>
+</tr>
+<tr>
+<td style="text-align:left">extended</td>
+<td style="text-align:left"><a href="http://pubs.opengroup.org/onlinepubs/9699919799/basedefs/V1_chap09.html#tag_09_04" target="_blank" rel="noopener">扩展POSIX正则表达式语法</a></td>
+</tr>
+<tr>
+<td style="text-align:left"><code>awk</code></td>
+<td style="text-align:left"><a href="http://pubs.opengroup.org/onlinepubs/9699919799/utilities/awk.html#tag_20_06_13_04" target="_blank" rel="noopener">awk工具的正则表达式语法</a></td>
+</tr>
+<tr>
+<td style="text-align:left"><code>grep</code></td>
+<td style="text-align:left"><a href="https://www.gnu.org/software/findutils/manual/html_node/find_html/grep-regular-expression-syntax.html" target="_blank" rel="noopener">grep工具的正则表达式语法</a></td>
+</tr>
+<tr>
+<td style="text-align:left"><code>egrep</code></td>
+<td style="text-align:left"><a href="https://www.gnu.org/software/findutils/manual/html_node/find_html/posix_002degrep-regular-expression-syntax.html#posix_002degrep-regular-expression-syntax" target="_blank" rel="noopener">grep工具的正则表达式语法</a></td>
+</tr>
+</tbody>
+</table></div>
+<p>不同的文法在表达上有一些不同，如果你原先已经很熟悉<code>awk</code>或者<code>egrep</code>文法的正则表达式，你可以直接使用它们。对于其他人来说，我们直接使用默认的ECMAScript文法即可（<code>Javascript</code>的正则表达式也是使用ECMAScript文法）。</p>
+<blockquote>
+<p>grep的全称是Global Regular Expression Print。这个名字是在提示我们，它本身与正则表达式的历史有着特定的联系。</p>
+</blockquote>
+<p>C++ 中的 ECMAScript 正则表达式文法是 <a href="http://ecma-international.org/ecma-262/5.1/#sec-15.10" target="_blank" rel="noopener">ECMA-262 文法</a>，你可以点击链接查看详细内容。</p>
+<p>下文中，将会 <strong>引用 <a href="https://paul.pub/" target="_blank" rel="noopener">保罗的酒吧</a>：关于<a href="">正则表达式</a>的解释</strong>。</p>
+<h2 id="raw-string-literal-原始字符串"><a href="#raw-string-literal-原始字符串" class="anchor-link"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" class="icon anchor-icon"><path d="M326.612 185.391c59.747 59.809 58.927 155.698.36 214.59-.11.12-.24.25-.36.37l-67.2 67.2c-59.27 59.27-155.699 59.262-214.96 0-59.27-59.26-59.27-155.7 0-214.96l37.106-37.106c9.84-9.84 26.786-3.3 27.294 10.606.648 17.722 3.826 35.527 9.69 52.721 1.986 5.822.567 12.262-3.783 16.612l-13.087 13.087c-28.026 28.026-28.905 73.66-1.155 101.96 28.024 28.579 74.086 28.749 102.325.51l67.2-67.19c28.191-28.191 28.073-73.757 0-101.83-3.701-3.694-7.429-6.564-10.341-8.569a16.037 16.037 0 0 1-6.947-12.606c-.396-10.567 3.348-21.456 11.698-29.806l21.054-21.055c5.521-5.521 14.182-6.199 20.584-1.731a152.482 152.482 0 0 1 20.522 17.197zM467.547 44.449c-59.261-59.262-155.69-59.27-214.96 0l-67.2 67.2c-.12.12-.25.25-.36.37-58.566 58.892-59.387 154.781.36 214.59a152.454 152.454 0 0 0 20.521 17.196c6.402 4.468 15.064 3.789 20.584-1.731l21.054-21.055c8.35-8.35 12.094-19.239 11.698-29.806a16.037 16.037 0 0 0-6.947-12.606c-2.912-2.005-6.64-4.875-10.341-8.569-28.073-28.073-28.191-73.639 0-101.83l67.2-67.19c28.239-28.239 74.3-28.069 102.325.51 27.75 28.3 26.872 73.934-1.155 101.96l-13.087 13.087c-4.35 4.35-5.769 10.79-3.783 16.612 5.864 17.194 9.042 34.999 9.69 52.721.509 13.906 17.454 20.446 27.294 10.606l37.106-37.106c59.271-59.259 59.271-155.699.001-214.959z"/></svg></a>Raw string literal (原始字符串)</h2>
+<p>在代码中写字符串有时候是比较麻烦的，因为很多字符需要通过反斜杠转义。当有多个反斜杠连在一起时，就很容易写错或者理解错了。</p>
+<p>当通过字符串来写正则表达式时，这个问题就更严重了。因为正则表达式本身也有一些字符需要转义。例如，对于这样一个字符串 <code>&quot;('(?:[^\\\\']|\\\\.)*'|\&quot;(?:[^\\\\\&quot;]|\\\\.)*\&quot;)|&quot;</code> 大部分人恐怕很难一眼看出其含义了。</p>
+<p>在正则表达式很复杂的时候，推荐大家使用 <code>Raw string literal</code> 来表达。这种表达式是告诉编译器：这里的内容是<strong>纯字符串</strong>，因此不再需要增加反斜杠来转义特殊字符。</p>
+<p><strong>Raw string literal</strong> 的格式如下：</p>
+<div class="highlight"><div class="chroma">
+<div class="table-container"><table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><code><span class="lnt">1
+</span></code></pre></td>
+<td class="lntd">
+<pre class="chroma"><code class="language-cpp" data-lang="cpp"><span class="n">R</span><span class="s">&#34;delimiter(raw_characters)delimiter&#34;</span>
+</code></pre></td></tr></table></div>
+</div>
+</div><p>这其中：</p>
+<ul>
+<li>delimiter是可选的分隔符，通常不用写</li>
+<li>raw_characters是具体的字符串</li>
+</ul>
+<p>也就是说，<code>R&quot;(content)&quot;</code>中的<code>content</code>是你需要的字符串本身。</p>
+<p>下面是一个代码示例：</p>
+<div class="highlight"><div class="chroma">
+<div class="table-container"><table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span></code></pre></td>
+<td class="lntd">
+<pre class="chroma"><code class="language-cpp" data-lang="cpp"><span class="n">string</span> <span class="n">s</span> <span class="o">=</span> <span class="n">R</span><span class="s">&#34;(&#34;</span><span class="err">\</span><span class="n">w</span><span class="err">\\</span><span class="n">w</span><span class="err">\\\</span><span class="n">w</span><span class="p">)</span><span class="s">&#34;;</span>
+<span class="n">cout</span> <span class="o">&lt;&lt;</span> <span class="n">s</span> <span class="o">&lt;&lt;</span> <span class="n">endl</span><span class="p">;</span>
+</code></pre></td></tr></table></div>
+</div>
+</div><p>它将输出：</p>
+<div class="highlight"><div class="chroma">
+<div class="table-container"><table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><code><span class="lnt">1
+</span></code></pre></td>
+<td class="lntd">
+<pre class="chroma"><code class="language-cpp" data-lang="cpp"><span class="s">&#34;\w</span><span class="se">\\</span><span class="s">w</span><span class="se">\\</span><span class="s">\w</span>
+</code></pre></td></tr></table></div>
+</div>
+</div><p>可以看到，这里的双引号和反斜杠不会被解释成转义字符，而是当成字符串内容本身，因此会原样输出。这样就减少了转义字符的复杂度，于是更容易理解了。</p>
+<h2 id="特殊字符"><a href="#特殊字符" class="anchor-link"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" class="icon anchor-icon"><path d="M326.612 185.391c59.747 59.809 58.927 155.698.36 214.59-.11.12-.24.25-.36.37l-67.2 67.2c-59.27 59.27-155.699 59.262-214.96 0-59.27-59.26-59.27-155.7 0-214.96l37.106-37.106c9.84-9.84 26.786-3.3 27.294 10.606.648 17.722 3.826 35.527 9.69 52.721 1.986 5.822.567 12.262-3.783 16.612l-13.087 13.087c-28.026 28.026-28.905 73.66-1.155 101.96 28.024 28.579 74.086 28.749 102.325.51l67.2-67.19c28.191-28.191 28.073-73.757 0-101.83-3.701-3.694-7.429-6.564-10.341-8.569a16.037 16.037 0 0 1-6.947-12.606c-.396-10.567 3.348-21.456 11.698-29.806l21.054-21.055c5.521-5.521 14.182-6.199 20.584-1.731a152.482 152.482 0 0 1 20.522 17.197zM467.547 44.449c-59.261-59.262-155.69-59.27-214.96 0l-67.2 67.2c-.12.12-.25.25-.36.37-58.566 58.892-59.387 154.781.36 214.59a152.454 152.454 0 0 0 20.521 17.196c6.402 4.468 15.064 3.789 20.584-1.731l21.054-21.055c8.35-8.35 12.094-19.239 11.698-29.806a16.037 16.037 0 0 0-6.947-12.606c-2.912-2.005-6.64-4.875-10.341-8.569-28.073-28.073-28.191-73.639 0-101.83l67.2-67.19c28.239-28.239 74.3-28.069 102.325.51 27.75 28.3 26.872 73.934-1.155 101.96l-13.087 13.087c-4.35 4.35-5.769 10.79-3.783 16.612 5.864 17.194 9.042 34.999 9.69 52.721.509 13.906 17.454 20.446 27.294 10.606l37.106-37.106c59.271-59.259 59.271-155.699.001-214.959z"/></svg></a>特殊字符</h2>
+<p>正则表达式本身定义了一些特殊的字符，这些字符有着特殊的含义。它们如下表所示。</p>
+<div class="table-container"><table>
+<thead>
+<tr>
+<th style="text-align:left">字符</th>
+<th style="text-align:left">说明</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:left">.</td>
+<td style="text-align:left">匹配任意字符</td>
+</tr>
+<tr>
+<td style="text-align:left">[</td>
+<td style="text-align:left">字符类的开始</td>
+</tr>
+<tr>
+<td style="text-align:left">]</td>
+<td style="text-align:left">字符类的结束</td>
+</tr>
+<tr>
+<td style="text-align:left">{</td>
+<td style="text-align:left">量词重复数开始</td>
+</tr>
+<tr>
+<td style="text-align:left">}</td>
+<td style="text-align:left">量词重复数结束</td>
+</tr>
+<tr>
+<td style="text-align:left">(</td>
+<td style="text-align:left">分组开始</td>
+</tr>
+<tr>
+<td style="text-align:left">)</td>
+<td style="text-align:left">分组结束</td>
+</tr>
+<tr>
+<td style="text-align:left">\</td>
+<td style="text-align:left">转义字符</td>
+</tr>
+<tr>
+<td style="text-align:left">\</td>
+<td style="text-align:left">转义字符自身</td>
+</tr>
+<tr>
+<td style="text-align:left">*</td>
+<td style="text-align:left">量词，0个或者多个</td>
+</tr>
+<tr>
+<td style="text-align:left">+</td>
+<td style="text-align:left">量词，1个或者多个</td>
+</tr>
+<tr>
+<td style="text-align:left">?</td>
+<td style="text-align:left">量词，0个或者1个</td>
+</tr>
+<tr>
+<td style="text-align:left">|</td>
+<td style="text-align:left">或</td>
+</tr>
+<tr>
+<td style="text-align:left">^</td>
+<td style="text-align:left">行开始；否定</td>
+</tr>
+<tr>
+<td style="text-align:left">$</td>
+<td style="text-align:left">行结束</td>
+</tr>
+<tr>
+<td style="text-align:left">\n</td>
+<td style="text-align:left">换行</td>
+</tr>
+<tr>
+<td style="text-align:left">\t</td>
+<td style="text-align:left">Tab符</td>
+</tr>
+<tr>
+<td style="text-align:left">\xhh</td>
+<td style="text-align:left">hh表示两位十六进展表示的Unicode字符</td>
+</tr>
+<tr>
+<td style="text-align:left">\xhhhh</td>
+<td style="text-align:left">hhhh表示四位十六进制表示的Unicode字符串</td>
+</tr>
+</tbody>
+</table></div>
+<p>这些字符并不少，刚开始接触可能记不住，但随着下文的讲解，相信你会逐渐熟悉它们。</p>
+<h2 id="字符类"><a href="#字符类" class="anchor-link"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" class="icon anchor-icon"><path d="M326.612 185.391c59.747 59.809 58.927 155.698.36 214.59-.11.12-.24.25-.36.37l-67.2 67.2c-59.27 59.27-155.699 59.262-214.96 0-59.27-59.26-59.27-155.7 0-214.96l37.106-37.106c9.84-9.84 26.786-3.3 27.294 10.606.648 17.722 3.826 35.527 9.69 52.721 1.986 5.822.567 12.262-3.783 16.612l-13.087 13.087c-28.026 28.026-28.905 73.66-1.155 101.96 28.024 28.579 74.086 28.749 102.325.51l67.2-67.19c28.191-28.191 28.073-73.757 0-101.83-3.701-3.694-7.429-6.564-10.341-8.569a16.037 16.037 0 0 1-6.947-12.606c-.396-10.567 3.348-21.456 11.698-29.806l21.054-21.055c5.521-5.521 14.182-6.199 20.584-1.731a152.482 152.482 0 0 1 20.522 17.197zM467.547 44.449c-59.261-59.262-155.69-59.27-214.96 0l-67.2 67.2c-.12.12-.25.25-.36.37-58.566 58.892-59.387 154.781.36 214.59a152.454 152.454 0 0 0 20.521 17.196c6.402 4.468 15.064 3.789 20.584-1.731l21.054-21.055c8.35-8.35 12.094-19.239 11.698-29.806a16.037 16.037 0 0 0-6.947-12.606c-2.912-2.005-6.64-4.875-10.341-8.569-28.073-28.073-28.191-73.639 0-101.83l67.2-67.19c28.239-28.239 74.3-28.069 102.325.51 27.75 28.3 26.872 73.934-1.155 101.96l-13.087 13.087c-4.35 4.35-5.769 10.79-3.783 16.612 5.864 17.194 9.042 34.999 9.69 52.721.509 13.906 17.454 20.446 27.294 10.606l37.106-37.106c59.271-59.259 59.271-155.699.001-214.959z"/></svg></a>字符类</h2>
+<p>字符类，顾名思义：是对字符的分类。</p>
+<p>例如：1234567890这些都属于数字字符类。除此之外，还有其他的分类，它们如下表所示：</p>
+<div class="table-container"><table>
+<thead>
+<tr>
+<th style="text-align:left">字符类</th>
+<th style="text-align:left">简写</th>
+<th style="text-align:left">说明</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:left">[[:alnum:]]</td>
+<td style="text-align:left"></td>
+<td style="text-align:left">字母和数字</td>
+</tr>
+<tr>
+<td style="text-align:left">[_[:alnum:]]</td>
+<td style="text-align:left">\w</td>
+<td style="text-align:left">字母，数字以及下划线</td>
+</tr>
+<tr>
+<td style="text-align:left">[^_[:alnum:]]</td>
+<td style="text-align:left">\W</td>
+<td style="text-align:left">非字母，数字以及下划线</td>
+</tr>
+<tr>
+<td style="text-align:left">[[:digit:]]</td>
+<td style="text-align:left">\d</td>
+<td style="text-align:left">数字</td>
+</tr>
+<tr>
+<td style="text-align:left">[^[:digit:]]</td>
+<td style="text-align:left">\D</td>
+<td style="text-align:left">非数字</td>
+</tr>
+<tr>
+<td style="text-align:left">[[:space:]]</td>
+<td style="text-align:left">\s</td>
+<td style="text-align:left">空白字符</td>
+</tr>
+<tr>
+<td style="text-align:left">[^[:space:]]</td>
+<td style="text-align:left">\S</td>
+<td style="text-align:left">非空白字符</td>
+</tr>
+<tr>
+<td style="text-align:left">[[:lower:]]</td>
+<td style="text-align:left"></td>
+<td style="text-align:left">小写字母</td>
+</tr>
+<tr>
+<td style="text-align:left">[[:upper:]]</td>
+<td style="text-align:left"></td>
+<td style="text-align:left">大写字母</td>
+</tr>
+<tr>
+<td style="text-align:left">[[:alpha:]]</td>
+<td style="text-align:left"></td>
+<td style="text-align:left">任意字母</td>
+</tr>
+<tr>
+<td style="text-align:left">[[:blank:]]</td>
+<td style="text-align:left"></td>
+<td style="text-align:left">非换行符的空白字符</td>
+</tr>
+<tr>
+<td style="text-align:left">[[:cntrl:]]</td>
+<td style="text-align:left"></td>
+<td style="text-align:left">控制字符</td>
+</tr>
+<tr>
+<td style="text-align:left">[[:graph:]]</td>
+<td style="text-align:left"></td>
+<td style="text-align:left">图形字符</td>
+</tr>
+<tr>
+<td style="text-align:left">[[:print:]]</td>
+<td style="text-align:left"></td>
+<td style="text-align:left">可打印字符</td>
+</tr>
+<tr>
+<td style="text-align:left">[[:punct:]]</td>
+<td style="text-align:left"></td>
+<td style="text-align:left">标点字符</td>
+</tr>
+<tr>
+<td style="text-align:left">[[:xdigit:]]</td>
+<td style="text-align:left"></td>
+<td style="text-align:left">十六进制的数字字符</td>
+</tr>
+</tbody>
+</table></div>
+<p>这里我们可以看到：</p>
+<ul>
+<li>字符类通过<code>[]</code>作为标识，因此这两个字符是正则表达式的中的特殊字符。如果是想使用这两个字符本身，需要对它们进行转义。</li>
+<li>在<code>[]</code>内部，通过<code>[:xxx:]</code>来描述字符类的名称。</li>
+<li><code>[]</code>中可以通过<code>^</code>表示否定，即：字符类的反面。</li>
+<li>字母，数字和空白字符由于这些字符类非常常用，因此它们有简写的方法。简写使得正则表达式更加简洁，但表达的含义是一样的。</li>
+</ul>
+<p>接下来我们看一个代码示例：</p>
+<div class="highlight"><div class="chroma">
+<div class="table-container"><table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><code><span class="lnt"> 1
+</span><span class="lnt"> 2
+</span><span class="lnt"> 3
+</span><span class="lnt"> 4
+</span><span class="lnt"> 5
+</span><span class="lnt"> 6
+</span><span class="lnt"> 7
+</span><span class="lnt"> 8
+</span><span class="lnt"> 9
+</span><span class="lnt">10
+</span><span class="lnt">11
+</span><span class="lnt">12
+</span><span class="lnt">13
+</span><span class="lnt">14
+</span><span class="lnt">15
+</span><span class="lnt">16
+</span><span class="lnt">17
+</span><span class="lnt">18
+</span><span class="lnt">19
+</span><span class="lnt">20
+</span><span class="lnt">21
+</span><span class="lnt">22
+</span><span class="lnt">23
+</span><span class="lnt">24
+</span><span class="lnt">25
+</span><span class="lnt">26
+</span><span class="lnt">27
+</span><span class="lnt">28
+</span><span class="lnt">29
+</span><span class="lnt">30
+</span><span class="lnt">31
+</span><span class="lnt">32
+</span><span class="lnt">33
+</span><span class="lnt">34
+</span><span class="lnt">35
+</span><span class="lnt">36
+</span><span class="lnt">37
+</span><span class="lnt">38
+</span><span class="lnt">39
+</span><span class="lnt">40
+</span><span class="lnt">41
+</span><span class="lnt">42
+</span><span class="lnt">43
+</span><span class="lnt">44
+</span></code></pre></td>
+<td class="lntd">
+<pre class="chroma"><code class="language-cpp" data-lang="cpp"><span class="cp">#include</span> <span class="cpf">&lt;iostream&gt;</span><span class="cp">
+</span><span class="cp">#include</span> <span class="cpf">&lt;regex&gt;</span><span class="cp">
+</span><span class="cp"></span>
+<span class="k">using</span> <span class="k">namespace</span> <span class="n">std</span><span class="p">;</span>
+
+<span class="k">static</span> <span class="kt">void</span> <span class="nf">search_string</span><span class="p">(</span><span class="k">const</span> <span class="n">string</span><span class="o">&amp;</span> <span class="n">str</span><span class="p">,</span> <span class="k">const</span> <span class="n">regex</span><span class="o">&amp;</span> <span class="n">reg_ex</span><span class="p">)</span> <span class="p">{</span> <span class="c1">// ①
+</span><span class="c1"></span>    <span class="k">for</span> <span class="p">(</span><span class="n">string</span><span class="o">::</span><span class="n">size_type</span> <span class="n">i</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span> <span class="n">i</span> <span class="o">&lt;</span> <span class="n">str</span><span class="p">.</span><span class="n">size</span><span class="p">()</span> <span class="o">-</span> <span class="mi">1</span><span class="p">;</span> <span class="n">i</span><span class="o">++</span><span class="p">)</span> <span class="p">{</span>
+        <span class="k">auto</span> <span class="n">substr</span> <span class="o">=</span> <span class="n">str</span><span class="p">.</span><span class="n">substr</span><span class="p">(</span><span class="n">i</span><span class="p">,</span> <span class="mi">1</span><span class="p">);</span>
+        <span class="k">if</span> <span class="p">(</span><span class="n">regex_match</span><span class="p">(</span><span class="n">substr</span><span class="p">,</span> <span class="n">reg_ex</span><span class="p">))</span> <span class="p">{</span>
+            <span class="n">cout</span> <span class="o">&lt;&lt;</span> <span class="n">substr</span><span class="p">;</span>
+        <span class="p">}</span>
+    <span class="p">}</span>
+<span class="p">}</span>
+
+<span class="k">static</span> <span class="kt">void</span> <span class="nf">search_by_regex</span><span class="p">(</span><span class="k">const</span> <span class="kt">char</span><span class="o">*</span> <span class="n">regex_s</span><span class="p">,</span>
+    <span class="k">const</span> <span class="n">string</span><span class="o">&amp;</span> <span class="n">s</span><span class="p">)</span> <span class="p">{</span> <span class="c1">// ②
+</span><span class="c1"></span>    <span class="n">regex</span> <span class="n">reg_ex</span><span class="p">(</span><span class="n">regex_s</span><span class="p">);</span>
+    <span class="n">cout</span><span class="p">.</span><span class="n">width</span><span class="p">(</span><span class="mi">12</span><span class="p">);</span> <span class="c1">// ③
+</span><span class="c1"></span>    <span class="n">cout</span> <span class="o">&lt;&lt;</span> <span class="n">regex_s</span> <span class="o">&lt;&lt;</span> <span class="s">&#34;: </span><span class="se">\&#34;</span><span class="s">&#34;</span><span class="p">;</span> <span class="c1">// ④
+</span><span class="c1"></span>    <span class="n">search_string</span><span class="p">(</span><span class="n">s</span><span class="p">,</span> <span class="n">reg_ex</span><span class="p">);</span>  <span class="c1">// ⑤
+</span><span class="c1"></span>    <span class="n">cout</span> <span class="o">&lt;&lt;</span> <span class="s">&#34;</span><span class="se">\&#34;</span><span class="s">&#34;</span> <span class="o">&lt;&lt;</span> <span class="n">endl</span><span class="p">;</span>
+<span class="p">}</span>
+
+<span class="kt">int</span> <span class="nf">main</span><span class="p">()</span> <span class="p">{</span>
+    <span class="n">string</span> <span class="n">s</span><span class="p">(</span><span class="s">&#34;_AaBbCcDdEeFfGg12345 </span><span class="se">\t\n</span><span class="s">!@#$%&#34;</span><span class="p">);</span> <span class="c1">// ⑥
+</span><span class="c1"></span>
+    <span class="n">search_by_regex</span><span class="p">(</span><span class="s">&#34;[[:alnum:]]&#34;</span><span class="p">,</span> <span class="n">s</span><span class="p">);</span>          <span class="c1">// ⑦
+</span><span class="c1"></span>    <span class="n">search_by_regex</span><span class="p">(</span><span class="s">&#34;</span><span class="se">\\</span><span class="s">w&#34;</span><span class="p">,</span> <span class="n">s</span><span class="p">);</span>                  <span class="c1">// ⑧
+</span><span class="c1"></span>    <span class="n">search_by_regex</span><span class="p">(</span><span class="n">R</span><span class="s">&#34;(\W)&#34;</span><span class="p">,</span> <span class="n">s</span><span class="p">);</span>                <span class="c1">// ⑨
+</span><span class="c1"></span>    <span class="n">search_by_regex</span><span class="p">(</span><span class="s">&#34;[[:digit:]]&#34;</span><span class="p">,</span> <span class="n">s</span><span class="p">);</span>          <span class="c1">// ⑩
+</span><span class="c1"></span>    <span class="n">search_by_regex</span><span class="p">(</span><span class="s">&#34;[^[:digit:]]&#34;</span><span class="p">,</span> <span class="n">s</span><span class="p">);</span>         <span class="c1">// ⑪
+</span><span class="c1"></span>    <span class="n">search_by_regex</span><span class="p">(</span><span class="s">&#34;[[:space:]]&#34;</span><span class="p">,</span> <span class="n">s</span><span class="p">);</span>          <span class="c1">// ⑫
+</span><span class="c1"></span>    <span class="n">search_by_regex</span><span class="p">(</span><span class="s">&#34;</span><span class="se">\\</span><span class="s">S&#34;</span><span class="p">,</span> <span class="n">s</span><span class="p">);</span>                  <span class="c1">// ⑬
+</span><span class="c1"></span>    <span class="n">search_by_regex</span><span class="p">(</span><span class="s">&#34;[[:lower:]]&#34;</span><span class="p">,</span> <span class="n">s</span><span class="p">);</span>          <span class="c1">// ⑭
+</span><span class="c1"></span>    <span class="n">search_by_regex</span><span class="p">(</span><span class="s">&#34;[[:upper:]]&#34;</span><span class="p">,</span> <span class="n">s</span><span class="p">);</span>
+    <span class="n">search_by_regex</span><span class="p">(</span><span class="s">&#34;[[:alpha:]]&#34;</span><span class="p">,</span> <span class="n">s</span><span class="p">);</span>          <span class="c1">// ⑮
+</span><span class="c1"></span>    <span class="n">search_by_regex</span><span class="p">(</span><span class="s">&#34;[[:blank:]]&#34;</span><span class="p">,</span> <span class="n">s</span><span class="p">);</span>          <span class="c1">// ⑯
+</span><span class="c1"></span>    <span class="n">search_by_regex</span><span class="p">(</span><span class="s">&#34;[[:graph:]]&#34;</span><span class="p">,</span> <span class="n">s</span><span class="p">);</span>          <span class="c1">// ⑰
+</span><span class="c1"></span>    <span class="n">search_by_regex</span><span class="p">(</span><span class="s">&#34;[[:print:]]&#34;</span><span class="p">,</span> <span class="n">s</span><span class="p">);</span>          <span class="c1">// ⑱
+</span><span class="c1"></span>    <span class="n">search_by_regex</span><span class="p">(</span><span class="s">&#34;[[:punct:]]&#34;</span><span class="p">,</span> <span class="n">s</span><span class="p">);</span>          <span class="c1">// ⑲
+</span><span class="c1"></span>    <span class="n">search_by_regex</span><span class="p">(</span><span class="s">&#34;[[:xdigit:]]&#34;</span><span class="p">,</span> <span class="n">s</span><span class="p">);</span>         <span class="c1">// ⑳
+</span><span class="c1"></span>
+    <span class="k">return</span> <span class="mi">0</span><span class="p">;</span>
+<span class="p">}</span>
+</code></pre></td></tr></table></div>
+</div>
+</div><p>这段代码稍微有些长，但还是比较好理解的。</p>
+<ol>
+<li>这里定义了一个函数，它接受一个字符串和一个正则表达式作为输入。该函数遍历字符串，每次取出一个字符然后用正则表达式进行匹配，如果匹配上，则输出该字符。逐个遍历字符串的方式并不是非常好，在后文中我们将看到更好的方法。</li>
+<li><code>search_by_regex</code>将调用<code>search_string</code>进行字符的匹配。</li>
+<li><code>cout.width(12);</code> 是为了控制输出格式的缩进。</li>
+<li>先打印出正则表达式，然后打印冒号和双引号。将匹配的内容放在双引号中是为了更容易辨识。</li>
+<li>调用<code>search_string</code>进行字符的匹配。</li>
+<li>这是我们待匹配的字符串，它其中包含了各种类型的字符。</li>
+<li><code>[[:alnum:]]</code>匹配字母和数字类字符。</li>
+<li><code>\w</code>是<code>[_[:alnum:]]</code>的简写方式，它与字符数字的区别在与：它还包含了<code>_</code>。当通过字符串定义正则表达式时，反斜杠需要转义。</li>
+<li><code>R&quot;(\W)&quot;</code>是一个Raw string literal，因此，这里的反斜杠不再需要转义。</li>
+<li><code>[[:digit:]]</code>匹配数字类字符。</li>
+<li><code>[^[:digit:]]</code>是非数字类正则表达式，它与⑩正好相反。</li>
+<li><code>[[:space:]]</code>匹配空白类字符，该表达式将包含换行符。</li>
+<li><code>\S</code>是非空白类字符类。</li>
+<li><code>[[:lower:]]</code>小写字母，<code>[[:upper:]]</code>下一行是大写字母。</li>
+<li><code>[[:alpha:]]</code>匹配所有字母字符。</li>
+<li><code>[[:blank:]]</code>是空白字符类，它与<code>[[:space:]]</code>的区别是：它不包含换行符。</li>
+<li><code>[[:graph:]]</code>是图形类字符。</li>
+<li><code>[[:print:]]</code>是可打印字符。</li>
+<li><code>[[:punct:]]</code>是标点符号字符。</li>
+<li><code>[[:xdigit:]]</code>是十六进制的数字字符。</li>
+</ol>
+<p><strong>该程序的输出如下：</strong></p>
+<pre><code class="language-pascal" data-lang="pascal"> [[:alnum:]]: &quot;AaBbCcDdEeFfGg12345&quot;
+          \w: &quot;_AaBbCcDdEeFfGg12345&quot;
+          \W: &quot;
+!@#$&quot;
+ [[:digit:]]: &quot;12345&quot;
+[^[:digit:]]: &quot;_AaBbCcDdEeFfGg
+!@#$&quot;
+ [[:space:]]: &quot;
+&quot;
+          \S: &quot;_AaBbCcDdEeFfGg12345!@#$&quot;
+ [[:lower:]]: &quot;abcdefg&quot;
+ [[:upper:]]: &quot;ABCDEFG&quot;
+ [[:alpha:]]: &quot;AaBbCcDdEeFfGg&quot;
+ [[:blank:]]: &quot;
+&quot;
+ [[:graph:]]: &quot;_AaBbCcDdEeFfGg12345!@#$&quot;
+ [[:print:]]: &quot;_AaBbCcDdEeFfGg12345 !@#$&quot;
+ [[:punct:]]: &quot;_!@#$&quot;
+[[:xdigit:]]: &quot;AaBbCcDdEeFf12345&quot;
+</code></pre><p>请仔细看一下这个输出，并确认与你的认知是否一致。这里的有些字符类包含了换行符，因此在输出的结果中也是换行的。</p>
+<h2 id="重复"><a href="#重复" class="anchor-link"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" class="icon anchor-icon"><path d="M326.612 185.391c59.747 59.809 58.927 155.698.36 214.59-.11.12-.24.25-.36.37l-67.2 67.2c-59.27 59.27-155.699 59.262-214.96 0-59.27-59.26-59.27-155.7 0-214.96l37.106-37.106c9.84-9.84 26.786-3.3 27.294 10.606.648 17.722 3.826 35.527 9.69 52.721 1.986 5.822.567 12.262-3.783 16.612l-13.087 13.087c-28.026 28.026-28.905 73.66-1.155 101.96 28.024 28.579 74.086 28.749 102.325.51l67.2-67.19c28.191-28.191 28.073-73.757 0-101.83-3.701-3.694-7.429-6.564-10.341-8.569a16.037 16.037 0 0 1-6.947-12.606c-.396-10.567 3.348-21.456 11.698-29.806l21.054-21.055c5.521-5.521 14.182-6.199 20.584-1.731a152.482 152.482 0 0 1 20.522 17.197zM467.547 44.449c-59.261-59.262-155.69-59.27-214.96 0l-67.2 67.2c-.12.12-.25.25-.36.37-58.566 58.892-59.387 154.781.36 214.59a152.454 152.454 0 0 0 20.521 17.196c6.402 4.468 15.064 3.789 20.584-1.731l21.054-21.055c8.35-8.35 12.094-19.239 11.698-29.806a16.037 16.037 0 0 0-6.947-12.606c-2.912-2.005-6.64-4.875-10.341-8.569-28.073-28.073-28.191-73.639 0-101.83l67.2-67.19c28.239-28.239 74.3-28.069 102.325.51 27.75 28.3 26.872 73.934-1.155 101.96l-13.087 13.087c-4.35 4.35-5.769 10.79-3.783 16.612 5.864 17.194 9.042 34.999 9.69 52.721.509 13.906 17.454 20.446 27.294 10.606l37.106-37.106c59.271-59.259 59.271-155.699.001-214.959z"/></svg></a>重复</h2>
+<p>上面的示例中，我们一次只匹配了一个字符。这样做效率是很低的。</p>
+<p>在很多时候，我们当然是想一次性匹配出一个完整的字符串。例如：一个手机号码。这种情况下，其实是多个数字字符的重复。</p>
+<p>下面就是在正则表达式中描述重复的方式。它们通常跟在字符类的后面，描述该字符出现多次。</p>
+<div class="table-container"><table>
+<thead>
+<tr>
+<th style="text-align:left">字符</th>
+<th style="text-align:left">说明</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:left">{n}</td>
+<td style="text-align:left">重复n次</td>
+</tr>
+<tr>
+<td style="text-align:left">{n,}</td>
+<td style="text-align:left">重复n或更多次</td>
+</tr>
+<tr>
+<td style="text-align:left">{n,m}</td>
+<td style="text-align:left">重复[n ~ m]次</td>
+</tr>
+<tr>
+<td style="text-align:left">*</td>
+<td style="text-align:left">重复0次或多次，等同于{0,}</td>
+</tr>
+<tr>
+<td style="text-align:left">+</td>
+<td style="text-align:left">重复1次或多次，等同于{1,}</td>
+</tr>
+<tr>
+<td style="text-align:left">?</td>
+<td style="text-align:left">重复0次或1次，等同于{0,1}</td>
+</tr>
+</tbody>
+</table></div>
+<p>知道重复的方法之后，正则表达式的查找能力就更强大了。看一下下面这个代码示例：</p>
+<div class="highlight"><div class="chroma">
+<div class="table-container"><table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><code><span class="lnt"> 1
+</span><span class="lnt"> 2
+</span><span class="lnt"> 3
+</span><span class="lnt"> 4
+</span><span class="lnt"> 5
+</span><span class="lnt"> 6
+</span><span class="lnt"> 7
+</span><span class="lnt"> 8
+</span><span class="lnt"> 9
+</span><span class="lnt">10
+</span><span class="lnt">11
+</span><span class="lnt">12
+</span><span class="lnt">13
+</span><span class="lnt">14
+</span><span class="lnt">15
+</span><span class="lnt">16
+</span><span class="lnt">17
+</span><span class="lnt">18
+</span><span class="lnt">19
+</span><span class="lnt">20
+</span><span class="lnt">21
+</span><span class="lnt">22
+</span><span class="lnt">23
+</span><span class="lnt">24
+</span><span class="lnt">25
+</span><span class="lnt">26
+</span><span class="lnt">27
+</span></code></pre></td>
+<td class="lntd">
+<pre class="chroma"><code class="language-cpp" data-lang="cpp"><span class="cp">#include</span> <span class="cpf">&lt;iostream&gt;</span><span class="cp">
+</span><span class="cp">#include</span> <span class="cpf">&lt;regex&gt;</span><span class="cp">
+</span><span class="cp"></span>
+<span class="k">using</span> <span class="k">namespace</span> <span class="n">std</span><span class="p">;</span>
+
+<span class="k">static</span> <span class="kt">void</span> <span class="nf">search_by_regex</span><span class="p">(</span><span class="k">const</span> <span class="kt">char</span><span class="o">*</span> <span class="n">regex_s</span><span class="p">,</span>
+                            <span class="k">const</span> <span class="n">string</span><span class="o">&amp;</span> <span class="n">s</span><span class="p">)</span> <span class="p">{</span> <span class="c1">// ①
+</span><span class="c1"></span>  <span class="n">regex</span> <span class="n">reg_ex</span><span class="p">(</span><span class="n">regex_s</span><span class="p">);</span>
+  <span class="n">smatch</span> <span class="n">match_result</span><span class="p">;</span> <span class="c1">// ②
+</span><span class="c1"></span>  <span class="n">cout</span><span class="p">.</span><span class="n">width</span><span class="p">(</span><span class="mi">14</span><span class="p">);</span> <span class="c1">// ③
+</span><span class="c1"></span>  <span class="k">if</span> <span class="p">(</span><span class="n">regex_search</span><span class="p">(</span><span class="n">s</span><span class="p">,</span> <span class="n">match_result</span><span class="p">,</span> <span class="n">reg_ex</span><span class="p">))</span> <span class="p">{</span> <span class="c1">// ④
+</span><span class="c1"></span>    <span class="n">cout</span> <span class="o">&lt;&lt;</span> <span class="n">regex_s</span> <span class="o">&lt;&lt;</span> <span class="s">&#34;: </span><span class="se">\&#34;</span><span class="s">&#34;</span> <span class="o">&lt;&lt;</span> <span class="n">match_result</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span> <span class="o">&lt;&lt;</span> <span class="s">&#34;</span><span class="se">\&#34;</span><span class="s">&#34;</span> <span class="o">&lt;&lt;</span> <span class="n">endl</span><span class="p">;</span> <span class="c1">// ⑤
+</span><span class="c1"></span>  <span class="p">}</span>
+<span class="p">}</span>
+
+<span class="kt">int</span> <span class="nf">main</span><span class="p">()</span> <span class="p">{</span>
+  <span class="n">string</span> <span class="n">s</span><span class="p">(</span><span class="s">&#34;_AaBbCcDdEeFfGg12345!@#$% </span><span class="se">\t</span><span class="s">&#34;</span><span class="p">);</span> <span class="c1">// ⑥
+</span><span class="c1"></span>
+  <span class="n">search_by_regex</span><span class="p">(</span><span class="s">&#34;[[:alnum:]]{5}&#34;</span><span class="p">,</span> <span class="n">s</span><span class="p">);</span>       <span class="c1">// ⑦
+</span><span class="c1"></span>  <span class="n">search_by_regex</span><span class="p">(</span><span class="s">&#34;</span><span class="se">\\</span><span class="s">w{5,}&#34;</span><span class="p">,</span> <span class="n">s</span><span class="p">);</span>              <span class="c1">// ⑧
+</span><span class="c1"></span>  <span class="n">search_by_regex</span><span class="p">(</span><span class="n">R</span><span class="s">&#34;(\W{3,5})&#34;</span><span class="p">,</span> <span class="n">s</span><span class="p">);</span>           <span class="c1">// ⑨
+</span><span class="c1"></span>  <span class="n">search_by_regex</span><span class="p">(</span><span class="s">&#34;[[:digit:]]*&#34;</span><span class="p">,</span> <span class="n">s</span><span class="p">);</span>         <span class="c1">// ⑩
+</span><span class="c1"></span>  <span class="n">search_by_regex</span><span class="p">(</span><span class="s">&#34;.+&#34;</span><span class="p">,</span> <span class="n">s</span><span class="p">);</span>                   <span class="c1">// ⑪
+</span><span class="c1"></span>  <span class="n">search_by_regex</span><span class="p">(</span><span class="s">&#34;[[:lower:]]?&#34;</span><span class="p">,</span> <span class="n">s</span><span class="p">);</span>         <span class="c1">// ⑫
+</span><span class="c1"></span>
+  <span class="k">return</span> <span class="mi">0</span><span class="p">;</span>
+<span class="p">}</span>
+</code></pre></td></tr></table></div>
+</div>
+</div><p>在这段代码中：</p>
+<ol>
+<li>这里定义了一个函数，它接受一个正则表达式和字符串。</li>
+<li><code>match_result</code>用来存储查找的结果。</li>
+<li>设置输出格式，为了让输出对齐。</li>
+<li>通过<code>regex_search</code>在字符串中查找匹配字符。</li>
+<li>输出匹配的结果。</li>
+<li>待匹配的字符串。</li>
+<li><code>[[:alnum:]]{5}</code>是指：字符或者数字出现5次。</li>
+<li><code>\\w{5,}</code>是指：字母，数字或者下划线出现5次或更多次。</li>
+<li><code>R&quot;(\W{3,5})&quot;</code>是指：非字母，数字或者下划线出现3次到5次。</li>
+<li><code>[[:digit:]]*</code>是指：数字出现任意多次。</li>
+<li><code>.+</code>是指：任意字符出现至少1次。</li>
+<li><code>[[:lower:]]?</code>是指：小写字母出现0次或者1次。</li>
+</ol>
+<p>该程序输出如下：</p>
+<pre><code class="language-pascal" data-lang="pascal">[[:alnum:]]{5}: &quot;AaBbC&quot;
+        \w{5,}: &quot;_AaBbCcDdEeFfGg12345&quot;
+       \W{3,5}: &quot;!@#$%&quot;
+  [[:digit:]]*: &quot;&quot;
+            .+: &quot;_AaBbCcDdEeFfGg12345!@#$% 	&quot;
+  [[:lower:]]?: &quot;&quot;
+</code></pre><h1 id="正则表达式编程"><a href="#正则表达式编程" class="anchor-link"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" class="icon anchor-icon"><path d="M326.612 185.391c59.747 59.809 58.927 155.698.36 214.59-.11.12-.24.25-.36.37l-67.2 67.2c-59.27 59.27-155.699 59.262-214.96 0-59.27-59.26-59.27-155.7 0-214.96l37.106-37.106c9.84-9.84 26.786-3.3 27.294 10.606.648 17.722 3.826 35.527 9.69 52.721 1.986 5.822.567 12.262-3.783 16.612l-13.087 13.087c-28.026 28.026-28.905 73.66-1.155 101.96 28.024 28.579 74.086 28.749 102.325.51l67.2-67.19c28.191-28.191 28.073-73.757 0-101.83-3.701-3.694-7.429-6.564-10.341-8.569a16.037 16.037 0 0 1-6.947-12.606c-.396-10.567 3.348-21.456 11.698-29.806l21.054-21.055c5.521-5.521 14.182-6.199 20.584-1.731a152.482 152.482 0 0 1 20.522 17.197zM467.547 44.449c-59.261-59.262-155.69-59.27-214.96 0l-67.2 67.2c-.12.12-.25.25-.36.37-58.566 58.892-59.387 154.781.36 214.59a152.454 152.454 0 0 0 20.521 17.196c6.402 4.468 15.064 3.789 20.584-1.731l21.054-21.055c8.35-8.35 12.094-19.239 11.698-29.806a16.037 16.037 0 0 0-6.947-12.606c-2.912-2.005-6.64-4.875-10.341-8.569-28.073-28.073-28.191-73.639 0-101.83l67.2-67.19c28.239-28.239 74.3-28.069 102.325.51 27.75 28.3 26.872 73.934-1.155 101.96l-13.087 13.087c-4.35 4.35-5.769 10.79-3.783 16.612 5.864 17.194 9.042 34.999 9.69 52.721.509 13.906 17.454 20.446 27.294 10.606l37.106-37.106c59.271-59.259 59.271-155.699.001-214.959z"/></svg></a>正则表达式编程</h1>
+<p>接下来我们会看到更多的示例。同时，也会看到C++正则表达式API的更多功能。</p>
+<p>为了便于下文示例的讲解，我们以维基百科上对于正则表达式的介绍文本为基础。</p>
+<blockquote>
+<p>A regular expression, regex or regexp ((sometimes called a rational expression)) is a sequence of characters that define a search pattern. Usually such patterns are used by string searching algorithms for “find” or “find and replace” operations on strings, or for input validation. It is a technique developed in theoretical computer science and formal language theory.</p>
+<p>The concept arose in the 1950s when the American mathematician Stephen Cole Kleene formalized the description of a regular language. The concept came into common use with Unix text-processing utilities. Different syntaxes for writing regular expressions have existed since the 1980s, one being the POSIX standard and another, widely used, being the Perl syntax.</p>
+<p>Regular expressions are used in search engines, search and replace dialogs of word processors and text editors, in text processing utilities such as sed and AWK and in lexical analysis. Many programming languages provide regex capabilities either built-in or via libraries.</p>
+</blockquote>
+<p>我们将这段文字保存在名称为<code>content.txt</code>的文本文件中。下面几个示例会在这个文本上操作。</p>
+<h2 id="迭代器"><a href="#迭代器" class="anchor-link"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" class="icon anchor-icon"><path d="M326.612 185.391c59.747 59.809 58.927 155.698.36 214.59-.11.12-.24.25-.36.37l-67.2 67.2c-59.27 59.27-155.699 59.262-214.96 0-59.27-59.26-59.27-155.7 0-214.96l37.106-37.106c9.84-9.84 26.786-3.3 27.294 10.606.648 17.722 3.826 35.527 9.69 52.721 1.986 5.822.567 12.262-3.783 16.612l-13.087 13.087c-28.026 28.026-28.905 73.66-1.155 101.96 28.024 28.579 74.086 28.749 102.325.51l67.2-67.19c28.191-28.191 28.073-73.757 0-101.83-3.701-3.694-7.429-6.564-10.341-8.569a16.037 16.037 0 0 1-6.947-12.606c-.396-10.567 3.348-21.456 11.698-29.806l21.054-21.055c5.521-5.521 14.182-6.199 20.584-1.731a152.482 152.482 0 0 1 20.522 17.197zM467.547 44.449c-59.261-59.262-155.69-59.27-214.96 0l-67.2 67.2c-.12.12-.25.25-.36.37-58.566 58.892-59.387 154.781.36 214.59a152.454 152.454 0 0 0 20.521 17.196c6.402 4.468 15.064 3.789 20.584-1.731l21.054-21.055c8.35-8.35 12.094-19.239 11.698-29.806a16.037 16.037 0 0 0-6.947-12.606c-2.912-2.005-6.64-4.875-10.341-8.569-28.073-28.073-28.191-73.639 0-101.83l67.2-67.19c28.239-28.239 74.3-28.069 102.325.51 27.75 28.3 26.872 73.934-1.155 101.96l-13.087 13.087c-4.35 4.35-5.769 10.79-3.783 16.612 5.864 17.194 9.042 34.999 9.69 52.721.509 13.906 17.454 20.446 27.294 10.606l37.106-37.106c59.271-59.259 59.271-155.699.001-214.959z"/></svg></a>迭代器</h2>
+<p>在上文中，为了从字符串中查找出所有匹配的字符，我们的做法是遍历原始字符串的每一个子字符串来进行查找，这样做很明显效率很低。更好的做法当然是使用迭代器。</p>
+<p>正则表达式迭代器一共有四种，分别对应了是否是宽字符，是否是字符串类型：</p>
+<div class="table-container"><table>
+<thead>
+<tr>
+<th style="text-align:left">类型</th>
+<th style="text-align:left">定义</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:left">cregex_iterator</td>
+<td style="text-align:left">regex_iterator&lt;const char*&gt;</td>
+</tr>
+<tr>
+<td style="text-align:left">wcregex_iterator</td>
+<td style="text-align:left">regex_iterator&lt;const wchar_t*&gt;</td>
+</tr>
+<tr>
+<td style="text-align:left">sregex_iterator</td>
+<td style="text-align:left">regex_iterator<a href="std::string::const_iterator">std::string::const_iterator</a></td>
+</tr>
+<tr>
+<td style="text-align:left">wsregex_iterator</td>
+<td style="text-align:left">regex_iterator<a href="std::wstring::const_iterator">std::wstring::const_iterator</a></td>
+</tr>
+</tbody>
+</table></div>
+<p>在一大段文本中查找所有匹配的目标，这是一个非常常见的需求。而迭代器正好满足这一需求，它会依次返回它从文本中找到的匹配内容。</p>
+<ul>
+<li>示例：统计出文本中一共出现了多个单词。</li>
+<li>思路：组成单词的字母可以使用<code>[[:alpha:]]</code>字符类来表达，一个单词至少有一个字母，因此这个正则表达式可以写成：<code>[[:alpha:]]+</code>。然后借助迭代器便可以统计出总数量。</li>
+</ul>
+<p>代码示例如下：</p>
+<div class="highlight"><div class="chroma">
+<div class="table-container"><table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><code><span class="lnt"> 1
+</span><span class="lnt"> 2
+</span><span class="lnt"> 3
+</span><span class="lnt"> 4
+</span><span class="lnt"> 5
+</span><span class="lnt"> 6
+</span><span class="lnt"> 7
+</span><span class="lnt"> 8
+</span><span class="lnt"> 9
+</span><span class="lnt">10
+</span><span class="lnt">11
+</span><span class="lnt">12
+</span><span class="lnt">13
+</span><span class="lnt">14
+</span><span class="lnt">15
+</span><span class="lnt">16
+</span><span class="lnt">17
+</span><span class="lnt">18
+</span><span class="lnt">19
+</span><span class="lnt">20
+</span><span class="lnt">21
+</span><span class="lnt">22
+</span><span class="lnt">23
+</span><span class="lnt">24
+</span><span class="lnt">25
+</span><span class="lnt">26
+</span></code></pre></td>
+<td class="lntd">
+<pre class="chroma"><code class="language-cpp" data-lang="cpp"><span class="cp">#include</span> <span class="cpf">&lt;fstream&gt;</span><span class="cp">
+</span><span class="cp">#include</span> <span class="cpf">&lt;iostream&gt;</span><span class="cp">
+</span><span class="cp">#include</span> <span class="cpf">&lt;regex&gt;</span><span class="cp">
+</span><span class="cp"></span>
+<span class="k">using</span> <span class="k">namespace</span> <span class="n">std</span><span class="p">;</span>
+
+<span class="kt">int</span> <span class="nf">main</span><span class="p">()</span> <span class="p">{</span>
+  <span class="n">regex</span> <span class="n">word_regex</span><span class="p">(</span><span class="s">&#34;[[:alpha:]]+&#34;</span><span class="p">);</span> <span class="c1">// ①
+</span><span class="c1"></span>
+  <span class="n">ifstream</span> <span class="n">file</span><span class="p">(</span><span class="s">&#34;./content.txt&#34;</span><span class="p">);</span> <span class="c1">// ②
+</span><span class="c1"></span>  <span class="n">string</span> <span class="n">line</span><span class="p">;</span>
+  <span class="kt">int</span> <span class="n">word_count</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span>
+  <span class="k">while</span><span class="p">(</span><span class="n">getline</span><span class="p">(</span><span class="n">file</span><span class="p">,</span> <span class="n">line</span><span class="p">))</span> <span class="p">{</span> <span class="c1">// ③
+</span><span class="c1"></span>    <span class="k">auto</span> <span class="n">iter_begin</span> <span class="o">=</span> <span class="n">sregex_iterator</span><span class="p">(</span><span class="n">line</span><span class="p">.</span><span class="n">begin</span><span class="p">(),</span>
+                                      <span class="n">line</span><span class="p">.</span><span class="n">end</span><span class="p">(),</span>
+                                      <span class="n">word_regex</span><span class="p">);</span>  <span class="c1">// ④
+</span><span class="c1"></span>    <span class="k">auto</span> <span class="n">iter_end</span> <span class="o">=</span> <span class="n">sregex_iterator</span><span class="p">();</span> <span class="c1">// ⑤
+</span><span class="c1"></span>    <span class="k">for</span> <span class="p">(</span><span class="k">auto</span> <span class="n">iter</span> <span class="o">=</span> <span class="n">iter_begin</span><span class="p">;</span> <span class="n">iter</span> <span class="o">!=</span> <span class="n">iter_end</span><span class="p">;</span> <span class="n">iter</span><span class="o">++</span><span class="p">)</span> <span class="p">{</span> <span class="c1">// ⑥
+</span><span class="c1"></span>      <span class="n">word_count</span><span class="o">++</span><span class="p">;</span>  <span class="c1">// ⑦
+</span><span class="c1"></span>      <span class="c1">// cout &lt;&lt; iter-&gt;str() &lt;&lt; endl; // ⑧
+</span><span class="c1"></span>    <span class="p">}</span>
+  <span class="p">}</span>
+  <span class="n">cout</span> <span class="o">&lt;&lt;</span> <span class="s">&#34;It contains &#34;</span> <span class="o">&lt;&lt;</span> <span class="n">word_count</span> <span class="o">&lt;&lt;</span> <span class="s">&#34; words&#34;</span> <span class="o">&lt;&lt;</span> <span class="n">endl</span><span class="p">;</span> <span class="c1">// ⑨
+</span><span class="c1"></span>
+  <span class="k">return</span> <span class="mi">0</span><span class="p">;</span>
+<span class="p">}</span>
+</code></pre></td></tr></table></div>
+</div>
+</div><p>这段代码的说明如下：</p>
+<ol>
+<li>匹配单词的正则表达式</li>
+<li>通过<code>ifstream</code>读取文本文件</li>
+<li>依次读取文本文件中的每一行</li>
+<li>通过正则表达式迭代器从文本行的逐个匹配</li>
+<li>迭代器的末尾</li>
+<li>迭代器遍历</li>
+<li>每遇到一个匹配进行一次计数</li>
+<li>如果需要，可以输出匹配的内容</li>
+</ol>
+<p>这段代码输出如下：</p>
+<pre><code class="language-pascal" data-lang="pascal">It contains 153 words
+</code></pre><p>接下来的几个代码示例的主体结构和这里会很相似，我们总是先打开文本文件，然后读取每一行来进行处理。</p>
+<h2 id="正则表达式选项"><a href="#正则表达式选项" class="anchor-link"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" class="icon anchor-icon"><path d="M326.612 185.391c59.747 59.809 58.927 155.698.36 214.59-.11.12-.24.25-.36.37l-67.2 67.2c-59.27 59.27-155.699 59.262-214.96 0-59.27-59.26-59.27-155.7 0-214.96l37.106-37.106c9.84-9.84 26.786-3.3 27.294 10.606.648 17.722 3.826 35.527 9.69 52.721 1.986 5.822.567 12.262-3.783 16.612l-13.087 13.087c-28.026 28.026-28.905 73.66-1.155 101.96 28.024 28.579 74.086 28.749 102.325.51l67.2-67.19c28.191-28.191 28.073-73.757 0-101.83-3.701-3.694-7.429-6.564-10.341-8.569a16.037 16.037 0 0 1-6.947-12.606c-.396-10.567 3.348-21.456 11.698-29.806l21.054-21.055c5.521-5.521 14.182-6.199 20.584-1.731a152.482 152.482 0 0 1 20.522 17.197zM467.547 44.449c-59.261-59.262-155.69-59.27-214.96 0l-67.2 67.2c-.12.12-.25.25-.36.37-58.566 58.892-59.387 154.781.36 214.59a152.454 152.454 0 0 0 20.521 17.196c6.402 4.468 15.064 3.789 20.584-1.731l21.054-21.055c8.35-8.35 12.094-19.239 11.698-29.806a16.037 16.037 0 0 0-6.947-12.606c-2.912-2.005-6.64-4.875-10.341-8.569-28.073-28.073-28.191-73.639 0-101.83l67.2-67.19c28.239-28.239 74.3-28.069 102.325.51 27.75 28.3 26.872 73.934-1.155 101.96l-13.087 13.087c-4.35 4.35-5.769 10.79-3.783 16.612 5.864 17.194 9.042 34.999 9.69 52.721.509 13.906 17.454 20.446 27.294 10.606l37.106-37.106c59.271-59.259 59.271-155.699.001-214.959z"/></svg></a>正则表达式选项</h2>
+<p>前面的示例中我们已经看到，通过<code>std::regex</code>并传递字符串就可以构造正则表达式对象。实际上，除了<code>std::regex</code>，还有宽字符版本的<code>std::wregex</code>。它们都源自<code>std::basic_regex</code></p>
+<div class="table-container"><table>
+<thead>
+<tr>
+<th style="text-align:left">类型</th>
+<th style="text-align:left">定义</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:left">regex</td>
+<td style="text-align:left">basic_regex<char></td>
+</tr>
+<tr>
+<td style="text-align:left">wregex</td>
+<td style="text-align:left">basic_regex&lt;wchar_t&gt;</td>
+</tr>
+</tbody>
+</table></div>
+<p>在创建正则表达式对象的时候，除了描述规则本身的字符串之外，还可以传递一个<code>flag_type</code>类型的参数，该参数的值定义在<code>std::regex_constants::syntax_option_type</code>中。它们中与<a href="https://paul.pub/cpp-regex/#id-%E6%96%87%E6%B3%95" target="_blank" rel="noopener">“文法”</a>相关的已经在上文介绍过了。</p>
+<p>剩下的还有几个说明如下：</p>
+<div class="table-container"><table>
+<thead>
+<tr>
+<th style="text-align:left">值</th>
+<th style="text-align:left">效果</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:left">icase</td>
+<td style="text-align:left">以不考虑大小写进行字符匹配。</td>
+</tr>
+<tr>
+<td style="text-align:left">nosubs</td>
+<td style="text-align:left">进行匹配时，将所有被标记的子表达式 exprexpr 当做非标记的子表达式 ?:expr?:expr 。不将匹配存储于提供的 std::regex_match 结构中，且 <code>mark_count()</code> 为零</td>
+</tr>
+<tr>
+<td style="text-align:left">optimize</td>
+<td style="text-align:left">指示正则表达式引擎进行更快的匹配，带有令构造变慢的潜在开销。例如这可能表示将非确定 FSA 转换为确定 FSA 。</td>
+</tr>
+<tr>
+<td style="text-align:left">collate</td>
+<td style="text-align:left">形如 “[a-b]” 的字符范围将对本地环境敏感。</td>
+</tr>
+<tr>
+<td style="text-align:left">multiline（C++17）</td>
+<td style="text-align:left">若选择 ECMAScript 引擎，则指定<code>^</code>匹配行首，<code>$</code>应该匹配行尾。</td>
+</tr>
+</tbody>
+</table></div>
+<p>这其中，第一个是我们最常用的。</p>
+<ul>
+<li>示例：匹配文本中“regular expression”所有的单复数，并且不区分大小写。</li>
+<li>思路：单词的首字母有些会大写，我们可以通过<code>[Rr]</code>来匹配大写或者小写的R字母，但实际上，使用<code>icase</code>无疑会更方便。</li>
+</ul>
+<p>代码示例：</p>
+<pre><code>#include &lt;fstream&gt;
+#include &lt;iostream&gt;
+#include &lt;regex&gt;
+
+using namespace std;
+
+int main() {
+  regex word_regex(&quot;regular expressions?&quot;, regex::icase);
+
+  ifstream file(&quot;./content.txt&quot;);
+  string line;
+  while(getline(file, line)) {
+    auto iter_begin = sregex_iterator(line.begin(),
+                                      line.end(),
+                                      word_regex);
+    auto iter_end = sregex_iterator();
+    for (auto iter = iter_begin; iter != iter_end; iter++) {
+      cout &lt;&lt; iter-&gt;str() &lt;&lt; endl;
+    }
+  }
+
+  return 0;
+}
+</code></pre><p>这段代码与前面的结构是一样的，我们最需要关注的可能就是下面这一行：</p>
+<pre><code>regex word_regex(&quot;regular expressions?&quot;, regex::icase);
+</code></pre><p>通过<code>std::regex::icase</code>我们指定了这个正则表达式是不区分大小写的。</p>
+<p>另外还有一个值得注意的就是正则表达式末尾的<code>...s?</code>，它意味着单词可能是单数或者复数，因此结尾的“s”可以出现0次或者1次。</p>
+<p>这段代码输出如下：</p>
+<pre><code>regular expression
+regular expressions
+Regular expressions
+</code></pre><h2 id="匹配结果与分组"><a href="#匹配结果与分组" class="anchor-link"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" class="icon anchor-icon"><path d="M326.612 185.391c59.747 59.809 58.927 155.698.36 214.59-.11.12-.24.25-.36.37l-67.2 67.2c-59.27 59.27-155.699 59.262-214.96 0-59.27-59.26-59.27-155.7 0-214.96l37.106-37.106c9.84-9.84 26.786-3.3 27.294 10.606.648 17.722 3.826 35.527 9.69 52.721 1.986 5.822.567 12.262-3.783 16.612l-13.087 13.087c-28.026 28.026-28.905 73.66-1.155 101.96 28.024 28.579 74.086 28.749 102.325.51l67.2-67.19c28.191-28.191 28.073-73.757 0-101.83-3.701-3.694-7.429-6.564-10.341-8.569a16.037 16.037 0 0 1-6.947-12.606c-.396-10.567 3.348-21.456 11.698-29.806l21.054-21.055c5.521-5.521 14.182-6.199 20.584-1.731a152.482 152.482 0 0 1 20.522 17.197zM467.547 44.449c-59.261-59.262-155.69-59.27-214.96 0l-67.2 67.2c-.12.12-.25.25-.36.37-58.566 58.892-59.387 154.781.36 214.59a152.454 152.454 0 0 0 20.521 17.196c6.402 4.468 15.064 3.789 20.584-1.731l21.054-21.055c8.35-8.35 12.094-19.239 11.698-29.806a16.037 16.037 0 0 0-6.947-12.606c-2.912-2.005-6.64-4.875-10.341-8.569-28.073-28.073-28.191-73.639 0-101.83l67.2-67.19c28.239-28.239 74.3-28.069 102.325.51 27.75 28.3 26.872 73.934-1.155 101.96l-13.087 13.087c-4.35 4.35-5.769 10.79-3.783 16.612 5.864 17.194 9.042 34.999 9.69 52.721.509 13.906 17.454 20.446 27.294 10.606l37.106-37.106c59.271-59.259 59.271-155.699.001-214.959z"/></svg></a>匹配结果与分组</h2>
+<p><code>std::match_results</code>用来存储匹配结果。与迭代器类似，匹配结果也有四种类型：</p>
+<div class="table-container"><table>
+<thead>
+<tr>
+<th style="text-align:left">类型</th>
+<th style="text-align:left">定义</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:left">std::cmatch</td>
+<td style="text-align:left">std::match_results&lt;const char*&gt;</td>
+</tr>
+<tr>
+<td style="text-align:left">std::wcmatch</td>
+<td style="text-align:left">std::match_results&lt;const wchar_t*&gt;</td>
+</tr>
+<tr>
+<td style="text-align:left">std::smatch</td>
+<td style="text-align:left">std::match_results<a href="std::string::const_iterator">std::string::const_iterator</a></td>
+</tr>
+<tr>
+<td style="text-align:left">std::wsmatch</td>
+<td style="text-align:left">std::match_results<a href="std::wstring::const_iterator">std::wstring::const_iterator</a></td>
+</tr>
+</tbody>
+</table></div>
+<p>当我们使用正则表达式时，我们的目标常常不单单是判断或者查找完整匹配的内容。而是需要捕获匹配结果中的子串。例如：我们不仅要匹配出日期，还要捕获日期中的年份，月份等信息。这个时候就要使用分组功能。</p>
+<p>我们在介绍正则表达式特殊字符的时候，提到过圆括号<code>(</code>和<code>)</code>。它们的作用就是分组。当你在正则表达式中配对的使用圆括号时，就会形成一个分组，一个正则表达式中可以包含多个分组。分组通过编号0, 1, 2, …来区分。编号0的分组是匹配的整体，其他编号根据括号的顺序来确定。</p>
+<p>这些分组最终可以在匹配完成之后，可以通过<code>std::match_results</code>的API来获取。这些API如下表所示：</p>
+<div class="table-container"><table>
+<thead>
+<tr>
+<th style="text-align:left">API</th>
+<th style="text-align:left">说明</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:left">empty</td>
+<td style="text-align:left">检查匹配是否成功</td>
+</tr>
+<tr>
+<td style="text-align:left">size</td>
+<td style="text-align:left">返回完成建立的结果状态中的匹配数</td>
+</tr>
+<tr>
+<td style="text-align:left">max_size</td>
+<td style="text-align:left">返回子匹配的最大可能数量</td>
+</tr>
+<tr>
+<td style="text-align:left">length</td>
+<td style="text-align:left">返回特定分组的长度</td>
+</tr>
+<tr>
+<td style="text-align:left">position</td>
+<td style="text-align:left">分会特定分组首字符的位置</td>
+</tr>
+<tr>
+<td style="text-align:left">str</td>
+<td style="text-align:left">返回特定分组的字符序列</td>
+</tr>
+<tr>
+<td style="text-align:left">operation[]</td>
+<td style="text-align:left">返回指定的分组</td>
+</tr>
+<tr>
+<td style="text-align:left">prefix</td>
+<td style="text-align:left">返回目标序列起始和完整匹配起始之间的分组</td>
+</tr>
+<tr>
+<td style="text-align:left">suffix</td>
+<td style="text-align:left">返回完整匹配结果和目标序列结尾之间的分组</td>
+</tr>
+</tbody>
+</table></div>
+<p>在C++中，分组叫做子匹配（sub_match）。<a href="https://en.cppreference.com/w/cpp/regex/sub_match" target="_blank" rel="noopener">std::sub_match</a> 这个类型只有一个默认构造函数，通常你不会主动创建它，而是使用<code>std::match_results</code>的接口来获取它的对象。</p>
+<p>示例：查找出文本中所有的年代，并分离出世纪的部分和年份的部分。 思路：年代的格式是四位数字加上“s”作为后缀。我们可以通过分组的形式分离出两个部分。图示如下：</p>
+<p><img src="https://gitee.com//riotian/blogimage/raw/master/img/20200723145244.png" alt=""></p>
+<p>代码示例：</p>
+<div class="highlight"><div class="chroma">
+<div class="table-container"><table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><code><span class="lnt"> 1
+</span><span class="lnt"> 2
+</span><span class="lnt"> 3
+</span><span class="lnt"> 4
+</span><span class="lnt"> 5
+</span><span class="lnt"> 6
+</span><span class="lnt"> 7
+</span><span class="lnt"> 8
+</span><span class="lnt"> 9
+</span><span class="lnt">10
+</span><span class="lnt">11
+</span><span class="lnt">12
+</span><span class="lnt">13
+</span><span class="lnt">14
+</span><span class="lnt">15
+</span><span class="lnt">16
+</span><span class="lnt">17
+</span><span class="lnt">18
+</span><span class="lnt">19
+</span><span class="lnt">20
+</span><span class="lnt">21
+</span><span class="lnt">22
+</span><span class="lnt">23
+</span><span class="lnt">24
+</span><span class="lnt">25
+</span><span class="lnt">26
+</span><span class="lnt">27
+</span><span class="lnt">28
+</span><span class="lnt">29
+</span><span class="lnt">30
+</span><span class="lnt">31
+</span><span class="lnt">32
+</span><span class="lnt">33
+</span><span class="lnt">34
+</span><span class="lnt">35
+</span></code></pre></td>
+<td class="lntd">
+<pre class="chroma"><code class="language-cpp" data-lang="cpp"><span class="cp">#include</span> <span class="cpf">&lt;fstream&gt;</span><span class="cp">
+</span><span class="cp">#include</span> <span class="cpf">&lt;iostream&gt;</span><span class="cp">
+</span><span class="cp">#include</span> <span class="cpf">&lt;regex&gt;</span><span class="cp">
+</span><span class="cp"></span>
+<span class="k">using</span> <span class="k">namespace</span> <span class="n">std</span><span class="p">;</span>
+
+<span class="kt">int</span> <span class="nf">main</span><span class="p">()</span> <span class="p">{</span>
+  <span class="n">regex</span> <span class="n">word_regex</span><span class="p">(</span><span class="n">R</span><span class="s">&#34;((\d{2})(\d{2})s)&#34;</span><span class="p">);</span> <span class="c1">// ①
+</span><span class="c1"></span>
+  <span class="n">ifstream</span> <span class="n">file</span><span class="p">(</span><span class="s">&#34;./content.txt&#34;</span><span class="p">);</span>
+  <span class="n">string</span> <span class="n">line</span><span class="p">;</span>
+  <span class="k">while</span><span class="p">(</span><span class="n">getline</span><span class="p">(</span><span class="n">file</span><span class="p">,</span> <span class="n">line</span><span class="p">))</span> <span class="p">{</span>
+    <span class="k">auto</span> <span class="n">iter_begin</span> <span class="o">=</span> <span class="n">sregex_iterator</span><span class="p">(</span><span class="n">line</span><span class="p">.</span><span class="n">begin</span><span class="p">(),</span>
+                                      <span class="n">line</span><span class="p">.</span><span class="n">end</span><span class="p">(),</span>
+                                      <span class="n">word_regex</span><span class="p">);</span>
+    <span class="k">auto</span> <span class="n">iter_end</span> <span class="o">=</span> <span class="n">sregex_iterator</span><span class="p">();</span>
+    <span class="k">for</span> <span class="p">(</span><span class="k">auto</span> <span class="n">iter</span> <span class="o">=</span> <span class="n">iter_begin</span><span class="p">;</span> <span class="n">iter</span> <span class="o">!=</span> <span class="n">iter_end</span><span class="p">;</span> <span class="n">iter</span><span class="o">++</span><span class="p">)</span> <span class="p">{</span>
+      <span class="n">cout</span> <span class="o">&lt;&lt;</span> <span class="s">&#34;Match content: &#34;</span> <span class="o">&lt;&lt;</span> <span class="n">iter</span><span class="o">-&gt;</span><span class="n">str</span><span class="p">(</span><span class="mi">0</span><span class="p">)</span> <span class="o">&lt;&lt;</span> <span class="s">&#34;, &#34;</span><span class="p">;</span> <span class="c1">// ②
+</span><span class="c1"></span>      <span class="n">cout</span> <span class="o">&lt;&lt;</span> <span class="s">&#34;group Size: &#34;</span> <span class="o">&lt;&lt;</span> <span class="n">iter</span><span class="o">-&gt;</span><span class="n">size</span><span class="p">()</span> <span class="o">&lt;&lt;</span> <span class="n">endl</span><span class="p">;</span>  <span class="c1">// ③
+</span><span class="c1"></span>
+      <span class="n">cout</span> <span class="o">&lt;&lt;</span> <span class="s">&#34;Century: &#34;</span> <span class="o">&lt;&lt;</span> <span class="n">iter</span><span class="o">-&gt;</span><span class="n">str</span><span class="p">(</span><span class="mi">1</span><span class="p">)</span> <span class="o">&lt;&lt;</span> <span class="s">&#34;, &#34;</span><span class="p">;</span> <span class="c1">// ④
+</span><span class="c1"></span>      <span class="n">cout</span> <span class="o">&lt;&lt;</span> <span class="s">&#34;length: &#34;</span> <span class="o">&lt;&lt;</span> <span class="n">iter</span><span class="o">-&gt;</span><span class="n">length</span><span class="p">(</span><span class="mi">1</span><span class="p">)</span> <span class="o">&lt;&lt;</span> <span class="s">&#34;, &#34;</span><span class="p">;</span>
+      <span class="n">cout</span> <span class="o">&lt;&lt;</span> <span class="s">&#34;position: &#34;</span> <span class="o">&lt;&lt;</span> <span class="n">iter</span><span class="o">-&gt;</span><span class="n">position</span><span class="p">(</span><span class="mi">1</span><span class="p">)</span> <span class="o">&lt;&lt;</span> <span class="n">endl</span><span class="p">;</span>
+
+      <span class="k">auto</span> <span class="n">year</span> <span class="o">=</span> <span class="p">(</span><span class="o">*</span><span class="n">iter</span><span class="p">)[</span><span class="mi">2</span><span class="p">];</span> <span class="c1">// ⑤
+</span><span class="c1"></span>      <span class="n">cout</span> <span class="o">&lt;&lt;</span> <span class="s">&#34;Year: &#34;</span> <span class="o">&lt;&lt;</span> <span class="n">year</span><span class="p">.</span><span class="n">str</span><span class="p">()</span> <span class="o">&lt;&lt;</span> <span class="s">&#34;, &#34;</span><span class="p">;</span>
+      <span class="n">cout</span> <span class="o">&lt;&lt;</span> <span class="s">&#34;length: &#34;</span> <span class="o">&lt;&lt;</span> <span class="n">year</span><span class="p">.</span><span class="n">length</span><span class="p">()</span> <span class="o">&lt;&lt;</span> <span class="s">&#34;, &#34;</span><span class="p">;</span>
+      <span class="n">cout</span> <span class="o">&lt;&lt;</span> <span class="s">&#34;position: &#34;</span> <span class="o">&lt;&lt;</span> <span class="n">iter</span><span class="o">-&gt;</span><span class="n">position</span><span class="p">(</span><span class="mi">2</span><span class="p">)</span> <span class="o">&lt;&lt;</span> <span class="n">endl</span><span class="p">;</span>
+
+      <span class="n">cout</span> <span class="o">&lt;&lt;</span> <span class="n">endl</span><span class="p">;</span>
+    <span class="p">}</span>
+  <span class="p">}</span>
+
+  <span class="k">return</span> <span class="mi">0</span><span class="p">;</span>
+<span class="p">}</span>
+</code></pre></td></tr></table></div>
+</div>
+</div><p>这段代码说明如下：</p>
+<ol>
+<li>这个正则表达式请注意其中的圆括号</li>
+<li>先打印匹配的字符串整体</li>
+<li>所有的分组数量，应该是 2 + 1 = 3</li>
+<li>打印出世纪的部分</li>
+<li>获取编号2的分组，其类型是<code>sub_match</code></li>
+</ol>
+<p>这段代码输出如下：</p>
+<pre><code class="language-pascal" data-lang="pascal">Match content: 1950s, group Size: 3
+Century: 19, length: 2, position: 25
+Year: 50, length: 2, position: 27
+
+Match content: 1980s, group Size: 3
+Century: 19, length: 2, position: 277
+Year: 80, length: 2, position: 279
+</code></pre><h1 id="稍微深入一点的内容"><a href="#稍微深入一点的内容" class="anchor-link"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" class="icon anchor-icon"><path d="M326.612 185.391c59.747 59.809 58.927 155.698.36 214.59-.11.12-.24.25-.36.37l-67.2 67.2c-59.27 59.27-155.699 59.262-214.96 0-59.27-59.26-59.27-155.7 0-214.96l37.106-37.106c9.84-9.84 26.786-3.3 27.294 10.606.648 17.722 3.826 35.527 9.69 52.721 1.986 5.822.567 12.262-3.783 16.612l-13.087 13.087c-28.026 28.026-28.905 73.66-1.155 101.96 28.024 28.579 74.086 28.749 102.325.51l67.2-67.19c28.191-28.191 28.073-73.757 0-101.83-3.701-3.694-7.429-6.564-10.341-8.569a16.037 16.037 0 0 1-6.947-12.606c-.396-10.567 3.348-21.456 11.698-29.806l21.054-21.055c5.521-5.521 14.182-6.199 20.584-1.731a152.482 152.482 0 0 1 20.522 17.197zM467.547 44.449c-59.261-59.262-155.69-59.27-214.96 0l-67.2 67.2c-.12.12-.25.25-.36.37-58.566 58.892-59.387 154.781.36 214.59a152.454 152.454 0 0 0 20.521 17.196c6.402 4.468 15.064 3.789 20.584-1.731l21.054-21.055c8.35-8.35 12.094-19.239 11.698-29.806a16.037 16.037 0 0 0-6.947-12.606c-2.912-2.005-6.64-4.875-10.341-8.569-28.073-28.073-28.191-73.639 0-101.83l67.2-67.19c28.239-28.239 74.3-28.069 102.325.51 27.75 28.3 26.872 73.934-1.155 101.96l-13.087 13.087c-4.35 4.35-5.769 10.79-3.783 16.612 5.864 17.194 9.042 34.999 9.69 52.721.509 13.906 17.454 20.446 27.294 10.606l37.106-37.106c59.271-59.259 59.271-155.699.001-214.959z"/></svg></a>稍微深入一点的内容</h1>
+<h2 id="同一个符号的不同含义"><a href="#同一个符号的不同含义" class="anchor-link"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" class="icon anchor-icon"><path d="M326.612 185.391c59.747 59.809 58.927 155.698.36 214.59-.11.12-.24.25-.36.37l-67.2 67.2c-59.27 59.27-155.699 59.262-214.96 0-59.27-59.26-59.27-155.7 0-214.96l37.106-37.106c9.84-9.84 26.786-3.3 27.294 10.606.648 17.722 3.826 35.527 9.69 52.721 1.986 5.822.567 12.262-3.783 16.612l-13.087 13.087c-28.026 28.026-28.905 73.66-1.155 101.96 28.024 28.579 74.086 28.749 102.325.51l67.2-67.19c28.191-28.191 28.073-73.757 0-101.83-3.701-3.694-7.429-6.564-10.341-8.569a16.037 16.037 0 0 1-6.947-12.606c-.396-10.567 3.348-21.456 11.698-29.806l21.054-21.055c5.521-5.521 14.182-6.199 20.584-1.731a152.482 152.482 0 0 1 20.522 17.197zM467.547 44.449c-59.261-59.262-155.69-59.27-214.96 0l-67.2 67.2c-.12.12-.25.25-.36.37-58.566 58.892-59.387 154.781.36 214.59a152.454 152.454 0 0 0 20.521 17.196c6.402 4.468 15.064 3.789 20.584-1.731l21.054-21.055c8.35-8.35 12.094-19.239 11.698-29.806a16.037 16.037 0 0 0-6.947-12.606c-2.912-2.005-6.64-4.875-10.341-8.569-28.073-28.073-28.191-73.639 0-101.83l67.2-67.19c28.239-28.239 74.3-28.069 102.325.51 27.75 28.3 26.872 73.934-1.155 101.96l-13.087 13.087c-4.35 4.35-5.769 10.79-3.783 16.612 5.864 17.194 9.042 34.999 9.69 52.721.509 13.906 17.454 20.446 27.294 10.606l37.106-37.106c59.271-59.259 59.271-155.699.001-214.959z"/></svg></a>同一个符号的不同含义</h2>
+<p><a href="https://paul.pub/cpp-regex/#id-%E7%89%B9%E6%AE%8A%E5%AD%97%E7%AC%A6" target="_blank" rel="noopener">前面的表格中</a>，我们看到了正则表达式的特殊字符。但需要进一步说明的是，这些特殊字符在不同的环境可能有着不同的含义。</p>
+<p>例如，特殊字符<code>-</code>只有在字符组<code>[...]</code>内部才是元字符，否则它只能匹配普通的连字符符号。并且，即便在字符组内部，如果连字符是在开头，它依然是一个普通字符而不是表示一个范围。</p>
+<p>相反的，问号<code>?</code>和点号<code>.</code>不在字符组内部的时候才是特殊字符。因此<code>[?.]</code>中的这两个符号仅仅代表这两个字符自身。</p>
+<p>还有，字符<code>^</code>出现在字符组中的时候表示的是否定，例如：<code>[a-z]</code>和<code>[^a-z]</code>表示的是正好相反的字符集。但是当字符<code>^</code>不是用在字符组中的时候，它是一个<a href="https://paul.pub/cpp-regex/#id-%E9%94%9A%E7%82%B9" target="_blank" rel="noopener">锚点</a>，具体内容下文会说到。</p>
+<h2 id="量词的占有欲"><a href="#量词的占有欲" class="anchor-link"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" class="icon anchor-icon"><path d="M326.612 185.391c59.747 59.809 58.927 155.698.36 214.59-.11.12-.24.25-.36.37l-67.2 67.2c-59.27 59.27-155.699 59.262-214.96 0-59.27-59.26-59.27-155.7 0-214.96l37.106-37.106c9.84-9.84 26.786-3.3 27.294 10.606.648 17.722 3.826 35.527 9.69 52.721 1.986 5.822.567 12.262-3.783 16.612l-13.087 13.087c-28.026 28.026-28.905 73.66-1.155 101.96 28.024 28.579 74.086 28.749 102.325.51l67.2-67.19c28.191-28.191 28.073-73.757 0-101.83-3.701-3.694-7.429-6.564-10.341-8.569a16.037 16.037 0 0 1-6.947-12.606c-.396-10.567 3.348-21.456 11.698-29.806l21.054-21.055c5.521-5.521 14.182-6.199 20.584-1.731a152.482 152.482 0 0 1 20.522 17.197zM467.547 44.449c-59.261-59.262-155.69-59.27-214.96 0l-67.2 67.2c-.12.12-.25.25-.36.37-58.566 58.892-59.387 154.781.36 214.59a152.454 152.454 0 0 0 20.521 17.196c6.402 4.468 15.064 3.789 20.584-1.731l21.054-21.055c8.35-8.35 12.094-19.239 11.698-29.806a16.037 16.037 0 0 0-6.947-12.606c-2.912-2.005-6.64-4.875-10.341-8.569-28.073-28.073-28.191-73.639 0-101.83l67.2-67.19c28.239-28.239 74.3-28.069 102.325.51 27.75 28.3 26.872 73.934-1.155 101.96l-13.087 13.087c-4.35 4.35-5.769 10.79-3.783 16.612 5.864 17.194 9.042 34.999 9.69 52.721.509 13.906 17.454 20.446 27.294 10.606l37.106-37.106c59.271-59.259 59.271-155.699.001-214.959z"/></svg></a>量词的占有欲</h2>
+<p>还是以<code>content.txt</code>的内容为基础，现在假设我们的目标是：找出所有双引号中的内容。</p>
+<p>根据之前的知识，你可能很轻松就写出了下面这个正则表达式：</p>
+<pre><code class="language-pascal" data-lang="pascal">regex content_regex(&quot;\&quot;(.+)\&quot;&quot;);
+</code></pre><ul>
+<li>两边的双引号通过反斜杠转义</li>
+<li>待捕获的内容通过圆括号形成分组</li>
+<li>双引号中可以是任意内容，因此使用<code>.+</code></li>
+</ul>
+<p>但是当你运行程序的时候却发现它可能有点问题。它捕获的结果是：</p>
+<pre><code class="language-pascal" data-lang="pascal">&quot;find&quot; or &quot;find and replace&quot;
+</code></pre><p>为什么？其实很简单，因为双引号本身也可以与<code>.</code>匹配。上面这个正则表达式的含义是：匹配一个两端是双引号，中间是任意文字的内容。</p>
+<p>当然，你马上想到一个改进方法那就是：将正则表达式圆括号中的<code>.+</code>改为<code>[^&quot;]+</code>，它的含义是：一个或多个非双引号字符。这么做是可以的。但其实我们还有更好的做法。</p>
+<p>我们再回头看一下原先的正则表达式，不考虑分组和转义，它可以写成：<code>&quot;.+&quot;</code>。其实我们知道下面这三个字符串都是与其匹配的：</p>
+<ul>
+<li><code>&quot;find&quot;</code></li>
+<li><code>&quot;find and replace&quot;</code></li>
+<li><code>&quot;find&quot; or &quot;find and replace&quot;</code></li>
+</ul>
+<p>而将整个文本交给正则表达式的时候，它找出了最长的那个串。可见，原先的正则表达式太过“贪婪”（greedy）。是的，<strong>量词在默认情况都是贪婪的</strong>。即：它们会尽可能多的占有内容。</p>
+<p>那我们能不能控制量词让其尽可能少的占有内容，只要满足匹配要求就可以呢？</p>
+<p>答案是肯定的，而且做法很简单：在量词的后面加上一个<code>?</code>。即，将圆括号中<code>.+</code>修改为<code>.+?</code>即可。量词的默认形式称之为“匹配优先量词”，现在这种写法称之为“忽略优先量词”。</p>
+<p>现在它找到的是下面两个匹配：</p>
+<pre><code class="language-pascal" data-lang="pascal">&quot;find&quot;
+&quot;find and replace&quot;
+</code></pre><p>小结一下：</p>
+<ul>
+<li>匹配优先量词：<code>*</code>，<code>+</code>，<code>?</code>，<code>{num, num}</code></li>
+<li>忽略优先量词: <code>*?</code>，<code>+?</code>，<code>??</code>，<code>{num, num}?</code></li>
+</ul>
+<h2 id="锚点"><a href="#锚点" class="anchor-link"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" class="icon anchor-icon"><path d="M326.612 185.391c59.747 59.809 58.927 155.698.36 214.59-.11.12-.24.25-.36.37l-67.2 67.2c-59.27 59.27-155.699 59.262-214.96 0-59.27-59.26-59.27-155.7 0-214.96l37.106-37.106c9.84-9.84 26.786-3.3 27.294 10.606.648 17.722 3.826 35.527 9.69 52.721 1.986 5.822.567 12.262-3.783 16.612l-13.087 13.087c-28.026 28.026-28.905 73.66-1.155 101.96 28.024 28.579 74.086 28.749 102.325.51l67.2-67.19c28.191-28.191 28.073-73.757 0-101.83-3.701-3.694-7.429-6.564-10.341-8.569a16.037 16.037 0 0 1-6.947-12.606c-.396-10.567 3.348-21.456 11.698-29.806l21.054-21.055c5.521-5.521 14.182-6.199 20.584-1.731a152.482 152.482 0 0 1 20.522 17.197zM467.547 44.449c-59.261-59.262-155.69-59.27-214.96 0l-67.2 67.2c-.12.12-.25.25-.36.37-58.566 58.892-59.387 154.781.36 214.59a152.454 152.454 0 0 0 20.521 17.196c6.402 4.468 15.064 3.789 20.584-1.731l21.054-21.055c8.35-8.35 12.094-19.239 11.698-29.806a16.037 16.037 0 0 0-6.947-12.606c-2.912-2.005-6.64-4.875-10.341-8.569-28.073-28.073-28.191-73.639 0-101.83l67.2-67.19c28.239-28.239 74.3-28.069 102.325.51 27.75 28.3 26.872 73.934-1.155 101.96l-13.087 13.087c-4.35 4.35-5.769 10.79-3.783 16.612 5.864 17.194 9.042 34.999 9.69 52.721.509 13.906 17.454 20.446 27.294 10.606l37.106-37.106c59.271-59.259 59.271-155.699.001-214.959z"/></svg></a>锚点</h2>
+<p>锚点是一类特殊的标记，它们不会匹配任何文本内容，而是寻找特定的标记。你可以简单理解为它是原先表达式的基础上增加了新的匹配条件。如果条件不满足，则无法完成匹配。</p>
+<p>锚点主要分为三种：</p>
+<ul>
+<li>行/字符串的起始位置：<code>^</code>，行/字符串的结束位置：<code>$</code></li>
+<li>单词边界：<code>\b</code></li>
+<li>环视 ，见下文</li>
+</ul>
+<p>例如：</p>
+<ul>
+<li>正则表达式<code>^\d+</code>在字符串<code>&quot;123abc&quot;</code>中能找到匹配，在字符串<code>&quot;abc123&quot;</code>却找不到。</li>
+<li>正则表达式<code>some\b</code>在字符串<code>&quot;some birds&quot;</code>中能找到匹配，在字符串<code>&quot;sometimes wonderful&quot;</code>中却找不到。</li>
+</ul>
+<p>下面是代码示例：</p>
+<div class="highlight"><div class="chroma">
+<div class="table-container"><table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><code><span class="lnt"> 1
+</span><span class="lnt"> 2
+</span><span class="lnt"> 3
+</span><span class="lnt"> 4
+</span><span class="lnt"> 5
+</span><span class="lnt"> 6
+</span><span class="lnt"> 7
+</span><span class="lnt"> 8
+</span><span class="lnt"> 9
+</span><span class="lnt">10
+</span><span class="lnt">11
+</span><span class="lnt">12
+</span><span class="lnt">13
+</span><span class="lnt">14
+</span><span class="lnt">15
+</span><span class="lnt">16
+</span><span class="lnt">17
+</span><span class="lnt">18
+</span><span class="lnt">19
+</span><span class="lnt">20
+</span><span class="lnt">21
+</span><span class="lnt">22
+</span><span class="lnt">23
+</span><span class="lnt">24
+</span><span class="lnt">25
+</span><span class="lnt">26
+</span></code></pre></td>
+<td class="lntd">
+<pre class="chroma"><code class="language-cpp" data-lang="cpp"><span class="cp">#include</span> <span class="cpf">&lt;iostream&gt;</span><span class="cp">
+</span><span class="cp">#include</span> <span class="cpf">&lt;regex&gt;</span><span class="cp">
+</span><span class="cp"></span>
+<span class="k">using</span> <span class="k">namespace</span> <span class="n">std</span><span class="p">;</span>
+
+<span class="kt">void</span> <span class="nf">findIn</span><span class="p">(</span><span class="k">const</span> <span class="kt">char</span><span class="o">*</span> <span class="n">content</span><span class="p">,</span> <span class="k">const</span> <span class="kt">char</span><span class="o">*</span> <span class="n">reg_ex</span><span class="p">)</span> <span class="p">{</span>
+	<span class="n">cout</span> <span class="o">&lt;&lt;</span> <span class="s">&#34;Search &#39;&#34;</span> <span class="o">&lt;&lt;</span> <span class="n">reg_ex</span> <span class="o">&lt;&lt;</span> <span class="s">&#34;&#39; in &#39;&#34;</span> <span class="o">&lt;&lt;</span> <span class="n">content</span> <span class="o">&lt;&lt;</span> <span class="s">&#34;&#39;: &#34;</span><span class="p">;</span>
+	<span class="n">smatch</span> <span class="n">match</span><span class="p">;</span>
+	<span class="n">string</span> <span class="n">s</span><span class="p">(</span><span class="n">content</span><span class="p">);</span>
+	<span class="n">regex</span> <span class="n">reg</span><span class="p">(</span><span class="n">reg_ex</span><span class="p">);</span>
+	<span class="k">if</span><span class="p">(</span><span class="n">regex_search</span><span class="p">(</span><span class="n">s</span><span class="p">,</span> <span class="n">match</span><span class="p">,</span> <span class="n">reg</span><span class="p">))</span> <span class="p">{</span>
+		<span class="n">cout</span> <span class="o">&lt;&lt;</span> <span class="n">match</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span> <span class="o">&lt;&lt;</span> <span class="n">endl</span><span class="p">;</span>
+	<span class="p">}</span> <span class="k">else</span> <span class="p">{</span>
+		<span class="n">cout</span> <span class="o">&lt;&lt;</span> <span class="s">&#34;NOTHING&#34;</span> <span class="o">&lt;&lt;</span> <span class="n">endl</span><span class="p">;</span>
+	<span class="p">}</span>
+<span class="p">}</span>
+
+<span class="kt">int</span> <span class="nf">main</span><span class="p">()</span> <span class="p">{</span>
+  <span class="n">findIn</span><span class="p">(</span><span class="s">&#34;123abc&#34;</span><span class="p">,</span> <span class="s">&#34;^</span><span class="se">\\</span><span class="s">d+&#34;</span><span class="p">);</span>
+  <span class="n">findIn</span><span class="p">(</span><span class="s">&#34;abc123&#34;</span><span class="p">,</span> <span class="s">&#34;^</span><span class="se">\\</span><span class="s">d+&#34;</span><span class="p">);</span>
+  <span class="n">cout</span> <span class="o">&lt;&lt;</span> <span class="n">endl</span><span class="p">;</span>
+  <span class="n">findIn</span><span class="p">(</span><span class="s">&#34;some birds&#34;</span><span class="p">,</span> <span class="s">&#34;some</span><span class="se">\\</span><span class="s">b&#34;</span><span class="p">);</span>
+  <span class="n">findIn</span><span class="p">(</span><span class="s">&#34;sometimes wonderful&#34;</span><span class="p">,</span> <span class="s">&#34;some</span><span class="se">\\</span><span class="s">b&#34;</span><span class="p">);</span>
+
+  <span class="k">return</span> <span class="mi">0</span><span class="p">;</span>
+<span class="p">}</span>
+</code></pre></td></tr></table></div>
+</div>
+</div><p>它的输出如下：</p>
+<pre><code class="language-pascal" data-lang="pascal">Search '^\d+' in '123abc': 123
+Search '^\d+' in 'abc123': NOTHING
+
+Search 'some\b' in 'some birds': some
+Search 'some\b' in 'sometimes wonderful': NOTHING
+</code></pre><h2 id="环视"><a href="#环视" class="anchor-link"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" class="icon anchor-icon"><path d="M326.612 185.391c59.747 59.809 58.927 155.698.36 214.59-.11.12-.24.25-.36.37l-67.2 67.2c-59.27 59.27-155.699 59.262-214.96 0-59.27-59.26-59.27-155.7 0-214.96l37.106-37.106c9.84-9.84 26.786-3.3 27.294 10.606.648 17.722 3.826 35.527 9.69 52.721 1.986 5.822.567 12.262-3.783 16.612l-13.087 13.087c-28.026 28.026-28.905 73.66-1.155 101.96 28.024 28.579 74.086 28.749 102.325.51l67.2-67.19c28.191-28.191 28.073-73.757 0-101.83-3.701-3.694-7.429-6.564-10.341-8.569a16.037 16.037 0 0 1-6.947-12.606c-.396-10.567 3.348-21.456 11.698-29.806l21.054-21.055c5.521-5.521 14.182-6.199 20.584-1.731a152.482 152.482 0 0 1 20.522 17.197zM467.547 44.449c-59.261-59.262-155.69-59.27-214.96 0l-67.2 67.2c-.12.12-.25.25-.36.37-58.566 58.892-59.387 154.781.36 214.59a152.454 152.454 0 0 0 20.521 17.196c6.402 4.468 15.064 3.789 20.584-1.731l21.054-21.055c8.35-8.35 12.094-19.239 11.698-29.806a16.037 16.037 0 0 0-6.947-12.606c-2.912-2.005-6.64-4.875-10.341-8.569-28.073-28.073-28.191-73.639 0-101.83l67.2-67.19c28.239-28.239 74.3-28.069 102.325.51 27.75 28.3 26.872 73.934-1.155 101.96l-13.087 13.087c-4.35 4.35-5.769 10.79-3.783 16.612 5.864 17.194 9.042 34.999 9.69 52.721.509 13.906 17.454 20.446 27.294 10.606l37.106-37.106c59.271-59.259 59.271-155.699.001-214.959z"/></svg></a>环视</h2>
+<p>现在假设我们有下面两个需求：</p>
+<ol>
+<li>匹配出所有sometimes中的前四个字符“some”</li>
+<li>匹配出所有的单词some，但是要排除掉“some birds”中的“some”</li>
+</ol>
+<p>对于第一个问题，我们可以分两步：先找出所有的单词sometimes，然后取前四个字符。对于第二个问题，我们可以先找出所有的单词“some”，然后把后面是“birds”的丢掉。</p>
+<p>以上的解法都是分两步完成。但实际上，借助环视（lookaround）我们可以一步就完成任务。</p>
+<p>环视是对匹配位置的附加条件，只有条件满足时才能完成匹配。环视有：顺序（向右），逆序（向左），肯定和否定一共四种：</p>
+<div class="table-container"><table>
+<thead>
+<tr>
+<th style="text-align:left">类型</th>
+<th style="text-align:left">正则表达式</th>
+<th style="text-align:left">匹配条件</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:left">肯定顺序环视</td>
+<td style="text-align:left"><code>(?=...)</code></td>
+<td style="text-align:left">子表达式能够匹配右侧文本</td>
+</tr>
+<tr>
+<td style="text-align:left">否定顺序环视</td>
+<td style="text-align:left"><code>(?!...)</code></td>
+<td style="text-align:left">子表达式不能匹配右侧文本</td>
+</tr>
+<tr>
+<td style="text-align:left">肯定逆序环视</td>
+<td style="text-align:left"><code>(?&lt;=...)</code></td>
+<td style="text-align:left">子表达式能够匹配左侧文本</td>
+</tr>
+<tr>
+<td style="text-align:left">否定逆序环视</td>
+<td style="text-align:left"><code>(?&lt;!...)</code></td>
+<td style="text-align:left">子表达式不能匹配左侧文本</td>
+</tr>
+</tbody>
+</table></div>
+<blockquote>
+<p>C++中的环视只支持顺序环视，不支持逆序环视。</p>
+</blockquote>
+<p>环视说起来有些拗口，但看具体的例子就容易理解了：</p>
+<div class="highlight"><div class="chroma">
+<div class="table-container"><table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><code><span class="lnt"> 1
+</span><span class="lnt"> 2
+</span><span class="lnt"> 3
+</span><span class="lnt"> 4
+</span><span class="lnt"> 5
+</span><span class="lnt"> 6
+</span><span class="lnt"> 7
+</span><span class="lnt"> 8
+</span><span class="lnt"> 9
+</span><span class="lnt">10
+</span><span class="lnt">11
+</span><span class="lnt">12
+</span><span class="lnt">13
+</span><span class="lnt">14
+</span><span class="lnt">15
+</span><span class="lnt">16
+</span><span class="lnt">17
+</span><span class="lnt">18
+</span><span class="lnt">19
+</span><span class="lnt">20
+</span><span class="lnt">21
+</span><span class="lnt">22
+</span><span class="lnt">23
+</span><span class="lnt">24
+</span><span class="lnt">25
+</span><span class="lnt">26
+</span><span class="lnt">27
+</span></code></pre></td>
+<td class="lntd">
+<pre class="chroma"><code class="language-cpp" data-lang="cpp"><span class="cp">#include</span> <span class="cpf">&lt;iostream&gt;</span><span class="cp">
+</span><span class="cp">#include</span> <span class="cpf">&lt;regex&gt;</span><span class="cp">
+</span><span class="cp"></span>
+<span class="k">using</span> <span class="k">namespace</span> <span class="n">std</span><span class="p">;</span>
+
+<span class="kt">void</span> <span class="nf">isMatch</span><span class="p">(</span><span class="k">const</span> <span class="kt">char</span><span class="o">*</span> <span class="n">content</span><span class="p">,</span> <span class="k">const</span> <span class="kt">char</span><span class="o">*</span> <span class="n">reg_ex</span><span class="p">)</span> <span class="p">{</span>
+	<span class="n">cout</span> <span class="o">&lt;&lt;</span> <span class="s">&#34;Is &#39;&#34;</span> <span class="o">&lt;&lt;</span> <span class="n">reg_ex</span> <span class="o">&lt;&lt;</span> <span class="s">&#34;&#39; match &#39;&#34;</span> <span class="o">&lt;&lt;</span> <span class="n">content</span> <span class="o">&lt;&lt;</span> <span class="s">&#34;&#39;: &#34;</span><span class="p">;</span>
+	<span class="n">smatch</span> <span class="n">match</span><span class="p">;</span>
+	<span class="n">string</span> <span class="n">s</span><span class="p">(</span><span class="n">content</span><span class="p">);</span>
+	<span class="n">regex</span> <span class="n">reg</span><span class="p">(</span><span class="n">reg_ex</span><span class="p">);</span>
+	<span class="k">if</span><span class="p">(</span><span class="n">regex_search</span><span class="p">(</span><span class="n">s</span><span class="p">,</span> <span class="n">match</span><span class="p">,</span> <span class="n">reg</span><span class="p">))</span> <span class="p">{</span>
+		<span class="n">cout</span> <span class="o">&lt;&lt;</span> <span class="s">&#34;YES&#34;</span> <span class="o">&lt;&lt;</span> <span class="n">endl</span><span class="p">;</span>
+	<span class="p">}</span> <span class="k">else</span> <span class="p">{</span>
+		<span class="n">cout</span> <span class="o">&lt;&lt;</span> <span class="s">&#34;NO&#34;</span> <span class="o">&lt;&lt;</span> <span class="n">endl</span><span class="p">;</span>
+	<span class="p">}</span>
+<span class="p">}</span>
+
+<span class="kt">int</span> <span class="nf">main</span><span class="p">()</span> <span class="p">{</span>
+  <span class="n">isMatch</span><span class="p">(</span><span class="s">&#34;sometimes&#34;</span><span class="p">,</span> <span class="s">&#34;(?=sometimes)some&#34;</span><span class="p">);</span>
+  <span class="n">isMatch</span><span class="p">(</span><span class="s">&#34;something&#34;</span><span class="p">,</span> <span class="s">&#34;(?=sometimes)some&#34;</span><span class="p">);</span>
+
+  <span class="n">cout</span> <span class="o">&lt;&lt;</span> <span class="n">endl</span><span class="p">;</span>
+  <span class="n">isMatch</span><span class="p">(</span><span class="s">&#34;some eggs&#34;</span><span class="p">,</span> <span class="s">&#34;(?!some birds)some&#34;</span><span class="p">);</span>
+  <span class="n">isMatch</span><span class="p">(</span><span class="s">&#34;some birds&#34;</span><span class="p">,</span> <span class="s">&#34;(?!some birds)some&#34;</span><span class="p">);</span>
+
+  <span class="k">return</span> <span class="mi">0</span><span class="p">;</span>
+<span class="p">}</span>
+</code></pre></td></tr></table></div>
+</div>
+</div><p>这段代码并不复杂所以就不多做说明，它的输出结果如下：</p>
+<pre><code class="language-pascal" data-lang="pascal">Is 'sometimes' match '(?=sometimes)some': YES
+Is 'something' match '(?=sometimes)some': NO
+
+Is 'some eggs' match '(?!some birds)some': YES
+Is 'some birds' match '(?!some birds)some': NO
+</code></pre><p>对于包含环视的正则表达式来说，环视之外的内容是匹配的主体，环视本身只是一个附件条件。<code>(?=sometimes)</code>这个肯定顺序环视要求从这个位置开始，接下来的字符串必须是<code>&quot;sometimes&quot;</code>才能完成匹配。<code>(?!some birds)</code>这个否定顺序环视要是接下来的字符串一定<strong>不能</strong>是<code>&quot;some birds&quot;</code>才能完成匹配。</p>
+<p>为了进一步帮助你理解，我们以图示的方式将<code>(?=sometimes)some</code>匹配<code>&quot;something&quot;</code>的过程描述出来。</p>
+<p>图示中，虚线的上面是待匹配的文本，下面是正则表达式。对于环视，我们可以将其环视条件和主体分开来看。我们以一个下标三角箭头表示当前匹配的搜索位置。</p>
+<p>刚开始的时候，搜索的位置是第一个字符的前面：</p>
+<p><img src="https://gitee.com//riotian/blogimage/raw/master/img/20200723145422.png" alt=""></p>
+<p>接下来，搜索位置往后走一个字符：</p>
+<p><img src="https://gitee.com//riotian/blogimage/raw/master/img/20200723145429.png" alt="img"></p>
+<p>这个过程可以一直进行，直到匹配完<code>&quot;some&quot;</code>：</p>
+<p><img src="https://gitee.com//riotian/blogimage/raw/master/img/20200723145446.png" alt="img"></p>
+<p>虽然正则表达式的主体<code>&quot;some&quot;</code>完成了匹配，但是接下来环视的条件却无法满足，于是匹配失败：</p>
+<p><img src="https://gitee.com//riotian/blogimage/raw/master/img/20200723145520.png" alt="img"></p>
+<p>但是，如果要匹配内容正好是<code>&quot;sometimes&quot;</code>，则条件是满足的，于是就完成了匹配。</p>
+<p><img src="https://gitee.com//riotian/blogimage/raw/master/img/20200723145517.png" alt="img"></p>
+<h1 id="结束语"><a href="#结束语" class="anchor-link"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" class="icon anchor-icon"><path d="M326.612 185.391c59.747 59.809 58.927 155.698.36 214.59-.11.12-.24.25-.36.37l-67.2 67.2c-59.27 59.27-155.699 59.262-214.96 0-59.27-59.26-59.27-155.7 0-214.96l37.106-37.106c9.84-9.84 26.786-3.3 27.294 10.606.648 17.722 3.826 35.527 9.69 52.721 1.986 5.822.567 12.262-3.783 16.612l-13.087 13.087c-28.026 28.026-28.905 73.66-1.155 101.96 28.024 28.579 74.086 28.749 102.325.51l67.2-67.19c28.191-28.191 28.073-73.757 0-101.83-3.701-3.694-7.429-6.564-10.341-8.569a16.037 16.037 0 0 1-6.947-12.606c-.396-10.567 3.348-21.456 11.698-29.806l21.054-21.055c5.521-5.521 14.182-6.199 20.584-1.731a152.482 152.482 0 0 1 20.522 17.197zM467.547 44.449c-59.261-59.262-155.69-59.27-214.96 0l-67.2 67.2c-.12.12-.25.25-.36.37-58.566 58.892-59.387 154.781.36 214.59a152.454 152.454 0 0 0 20.521 17.196c6.402 4.468 15.064 3.789 20.584-1.731l21.054-21.055c8.35-8.35 12.094-19.239 11.698-29.806a16.037 16.037 0 0 0-6.947-12.606c-2.912-2.005-6.64-4.875-10.341-8.569-28.073-28.073-28.191-73.639 0-101.83l67.2-67.19c28.239-28.239 74.3-28.069 102.325.51 27.75 28.3 26.872 73.934-1.155 101.96l-13.087 13.087c-4.35 4.35-5.769 10.79-3.783 16.612 5.864 17.194 9.042 34.999 9.69 52.721.509 13.906 17.454 20.446 27.294 10.606l37.106-37.106c59.271-59.259 59.271-155.699.001-214.959z"/></svg></a>结束语</h1>
+<p>因为是入门的文章，所以本文中所举例的正则表达式都很简单。但实际应用的时候，我们常常会写出非常复杂的正则表达式。你可以点击这里浏览一些示例：<a href="http://regexlib.com/DisplayPatterns.aspx" target="_blank" rel="noopener">Regular Expression Library</a>。</p>
+<p>复杂的正则表达式常常很难理解，你可能需要借助工具来帮助分析，下面两个工具也许能帮上忙：</p>
+<ul>
+<li><a href="https://regex101.com/" target="_blank" rel="noopener">https://regex101.com</a></li>
+<li><a href="https://www.debuggex.com/" target="_blank" rel="noopener">https://www.debuggex.com</a></li>
+</ul>
+<p>想要很好的掌握正则表达式，多使用多练习是最好的方法。想要深入学习正则表达式，Jeffrey E.F. Friedl的<a href="https://item.jd.com/11070361.html" target="_blank" rel="noopener">《精通正则表达式》</a>可能是最好的选择。</p>
+<h1 id="参考资料与推荐读物"><a href="#参考资料与推荐读物" class="anchor-link"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" class="icon anchor-icon"><path d="M326.612 185.391c59.747 59.809 58.927 155.698.36 214.59-.11.12-.24.25-.36.37l-67.2 67.2c-59.27 59.27-155.699 59.262-214.96 0-59.27-59.26-59.27-155.7 0-214.96l37.106-37.106c9.84-9.84 26.786-3.3 27.294 10.606.648 17.722 3.826 35.527 9.69 52.721 1.986 5.822.567 12.262-3.783 16.612l-13.087 13.087c-28.026 28.026-28.905 73.66-1.155 101.96 28.024 28.579 74.086 28.749 102.325.51l67.2-67.19c28.191-28.191 28.073-73.757 0-101.83-3.701-3.694-7.429-6.564-10.341-8.569a16.037 16.037 0 0 1-6.947-12.606c-.396-10.567 3.348-21.456 11.698-29.806l21.054-21.055c5.521-5.521 14.182-6.199 20.584-1.731a152.482 152.482 0 0 1 20.522 17.197zM467.547 44.449c-59.261-59.262-155.69-59.27-214.96 0l-67.2 67.2c-.12.12-.25.25-.36.37-58.566 58.892-59.387 154.781.36 214.59a152.454 152.454 0 0 0 20.521 17.196c6.402 4.468 15.064 3.789 20.584-1.731l21.054-21.055c8.35-8.35 12.094-19.239 11.698-29.806a16.037 16.037 0 0 0-6.947-12.606c-2.912-2.005-6.64-4.875-10.341-8.569-28.073-28.073-28.191-73.639 0-101.83l67.2-67.19c28.239-28.239 74.3-28.069 102.325.51 27.75 28.3 26.872 73.934-1.155 101.96l-13.087 13.087c-4.35 4.35-5.769 10.79-3.783 16.612 5.864 17.194 9.042 34.999 9.69 52.721.509 13.906 17.454 20.446 27.294 10.606l37.106-37.106c59.271-59.259 59.271-155.699.001-214.959z"/></svg></a>参考资料与推荐读物</h1>
+<ul>
+<li><a href="https://paul.pub/" target="_blank" rel="noopener">保罗的酒吧</a>：<a href="">Regex</a></li>
+</ul>
+<ul>
+<li><a href="https://www.amazon.com/Mastering-Regular-Expressions-Jeffrey-Friedl/dp/0596528124" target="_blank" rel="noopener">Mastering Regular Expressions</a></li>
+<li><a href="https://en.cppreference.com/w/cpp/regex/ecmascript" target="_blank" rel="noopener">Modified ECMAScript regular expression grammar</a></li>
+<li><a href="https://pubs.opengroup.org/onlinepubs/9699919799/basedefs/V1_chap09.html" target="_blank" rel="noopener">9. Regular Expressions - The Open Group Base Specifications Issue 7, 2018 edition</a></li>
+<li><a href="https://pubs.opengroup.org/onlinepubs/9699919799/utilities/awk.html#tag_20_06_13_04" target="_blank" rel="noopener">awk Regular Expressions - The Open Group Base Specifications Issue 7, 2018 edition</a></li>
+<li><a href="https://en.cppreference.com/w/cpp/regex" target="_blank" rel="noopener">C++ Regular expressions library</a></li>
+</ul>
+
+            </div>
+
+            
+    
+    
+        <ul class="post-copyright">
+            <li class="copyright-item author"><span class="copyright-item-text">作者</span>：<a href="https://rivtian.github.io/" class="p-author h-card" target="_blank" rel="noopener">RioTian</a></li>
+            
+                
+                
+                
+                
+                <li class="copyright-item link"><span class="copyright-item-text">链接</span>：<a href="/tech/c&#43;&#43;%E4%B8%8E%E6%AD%A3%E5%88%99%E8%A1%A8%E8%BE%BE%E5%BC%8F/" target="_blank" rel="noopener">https://rivtian.github.io/tech/c&#43;&#43;与正则表达式/</a></li>
+            
+            <li class="copyright-item license"><span class="copyright-item-text">许可</span>：<a href="https://creativecommons.org/licenses/by-nc-sa/4.0/deed.zh" target="_blank" rel="noopener">CC BY-NC-SA 4.0</a></li>
+            
+        </ul>
+    
+
+
+
+        </article>
+
+        
+
+        
+    <div class="updated-badge-container">
+        <span title="Updated @ 2020-10-23 15:04:34 UTC" style="cursor:help">
+
+<svg xmlns="http://www.w3.org/2000/svg" width="130" height="20" class="updated-badge"><linearGradient id="b" x2="0" y2="100%"><stop offset="0" stop-color="#bbb" stop-opacity=".1"/><stop offset="1" stop-opacity=".1"/></linearGradient><clipPath id="a"><rect width="130" height="20" rx="3" fill="#fff"/></clipPath><g clip-path="url(#a)"><path class="updated-badge-left" d="M0 0h55v20H0z"/><path class="updated-badge-right" d="M55 0h75v20H55z"/><path fill="url(#b)" d="M0 0h130v20H0z"/></g><g fill="#fff" text-anchor="middle" font-size="110"><text x="285" y="150" fill="#010101" fill-opacity=".3" textLength="450" transform="scale(.1)">updated</text><text x="285" y="140" textLength="450" transform="scale(.1)">updated</text><text x="915" y="150" fill="#010101" fill-opacity=".3" textLength="650" transform="scale(.1)">2020-10-23</text><text x="915" y="140" textLength="650" transform="scale(.1)">2020-10-23</text></g></svg>
+        </span></div>
+
+
+
+        
+
+
+        
+
+
+        
+    
+    
+        <div class="related-posts">
+            <h2 class="related-title">相关文章：<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" class="icon related-icon"><path d="M256 8C119 8 8 119 8 256s111 248 248 248 248-111 248-248S393 8 256 8zm144 276c0 6.6-5.4 12-12 12h-92v92c0 6.6-5.4 12-12 12h-56c-6.6 0-12-5.4-12-12v-92h-92c-6.6 0-12-5.4-12-12v-56c0-6.6 5.4-12 12-12h92v-92c0-6.6 5.4-12 12-12h56c6.6 0 12 5.4 12 12v92h92c6.6 0 12 5.4 12 12v56z"/></svg></h2>
+            <ul class="related-list">
+                
+                    <li class="related-item">
+                        <a href="/tech/%E7%AE%80%E5%8D%95%E7%9A%84%E6%97%A5%E6%9C%9F%E6%AD%A3%E5%88%99%E8%A1%A8%E8%BE%BE%E5%BC%8F/" class="related-link">简单的日期正则表达式</a>
+                    </li>
+                
+            </ul>
+        </div>
+    
+
+
+
+        
+    
+        <div class="post-tags">
+            
+                
+                
+                
+                
+                    
+                    <a href="/tags/%E6%AD%A3%E5%88%99%E8%A1%A8%E8%BE%BE%E5%BC%8F/" rel="tag" class="post-tags-link"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" class="icon tag-icon"><path d="M0 252.118V48C0 21.49 21.49 0 48 0h204.118a48 48 0 0 1 33.941 14.059l211.882 211.882c18.745 18.745 18.745 49.137 0 67.882L293.823 497.941c-18.745 18.745-49.137 18.745-67.882 0L14.059 286.059A48 48 0 0 1 0 252.118zM112 64c-26.51 0-48 21.49-48 48s21.49 48 48 48 48-21.49 48-48-21.49-48-48-48z"/></svg>正则表达式</a>
+                
+            
+        </div>
+    
+
+
+
+        
+    <footer class="minimal-footer">
+        
+            <div class="post-tag"><a href="/tags/%E6%AD%A3%E5%88%99%E8%A1%A8%E8%BE%BE%E5%BC%8F/" rel="tag" class="post-tag-link">#正则表达式</a></div>
+        
+        
+        
+            
+        
+    </footer>
+
+
+
+        
+
+
+        
+    
+        
+        
+    
+    
+    
+    
+        <ul class="post-nav">
+            
+                <li class="post-nav-prev">
+                    <a href="/tech/%E8%BF%9E%E9%80%9A%E5%9B%BE/" rel="prev">&lt; 连通图</a>
+                </li>
+            
+            
+                <li class="post-nav-next">
+                    <a href="/tech/%E7%AE%80%E5%8D%95%E7%9A%84%E6%97%A5%E6%9C%9F%E6%AD%A3%E5%88%99%E8%A1%A8%E8%BE%BE%E5%BC%8F/" rel="next">简单的日期正则表达式 &gt;</a>
+                </li>
+            
+        </ul>
+    
+
+
+
+        
+    
+
+        <div class="load-comments">
+            <div id="load-comments">加载评论</div>
+        </div>
+
+        
+
+        
+            <div id="vcomments"></div>
+        
+
+        
+
+    
+
+
+
+    </div>
+</main>
+
+
+            
+    <div id="back-to-top" class="back-to-top">
+        <a href="#"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512" class="icon arrow-up"><path d="M34.9 289.5l-22.2-22.2c-9.4-9.4-9.4-24.6 0-33.9L207 39c9.4-9.4 24.6-9.4 33.9 0l194.3 194.3c9.4 9.4 9.4 24.6 0 33.9L413 289.4c-9.5 9.5-25 9.3-34.3-.4L264 168.6V456c0 13.3-10.7 24-24 24h-32c-13.3 0-24-10.7-24-24V168.6L69.2 289.1c-9.3 9.8-24.8 10-34.3.4z"/></svg></a>
+    </div>
+
+
+            
+    <footer id="footer" class="footer">
+        <div class="footer-inner">
+            <div class="site-info">©&nbsp;2020–2020&nbsp;<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" class="icon footer-icon"><path d="M462.3 62.6C407.5 15.9 326 24.3 275.7 76.2L256 96.5l-19.7-20.3C186.1 24.3 104.5 15.9 49.7 62.6c-62.8 53.6-66.1 149.8-9.9 207.9l193.5 199.8c12.5 12.9 32.8 12.9 45.3 0l193.5-199.8c56.3-58.1 53-154.3-9.8-207.9z"/></svg>&nbsp;RioTian</div><div class="site-copyright"><a href="https://creativecommons.org/licenses/by-nc-sa/4.0/deed.zh" target="_blank" rel="noopener">CC BY-NC-SA 4.0</a></div>
+                <div class="busuanzi-site-uv-and-pv">
+                    <span id="busuanzi_container_site_uv">本站访客数&nbsp;<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512" class="icon busuanzi-site-uv"><path d="M224 256c70.7 0 128-57.3 128-128S294.7 0 224 0 96 57.3 96 128s57.3 128 128 128zm89.6 32h-16.7c-22.2 10.2-46.9 16-72.9 16s-50.6-5.8-72.9-16h-16.7C60.2 288 0 348.2 0 422.4V464c0 26.5 21.5 48 48 48h352c26.5 0 48-21.5 48-48v-41.6c0-74.2-60.2-134.4-134.4-134.4z"/></svg>&nbsp;<span id="busuanzi_value_site_uv"></span></span>&nbsp;|&nbsp;<span id="busuanzi_container_site_pv">本站访问量&nbsp;<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 576 512" class="icon busuanzi-site-pv"><path d="M288 144a110.94 110.94 0 0 0-31.24 5 55.4 55.4 0 0 1 7.24 27 56 56 0 0 1-56 56 55.4 55.4 0 0 1-27-7.24A111.71 111.71 0 1 0 288 144zm284.52 97.4C518.29 135.59 410.93 64 288 64S57.68 135.64 3.48 241.41a32.35 32.35 0 0 0 0 29.19C57.71 376.41 165.07 448 288 448s230.32-71.64 284.52-177.41a32.35 32.35 0 0 0 0-29.19zM288 400c-98.65 0-189.09-55-237.93-144C98.91 167 189.34 112 288 112s189.09 55 237.93 144C477.1 345 386.66 400 288 400z"/></svg>&nbsp;<span id="busuanzi_value_site_pv"></span></span>
+                </div>
+
+            
+
+
+            
+        </div>
+    </footer>
+
+
+        </div>
+        
+
+        
+
+
+    <script>
+    if (typeof MathJax === 'undefined') {
+        window.MathJax = {
+            loader: {
+                load: ['[tex]/mhchem']
+            },
+            
+            tex: {
+                inlineMath: {'[+]': [['$', '$']]},
+                tags: 'ams',
+                packages: {'[+]': ['mhchem']}
+            }
+        };
+        (function() {
+            var script = document.createElement('script');
+            script.src = 'https://cdn.jsdelivr.net/npm/mathjax@3.0.1/es5/tex-mml-chtml.js';
+            script.defer = true;
+            document.head.appendChild(script);
+        })();
+    } else {
+        MathJax.texReset();
+        MathJax.typeset();
+    }
+</script>
+
+
+
+
+    <script src="https://cdn.jsdelivr.net/npm/mermaid@8.5.2/dist/mermaid.min.js"></script>
+<script>
+    let mermaidConfig = {
+        startOnLoad: true,
+        flowchart: {
+            useMaxWidth: false,
+            htmlLabels: true
+        },
+        theme: 'default'
+    };
+    mermaid.initialize(mermaidConfig);
+</script>
+
+
+
+    
+
+        
+
+        
+            <script>
+    function loadComments() {
+        if (typeof Valine === 'undefined') {
+            var getScript = (options) => {
+                var script = document.createElement('script');
+                script.defer = true;
+                script.crossOrigin = 'anonymous';
+                Object.keys(options).forEach((key) => {
+                    script[key] = options[key];
+                });
+                document.body.appendChild(script);
+            };
+            getScript({
+                src: 'https://cdn.jsdelivr.net/npm/valine@1.4.14/dist/Valine.min.js',
+                onload: () => {
+                    newValine();
+                }
+            });
+        } else {
+            newValine();
+        }
+    }
+    function newValine() {
+        new Valine({
+            el: '#vcomments',
+            appId: '',
+            appKey: '',
+            placeholder: 'Just go go',
+            path: location.pathname,
+            avatar: 'mm',
+            meta: ["nick","mail","link"],
+            pageSize:  10 ,
+            lang: 'zh-cn',
+            visitor:  false ,
+            highlight:  true ,
+            avatarForce:  false ,
+            recordIP:  false ,
+            serverURLs: '',
+            emojiCDN: '',
+            emojiMaps: {},
+            enableQQ:  false ,
+            requiredFields: []
+        });
+    }
+</script>
+
+        
+
+        
+
+    
+
+
+
+    <script src="https://cdn.jsdelivr.net/npm/medium-zoom@latest/dist/medium-zoom.min.js"></script>
+
+<script>
+    mediumZoom(document.querySelectorAll('div.post-body img'), {
+        background: 'hsla(var(--color-bg-h), var(--color-bg-s), var(--color-bg-l), 0.95)'
+    })
+</script>
+
+
+
+
+    <script src="https://cdn.jsdelivr.net/npm/instant.page@3.0.0/instantpage.min.js" type="module" defer></script>
+
+
+
+
+    
+        <script async src="https://busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script>
+    
+
+
+
+
+    </body>
+</html>
