@@ -646,8 +646,8 @@ uglyURLs = false
 
     ## Valine
     enableValine = true
-    valineAppId = "R1hGV8vEyQaCLsQ6GkEWLXEx-gzGzoHsz"
-    valineAppKey = "MFHJrr5y4S4WnVDFeNKy2JyO"
+    valineAppId = "YoWdn7Ys47IiEYbjQ2EoFsaB-gzGzoHsz"
+    valineAppKey = "h5BBQBmC17Dj1dGLGolglo0F"
     valinePlaceholder = "真的不说两句吗？φ(゜▽゜*)♪"
     valinePath = ""
     valineAvatar = "mm"
@@ -1145,7 +1145,7 @@ uglyURLs = false
     # 相关文章
 
     # 是否开启
-    enableRelatedPosts = true
+    enableRelatedPosts = false
 
     # 是否显示（全局设置）
     displayRelatedPosts = true
