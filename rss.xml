@@ -23,10 +23,229 @@
         
             <copyright>[CC BY-NC-SA 4.0](https://creativecommons.org/licenses/by-nc-sa/4.0/deed.zh)</copyright>
         
-        <lastBuildDate>Sat, 24 Oct 2020 05:36:46 &#43;0000</lastBuildDate>
+        <lastBuildDate>Sat, 24 Oct 2020 06:20:44 &#43;0000</lastBuildDate>
         
             <atom:link rel="self" type="application/rss&#43;xml" href="https://www.riotian.com/rss.xml" />
         
+        
+            <item>
+                <title>使用Hugo&#43;Github Actions实现自动化部署博客</title>
+                <link>https://www.riotian.com/tech/%E4%BD%BF%E7%94%A8hugo&#43;github-actions%E5%AE%9E%E7%8E%B0%E8%87%AA%E5%8A%A8%E5%8C%96%E9%83%A8%E7%BD%B2%E5%8D%9A%E5%AE%A2/</link>
+                <guid isPermaLink="true">https://www.riotian.com/tech/%E4%BD%BF%E7%94%A8hugo&#43;github-actions%E5%AE%9E%E7%8E%B0%E8%87%AA%E5%8A%A8%E5%8C%96%E9%83%A8%E7%BD%B2%E5%8D%9A%E5%AE%A2/</guid>
+                <pubDate>Sat, 24 Oct 2020 14:16:45 &#43;0800</pubDate>
+                
+                    <author>kannajiahe@gmail.com (RioTian)</author>
+                
+                <copyright>[CC BY-NC-SA 4.0](https://creativecommons.org/licenses/by-nc-sa/4.0/deed.zh)</copyright>
+                
+                    <description>&lt;blockquote&gt;
+&lt;p&gt;&lt;em&gt;很早就想搭建一个自己的博客了，因为某些原因一直为付诸行动。直到近期自己对建博的需求愈发强烈，在尝试过了各类流行的方案后，选择Hugo+Github Action来实现静态博客的自动化部署。这里也将整理过的流程记录下来，也作为新博客的第一篇文章。&lt;/em&gt;&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;h1 id=&#34;一环境准备&#34;&gt;一、环境准备&lt;/h1&gt;
+&lt;p&gt;安装&lt;a href=&#34;https://git-scm.com/&#34;&gt;Git&lt;/a&gt;、&lt;a href=&#34;https://gohugo.io/&#34;&gt;Hugo&lt;/a&gt;，注册&lt;a href=&#34;https://github.com/&#34;&gt;Github&lt;/a&gt;账号，网上教程很多就不再赘述，我使用Windows系统，MacOS系统用户可自行调整。&lt;/p&gt;
+&lt;p&gt;注：请自行将下文中的&lt;code&gt;My_blog&lt;/code&gt;、&lt;code&gt;RivTian&lt;/code&gt;、&lt;code&gt;RioTian&lt;/code&gt;替换为自己的仓库名、站点名、文件夹名、用户名二、初始化Hugo项目&lt;/p&gt;
+&lt;h1 id=&#34;二初始化hugo项目&#34;&gt;二、初始化Hugo项目&lt;/h1&gt;
+&lt;h2 id=&#34;1新建站点&#34;&gt;1.新建站点&lt;/h2&gt;
+&lt;p&gt;本地安装好各类环境后，终端通过&lt;code&gt;hugo new site My_blog&lt;/code&gt;新建站点，生成hugo站点的默认目录，目录树如下：&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;My_blog  
+├─ archetypes     
+│  └─ default.md  
+├─ content        
+├─ data           
+├─ layouts        
+├─ static         
+├─ themes         
+└─ config.toml    
+&lt;/code&gt;&lt;/pre&gt;&lt;h2 id=&#34;2安装主题&#34;&gt;2.安装主题&lt;/h2&gt;
+&lt;p&gt;Hugo默认不带主题，可以在&lt;a href=&#34;https://themes.gohugo.io/&#34;&gt;官方主题仓库&lt;/a&gt;选择喜欢的主题，本次我使用了的&lt;a href=&#34;https://io-oi.me/tech/documentation-of-hugo-theme-meme/&#34;&gt;memE主题&lt;/a&gt;，在主题页面下载好主题文件后，将主题文件复制到&lt;code&gt;themes&lt;/code&gt;文件夹下，并重命名为&lt;code&gt;meme&lt;/code&gt;，并将主题的示例文件&lt;code&gt;exampleSite&lt;/code&gt;目录下的示例文件复制到项目根目录下替换原有文件：&lt;/p&gt;
+&lt;h1 id=&#34;三git仓库配置&#34;&gt;三、Git仓库配置&lt;/h1&gt;
+&lt;p&gt;在Github上创建名为&lt;code&gt;My_blog&lt;/code&gt;的公开仓库，创建时无需进行初始化&lt;/p&gt;
+&lt;p&gt;依次在终端中执行以下命令：&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;&lt;code&gt;git init&lt;/code&gt;初始化仓库&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;git remote add origin https://github.com/RivTian/My_blog.git&lt;/code&gt;连接远端仓库&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;git checkout -b develop&lt;/code&gt;切换至develop分支（&lt;a href=&#34;https://weibo.com/ttarticle/p/show?id=2309404516196870390640&#34;&gt;不使用master分支的原因？&lt;/a&gt;）&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;git add .&lt;/code&gt;暂存全部文件&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;git commit -m &amp;quot;first commit&amp;quot;&lt;/code&gt;提交&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;git push -u origin develop&lt;/code&gt;推送到远端仓库&lt;/li&gt;
+&lt;/ol&gt;
+&lt;p&gt;执行完毕后去Github上看下文件是否都已上传，顺手在Github上新建一个&lt;code&gt;gh-pages&lt;/code&gt;分支&lt;/p&gt;
+&lt;h1 id=&#34;四自动化部署&#34;&gt;四、自动化部署&lt;/h1&gt;
+&lt;p&gt;在Github中的&lt;a href=&#34;https://github.com/settings/tokens&#34;&gt;创建一个Token&lt;/a&gt;(记得在页面关闭前保存下来，页面一旦关闭就再也看不到了),回到&lt;code&gt;My_blog&lt;/code&gt;项目仓库中在&lt;code&gt;Settings/Secrets&lt;/code&gt;创建一个&lt;code&gt;Secrets&lt;/code&gt;，标题命名为&lt;code&gt;personal_token&lt;/code&gt;，内容填入刚刚创建的&lt;code&gt;Token&lt;/code&gt;。&lt;/p&gt;
+&lt;p&gt;本地&lt;code&gt;My_blog&lt;/code&gt;目录中新建&lt;code&gt;.github/workflows/deploy.yml&lt;/code&gt;，内容填入以下代码：&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;name: Deploy Hugo
+
+on:
+  push:
+    branches:
+      - develop
+
+jobs:
+  build-deploy:
+    runs-on: ubuntu-18.04
+    steps:
+      - uses: actions/checkout@v1  # v2 does not have submodules option now
+        # with:
+          # submodules: true
+
+      - name: Setup Hugo
+        uses: peaceiris/actions-hugo@v2
+        with:
+          hugo-version: latest
+          # extended: true
+
+      - name: Build
+        run: hugo
+
+      - name: Deploy
+        uses: peaceiris/actions-gh-pages@v3
+        with:
+          personal_token: ${{ secrets.personal_token }} # 这里的 ACTIONS_DEPLOY_KEY 则是上面设置 Private Key的变量名
+          PUBLISH_BRANCH: gh-pages
+          PUBLISH_DIR: ./public
+          commit_message: ${{ github.event.head_commit.message }}
+&lt;/code&gt;&lt;/pre&gt;&lt;p&gt;依次在终端中执行以下命令：&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;&lt;code&gt;git add .&lt;/code&gt;暂存全部文件&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;git commit -m &amp;quot;Github Action自动化部署&amp;quot;&lt;/code&gt;提交&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;git push -u origin develop&lt;/code&gt;推送到远端仓库&lt;/li&gt;
+&lt;/ol&gt;
+&lt;p&gt;等待Github仓库中Actions&lt;code&gt;Deploy Hugo&lt;/code&gt;执行完毕后，看下&lt;code&gt;gh-pages&lt;/code&gt;分支是否已生成HTML文件。&lt;/p&gt;
+&lt;h1 id=&#34;五其他补充内容&#34;&gt;五、其他补充内容&lt;/h1&gt;
+&lt;h2 id=&#34;1绑定域名&#34;&gt;1.绑定域名&lt;/h2&gt;
+&lt;p&gt;详细介绍：[Click Here](GitHub Pages 绑定域名.md)&lt;/p&gt;
+&lt;p&gt;在本地&lt;code&gt;static&lt;/code&gt;目录下新建&lt;code&gt;CNAME&lt;/code&gt;文件，内容填入绑定的域名&lt;code&gt;www.RioTian.com&lt;/code&gt;，同时也需要将域名解析至&lt;code&gt;RivTian.github.io.&lt;/code&gt;&lt;/p&gt;
+&lt;p&gt;后依次在终端中执行：&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;&lt;code&gt;git add .&lt;/code&gt;暂存全部文件&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;git commit -m &amp;quot;绑定域名&amp;quot;&lt;/code&gt;提交&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;git push -u origin develop&lt;/code&gt;推送到远端仓库&lt;/li&gt;
+&lt;/ol&gt;
+&lt;h2 id=&#34;2修改主题配置&#34;&gt;2.修改主题配置&lt;/h2&gt;
+&lt;p&gt;可以参考这位前辈的文章：&lt;a href=&#34;https://ztygcs.github.io/posts/meme%E4%B8%BB%E9%A2%98%E4%BC%98%E5%8C%96/&#34;&gt;Here&lt;/a&gt;&lt;/p&gt;
+&lt;h2 id=&#34;3访问测试&#34;&gt;3.访问测试&lt;/h2&gt;
+&lt;p&gt;尝试访问&lt;a href=&#34;https://www.riotian.com/&#34;&gt;https://www.riotian.com/&lt;/a&gt;，看是否能顺利打开，页面显示是否正常等.&lt;/p&gt;
+&lt;h1 id=&#34;六参考资料&#34;&gt;六、参考资料&lt;/h1&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&#34;https://immmmm.com/hugo-github-actions/&#34;&gt;Hugo + Github Actions 实现自动化部署&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://www.nashome.cn/posts/hugo-github-actions/&#34;&gt;用 Hugo 配合 Github Actions 自动构建我的博客&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://piggy.site/posts/deploy-hugo-on-github-pages/&#34;&gt;Deploy Hugo on Github Pages&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+</description>
+                
+                
+                
+                
+                
+                    
+                        
+                    
+                        
+                            
+                                
+                                
+                                
+                                    <category domain="https://www.riotian.com/tags/">Tags</category>
+                                
+                            
+                        
+                    
+                
+            </item>
+        
+            <item>
+                <title>GitHub Pages 绑定域名</title>
+                <link>https://www.riotian.com/tech/github-pages-%E7%BB%91%E5%AE%9A%E5%9F%9F%E5%90%8D/</link>
+                <guid isPermaLink="true">https://www.riotian.com/tech/github-pages-%E7%BB%91%E5%AE%9A%E5%9F%9F%E5%90%8D/</guid>
+                <pubDate>Sat, 24 Oct 2020 14:15:47 &#43;0800</pubDate>
+                
+                    <author>kannajiahe@gmail.com (RioTian)</author>
+                
+                <copyright>[CC BY-NC-SA 4.0](https://creativecommons.org/licenses/by-nc-sa/4.0/deed.zh)</copyright>
+                
+                    <description>&lt;h2 id=&#34;域名选购&#34;&gt;域名选购&lt;/h2&gt;
+&lt;p&gt;域名注册商有很多，国内的万网，国外的 GoDaddy 等等。区别在于国内域名注册后需要备案，因为政策因素也可能随时被停用，相对的，国外注册域名在交流和沟通方面不如国内方便，而因为没有国内的政策限制，域名注册商通常会给予用户域名的完全控制权与转移权，在安全性方面可能比国内稍差。&lt;/p&gt;
+&lt;p&gt;本站域名申请使用国外域名平台 Namesilo，是目前价格较便宜的域名平台，支持微信、支付宝、Paypal、Visa 等多种付款方式，提供免费的域名隐私保护，性价比较高，用户评价也不错。&lt;/p&gt;
+&lt;hr&gt;
+&lt;h2 id=&#34;ns-修改&#34;&gt;NS 修改&lt;/h2&gt;
+&lt;p&gt;国外的域名使用默认的域名服务器（NS）解析可能较慢，网上很多人推荐转到 DNSPod，也就是说指派 DNSPod 进行域名的解析工作。&lt;/p&gt;
+&lt;h3 id=&#34;1注册-dnspod-账号&#34;&gt;1、注册 DNSPod 账号&lt;/h3&gt;
+&lt;p&gt;在 DNSPod 官网注册账号，在域名解析页面选择添加域名，添加已购买的域名。&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://cdn.jsdelivr.net/gh/Kanna-jiahe/blogimage/img/20201024130722.png&#34; alt=&#34;image-20201024130720565&#34;&gt;&lt;/p&gt;
+&lt;p&gt;完成后点击查看，DNSPod 提供两条默认的 NS 记录：&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;f1g1ns1.dnspod.net
+f1g1ns2.dnspod.net
+&lt;/code&gt;&lt;/pre&gt;&lt;h3 id=&#34;2修改-namesilo-中-ns-记录&#34;&gt;2、修改 Namesilo 中 NS 记录&lt;/h3&gt;
+&lt;p&gt;登录 Namesilo，选择 Manage My Domains，进入域名管理页面。勾选你的域名，点击选项栏中的 Change Nameservers。&lt;/p&gt;
+&lt;p&gt;&lt;a href=&#34;https://tding.top/archives/b48e2719/3.png&#34;&gt;&lt;img src=&#34;https://tding.top/archives/b48e2719/3.png&#34; alt=&#34;图3&#34;&gt;图 3&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;将 NS1，NS2 改为 DNSPod 提供的两条 NS 记录，删除第三条 NS 记录，点击提交。&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://cdn.jsdelivr.net/gh/Kanna-jiahe/blogimage/img/20201024131029.png&#34; alt=&#34;&#34;&gt;&lt;/p&gt;
+&lt;p&gt;NS 的修改需要一段时间，一般最长 48 小时生效，个人情况来看，10 分钟左右即可完成更改。&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://cdn.jsdelivr.net/gh/Kanna-jiahe/blogimage/img/20201024131129.png&#34; alt=&#34;&#34;&gt;&lt;/p&gt;
+&lt;h3 id=&#34;3dnspod-解析服务&#34;&gt;3、DNSPod 解析服务&lt;/h3&gt;
+&lt;blockquote&gt;
+&lt;p&gt;自 2018 年 5 月 1 日，Github 支持自定义域名的 HTTPS 请求了。&lt;/p&gt;
+&lt;p&gt;配置也相当简单，只需要更新 DNS 配置里的 A 记录，将其指向以下 4 个 IP 地址中的至少一个。&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;185.199.108.153&lt;/li&gt;
+&lt;li&gt;185.199.109.153&lt;/li&gt;
+&lt;li&gt;185.199.110.153&lt;/li&gt;
+&lt;li&gt;185.199.111.153&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;HTTPS 让你的网站和网站访客更安全，并且 Github 提供的这些 IP 地址自动将你的站点加入了 CDN，提高了访问速度。你还可以在 GiHub Pages 仓库的设置里勾选 ‘Enforce HTTPS’，这样所有访问你站点的请求都会走 HTTPS。&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;下面我们添加三个数据&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;@ A 185.199.108.153
+@ A 185.199.109.153
+www CNAME username.github.io
+&lt;/code&gt;&lt;/pre&gt;&lt;p&gt;&lt;img src=&#34;https://cdn.jsdelivr.net/gh/Kanna-jiahe/blogimage/img/20201024131207.png&#34; alt=&#34;&#34;&gt;&lt;/p&gt;
+&lt;p&gt;其中 &lt;code&gt;185.199.108.153&lt;/code&gt; 和 &lt;code&gt;185.199.109.153&lt;/code&gt; 都是 GitHub 的地址。&lt;/p&gt;
+&lt;p&gt;上述设置的解释：&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;设置 A 记录的意思是，当我输入 &lt;code&gt;tding.top&lt;/code&gt; 这个域名的时候，访问的是 &lt;code&gt;185.199.108.153&lt;/code&gt; 这个地址；&lt;/li&gt;
+&lt;li&gt;设置 CNAME 的意思是，当我访问 &lt;code&gt;dta0502.github.io&lt;/code&gt; 这个地址的时候，会跳转到 &lt;code&gt;tding.top&lt;/code&gt;，之后的过程就和 A 记录相同了，即访问 &lt;code&gt;185.199.108.153&lt;/code&gt;。&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&#34;添加-cname-文件&#34;&gt;添加 CNAME 文件&lt;/h2&gt;
+&lt;p&gt;在本地&lt;code&gt;static&lt;/code&gt;目录下新建&lt;code&gt;CNAME&lt;/code&gt;文件，内容填入绑定的域名&lt;code&gt;www.riotian.com&lt;/code&gt;，同时也需要将域名解析至&lt;code&gt;RivTian.github.io.&lt;/code&gt;&lt;/p&gt;
+&lt;p&gt;后依次在终端中执行：&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;&lt;code&gt;git add .&lt;/code&gt;暂存全部文件&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;git commit -m &amp;quot;绑定域名&amp;quot;&lt;/code&gt;提交&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;git push -u origin develop&lt;/code&gt;推送到远端仓库&lt;/li&gt;
+&lt;/ol&gt;
+&lt;h2 id=&#34;github-pages-对自定义域上-https&#34;&gt;Github Pages 对自定义域上 Https&lt;/h2&gt;
+&lt;p&gt;然后我们在 Github Pages 项目中 Settings 选项卡 Github Pages 选项：在 Custom domain 添加你的自定义域名。&lt;/p&gt;
+&lt;p&gt;刷新页面 如果能勾选 Enforce HTTPS 即完成。&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://cdn.jsdelivr.net/gh/Kanna-jiahe/blogimage/img/20201024131314.png&#34; alt=&#34;image-20201024131311814&#34;&gt;&lt;/p&gt;
+&lt;p&gt;现在，我们就可以通过 https 访问自定义域了。&lt;/p&gt;
+&lt;h2 id=&#34;参考&#34;&gt;参考&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&#34;https://indexmoon.com/articles/1318032967/&#34;&gt;Hexo 基础教程 (二)：个人域名绑定&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://www.zhihu.com/question/31377141/answer/103056861&#34;&gt;github 怎么绑定自己的域名？&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;http://cps.ninja/2016/10/09/customize-your-blog-domain/&#34;&gt;为 Github 上的 Hexo 博客绑定个性域名&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://help.github.com/cn/articles/troubleshooting-custom-domains&#34;&gt;自定义域故障排除&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+</description>
+                
+                
+                
+                
+                
+                    
+                        
+                    
+                        
+                            
+                                
+                                
+                                
+                                    <category domain="https://www.riotian.com/tags/hugo/">Hugo</category>
+                                
+                            
+                        
+                    
+                
+            </item>
         
             <item>
                 <title>数据结构（5）：主席树</title>
@@ -371,7 +590,7 @@ summary: 本文介绍如何基于hugo搭建自己的个人blog，包括blog的�
                                 
                                 
                                 
-                                    <category domain="https://www.riotian.com/tags/hugo/">hugo</category>
+                                    <category domain="https://www.riotian.com/tags/hugo/">Hugo</category>
                                 
                             
                                 
