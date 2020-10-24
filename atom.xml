@@ -4,13 +4,13 @@
 <feed xmlns="http://www.w3.org/2005/Atom" xml:lang="zh-CN">
     <title type="text">RioTianの小窝</title>
     <subtitle type="html">MemE 是一个强大且可高度定制的 GoHugo 博客主题，专为个人博客设计。</subtitle>
-    <updated>2020-10-24T04:45:43&#43;00:00</updated>
-    <id>https://rivtian.github.io/</id>
-    <link rel="alternate" type="text/html" href="https://rivtian.github.io/" />
-    <link rel="self" type="application/atom&#43;xml" href="https://rivtian.github.io/atom.xml" />
+    <updated>2020-10-24T05:36:46&#43;00:00</updated>
+    <id>https://www.riotian.com/</id>
+    <link rel="alternate" type="text/html" href="https://www.riotian.com/" />
+    <link rel="self" type="application/atom&#43;xml" href="https://www.riotian.com/atom.xml" />
     <author>
             <name>RioTian</name>
-            <uri>https://rivtian.github.io/</uri>
+            <uri>https://www.riotian.com/</uri>
             
                 <email>kannajiahe@gmail.com</email>
             </author>
@@ -18,13 +18,13 @@
     <generator uri="https://gohugo.io/" version="0.76.5">Hugo</generator>
         <entry>
             <title type="text">数据结构（5）：主席树</title>
-            <link rel="alternate" type="text/html" href="https://rivtian.github.io/tech/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%845%E4%B8%BB%E5%B8%AD%E6%A0%91/" />
-            <id>https://rivtian.github.io/tech/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%845%E4%B8%BB%E5%B8%AD%E6%A0%91/</id>
-            <updated>2020-10-24T04:45:38&#43;00:00</updated>
+            <link rel="alternate" type="text/html" href="https://www.riotian.com/tech/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%845%E4%B8%BB%E5%B8%AD%E6%A0%91/" />
+            <id>https://www.riotian.com/tech/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%845%E4%B8%BB%E5%B8%AD%E6%A0%91/</id>
+            <updated>2020-10-24T05:36:43&#43;00:00</updated>
             <published>2020-10-23T15:57:47&#43;08:00</published>
             <author>
                     <name>RioTian</name>
-                    <uri>https://rivtian.github.io/</uri>
+                    <uri>https://www.riotian.com/</uri>
                     <email>kannajiahe@gmail.com</email>
                     </author>
             <rights>[CC BY-NC-SA 4.0](https://creativecommons.org/licenses/by-nc-sa/4.0/deed.zh)</rights><summary type="html">最近学习了下主席树，发现比想象中简单，又发现网上的讲解比较复杂，于是自己写一篇简易的……</summary>
@@ -283,13 +283,13 @@ The following m lines contain question descriptions, each description consists o
                             
                             
                             
-                                <category scheme="https://rivtian.github.io/tags/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84/" term="数据结构" label="数据结构" />
+                                <category scheme="https://www.riotian.com/tags/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84/" term="数据结构" label="数据结构" />
                             
                         
                             
                             
                             
-                                <category scheme="https://rivtian.github.io/tags/%E4%B8%BB%E5%B8%AD%E6%A0%91/" term="主席树" label="主席树" />
+                                <category scheme="https://www.riotian.com/tags/%E4%B8%BB%E5%B8%AD%E6%A0%91/" term="主席树" label="主席树" />
                             
                         
                     
@@ -299,25 +299,25 @@ The following m lines contain question descriptions, each description consists o
     
         <entry>
             <title type="text">Hello World</title>
-            <link rel="alternate" type="text/html" href="https://rivtian.github.io/tech/hello-world/" />
-            <id>https://rivtian.github.io/tech/hello-world/</id>
+            <link rel="alternate" type="text/html" href="https://www.riotian.com/tech/hello-world/" />
+            <id>https://www.riotian.com/tech/hello-world/</id>
             <updated>2020-10-23T22:52:53&#43;08:00</updated>
             <published>2020-10-23T08:53:44&#43;08:00</published>
             <author>
                     <name>RioTian</name>
-                    <uri>https://rivtian.github.io/</uri>
+                    <uri>https://www.riotian.com/</uri>
                     <email>kannajiahe@gmail.com</email>
                     </author>
             <rights>[CC BY-NC-SA 4.0](https://creativecommons.org/licenses/by-nc-sa/4.0/deed.zh)</rights><summary type="html">感谢OI wiki对本文的帮助1 脚注测试 分割线测试 撰写blog 内容来源2 之前有提到过，……</summary>
             
                 <content type="html">&lt;blockquote&gt;
-&lt;p&gt;感谢OI wiki对本文的帮助&lt;sup id=&#34;fnref:1&#34;&gt;&lt;a href=&#34;https://rivtian.github.io/tech/hello-world/#fn:1&#34; class=&#34;footnote-ref&#34; role=&#34;doc-noteref&#34;&gt;1&lt;/a&gt;&lt;/sup&gt;&lt;/p&gt;
+&lt;p&gt;感谢OI wiki对本文的帮助&lt;sup id=&#34;fnref:1&#34;&gt;&lt;a href=&#34;https://www.riotian.com/tech/hello-world/#fn:1&#34; class=&#34;footnote-ref&#34; role=&#34;doc-noteref&#34;&gt;1&lt;/a&gt;&lt;/sup&gt;&lt;/p&gt;
 &lt;p&gt;脚注测试&lt;/p&gt;
 &lt;/blockquote&gt;
 &lt;p&gt;分割线测试&lt;/p&gt;
 &lt;hr&gt;
 &lt;h3 id=&#34;撰写blog&#34;&gt;&lt;strong&gt;撰写blog&lt;/strong&gt;&lt;/h3&gt;
-&lt;p&gt;内容来源&lt;sup id=&#34;fnref:2&#34;&gt;&lt;a href=&#34;https://rivtian.github.io/tech/hello-world/#fn:2&#34; class=&#34;footnote-ref&#34; role=&#34;doc-noteref&#34;&gt;2&lt;/a&gt;&lt;/sup&gt;&lt;/p&gt;
+&lt;p&gt;内容来源&lt;sup id=&#34;fnref:2&#34;&gt;&lt;a href=&#34;https://www.riotian.com/tech/hello-world/#fn:2&#34; class=&#34;footnote-ref&#34; role=&#34;doc-noteref&#34;&gt;2&lt;/a&gt;&lt;/sup&gt;&lt;/p&gt;
 &lt;p&gt;之前有提到过，每个blog除了内容部分以外，还有一个很重要的是描述blog的一些属性。举例来说，blog的标题叫什么、什么时候写的blog、blog的标签是啥、主题又是啥，这些都是blog的元数据。&lt;/p&gt;
 &lt;p&gt;hugo使用markdown来描述blog的正文内容，那这些元数据如何表示呢？hugo选择在markdown文件头添加一部分信息，并管这些信息叫&lt;strong&gt;front matter&lt;/strong&gt;。&lt;/p&gt;
 &lt;h3 id=&#34;blog的元数据front-matter&#34;&gt;&lt;strong&gt;blog的元数据，front matter&lt;/strong&gt;&lt;/h3&gt;
@@ -344,10 +344,10 @@ summary: 本文介绍如何基于hugo搭建自己的个人blog，包括blog的�
 &lt;hr&gt;
 &lt;ol&gt;
 &lt;li id=&#34;fn:1&#34; role=&#34;doc-endnote&#34;&gt;
-&lt;p&gt;说明：本文即采用持续写作的方式创作并发布，见 &lt;a href=&#34;https://github.com/reuixiy/io-oi.me/issues/10&#34;&gt;#10&lt;/a&gt; &lt;a href=&#34;https://rivtian.github.io/tech/hello-world/#fnref:1&#34; class=&#34;footnote-backref&#34; role=&#34;doc-backlink&#34;&gt;&amp;#x21a9;&amp;#xfe0e;&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;说明：本文即采用持续写作的方式创作并发布，见 &lt;a href=&#34;https://github.com/reuixiy/io-oi.me/issues/10&#34;&gt;#10&lt;/a&gt; &lt;a href=&#34;https://www.riotian.com/tech/hello-world/#fnref:1&#34; class=&#34;footnote-backref&#34; role=&#34;doc-backlink&#34;&gt;&amp;#x21a9;&amp;#xfe0e;&lt;/a&gt;&lt;/p&gt;
 &lt;/li&gt;
 &lt;li id=&#34;fn:2&#34; role=&#34;doc-endnote&#34;&gt;
-&lt;p&gt;内容来源 &lt;a href=&#34;https://rivtian.github.io/tech/hello-world/#fnref:2&#34; class=&#34;footnote-backref&#34; role=&#34;doc-backlink&#34;&gt;&amp;#x21a9;&amp;#xfe0e;&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;内容来源 &lt;a href=&#34;https://www.riotian.com/tech/hello-world/#fnref:2&#34; class=&#34;footnote-backref&#34; role=&#34;doc-backlink&#34;&gt;&amp;#x21a9;&amp;#xfe0e;&lt;/a&gt;&lt;/p&gt;
 &lt;/li&gt;
 &lt;/ol&gt;
 &lt;/section&gt;
@@ -365,13 +365,13 @@ summary: 本文介绍如何基于hugo搭建自己的个人blog，包括blog的�
                             
                             
                             
-                                <category scheme="https://rivtian.github.io/tags/hugo/" term="hugo" label="hugo" />
+                                <category scheme="https://www.riotian.com/tags/hugo/" term="hugo" label="hugo" />
                             
                         
                             
                             
                             
-                                <category scheme="https://rivtian.github.io/tags/blog/" term="blog" label="blog" />
+                                <category scheme="https://www.riotian.com/tags/blog/" term="blog" label="blog" />
                             
                         
                     
@@ -381,13 +381,13 @@ summary: 本文介绍如何基于hugo搭建自己的个人blog，包括blog的�
     
         <entry>
             <title type="text">【计算几何 05】Pick定理</title>
-            <link rel="alternate" type="text/html" href="https://rivtian.github.io/tech/%E8%AE%A1%E7%AE%97%E5%87%A0%E4%BD%95-05pick%E5%AE%9A%E7%90%86/" />
-            <id>https://rivtian.github.io/tech/%E8%AE%A1%E7%AE%97%E5%87%A0%E4%BD%95-05pick%E5%AE%9A%E7%90%86/</id>
-            <updated>2020-10-24T04:45:38&#43;00:00</updated>
+            <link rel="alternate" type="text/html" href="https://www.riotian.com/tech/%E8%AE%A1%E7%AE%97%E5%87%A0%E4%BD%95-05pick%E5%AE%9A%E7%90%86/" />
+            <id>https://www.riotian.com/tech/%E8%AE%A1%E7%AE%97%E5%87%A0%E4%BD%95-05pick%E5%AE%9A%E7%90%86/</id>
+            <updated>2020-10-24T05:36:43&#43;00:00</updated>
             <published>2020-10-20T15:30:46&#43;08:00</published>
             <author>
                     <name>RioTian</name>
-                    <uri>https://rivtian.github.io/</uri>
+                    <uri>https://www.riotian.com/</uri>
                     <email>kannajiahe@gmail.com</email>
                     </author>
             <rights>[CC BY-NC-SA 4.0](https://creativecommons.org/licenses/by-nc-sa/4.0/deed.zh)</rights><summary type="html">什么是Pick定理（皮克定理） 来自wiki的介绍： 给定顶点座标均是整点（或正方形格子……</summary>
@@ -511,7 +511,7 @@ summary: 本文介绍如何基于hugo搭建自己的个人blog，包括blog的�
                             
                             
                             
-                                <category scheme="https://rivtian.github.io/tags/%E8%AE%A1%E7%AE%97%E5%87%A0%E4%BD%95/" term="计算几何" label="计算几何" />
+                                <category scheme="https://www.riotian.com/tags/%E8%AE%A1%E7%AE%97%E5%87%A0%E4%BD%95/" term="计算几何" label="计算几何" />
                             
                         
                     
@@ -521,13 +521,13 @@ summary: 本文介绍如何基于hugo搭建自己的个人blog，包括blog的�
     
         <entry>
             <title type="text">VS Code 代码格式化工具clang Format</title>
-            <link rel="alternate" type="text/html" href="https://rivtian.github.io/tech/vs-code-%E4%BB%A3%E7%A0%81%E6%A0%BC%E5%BC%8F%E5%8C%96%E5%B7%A5%E5%85%B7clang-format/" />
-            <id>https://rivtian.github.io/tech/vs-code-%E4%BB%A3%E7%A0%81%E6%A0%BC%E5%BC%8F%E5%8C%96%E5%B7%A5%E5%85%B7clang-format/</id>
-            <updated>2020-10-24T04:45:38&#43;00:00</updated>
+            <link rel="alternate" type="text/html" href="https://www.riotian.com/tech/vs-code-%E4%BB%A3%E7%A0%81%E6%A0%BC%E5%BC%8F%E5%8C%96%E5%B7%A5%E5%85%B7clang-format/" />
+            <id>https://www.riotian.com/tech/vs-code-%E4%BB%A3%E7%A0%81%E6%A0%BC%E5%BC%8F%E5%8C%96%E5%B7%A5%E5%85%B7clang-format/</id>
+            <updated>2020-10-24T05:36:43&#43;00:00</updated>
             <published>2020-10-15T16:03:45&#43;08:00</published>
             <author>
                     <name>RioTian</name>
-                    <uri>https://rivtian.github.io/</uri>
+                    <uri>https://www.riotian.com/</uri>
                     <email>kannajiahe@gmail.com</email>
                     </author>
             <rights>[CC BY-NC-SA 4.0](https://creativecommons.org/licenses/by-nc-sa/4.0/deed.zh)</rights><summary type="html">IDE: Visual Studio Code Language: C/C++ 格式化工具: clang-format 安装 vscode安装扩展C/C++，扩展程序将自动安装cl……</summary>
@@ -861,7 +861,7 @@ UseTab:	Never
                             
                             
                             
-                                <category scheme="https://rivtian.github.io/tags/vscode/" term="VScode" label="VScode" />
+                                <category scheme="https://www.riotian.com/tags/vscode/" term="VScode" label="VScode" />
                             
                         
                     
@@ -871,13 +871,13 @@ UseTab:	Never
     
         <entry>
             <title type="text">Windows vs Code 配置 C&#43;&#43; 开发环境</title>
-            <link rel="alternate" type="text/html" href="https://rivtian.github.io/tech/windows-vs-code-%E9%85%8D%E7%BD%AE-c&#43;&#43;-%E5%BC%80%E5%8F%91%E7%8E%AF%E5%A2%83/" />
-            <id>https://rivtian.github.io/tech/windows-vs-code-%E9%85%8D%E7%BD%AE-c&#43;&#43;-%E5%BC%80%E5%8F%91%E7%8E%AF%E5%A2%83/</id>
-            <updated>2020-10-24T04:45:38&#43;00:00</updated>
+            <link rel="alternate" type="text/html" href="https://www.riotian.com/tech/windows-vs-code-%E9%85%8D%E7%BD%AE-c&#43;&#43;-%E5%BC%80%E5%8F%91%E7%8E%AF%E5%A2%83/" />
+            <id>https://www.riotian.com/tech/windows-vs-code-%E9%85%8D%E7%BD%AE-c&#43;&#43;-%E5%BC%80%E5%8F%91%E7%8E%AF%E5%A2%83/</id>
+            <updated>2020-10-24T05:36:43&#43;00:00</updated>
             <published>2020-10-14T16:02:55&#43;08:00</published>
             <author>
                     <name>RioTian</name>
-                    <uri>https://rivtian.github.io/</uri>
+                    <uri>https://www.riotian.com/</uri>
                     <email>kannajiahe@gmail.com</email>
                     </author>
             <rights>[CC BY-NC-SA 4.0](https://creativecommons.org/licenses/by-nc-sa/4.0/deed.zh)</rights><summary type="html">准备 Windows 【这个相信大家都有 笑: )】 VS Code MinGW-w64 C/C++ 安装 MinGw-w64 具体说明细节和安装体验可以在《⑨也懂系……</summary>
@@ -1336,7 +1336,7 @@ UseTab:	Never
                             
                             
                             
-                                <category scheme="https://rivtian.github.io/tags/vscode/" term="VScode" label="VScode" />
+                                <category scheme="https://www.riotian.com/tags/vscode/" term="VScode" label="VScode" />
                             
                         
                     
@@ -1346,13 +1346,13 @@ UseTab:	Never
     
         <entry>
             <title type="text">【字符串算法】字典树(Trie树)</title>
-            <link rel="alternate" type="text/html" href="https://rivtian.github.io/tech/%E5%AD%97%E7%AC%A6%E4%B8%B2%E7%AE%97%E6%B3%95%E5%AD%97%E5%85%B8%E6%A0%91trie%E6%A0%91/" />
-            <id>https://rivtian.github.io/tech/%E5%AD%97%E7%AC%A6%E4%B8%B2%E7%AE%97%E6%B3%95%E5%AD%97%E5%85%B8%E6%A0%91trie%E6%A0%91/</id>
-            <updated>2020-10-24T04:45:38&#43;00:00</updated>
+            <link rel="alternate" type="text/html" href="https://www.riotian.com/tech/%E5%AD%97%E7%AC%A6%E4%B8%B2%E7%AE%97%E6%B3%95%E5%AD%97%E5%85%B8%E6%A0%91trie%E6%A0%91/" />
+            <id>https://www.riotian.com/tech/%E5%AD%97%E7%AC%A6%E4%B8%B2%E7%AE%97%E6%B3%95%E5%AD%97%E5%85%B8%E6%A0%91trie%E6%A0%91/</id>
+            <updated>2020-10-24T05:36:43&#43;00:00</updated>
             <published>2020-10-08T15:55:42&#43;08:00</published>
             <author>
                     <name>RioTian</name>
-                    <uri>https://rivtian.github.io/</uri>
+                    <uri>https://www.riotian.com/</uri>
                     <email>kannajiahe@gmail.com</email>
                     </author>
             <rights>[CC BY-NC-SA 4.0](https://creativecommons.org/licenses/by-nc-sa/4.0/deed.zh)</rights><summary type="html">什么是字典树 基本概念 字典树，又称为单词查找树或Tire树，是一种树形结构，它是一种哈……</summary>
@@ -1627,13 +1627,13 @@ HDU1800&lt;/p&gt;
                             
                             
                             
-                                <category scheme="https://rivtian.github.io/tags/%E5%AD%97%E7%AC%A6%E4%B8%B2/" term="字符串" label="字符串" />
+                                <category scheme="https://www.riotian.com/tags/%E5%AD%97%E7%AC%A6%E4%B8%B2/" term="字符串" label="字符串" />
                             
                         
                             
                             
                             
-                                <category scheme="https://rivtian.github.io/tags/trie/" term="Trie" label="Trie" />
+                                <category scheme="https://www.riotian.com/tags/trie/" term="Trie" label="Trie" />
                             
                         
                     
@@ -1643,13 +1643,13 @@ HDU1800&lt;/p&gt;
     
         <entry>
             <title type="text">【字符串算法】AC自动机</title>
-            <link rel="alternate" type="text/html" href="https://rivtian.github.io/tech/%E5%AD%97%E7%AC%A6%E4%B8%B2%E7%AE%97%E6%B3%95ac%E8%87%AA%E5%8A%A8%E6%9C%BA/" />
-            <id>https://rivtian.github.io/tech/%E5%AD%97%E7%AC%A6%E4%B8%B2%E7%AE%97%E6%B3%95ac%E8%87%AA%E5%8A%A8%E6%9C%BA/</id>
-            <updated>2020-10-24T04:45:38&#43;00:00</updated>
+            <link rel="alternate" type="text/html" href="https://www.riotian.com/tech/%E5%AD%97%E7%AC%A6%E4%B8%B2%E7%AE%97%E6%B3%95ac%E8%87%AA%E5%8A%A8%E6%9C%BA/" />
+            <id>https://www.riotian.com/tech/%E5%AD%97%E7%AC%A6%E4%B8%B2%E7%AE%97%E6%B3%95ac%E8%87%AA%E5%8A%A8%E6%9C%BA/</id>
+            <updated>2020-10-24T05:36:43&#43;00:00</updated>
             <published>2020-10-08T15:51:00&#43;08:00</published>
             <author>
                     <name>RioTian</name>
-                    <uri>https://rivtian.github.io/</uri>
+                    <uri>https://www.riotian.com/</uri>
                     <email>kannajiahe@gmail.com</email>
                     </author>
             <rights>[CC BY-NC-SA 4.0](https://creativecommons.org/licenses/by-nc-sa/4.0/deed.zh)</rights><summary type="html">国庆后面两天划水，甚至想接着发出咕咕咕的叫声。咳咳咳，这些都不重要!最近学习了一下A……</summary>
@@ -1885,7 +1885,7 @@ s【5】存储的是E，它的next都为-1。&lt;/p&gt;
 &lt;p&gt;首先假如我是那个父亲节点x，对于字母a子节点，我先看一下我的fail指针指向的节点y，看一下y有没有字母a子节点z，如果有，就太好了，我就让我的子节点的fail指针指向z；&lt;/p&gt;
 &lt;p&gt;如果没有，那就从y出发，继续看他fail指向的点的有没有字母a的子节点……直到找到满足条件的点。&lt;/p&gt;
 &lt;p&gt;如果实在没办法，就算fail一路跳到0号节点也找不到，那就没办法了，我的字母a子节点的fail就只好指向0号节点了【因为初始化就为0，所以此时就不用操作了】&lt;/p&gt;
-&lt;p&gt;我们举个具体的栗子来看看：&lt;sup id=&#34;fnref:1&#34;&gt;&lt;a href=&#34;https://rivtian.github.io/tech/%E5%AD%97%E7%AC%A6%E4%B8%B2%E7%AE%97%E6%B3%95ac%E8%87%AA%E5%8A%A8%E6%9C%BA/#fn:1&#34; class=&#34;footnote-ref&#34; role=&#34;doc-noteref&#34;&gt;1&lt;/a&gt;&lt;/sup&gt;&lt;/p&gt;
+&lt;p&gt;我们举个具体的栗子来看看：&lt;sup id=&#34;fnref:1&#34;&gt;&lt;a href=&#34;https://www.riotian.com/tech/%E5%AD%97%E7%AC%A6%E4%B8%B2%E7%AE%97%E6%B3%95ac%E8%87%AA%E5%8A%A8%E6%9C%BA/#fn:1&#34; class=&#34;footnote-ref&#34; role=&#34;doc-noteref&#34;&gt;1&lt;/a&gt;&lt;/sup&gt;&lt;/p&gt;
 &lt;p&gt;&lt;img src=&#34;https://cdn.jsdelivr.net/gh/Kanna-jiahe/blogimage/img/20201023155410.jpeg&#34; alt=&#34;&#34;&gt;
 &lt;img src=&#34;https://cdn.jsdelivr.net/gh/Kanna-jiahe/blogimage/img/20201023155336.jpeg&#34; alt=&#34;&#34;&gt;
 &lt;img src=&#34;https://cdn.jsdelivr.net/gh/Kanna-jiahe/blogimage/img/20201023155325.jpeg&#34; alt=&#34;&#34;&gt;
@@ -2265,7 +2265,7 @@ subtask2[50pts]:∑length(模式串)&amp;lt;=10^6,length(文本串)&amp;lt;=10^6
 &lt;hr&gt;
 &lt;ol&gt;
 &lt;li id=&#34;fn:1&#34; role=&#34;doc-endnote&#34;&gt;
-&lt;p&gt;举例来源 &lt;a href=&#34;https://rivtian.github.io/tech/%E5%AD%97%E7%AC%A6%E4%B8%B2%E7%AE%97%E6%B3%95ac%E8%87%AA%E5%8A%A8%E6%9C%BA/#fnref:1&#34; class=&#34;footnote-backref&#34; role=&#34;doc-backlink&#34;&gt;&amp;#x21a9;&amp;#xfe0e;&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;举例来源 &lt;a href=&#34;https://www.riotian.com/tech/%E5%AD%97%E7%AC%A6%E4%B8%B2%E7%AE%97%E6%B3%95ac%E8%87%AA%E5%8A%A8%E6%9C%BA/#fnref:1&#34; class=&#34;footnote-backref&#34; role=&#34;doc-backlink&#34;&gt;&amp;#x21a9;&amp;#xfe0e;&lt;/a&gt;&lt;/p&gt;
 &lt;/li&gt;
 &lt;/ol&gt;
 &lt;/section&gt;
@@ -2283,13 +2283,13 @@ subtask2[50pts]:∑length(模式串)&amp;lt;=10^6,length(文本串)&amp;lt;=10^6
                             
                             
                             
-                                <category scheme="https://rivtian.github.io/tags/%E5%AD%97%E7%AC%A6%E4%B8%B2/" term="字符串" label="字符串" />
+                                <category scheme="https://www.riotian.com/tags/%E5%AD%97%E7%AC%A6%E4%B8%B2/" term="字符串" label="字符串" />
                             
                         
                             
                             
                             
-                                <category scheme="https://rivtian.github.io/tags/ac%E8%87%AA%E5%8A%A8%E6%9C%BA/" term="AC自动机" label="AC自动机" />
+                                <category scheme="https://www.riotian.com/tags/ac%E8%87%AA%E5%8A%A8%E6%9C%BA/" term="AC自动机" label="AC自动机" />
                             
                         
                     
@@ -2299,13 +2299,13 @@ subtask2[50pts]:∑length(模式串)&amp;lt;=10^6,length(文本串)&amp;lt;=10^6
     
         <entry>
             <title type="text">神奇的字符串匹配：扩展KMP算法</title>
-            <link rel="alternate" type="text/html" href="https://rivtian.github.io/tech/%E7%A5%9E%E5%A5%87%E7%9A%84%E5%AD%97%E7%AC%A6%E4%B8%B2%E5%8C%B9%E9%85%8D%E6%89%A9%E5%B1%95kmp%E7%AE%97%E6%B3%95/" />
-            <id>https://rivtian.github.io/tech/%E7%A5%9E%E5%A5%87%E7%9A%84%E5%AD%97%E7%AC%A6%E4%B8%B2%E5%8C%B9%E9%85%8D%E6%89%A9%E5%B1%95kmp%E7%AE%97%E6%B3%95/</id>
-            <updated>2020-10-24T04:45:38&#43;00:00</updated>
+            <link rel="alternate" type="text/html" href="https://www.riotian.com/tech/%E7%A5%9E%E5%A5%87%E7%9A%84%E5%AD%97%E7%AC%A6%E4%B8%B2%E5%8C%B9%E9%85%8D%E6%89%A9%E5%B1%95kmp%E7%AE%97%E6%B3%95/" />
+            <id>https://www.riotian.com/tech/%E7%A5%9E%E5%A5%87%E7%9A%84%E5%AD%97%E7%AC%A6%E4%B8%B2%E5%8C%B9%E9%85%8D%E6%89%A9%E5%B1%95kmp%E7%AE%97%E6%B3%95/</id>
+            <updated>2020-10-24T05:36:43&#43;00:00</updated>
             <published>2020-10-05T15:56:37&#43;08:00</published>
             <author>
                     <name>RioTian</name>
-                    <uri>https://rivtian.github.io/</uri>
+                    <uri>https://www.riotian.com/</uri>
                     <email>kannajiahe@gmail.com</email>
                     </author>
             <rights>[CC BY-NC-SA 4.0](https://creativecommons.org/licenses/by-nc-sa/4.0/deed.zh)</rights><summary type="html">引言 一个算是冷门的算法（在竞赛上），不过其算法思想值得深究。 前置知识 kmp的算法思想……</summary>
@@ -2614,13 +2614,13 @@ extend: 0 0 0
                             
                             
                             
-                                <category scheme="https://rivtian.github.io/tags/%E5%AD%97%E7%AC%A6%E4%B8%B2/" term="字符串" label="字符串" />
+                                <category scheme="https://www.riotian.com/tags/%E5%AD%97%E7%AC%A6%E4%B8%B2/" term="字符串" label="字符串" />
                             
                         
                             
                             
                             
-                                <category scheme="https://rivtian.github.io/tags/kmp/" term="KMP" label="KMP" />
+                                <category scheme="https://www.riotian.com/tags/kmp/" term="KMP" label="KMP" />
                             
                         
                     
@@ -2630,19 +2630,19 @@ extend: 0 0 0
     
         <entry>
             <title type="text">【计算几何 04】距离计算</title>
-            <link rel="alternate" type="text/html" href="https://rivtian.github.io/tech/%E8%AE%A1%E7%AE%97%E5%87%A0%E4%BD%95-04%E8%B7%9D%E7%A6%BB%E8%AE%A1%E7%AE%97/" />
-            <id>https://rivtian.github.io/tech/%E8%AE%A1%E7%AE%97%E5%87%A0%E4%BD%95-04%E8%B7%9D%E7%A6%BB%E8%AE%A1%E7%AE%97/</id>
-            <updated>2020-10-24T04:45:38&#43;00:00</updated>
+            <link rel="alternate" type="text/html" href="https://www.riotian.com/tech/%E8%AE%A1%E7%AE%97%E5%87%A0%E4%BD%95-04%E8%B7%9D%E7%A6%BB%E8%AE%A1%E7%AE%97/" />
+            <id>https://www.riotian.com/tech/%E8%AE%A1%E7%AE%97%E5%87%A0%E4%BD%95-04%E8%B7%9D%E7%A6%BB%E8%AE%A1%E7%AE%97/</id>
+            <updated>2020-10-24T05:36:43&#43;00:00</updated>
             <published>2020-10-01T15:29:22&#43;08:00</published>
             <author>
                     <name>RioTian</name>
-                    <uri>https://rivtian.github.io/</uri>
+                    <uri>https://www.riotian.com/</uri>
                     <email>kannajiahe@gmail.com</email>
                     </author>
             <rights>[CC BY-NC-SA 4.0](https://creativecommons.org/licenses/by-nc-sa/4.0/deed.zh)</rights><summary type="html">感谢OI wiki对本文的帮助1 欧氏距离 欧氏距离，一般也称作欧几里得距离。在平面直角坐……</summary>
             
                 <content type="html">&lt;blockquote&gt;
-&lt;p&gt;感谢OI wiki对本文的帮助&lt;sup id=&#34;fnref:1&#34;&gt;&lt;a href=&#34;https://rivtian.github.io/tech/%E8%AE%A1%E7%AE%97%E5%87%A0%E4%BD%95-04%E8%B7%9D%E7%A6%BB%E8%AE%A1%E7%AE%97/#fn:1&#34; class=&#34;footnote-ref&#34; role=&#34;doc-noteref&#34;&gt;1&lt;/a&gt;&lt;/sup&gt;&lt;/p&gt;
+&lt;p&gt;感谢OI wiki对本文的帮助&lt;sup id=&#34;fnref:1&#34;&gt;&lt;a href=&#34;https://www.riotian.com/tech/%E8%AE%A1%E7%AE%97%E5%87%A0%E4%BD%95-04%E8%B7%9D%E7%A6%BB%E8%AE%A1%E7%AE%97/#fn:1&#34; class=&#34;footnote-ref&#34; role=&#34;doc-noteref&#34;&gt;1&lt;/a&gt;&lt;/sup&gt;&lt;/p&gt;
 &lt;/blockquote&gt;
 &lt;hr&gt;
 &lt;h2 id=&#34;欧氏距离&#34;&gt;欧氏距离&lt;/h2&gt;
@@ -2894,7 +2894,7 @@ int main() {
 &lt;hr&gt;
 &lt;ol&gt;
 &lt;li id=&#34;fn:1&#34; role=&#34;doc-endnote&#34;&gt;
-&lt;p&gt;&lt;a href=&#34;https://oi-wiki.org/&#34;&gt;资料来源&lt;/a&gt; &lt;a href=&#34;https://rivtian.github.io/tech/%E8%AE%A1%E7%AE%97%E5%87%A0%E4%BD%95-04%E8%B7%9D%E7%A6%BB%E8%AE%A1%E7%AE%97/#fnref:1&#34; class=&#34;footnote-backref&#34; role=&#34;doc-backlink&#34;&gt;&amp;#x21a9;&amp;#xfe0e;&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;&lt;a href=&#34;https://oi-wiki.org/&#34;&gt;资料来源&lt;/a&gt; &lt;a href=&#34;https://www.riotian.com/tech/%E8%AE%A1%E7%AE%97%E5%87%A0%E4%BD%95-04%E8%B7%9D%E7%A6%BB%E8%AE%A1%E7%AE%97/#fnref:1&#34; class=&#34;footnote-backref&#34; role=&#34;doc-backlink&#34;&gt;&amp;#x21a9;&amp;#xfe0e;&lt;/a&gt;&lt;/p&gt;
 &lt;/li&gt;
 &lt;/ol&gt;
 &lt;/section&gt;
@@ -2912,7 +2912,7 @@ int main() {
                             
                             
                             
-                                <category scheme="https://rivtian.github.io/tags/%E8%AE%A1%E7%AE%97%E5%87%A0%E4%BD%95/" term="计算几何" label="计算几何" />
+                                <category scheme="https://www.riotian.com/tags/%E8%AE%A1%E7%AE%97%E5%87%A0%E4%BD%95/" term="计算几何" label="计算几何" />
                             
                         
                     
@@ -2922,13 +2922,13 @@ int main() {
     
         <entry>
             <title type="text">数论（8）：min_25 筛（扩展埃氏筛）</title>
-            <link rel="alternate" type="text/html" href="https://rivtian.github.io/tech/%E6%95%B0%E8%AE%BA8min_25-%E7%AD%9B%E6%89%A9%E5%B1%95%E5%9F%83%E6%B0%8F%E7%AD%9B/" />
-            <id>https://rivtian.github.io/tech/%E6%95%B0%E8%AE%BA8min_25-%E7%AD%9B%E6%89%A9%E5%B1%95%E5%9F%83%E6%B0%8F%E7%AD%9B/</id>
-            <updated>2020-10-24T04:45:38&#43;00:00</updated>
+            <link rel="alternate" type="text/html" href="https://www.riotian.com/tech/%E6%95%B0%E8%AE%BA8min_25-%E7%AD%9B%E6%89%A9%E5%B1%95%E5%9F%83%E6%B0%8F%E7%AD%9B/" />
+            <id>https://www.riotian.com/tech/%E6%95%B0%E8%AE%BA8min_25-%E7%AD%9B%E6%89%A9%E5%B1%95%E5%9F%83%E6%B0%8F%E7%AD%9B/</id>
+            <updated>2020-10-24T05:36:43&#43;00:00</updated>
             <published>2020-09-30T15:42:19&#43;08:00</published>
             <author>
                     <name>RioTian</name>
-                    <uri>https://rivtian.github.io/</uri>
+                    <uri>https://www.riotian.com/</uri>
                     <email>kannajiahe@gmail.com</email>
                     </author>
             <rights>[CC BY-NC-SA 4.0](https://creativecommons.org/licenses/by-nc-sa/4.0/deed.zh)</rights><summary type="html">min_25 筛介绍 我们考虑这样一个问题。 $$ ans=\sum_{i = 1}^nf(i)\ $$ 其中 $1 \le n \le 10^{10}$ 其中 $f(i)$ 是一个奇怪的函数、并不像……</summary>
@@ -3266,7 +3266,7 @@ $$
                             
                             
                             
-                                <category scheme="https://rivtian.github.io/tags/%E6%95%B0%E8%AE%BA/" term="数论" label="数论" />
+                                <category scheme="https://www.riotian.com/tags/%E6%95%B0%E8%AE%BA/" term="数论" label="数论" />
                             
                         
                     
@@ -3276,13 +3276,13 @@ $$
     
         <entry>
             <title type="text">数论（7）：康托展开&amp;逆康托展开</title>
-            <link rel="alternate" type="text/html" href="https://rivtian.github.io/tech/%E6%95%B0%E8%AE%BA7%E5%BA%B7%E6%89%98%E5%B1%95%E5%BC%80%E9%80%86%E5%BA%B7%E6%89%98%E5%B1%95%E5%BC%80/" />
-            <id>https://rivtian.github.io/tech/%E6%95%B0%E8%AE%BA7%E5%BA%B7%E6%89%98%E5%B1%95%E5%BC%80%E9%80%86%E5%BA%B7%E6%89%98%E5%B1%95%E5%BC%80/</id>
-            <updated>2020-10-24T04:45:38&#43;00:00</updated>
+            <link rel="alternate" type="text/html" href="https://www.riotian.com/tech/%E6%95%B0%E8%AE%BA7%E5%BA%B7%E6%89%98%E5%B1%95%E5%BC%80%E9%80%86%E5%BA%B7%E6%89%98%E5%B1%95%E5%BC%80/" />
+            <id>https://www.riotian.com/tech/%E6%95%B0%E8%AE%BA7%E5%BA%B7%E6%89%98%E5%B1%95%E5%BC%80%E9%80%86%E5%BA%B7%E6%89%98%E5%B1%95%E5%BC%80/</id>
+            <updated>2020-10-24T05:36:43&#43;00:00</updated>
             <published>2020-09-29T15:41:40&#43;08:00</published>
             <author>
                     <name>RioTian</name>
-                    <uri>https://rivtian.github.io/</uri>
+                    <uri>https://www.riotian.com/</uri>
                     <email>kannajiahe@gmail.com</email>
                     </author>
             <rights>[CC BY-NC-SA 4.0](https://creativecommons.org/licenses/by-nc-sa/4.0/deed.zh)</rights><summary type="html">康托展开可以用来求一个 $1\sim n$ 的任意排列的排名。 什么是排列的排名？ 把 $1\sim n$ 的所有排列按字典……</summary>
@@ -3436,7 +3436,7 @@ $$&lt;/p&gt;
                             
                             
                             
-                                <category scheme="https://rivtian.github.io/tags/%E6%95%B0%E8%AE%BA/" term="数论" label="数论" />
+                                <category scheme="https://www.riotian.com/tags/%E6%95%B0%E8%AE%BA/" term="数论" label="数论" />
                             
                         
                     
@@ -3446,13 +3446,13 @@ $$&lt;/p&gt;
     
         <entry>
             <title type="text">如何使用 Python 進行字串格式化</title>
-            <link rel="alternate" type="text/html" href="https://rivtian.github.io/tech/%E5%A6%82%E4%BD%95%E4%BD%BF%E7%94%A8-python-%E9%80%B2%E8%A1%8C%E5%AD%97%E4%B8%B2%E6%A0%BC%E5%BC%8F%E5%8C%96/" />
-            <id>https://rivtian.github.io/tech/%E5%A6%82%E4%BD%95%E4%BD%BF%E7%94%A8-python-%E9%80%B2%E8%A1%8C%E5%AD%97%E4%B8%B2%E6%A0%BC%E5%BC%8F%E5%8C%96/</id>
-            <updated>2020-10-24T04:45:38&#43;00:00</updated>
+            <link rel="alternate" type="text/html" href="https://www.riotian.com/tech/%E5%A6%82%E4%BD%95%E4%BD%BF%E7%94%A8-python-%E9%80%B2%E8%A1%8C%E5%AD%97%E4%B8%B2%E6%A0%BC%E5%BC%8F%E5%8C%96/" />
+            <id>https://www.riotian.com/tech/%E5%A6%82%E4%BD%95%E4%BD%BF%E7%94%A8-python-%E9%80%B2%E8%A1%8C%E5%AD%97%E4%B8%B2%E6%A0%BC%E5%BC%8F%E5%8C%96/</id>
+            <updated>2020-10-24T05:36:43&#43;00:00</updated>
             <published>2020-09-27T14:17:55&#43;08:00</published>
             <author>
                     <name>RioTian</name>
-                    <uri>https://rivtian.github.io/</uri>
+                    <uri>https://www.riotian.com/</uri>
                     <email>kannajiahe@gmail.com</email>
                     </author>
             <rights>[CC BY-NC-SA 4.0](https://creativecommons.org/licenses/by-nc-sa/4.0/deed.zh)</rights><summary type="html">前言： Python有几种方法可以显示程序的输出；数据可以以人类可读的形式打印出来，或……</summary>
@@ -3735,7 +3735,7 @@ $$&lt;/p&gt;
                             
                             
                             
-                                <category scheme="https://rivtian.github.io/tags/python/" term="Python" label="Python" />
+                                <category scheme="https://www.riotian.com/tags/python/" term="Python" label="Python" />
                             
                         
                     
@@ -3745,13 +3745,13 @@ $$&lt;/p&gt;
     
         <entry>
             <title type="text">【计算几何 03】旋转卡壳算法</title>
-            <link rel="alternate" type="text/html" href="https://rivtian.github.io/tech/%E8%AE%A1%E7%AE%97%E5%87%A0%E4%BD%95-03%E6%97%8B%E8%BD%AC%E5%8D%A1%E5%A3%B3%E7%AE%97%E6%B3%95/" />
-            <id>https://rivtian.github.io/tech/%E8%AE%A1%E7%AE%97%E5%87%A0%E4%BD%95-03%E6%97%8B%E8%BD%AC%E5%8D%A1%E5%A3%B3%E7%AE%97%E6%B3%95/</id>
-            <updated>2020-10-24T04:45:38&#43;00:00</updated>
+            <link rel="alternate" type="text/html" href="https://www.riotian.com/tech/%E8%AE%A1%E7%AE%97%E5%87%A0%E4%BD%95-03%E6%97%8B%E8%BD%AC%E5%8D%A1%E5%A3%B3%E7%AE%97%E6%B3%95/" />
+            <id>https://www.riotian.com/tech/%E8%AE%A1%E7%AE%97%E5%87%A0%E4%BD%95-03%E6%97%8B%E8%BD%AC%E5%8D%A1%E5%A3%B3%E7%AE%97%E6%B3%95/</id>
+            <updated>2020-10-24T05:36:43&#43;00:00</updated>
             <published>2020-09-25T15:28:16&#43;08:00</published>
             <author>
                     <name>RioTian</name>
-                    <uri>https://rivtian.github.io/</uri>
+                    <uri>https://www.riotian.com/</uri>
                     <email>kannajiahe@gmail.com</email>
                     </author>
             <rights>[CC BY-NC-SA 4.0](https://creativecommons.org/licenses/by-nc-sa/4.0/deed.zh)</rights><summary type="html">旋转卡壳算法，这个算法和凸包有着很大的关系，所以建议没看凸包的同学去计算几何分类看一……</summary>
@@ -4007,7 +4007,7 @@ $$&lt;/p&gt;
                             
                             
                             
-                                <category scheme="https://rivtian.github.io/tags/%E8%AE%A1%E7%AE%97%E5%87%A0%E4%BD%95/" term="计算几何" label="计算几何" />
+                                <category scheme="https://www.riotian.com/tags/%E8%AE%A1%E7%AE%97%E5%87%A0%E4%BD%95/" term="计算几何" label="计算几何" />
                             
                         
                     
@@ -4017,13 +4017,13 @@ $$&lt;/p&gt;
     
         <entry>
             <title type="text">Python 之父为什么嫌弃 Lambda 匿名函数？</title>
-            <link rel="alternate" type="text/html" href="https://rivtian.github.io/tech/python-%E4%B9%8B%E7%88%B6%E4%B8%BA%E4%BB%80%E4%B9%88%E5%AB%8C%E5%BC%83-lambda-%E5%8C%BF%E5%90%8D%E5%87%BD%E6%95%B0/" />
-            <id>https://rivtian.github.io/tech/python-%E4%B9%8B%E7%88%B6%E4%B8%BA%E4%BB%80%E4%B9%88%E5%AB%8C%E5%BC%83-lambda-%E5%8C%BF%E5%90%8D%E5%87%BD%E6%95%B0/</id>
-            <updated>2020-10-24T04:45:38&#43;00:00</updated>
+            <link rel="alternate" type="text/html" href="https://www.riotian.com/tech/python-%E4%B9%8B%E7%88%B6%E4%B8%BA%E4%BB%80%E4%B9%88%E5%AB%8C%E5%BC%83-lambda-%E5%8C%BF%E5%90%8D%E5%87%BD%E6%95%B0/" />
+            <id>https://www.riotian.com/tech/python-%E4%B9%8B%E7%88%B6%E4%B8%BA%E4%BB%80%E4%B9%88%E5%AB%8C%E5%BC%83-lambda-%E5%8C%BF%E5%90%8D%E5%87%BD%E6%95%B0/</id>
+            <updated>2020-10-24T05:36:43&#43;00:00</updated>
             <published>2020-09-23T15:45:12&#43;08:00</published>
             <author>
                     <name>RioTian</name>
-                    <uri>https://rivtian.github.io/</uri>
+                    <uri>https://www.riotian.com/</uri>
                     <email>kannajiahe@gmail.com</email>
                     </author>
             <rights>[CC BY-NC-SA 4.0](https://creativecommons.org/licenses/by-nc-sa/4.0/deed.zh)</rights><summary type="html">Python 支持 lambda 匿名函数，其扩展的 BNF 表示法是lambda_expr ::= &amp;quot;lambda&amp;quot; [parameter_list] &amp;quot;:&amp;quot; expression ，也就是 lambda 参数序……</summary>
@@ -4203,7 +4203,7 @@ $$&lt;/p&gt;
                             
                             
                             
-                                <category scheme="https://rivtian.github.io/tags/python/" term="Python" label="Python" />
+                                <category scheme="https://www.riotian.com/tags/python/" term="Python" label="Python" />
                             
                         
                     
@@ -4213,13 +4213,13 @@ $$&lt;/p&gt;
     
         <entry>
             <title type="text">【计算几何 02】凸包问题</title>
-            <link rel="alternate" type="text/html" href="https://rivtian.github.io/tech/%E8%AE%A1%E7%AE%97%E5%87%A0%E4%BD%95-02%E5%87%B8%E5%8C%85%E9%97%AE%E9%A2%98/" />
-            <id>https://rivtian.github.io/tech/%E8%AE%A1%E7%AE%97%E5%87%A0%E4%BD%95-02%E5%87%B8%E5%8C%85%E9%97%AE%E9%A2%98/</id>
-            <updated>2020-10-24T04:45:38&#43;00:00</updated>
+            <link rel="alternate" type="text/html" href="https://www.riotian.com/tech/%E8%AE%A1%E7%AE%97%E5%87%A0%E4%BD%95-02%E5%87%B8%E5%8C%85%E9%97%AE%E9%A2%98/" />
+            <id>https://www.riotian.com/tech/%E8%AE%A1%E7%AE%97%E5%87%A0%E4%BD%95-02%E5%87%B8%E5%8C%85%E9%97%AE%E9%A2%98/</id>
+            <updated>2020-10-24T05:36:43&#43;00:00</updated>
             <published>2020-09-23T15:27:26&#43;08:00</published>
             <author>
                     <name>RioTian</name>
-                    <uri>https://rivtian.github.io/</uri>
+                    <uri>https://www.riotian.com/</uri>
                     <email>kannajiahe@gmail.com</email>
                     </author>
             <rights>[CC BY-NC-SA 4.0](https://creativecommons.org/licenses/by-nc-sa/4.0/deed.zh)</rights><summary type="html">引言 首先介绍下什么是凸包？如下图： 在一个二维坐标系中，有若干点杂乱排列着，将最外层的……</summary>
@@ -4454,7 +4454,7 @@ $$&lt;/p&gt;
                             
                             
                             
-                                <category scheme="https://rivtian.github.io/tags/%E8%AE%A1%E7%AE%97%E5%87%A0%E4%BD%95/" term="计算几何" label="计算几何" />
+                                <category scheme="https://www.riotian.com/tags/%E8%AE%A1%E7%AE%97%E5%87%A0%E4%BD%95/" term="计算几何" label="计算几何" />
                             
                         
                     
@@ -4464,13 +4464,13 @@ $$&lt;/p&gt;
     
         <entry>
             <title type="text">数论（6）：卡特兰数</title>
-            <link rel="alternate" type="text/html" href="https://rivtian.github.io/tech/%E6%95%B0%E8%AE%BA6%E5%8D%A1%E7%89%B9%E5%85%B0%E6%95%B0/" />
-            <id>https://rivtian.github.io/tech/%E6%95%B0%E8%AE%BA6%E5%8D%A1%E7%89%B9%E5%85%B0%E6%95%B0/</id>
-            <updated>2020-10-24T04:45:38&#43;00:00</updated>
+            <link rel="alternate" type="text/html" href="https://www.riotian.com/tech/%E6%95%B0%E8%AE%BA6%E5%8D%A1%E7%89%B9%E5%85%B0%E6%95%B0/" />
+            <id>https://www.riotian.com/tech/%E6%95%B0%E8%AE%BA6%E5%8D%A1%E7%89%B9%E5%85%B0%E6%95%B0/</id>
+            <updated>2020-10-24T05:36:43&#43;00:00</updated>
             <published>2020-09-21T15:40:51&#43;08:00</published>
             <author>
                     <name>RioTian</name>
-                    <uri>https://rivtian.github.io/</uri>
+                    <uri>https://www.riotian.com/</uri>
                     <email>kannajiahe@gmail.com</email>
                     </author>
             <rights>[CC BY-NC-SA 4.0](https://creativecommons.org/licenses/by-nc-sa/4.0/deed.zh)</rights><summary type="html">一、引言 卡特兰数（Catalan number）是组合数学中一个常出现在各种计数问题中……</summary>
@@ -4591,7 +4591,7 @@ $$&lt;/p&gt;
                             
                             
                             
-                                <category scheme="https://rivtian.github.io/tags/%E6%95%B0%E8%AE%BA/" term="数论" label="数论" />
+                                <category scheme="https://www.riotian.com/tags/%E6%95%B0%E8%AE%BA/" term="数论" label="数论" />
                             
                         
                     
@@ -4601,13 +4601,13 @@ $$&lt;/p&gt;
     
         <entry>
             <title type="text">【计算几何 01】叉积</title>
-            <link rel="alternate" type="text/html" href="https://rivtian.github.io/tech/%E8%AE%A1%E7%AE%97%E5%87%A0%E4%BD%95-01%E5%8F%89%E7%A7%AF/" />
-            <id>https://rivtian.github.io/tech/%E8%AE%A1%E7%AE%97%E5%87%A0%E4%BD%95-01%E5%8F%89%E7%A7%AF/</id>
-            <updated>2020-10-24T04:45:38&#43;00:00</updated>
+            <link rel="alternate" type="text/html" href="https://www.riotian.com/tech/%E8%AE%A1%E7%AE%97%E5%87%A0%E4%BD%95-01%E5%8F%89%E7%A7%AF/" />
+            <id>https://www.riotian.com/tech/%E8%AE%A1%E7%AE%97%E5%87%A0%E4%BD%95-01%E5%8F%89%E7%A7%AF/</id>
+            <updated>2020-10-24T05:36:43&#43;00:00</updated>
             <published>2020-09-21T15:13:32&#43;08:00</published>
             <author>
                     <name>RioTian</name>
-                    <uri>https://rivtian.github.io/</uri>
+                    <uri>https://www.riotian.com/</uri>
                     <email>kannajiahe@gmail.com</email>
                     </author>
             <rights>[CC BY-NC-SA 4.0](https://creativecommons.org/licenses/by-nc-sa/4.0/deed.zh)</rights><summary type="html">这几天闲来无事去学习了一下计算几何，发现其实不（sang）是（xin）太（bing）……</summary>
@@ -5007,7 +5007,7 @@ int main()
                             
                             
                             
-                                <category scheme="https://rivtian.github.io/tags/%E8%AE%A1%E7%AE%97%E5%87%A0%E4%BD%95/" term="计算几何" label="计算几何" />
+                                <category scheme="https://www.riotian.com/tags/%E8%AE%A1%E7%AE%97%E5%87%A0%E4%BD%95/" term="计算几何" label="计算几何" />
                             
                         
                     
@@ -5017,13 +5017,13 @@ int main()
     
         <entry>
             <title type="text">Web开发初探（二）：JavaScript 快速入门</title>
-            <link rel="alternate" type="text/html" href="https://rivtian.github.io/tech/web%E5%BC%80%E5%8F%91%E5%88%9D%E6%8E%A2%E4%BA%8Cjavascript-%E5%BF%AB%E9%80%9F%E5%85%A5%E9%97%A8/" />
-            <id>https://rivtian.github.io/tech/web%E5%BC%80%E5%8F%91%E5%88%9D%E6%8E%A2%E4%BA%8Cjavascript-%E5%BF%AB%E9%80%9F%E5%85%A5%E9%97%A8/</id>
-            <updated>2020-10-24T04:45:38&#43;00:00</updated>
+            <link rel="alternate" type="text/html" href="https://www.riotian.com/tech/web%E5%BC%80%E5%8F%91%E5%88%9D%E6%8E%A2%E4%BA%8Cjavascript-%E5%BF%AB%E9%80%9F%E5%85%A5%E9%97%A8/" />
+            <id>https://www.riotian.com/tech/web%E5%BC%80%E5%8F%91%E5%88%9D%E6%8E%A2%E4%BA%8Cjavascript-%E5%BF%AB%E9%80%9F%E5%85%A5%E9%97%A8/</id>
+            <updated>2020-10-24T05:36:43&#43;00:00</updated>
             <published>2020-09-15T14:11:19&#43;08:00</published>
             <author>
                     <name>RioTian</name>
-                    <uri>https://rivtian.github.io/</uri>
+                    <uri>https://www.riotian.com/</uri>
                     <email>kannajiahe@gmail.com</email>
                     </author>
             <rights>[CC BY-NC-SA 4.0](https://creativecommons.org/licenses/by-nc-sa/4.0/deed.zh)</rights><summary type="html">概述 本文以介绍 JavaScript 为主，初学者掌握本文的内容后，将能够对 JavaScript 有大体了解。 JavaScri……</summary>
@@ -5688,7 +5688,7 @@ int main()
                             
                             
                             
-                                <category scheme="https://rivtian.github.io/tags/web/" term="Web" label="Web" />
+                                <category scheme="https://www.riotian.com/tags/web/" term="Web" label="Web" />
                             
                         
                     
@@ -5698,13 +5698,13 @@ int main()
     
         <entry>
             <title type="text">Web开发初探</title>
-            <link rel="alternate" type="text/html" href="https://rivtian.github.io/tech/web%E5%BC%80%E5%8F%91%E5%88%9D%E6%8E%A2/" />
-            <id>https://rivtian.github.io/tech/web%E5%BC%80%E5%8F%91%E5%88%9D%E6%8E%A2/</id>
-            <updated>2020-10-24T04:45:38&#43;00:00</updated>
+            <link rel="alternate" type="text/html" href="https://www.riotian.com/tech/web%E5%BC%80%E5%8F%91%E5%88%9D%E6%8E%A2/" />
+            <id>https://www.riotian.com/tech/web%E5%BC%80%E5%8F%91%E5%88%9D%E6%8E%A2/</id>
+            <updated>2020-10-24T05:36:43&#43;00:00</updated>
             <published>2020-09-14T14:07:58&#43;08:00</published>
             <author>
                     <name>RioTian</name>
-                    <uri>https://rivtian.github.io/</uri>
+                    <uri>https://www.riotian.com/</uri>
                     <email>kannajiahe@gmail.com</email>
                     </author>
             <rights>[CC BY-NC-SA 4.0](https://creativecommons.org/licenses/by-nc-sa/4.0/deed.zh)</rights><summary type="html">一、Web开发介绍 我们看到的网页通过代码来实现的 ，这些代码由浏览器解释并渲染成你看到……</summary>
@@ -7085,7 +7085,7 @@ int main()
                             
                             
                             
-                                <category scheme="https://rivtian.github.io/tags/web/" term="Web" label="Web" />
+                                <category scheme="https://www.riotian.com/tags/web/" term="Web" label="Web" />
                             
                         
                     
@@ -7095,13 +7095,13 @@ int main()
     
         <entry>
             <title type="text">位运算の奇技淫巧(二)</title>
-            <link rel="alternate" type="text/html" href="https://rivtian.github.io/tech/%E4%BD%8D%E8%BF%90%E7%AE%97%E3%81%AE%E5%A5%87%E6%8A%80%E6%B7%AB%E5%B7%A7%E4%BA%8C/" />
-            <id>https://rivtian.github.io/tech/%E4%BD%8D%E8%BF%90%E7%AE%97%E3%81%AE%E5%A5%87%E6%8A%80%E6%B7%AB%E5%B7%A7%E4%BA%8C/</id>
-            <updated>2020-10-24T04:45:38&#43;00:00</updated>
+            <link rel="alternate" type="text/html" href="https://www.riotian.com/tech/%E4%BD%8D%E8%BF%90%E7%AE%97%E3%81%AE%E5%A5%87%E6%8A%80%E6%B7%AB%E5%B7%A7%E4%BA%8C/" />
+            <id>https://www.riotian.com/tech/%E4%BD%8D%E8%BF%90%E7%AE%97%E3%81%AE%E5%A5%87%E6%8A%80%E6%B7%AB%E5%B7%A7%E4%BA%8C/</id>
+            <updated>2020-10-24T05:36:43&#43;00:00</updated>
             <published>2020-09-13T14:11:19&#43;08:00</published>
             <author>
                     <name>RioTian</name>
-                    <uri>https://rivtian.github.io/</uri>
+                    <uri>https://www.riotian.com/</uri>
                     <email>kannajiahe@gmail.com</email>
                     </author>
             <rights>[CC BY-NC-SA 4.0](https://creativecommons.org/licenses/by-nc-sa/4.0/deed.zh)</rights><summary type="html">学习之余重新复习了下 位运算的奇技淫巧 又发现了几个有趣的位运算，部分内容来自东哥 本文分……</summary>
@@ -7307,7 +7307,7 @@ int main()
                             
                             
                             
-                                <category scheme="https://rivtian.github.io/tags/%E4%BD%8D%E8%BF%90%E7%AE%97/" term="位运算" label="位运算" />
+                                <category scheme="https://www.riotian.com/tags/%E4%BD%8D%E8%BF%90%E7%AE%97/" term="位运算" label="位运算" />
                             
                         
                     
@@ -7317,13 +7317,13 @@ int main()
     
         <entry>
             <title type="text">博弈论经典模型解析（入门级）</title>
-            <link rel="alternate" type="text/html" href="https://rivtian.github.io/tech/%E5%8D%9A%E5%BC%88%E8%AE%BA%E7%BB%8F%E5%85%B8%E6%A8%A1%E5%9E%8B%E8%A7%A3%E6%9E%90%E5%85%A5%E9%97%A8%E7%BA%A7/" />
-            <id>https://rivtian.github.io/tech/%E5%8D%9A%E5%BC%88%E8%AE%BA%E7%BB%8F%E5%85%B8%E6%A8%A1%E5%9E%8B%E8%A7%A3%E6%9E%90%E5%85%A5%E9%97%A8%E7%BA%A7/</id>
-            <updated>2020-10-24T04:45:38&#43;00:00</updated>
+            <link rel="alternate" type="text/html" href="https://www.riotian.com/tech/%E5%8D%9A%E5%BC%88%E8%AE%BA%E7%BB%8F%E5%85%B8%E6%A8%A1%E5%9E%8B%E8%A7%A3%E6%9E%90%E5%85%A5%E9%97%A8%E7%BA%A7/" />
+            <id>https://www.riotian.com/tech/%E5%8D%9A%E5%BC%88%E8%AE%BA%E7%BB%8F%E5%85%B8%E6%A8%A1%E5%9E%8B%E8%A7%A3%E6%9E%90%E5%85%A5%E9%97%A8%E7%BA%A7/</id>
+            <updated>2020-10-24T05:36:43&#43;00:00</updated>
             <published>2020-09-02T14:34:30&#43;08:00</published>
             <author>
                     <name>RioTian</name>
-                    <uri>https://rivtian.github.io/</uri>
+                    <uri>https://www.riotian.com/</uri>
                     <email>kannajiahe@gmail.com</email>
                     </author>
             <rights>[CC BY-NC-SA 4.0](https://creativecommons.org/licenses/by-nc-sa/4.0/deed.zh)</rights><summary type="html">在面试的过程中，除了常规的算法题目，我们经常也会被问到一些趣味题型来考察思维，而这类……</summary>
@@ -7480,7 +7480,7 @@ int main()
 &lt;h2 id=&#34;7参考&#34;&gt;7、参考&lt;/h2&gt;
 &lt;p&gt;&lt;a href=&#34;https://www.cnblogs.com/virtualman/p/9566936.html&#34;&gt;【博弈论】关于三姬分金(五海盗分赃)的博弈论问题分析&lt;/a&gt;&lt;/p&gt;
 &lt;p&gt;&lt;a href=&#34;https://www.bilibili.com/video/av25404551/&#34;&gt;李永乐老师对三姬分金视频讲解&lt;/a&gt;&lt;/p&gt;
-&lt;div  class=&#34;video&#34;&gt; &lt;iframe src=&#34;https://rivtian.github.io//player.bilibili.com/player.html?aid=25404551&amp;bvid=BV1zs41177xQ&amp;cid=43173266&amp;page=1&#34; scrolling=&#34;no&#34; border=&#34;0&#34; frameborder=&#34;no&#34; framespacing=&#34;0&#34; allowfullscreen=&#34;true&#34;&gt; &lt;/iframe&gt;&lt;/div&gt;</content>
+&lt;div  class=&#34;video&#34;&gt; &lt;iframe src=&#34;https://www.riotian.com//player.bilibili.com/player.html?aid=25404551&amp;bvid=BV1zs41177xQ&amp;cid=43173266&amp;page=1&#34; scrolling=&#34;no&#34; border=&#34;0&#34; frameborder=&#34;no&#34; framespacing=&#34;0&#34; allowfullscreen=&#34;true&#34;&gt; &lt;/iframe&gt;&lt;/div&gt;</content>
             
             
             
@@ -7494,7 +7494,7 @@ int main()
                             
                             
                             
-                                <category scheme="https://rivtian.github.io/tags/%E5%8D%9A%E5%BC%88%E8%AE%BA/" term="博弈论" label="博弈论" />
+                                <category scheme="https://www.riotian.com/tags/%E5%8D%9A%E5%BC%88%E8%AE%BA/" term="博弈论" label="博弈论" />
                             
                         
                     
@@ -7504,13 +7504,13 @@ int main()
     
         <entry>
             <title type="text">位运算の奇技淫巧</title>
-            <link rel="alternate" type="text/html" href="https://rivtian.github.io/tech/%E4%BD%8D%E8%BF%90%E7%AE%97%E3%81%AE%E5%A5%87%E6%8A%80%E6%B7%AB%E5%B7%A7/" />
-            <id>https://rivtian.github.io/tech/%E4%BD%8D%E8%BF%90%E7%AE%97%E3%81%AE%E5%A5%87%E6%8A%80%E6%B7%AB%E5%B7%A7/</id>
-            <updated>2020-10-24T04:45:38&#43;00:00</updated>
+            <link rel="alternate" type="text/html" href="https://www.riotian.com/tech/%E4%BD%8D%E8%BF%90%E7%AE%97%E3%81%AE%E5%A5%87%E6%8A%80%E6%B7%AB%E5%B7%A7/" />
+            <id>https://www.riotian.com/tech/%E4%BD%8D%E8%BF%90%E7%AE%97%E3%81%AE%E5%A5%87%E6%8A%80%E6%B7%AB%E5%B7%A7/</id>
+            <updated>2020-10-24T05:36:43&#43;00:00</updated>
             <published>2020-09-02T14:11:19&#43;08:00</published>
             <author>
                     <name>RioTian</name>
-                    <uri>https://rivtian.github.io/</uri>
+                    <uri>https://www.riotian.com/</uri>
                     <email>kannajiahe@gmail.com</email>
                     </author>
             <rights>[CC BY-NC-SA 4.0](https://creativecommons.org/licenses/by-nc-sa/4.0/deed.zh)</rights><summary type="html">位运算就是基于整数的二进制表示进行的运算。由于计算机内部就是以二进制来存储数据，位运……</summary>
@@ -7848,7 +7848,7 @@ $$&lt;/p&gt;
                             
                             
                             
-                                <category scheme="https://rivtian.github.io/tags/%E4%BD%8D%E8%BF%90%E7%AE%97/" term="位运算" label="位运算" />
+                                <category scheme="https://www.riotian.com/tags/%E4%BD%8D%E8%BF%90%E7%AE%97/" term="位运算" label="位运算" />
                             
                         
                     
@@ -7858,13 +7858,13 @@ $$&lt;/p&gt;
     
         <entry>
             <title type="text">01 分数规划技巧</title>
-            <link rel="alternate" type="text/html" href="https://rivtian.github.io/tech/01-%E5%88%86%E6%95%B0%E8%A7%84%E5%88%92%E6%8A%80%E5%B7%A7/" />
-            <id>https://rivtian.github.io/tech/01-%E5%88%86%E6%95%B0%E8%A7%84%E5%88%92%E6%8A%80%E5%B7%A7/</id>
-            <updated>2020-10-24T04:45:38&#43;00:00</updated>
+            <link rel="alternate" type="text/html" href="https://www.riotian.com/tech/01-%E5%88%86%E6%95%B0%E8%A7%84%E5%88%92%E6%8A%80%E5%B7%A7/" />
+            <id>https://www.riotian.com/tech/01-%E5%88%86%E6%95%B0%E8%A7%84%E5%88%92%E6%8A%80%E5%B7%A7/</id>
+            <updated>2020-10-24T05:36:43&#43;00:00</updated>
             <published>2020-09-01T15:45:55&#43;08:00</published>
             <author>
                     <name>RioTian</name>
-                    <uri>https://rivtian.github.io/</uri>
+                    <uri>https://www.riotian.com/</uri>
                     <email>kannajiahe@gmail.com</email>
                     </author>
             <rights>[CC BY-NC-SA 4.0](https://creativecommons.org/licenses/by-nc-sa/4.0/deed.zh)</rights><summary type="html">分数规划用来求一个分式的极值。 形象一点就是，给出 $a_i$ 和 $b_i$ ，求一组 $w_i\in{0,1}$ ，最小化或最大化 $$ \displaystyle\frac{\sum\limits_{i=1}^na_i\times……</summary>
@@ -8158,7 +8158,7 @@ $$&lt;/p&gt;
                             
                             
                             
-                                <category scheme="https://rivtian.github.io/tags/%E6%95%B0%E8%AE%BA/" term="数论" label="数论" />
+                                <category scheme="https://www.riotian.com/tags/%E6%95%B0%E8%AE%BA/" term="数论" label="数论" />
                             
                         
                     
@@ -8168,13 +8168,13 @@ $$&lt;/p&gt;
     
         <entry>
             <title type="text">组合数学（1）：棋盘完美覆盖数(小规模)</title>
-            <link rel="alternate" type="text/html" href="https://rivtian.github.io/tech/%E7%BB%84%E5%90%88%E6%95%B0%E5%AD%A61%E6%A3%8B%E7%9B%98%E5%AE%8C%E7%BE%8E%E8%A6%86%E7%9B%96%E6%95%B0%E5%B0%8F%E8%A7%84%E6%A8%A1/" />
-            <id>https://rivtian.github.io/tech/%E7%BB%84%E5%90%88%E6%95%B0%E5%AD%A61%E6%A3%8B%E7%9B%98%E5%AE%8C%E7%BE%8E%E8%A6%86%E7%9B%96%E6%95%B0%E5%B0%8F%E8%A7%84%E6%A8%A1/</id>
-            <updated>2020-10-24T04:45:38&#43;00:00</updated>
+            <link rel="alternate" type="text/html" href="https://www.riotian.com/tech/%E7%BB%84%E5%90%88%E6%95%B0%E5%AD%A61%E6%A3%8B%E7%9B%98%E5%AE%8C%E7%BE%8E%E8%A6%86%E7%9B%96%E6%95%B0%E5%B0%8F%E8%A7%84%E6%A8%A1/" />
+            <id>https://www.riotian.com/tech/%E7%BB%84%E5%90%88%E6%95%B0%E5%AD%A61%E6%A3%8B%E7%9B%98%E5%AE%8C%E7%BE%8E%E8%A6%86%E7%9B%96%E6%95%B0%E5%B0%8F%E8%A7%84%E6%A8%A1/</id>
+            <updated>2020-10-24T05:36:43&#43;00:00</updated>
             <published>2020-08-30T15:46:33&#43;08:00</published>
             <author>
                     <name>RioTian</name>
-                    <uri>https://rivtian.github.io/</uri>
+                    <uri>https://www.riotian.com/</uri>
                     <email>kannajiahe@gmail.com</email>
                     </author>
             <rights>[CC BY-NC-SA 4.0](https://creativecommons.org/licenses/by-nc-sa/4.0/deed.zh)</rights><summary type="html">前言： 最近在看组合数学，记录一些书中相关的知识点。 正文： 考虑一个普通的国际象棋棋盘，……</summary>
@@ -8220,7 +8220,7 @@ $$&lt;/p&gt;
                             
                             
                             
-                                <category scheme="https://rivtian.github.io/tags/%E7%BB%84%E5%90%88%E6%95%B0%E5%AD%A6/" term="组合数学" label="组合数学" />
+                                <category scheme="https://www.riotian.com/tags/%E7%BB%84%E5%90%88%E6%95%B0%E5%AD%A6/" term="组合数学" label="组合数学" />
                             
                         
                     
@@ -8230,13 +8230,13 @@ $$&lt;/p&gt;
     
         <entry>
             <title type="text">数论（5）：中国剩余定理</title>
-            <link rel="alternate" type="text/html" href="https://rivtian.github.io/tech/%E6%95%B0%E8%AE%BA5%E4%B8%AD%E5%9B%BD%E5%89%A9%E4%BD%99%E5%AE%9A%E7%90%86/" />
-            <id>https://rivtian.github.io/tech/%E6%95%B0%E8%AE%BA5%E4%B8%AD%E5%9B%BD%E5%89%A9%E4%BD%99%E5%AE%9A%E7%90%86/</id>
-            <updated>2020-10-24T04:45:38&#43;00:00</updated>
+            <link rel="alternate" type="text/html" href="https://www.riotian.com/tech/%E6%95%B0%E8%AE%BA5%E4%B8%AD%E5%9B%BD%E5%89%A9%E4%BD%99%E5%AE%9A%E7%90%86/" />
+            <id>https://www.riotian.com/tech/%E6%95%B0%E8%AE%BA5%E4%B8%AD%E5%9B%BD%E5%89%A9%E4%BD%99%E5%AE%9A%E7%90%86/</id>
+            <updated>2020-10-24T05:36:43&#43;00:00</updated>
             <published>2020-08-24T15:35:39&#43;08:00</published>
             <author>
                     <name>RioTian</name>
-                    <uri>https://rivtian.github.io/</uri>
+                    <uri>https://www.riotian.com/</uri>
                     <email>kannajiahe@gmail.com</email>
                     </author>
             <rights>[CC BY-NC-SA 4.0](https://creativecommons.org/licenses/by-nc-sa/4.0/deed.zh)</rights><summary type="html">「物不知数」问题 有物不知其数，三三数之剩二，五五数之剩三，七七数之剩二。问物几何？ 即……</summary>
@@ -8365,7 +8365,7 @@ $$&lt;/p&gt;
 &lt;p&gt;&lt;a href=&#34;https://loj.ac/problem/10229&#34;&gt;「SDOI2010」古代猪文&lt;/a&gt;&lt;/p&gt;
 &lt;hr&gt;
 &lt;h2 id=&#34;李永乐老师视频讲解&#34;&gt;李永乐老师视频讲解&lt;/h2&gt;
-&lt;div class = &#34;video&#34;&gt;&lt;iframe src=&#34;https://rivtian.github.io//player.bilibili.com/player.html?aid=25823277&amp;bvid=BV1ss411576j&amp;cid=44122303&amp;page=1&#34;  allowfullscreen=&#34;true&#34;&gt; &lt;/iframe&gt;&lt;/div&gt;
+&lt;div class = &#34;video&#34;&gt;&lt;iframe src=&#34;https://www.riotian.com//player.bilibili.com/player.html?aid=25823277&amp;bvid=BV1ss411576j&amp;cid=44122303&amp;page=1&#34;  allowfullscreen=&#34;true&#34;&gt; &lt;/iframe&gt;&lt;/div&gt;
 </content>
             
             
@@ -8380,7 +8380,7 @@ $$&lt;/p&gt;
                             
                             
                             
-                                <category scheme="https://rivtian.github.io/tags/%E6%95%B0%E8%AE%BA/" term="数论" label="数论" />
+                                <category scheme="https://www.riotian.com/tags/%E6%95%B0%E8%AE%BA/" term="数论" label="数论" />
                             
                         
                     
@@ -8390,18 +8390,18 @@ $$&lt;/p&gt;
     
         <entry>
             <title type="text">数论（4）：类欧几里德算法</title>
-            <link rel="alternate" type="text/html" href="https://rivtian.github.io/tech/%E6%95%B0%E8%AE%BA4%E7%B1%BB%E6%AC%A7%E5%87%A0%E9%87%8C%E5%BE%B7%E7%AE%97%E6%B3%95/" />
-            <id>https://rivtian.github.io/tech/%E6%95%B0%E8%AE%BA4%E7%B1%BB%E6%AC%A7%E5%87%A0%E9%87%8C%E5%BE%B7%E7%AE%97%E6%B3%95/</id>
-            <updated>2020-10-24T04:45:38&#43;00:00</updated>
+            <link rel="alternate" type="text/html" href="https://www.riotian.com/tech/%E6%95%B0%E8%AE%BA4%E7%B1%BB%E6%AC%A7%E5%87%A0%E9%87%8C%E5%BE%B7%E7%AE%97%E6%B3%95/" />
+            <id>https://www.riotian.com/tech/%E6%95%B0%E8%AE%BA4%E7%B1%BB%E6%AC%A7%E5%87%A0%E9%87%8C%E5%BE%B7%E7%AE%97%E6%B3%95/</id>
+            <updated>2020-10-24T05:36:43&#43;00:00</updated>
             <published>2020-08-23T15:34:50&#43;08:00</published>
             <author>
                     <name>RioTian</name>
-                    <uri>https://rivtian.github.io/</uri>
+                    <uri>https://www.riotian.com/</uri>
                     <email>kannajiahe@gmail.com</email>
                     </author>
             <rights>[CC BY-NC-SA 4.0](https://creativecommons.org/licenses/by-nc-sa/4.0/deed.zh)</rights><summary type="html">本文出自OI wiki1 类欧几里德算法由洪华敦在 2016 年冬令营营员交流中提出的内容，其本质可以理解……</summary>
             
-                <content type="html">&lt;p&gt;&lt;strong&gt;本文出自OI wiki&lt;/strong&gt;&lt;sup id=&#34;fnref:1&#34;&gt;&lt;a href=&#34;https://rivtian.github.io/tech/%E6%95%B0%E8%AE%BA4%E7%B1%BB%E6%AC%A7%E5%87%A0%E9%87%8C%E5%BE%B7%E7%AE%97%E6%B3%95/#fn:1&#34; class=&#34;footnote-ref&#34; role=&#34;doc-noteref&#34;&gt;1&lt;/a&gt;&lt;/sup&gt;&lt;/p&gt;
+                <content type="html">&lt;p&gt;&lt;strong&gt;本文出自OI wiki&lt;/strong&gt;&lt;sup id=&#34;fnref:1&#34;&gt;&lt;a href=&#34;https://www.riotian.com/tech/%E6%95%B0%E8%AE%BA4%E7%B1%BB%E6%AC%A7%E5%87%A0%E9%87%8C%E5%BE%B7%E7%AE%97%E6%B3%95/#fn:1&#34; class=&#34;footnote-ref&#34; role=&#34;doc-noteref&#34;&gt;1&lt;/a&gt;&lt;/sup&gt;&lt;/p&gt;
 &lt;p&gt;类欧几里德算法由洪华敦在 2016 年冬令营营员交流中提出的内容，其本质可以理解为，使用一个类似辗转相除法来做函数求和的过程。&lt;/p&gt;
 &lt;h2 id=&#34;引入&#34;&gt;引入&lt;/h2&gt;
 &lt;p&gt;设&lt;/p&gt;
@@ -8648,7 +8648,7 @@ $$&lt;/p&gt;
 &lt;hr&gt;
 &lt;ol&gt;
 &lt;li id=&#34;fn:1&#34; role=&#34;doc-endnote&#34;&gt;
-&lt;p&gt;&lt;a href=&#34;https://oi-wiki.org/&#34;&gt;https://oi-wiki.org/&lt;/a&gt; &lt;a href=&#34;https://rivtian.github.io/tech/%E6%95%B0%E8%AE%BA4%E7%B1%BB%E6%AC%A7%E5%87%A0%E9%87%8C%E5%BE%B7%E7%AE%97%E6%B3%95/#fnref:1&#34; class=&#34;footnote-backref&#34; role=&#34;doc-backlink&#34;&gt;&amp;#x21a9;&amp;#xfe0e;&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;&lt;a href=&#34;https://oi-wiki.org/&#34;&gt;https://oi-wiki.org/&lt;/a&gt; &lt;a href=&#34;https://www.riotian.com/tech/%E6%95%B0%E8%AE%BA4%E7%B1%BB%E6%AC%A7%E5%87%A0%E9%87%8C%E5%BE%B7%E7%AE%97%E6%B3%95/#fnref:1&#34; class=&#34;footnote-backref&#34; role=&#34;doc-backlink&#34;&gt;&amp;#x21a9;&amp;#xfe0e;&lt;/a&gt;&lt;/p&gt;
 &lt;/li&gt;
 &lt;/ol&gt;
 &lt;/section&gt;
@@ -8666,7 +8666,7 @@ $$&lt;/p&gt;
                             
                             
                             
-                                <category scheme="https://rivtian.github.io/tags/%E6%95%B0%E8%AE%BA/" term="数论" label="数论" />
+                                <category scheme="https://www.riotian.com/tags/%E6%95%B0%E8%AE%BA/" term="数论" label="数论" />
                             
                         
                     
@@ -8676,13 +8676,13 @@ $$&lt;/p&gt;
     
         <entry>
             <title type="text">网络流（4）：最小费用最大流</title>
-            <link rel="alternate" type="text/html" href="https://rivtian.github.io/tech/%E7%BD%91%E7%BB%9C%E6%B5%814%E6%9C%80%E5%B0%8F%E8%B4%B9%E7%94%A8%E6%9C%80%E5%A4%A7%E6%B5%81/" />
-            <id>https://rivtian.github.io/tech/%E7%BD%91%E7%BB%9C%E6%B5%814%E6%9C%80%E5%B0%8F%E8%B4%B9%E7%94%A8%E6%9C%80%E5%A4%A7%E6%B5%81/</id>
-            <updated>2020-10-24T04:45:38&#43;00:00</updated>
+            <link rel="alternate" type="text/html" href="https://www.riotian.com/tech/%E7%BD%91%E7%BB%9C%E6%B5%814%E6%9C%80%E5%B0%8F%E8%B4%B9%E7%94%A8%E6%9C%80%E5%A4%A7%E6%B5%81/" />
+            <id>https://www.riotian.com/tech/%E7%BD%91%E7%BB%9C%E6%B5%814%E6%9C%80%E5%B0%8F%E8%B4%B9%E7%94%A8%E6%9C%80%E5%A4%A7%E6%B5%81/</id>
+            <updated>2020-10-24T05:36:43&#43;00:00</updated>
             <published>2020-08-20T15:50:12&#43;08:00</published>
             <author>
                     <name>RioTian</name>
-                    <uri>https://rivtian.github.io/</uri>
+                    <uri>https://www.riotian.com/</uri>
                     <email>kannajiahe@gmail.com</email>
                     </author>
             <rights>[CC BY-NC-SA 4.0](https://creativecommons.org/licenses/by-nc-sa/4.0/deed.zh)</rights><summary type="html">我们现在来考虑比一般的网络流复杂一点的一个模型：最小费用最大流（*Minimum Cost Maximum……</summary>
@@ -8850,13 +8850,13 @@ add(y, x, 0, -c);
                             
                             
                             
-                                <category scheme="https://rivtian.github.io/tags/%E7%BD%91%E7%BB%9C%E6%B5%81/" term="网络流" label="网络流" />
+                                <category scheme="https://www.riotian.com/tags/%E7%BD%91%E7%BB%9C%E6%B5%81/" term="网络流" label="网络流" />
                             
                         
                             
                             
                             
-                                <category scheme="https://rivtian.github.io/tags/%E4%BA%8C%E5%88%86%E5%9B%BE/" term="二分图" label="二分图" />
+                                <category scheme="https://www.riotian.com/tags/%E4%BA%8C%E5%88%86%E5%9B%BE/" term="二分图" label="二分图" />
                             
                         
                     
@@ -8866,13 +8866,13 @@ add(y, x, 0, -c);
     
         <entry>
             <title type="text">数论（3）：欧拉函数与费马小定理</title>
-            <link rel="alternate" type="text/html" href="https://rivtian.github.io/tech/%E6%95%B0%E8%AE%BA3%E6%AC%A7%E6%8B%89%E5%87%BD%E6%95%B0/" />
-            <id>https://rivtian.github.io/tech/%E6%95%B0%E8%AE%BA3%E6%AC%A7%E6%8B%89%E5%87%BD%E6%95%B0/</id>
-            <updated>2020-10-24T04:45:38&#43;00:00</updated>
+            <link rel="alternate" type="text/html" href="https://www.riotian.com/tech/%E6%95%B0%E8%AE%BA3%E6%AC%A7%E6%8B%89%E5%87%BD%E6%95%B0/" />
+            <id>https://www.riotian.com/tech/%E6%95%B0%E8%AE%BA3%E6%AC%A7%E6%8B%89%E5%87%BD%E6%95%B0/</id>
+            <updated>2020-10-24T05:36:43&#43;00:00</updated>
             <published>2020-08-20T15:33:02&#43;08:00</published>
             <author>
                     <name>RioTian</name>
-                    <uri>https://rivtian.github.io/</uri>
+                    <uri>https://www.riotian.com/</uri>
                     <email>kannajiahe@gmail.com</email>
                     </author>
             <rights>[CC BY-NC-SA 4.0](https://creativecommons.org/licenses/by-nc-sa/4.0/deed.zh)</rights><summary type="html">欧拉函数（Euler&#39;s totient function），即 $\varphi(n)$ ，表示的是小于等于 $n$ 和 $n$ 互质的数的……</summary>
@@ -9032,7 +9032,7 @@ $$&lt;/p&gt;
                             
                             
                             
-                                <category scheme="https://rivtian.github.io/tags/%E6%95%B0%E8%AE%BA/" term="数论" label="数论" />
+                                <category scheme="https://www.riotian.com/tags/%E6%95%B0%E8%AE%BA/" term="数论" label="数论" />
                             
                         
                     
@@ -9042,13 +9042,13 @@ $$&lt;/p&gt;
     
         <entry>
             <title type="text">网络流（3）：路径覆盖问题</title>
-            <link rel="alternate" type="text/html" href="https://rivtian.github.io/tech/%E7%BD%91%E7%BB%9C%E6%B5%813%E8%B7%AF%E5%BE%84%E8%A6%86%E7%9B%96%E9%97%AE%E9%A2%98/" />
-            <id>https://rivtian.github.io/tech/%E7%BD%91%E7%BB%9C%E6%B5%813%E8%B7%AF%E5%BE%84%E8%A6%86%E7%9B%96%E9%97%AE%E9%A2%98/</id>
-            <updated>2020-10-24T04:45:38&#43;00:00</updated>
+            <link rel="alternate" type="text/html" href="https://www.riotian.com/tech/%E7%BD%91%E7%BB%9C%E6%B5%813%E8%B7%AF%E5%BE%84%E8%A6%86%E7%9B%96%E9%97%AE%E9%A2%98/" />
+            <id>https://www.riotian.com/tech/%E7%BD%91%E7%BB%9C%E6%B5%813%E8%B7%AF%E5%BE%84%E8%A6%86%E7%9B%96%E9%97%AE%E9%A2%98/</id>
+            <updated>2020-10-24T05:36:43&#43;00:00</updated>
             <published>2020-08-18T15:49:21&#43;08:00</published>
             <author>
                     <name>RioTian</name>
-                    <uri>https://rivtian.github.io/</uri>
+                    <uri>https://www.riotian.com/</uri>
                     <email>kannajiahe@gmail.com</email>
                     </author>
             <rights>[CC BY-NC-SA 4.0](https://creativecommons.org/licenses/by-nc-sa/4.0/deed.zh)</rights><summary type="html">我们再来看能够用网络流模型解决的另一类问题：路径覆盖问题。 这里说的路径覆盖，是在DA……</summary>
@@ -9167,19 +9167,19 @@ $$&lt;/p&gt;
                             
                             
                             
-                                <category scheme="https://rivtian.github.io/tags/%E7%BD%91%E7%BB%9C%E6%B5%81/" term="网络流" label="网络流" />
+                                <category scheme="https://www.riotian.com/tags/%E7%BD%91%E7%BB%9C%E6%B5%81/" term="网络流" label="网络流" />
                             
                         
                             
                             
                             
-                                <category scheme="https://rivtian.github.io/tags/%E4%BA%8C%E5%88%86%E5%9B%BE/" term="二分图" label="二分图" />
+                                <category scheme="https://www.riotian.com/tags/%E4%BA%8C%E5%88%86%E5%9B%BE/" term="二分图" label="二分图" />
                             
                         
                             
                             
                             
-                                <category scheme="https://rivtian.github.io/tags/dag/" term="DAG" label="DAG" />
+                                <category scheme="https://www.riotian.com/tags/dag/" term="DAG" label="DAG" />
                             
                         
                     
@@ -9189,13 +9189,13 @@ $$&lt;/p&gt;
     
         <entry>
             <title type="text">网络流（2）：最大流</title>
-            <link rel="alternate" type="text/html" href="https://rivtian.github.io/tech/%E7%BD%91%E7%BB%9C%E6%B5%812%E6%9C%80%E5%A4%A7%E6%B5%81/" />
-            <id>https://rivtian.github.io/tech/%E7%BD%91%E7%BB%9C%E6%B5%812%E6%9C%80%E5%A4%A7%E6%B5%81/</id>
-            <updated>2020-10-24T04:45:38&#43;00:00</updated>
+            <link rel="alternate" type="text/html" href="https://www.riotian.com/tech/%E7%BD%91%E7%BB%9C%E6%B5%812%E6%9C%80%E5%A4%A7%E6%B5%81/" />
+            <id>https://www.riotian.com/tech/%E7%BD%91%E7%BB%9C%E6%B5%812%E6%9C%80%E5%A4%A7%E6%B5%81/</id>
+            <updated>2020-10-24T05:36:43&#43;00:00</updated>
             <published>2020-08-17T15:48:31&#43;08:00</published>
             <author>
                     <name>RioTian</name>
-                    <uri>https://rivtian.github.io/</uri>
+                    <uri>https://www.riotian.com/</uri>
                     <email>kannajiahe@gmail.com</email>
                     </author>
             <rights>[CC BY-NC-SA 4.0](https://creativecommons.org/licenses/by-nc-sa/4.0/deed.zh)</rights><summary type="html">网络流是算法竞赛中的一个重要的模型，它分为两部分：网络和流。 网络，其实就是一张有向图……</summary>
@@ -9513,25 +9513,25 @@ $$&lt;/p&gt;
                             
                             
                             
-                                <category scheme="https://rivtian.github.io/tags/%E7%BD%91%E7%BB%9C%E6%B5%81/" term="网络流" label="网络流" />
+                                <category scheme="https://www.riotian.com/tags/%E7%BD%91%E7%BB%9C%E6%B5%81/" term="网络流" label="网络流" />
                             
                         
                             
                             
                             
-                                <category scheme="https://rivtian.github.io/tags/%E5%9B%BE%E8%AE%BA/" term="图论" label="图论" />
+                                <category scheme="https://www.riotian.com/tags/%E5%9B%BE%E8%AE%BA/" term="图论" label="图论" />
                             
                         
                             
                             
                             
-                                <category scheme="https://rivtian.github.io/tags/%E4%BA%8C%E5%88%86%E5%9B%BE/" term="二分图" label="二分图" />
+                                <category scheme="https://www.riotian.com/tags/%E4%BA%8C%E5%88%86%E5%9B%BE/" term="二分图" label="二分图" />
                             
                         
                             
                             
                             
-                                <category scheme="https://rivtian.github.io/tags/dfs/" term="DFS" label="DFS" />
+                                <category scheme="https://www.riotian.com/tags/dfs/" term="DFS" label="DFS" />
                             
                         
                     
@@ -9541,13 +9541,13 @@ $$&lt;/p&gt;
     
         <entry>
             <title type="text">网络流（1）：入门简介</title>
-            <link rel="alternate" type="text/html" href="https://rivtian.github.io/tech/%E7%BD%91%E7%BB%9C%E6%B5%811%E5%85%A5%E9%97%A8%E7%AE%80%E4%BB%8B/" />
-            <id>https://rivtian.github.io/tech/%E7%BD%91%E7%BB%9C%E6%B5%811%E5%85%A5%E9%97%A8%E7%AE%80%E4%BB%8B/</id>
-            <updated>2020-10-24T04:45:38&#43;00:00</updated>
+            <link rel="alternate" type="text/html" href="https://www.riotian.com/tech/%E7%BD%91%E7%BB%9C%E6%B5%811%E5%85%A5%E9%97%A8%E7%AE%80%E4%BB%8B/" />
+            <id>https://www.riotian.com/tech/%E7%BD%91%E7%BB%9C%E6%B5%811%E5%85%A5%E9%97%A8%E7%AE%80%E4%BB%8B/</id>
+            <updated>2020-10-24T05:36:43&#43;00:00</updated>
             <published>2020-08-17T15:47:20&#43;08:00</published>
             <author>
                     <name>RioTian</name>
-                    <uri>https://rivtian.github.io/</uri>
+                    <uri>https://www.riotian.com/</uri>
                     <email>kannajiahe@gmail.com</email>
                     </author>
             <rights>[CC BY-NC-SA 4.0](https://creativecommons.org/licenses/by-nc-sa/4.0/deed.zh)</rights><summary type="html">网络流在 OI 中是显得尤为重要的。在《算法导论》中就用了 35 页来讲述网络流的知识，在这里，……</summary>
@@ -9599,19 +9599,19 @@ $$&lt;/p&gt;
                             
                             
                             
-                                <category scheme="https://rivtian.github.io/tags/%E7%BD%91%E7%BB%9C%E6%B5%81/" term="网络流" label="网络流" />
+                                <category scheme="https://www.riotian.com/tags/%E7%BD%91%E7%BB%9C%E6%B5%81/" term="网络流" label="网络流" />
                             
                         
                             
                             
                             
-                                <category scheme="https://rivtian.github.io/tags/%E5%9B%BE%E8%AE%BA/" term="图论" label="图论" />
+                                <category scheme="https://www.riotian.com/tags/%E5%9B%BE%E8%AE%BA/" term="图论" label="图论" />
                             
                         
                             
                             
                             
-                                <category scheme="https://rivtian.github.io/tags/%E4%BA%8C%E5%88%86%E5%9B%BE/" term="二分图" label="二分图" />
+                                <category scheme="https://www.riotian.com/tags/%E4%BA%8C%E5%88%86%E5%9B%BE/" term="二分图" label="二分图" />
                             
                         
                     
@@ -9621,13 +9621,13 @@ $$&lt;/p&gt;
     
         <entry>
             <title type="text">数论（2）：最大公约数</title>
-            <link rel="alternate" type="text/html" href="https://rivtian.github.io/tech/%E6%95%B0%E8%AE%BA2%E6%9C%80%E5%A4%A7%E5%85%AC%E7%BA%A6%E6%95%B0/" />
-            <id>https://rivtian.github.io/tech/%E6%95%B0%E8%AE%BA2%E6%9C%80%E5%A4%A7%E5%85%AC%E7%BA%A6%E6%95%B0/</id>
-            <updated>2020-10-24T04:45:38&#43;00:00</updated>
+            <link rel="alternate" type="text/html" href="https://www.riotian.com/tech/%E6%95%B0%E8%AE%BA2%E6%9C%80%E5%A4%A7%E5%85%AC%E7%BA%A6%E6%95%B0/" />
+            <id>https://www.riotian.com/tech/%E6%95%B0%E8%AE%BA2%E6%9C%80%E5%A4%A7%E5%85%AC%E7%BA%A6%E6%95%B0/</id>
+            <updated>2020-10-24T05:36:43&#43;00:00</updated>
             <published>2020-08-15T15:32:24&#43;08:00</published>
             <author>
                     <name>RioTian</name>
-                    <uri>https://rivtian.github.io/</uri>
+                    <uri>https://www.riotian.com/</uri>
                     <email>kannajiahe@gmail.com</email>
                     </author>
             <rights>[CC BY-NC-SA 4.0](https://creativecommons.org/licenses/by-nc-sa/4.0/deed.zh)</rights><summary type="html">最大公约数 最大公约数即为 Greatest Common Divisor，常缩写为 gcd。 一组数的公约数，是指同时……</summary>
@@ -9793,7 +9793,7 @@ $$&lt;/p&gt;
                             
                             
                             
-                                <category scheme="https://rivtian.github.io/tags/%E6%95%B0%E8%AE%BA/" term="数论" label="数论" />
+                                <category scheme="https://www.riotian.com/tags/%E6%95%B0%E8%AE%BA/" term="数论" label="数论" />
                             
                         
                     
@@ -9803,13 +9803,13 @@ $$&lt;/p&gt;
     
         <entry>
             <title type="text">数论（1）：素数</title>
-            <link rel="alternate" type="text/html" href="https://rivtian.github.io/tech/%E6%95%B0%E8%AE%BA1%E7%B4%A0%E6%95%B0/" />
-            <id>https://rivtian.github.io/tech/%E6%95%B0%E8%AE%BA1%E7%B4%A0%E6%95%B0/</id>
-            <updated>2020-10-24T04:45:38&#43;00:00</updated>
+            <link rel="alternate" type="text/html" href="https://www.riotian.com/tech/%E6%95%B0%E8%AE%BA1%E7%B4%A0%E6%95%B0/" />
+            <id>https://www.riotian.com/tech/%E6%95%B0%E8%AE%BA1%E7%B4%A0%E6%95%B0/</id>
+            <updated>2020-10-24T05:36:43&#43;00:00</updated>
             <published>2020-08-14T15:31:22&#43;08:00</published>
             <author>
                     <name>RioTian</name>
-                    <uri>https://rivtian.github.io/</uri>
+                    <uri>https://www.riotian.com/</uri>
                     <email>kannajiahe@gmail.com</email>
                     </author>
             <rights>[CC BY-NC-SA 4.0](https://creativecommons.org/licenses/by-nc-sa/4.0/deed.zh)</rights><summary type="html">素数 我们说，如果存在一个整数 $k$ ，使得 $a = kd$ ，则称 $d$ 整除 $a$ ，记做 $d \mid a$ ，称 $a$ 是 $d$ 的倍数……</summary>
@@ -10268,7 +10268,7 @@ $$&lt;/p&gt;
                             
                             
                             
-                                <category scheme="https://rivtian.github.io/tags/%E6%95%B0%E8%AE%BA/" term="数论" label="数论" />
+                                <category scheme="https://www.riotian.com/tags/%E6%95%B0%E8%AE%BA/" term="数论" label="数论" />
                             
                         
                     
@@ -10278,13 +10278,13 @@ $$&lt;/p&gt;
     
         <entry>
             <title type="text">什么是P，NP和NPC问题？</title>
-            <link rel="alternate" type="text/html" href="https://rivtian.github.io/tech/%E4%BB%80%E4%B9%88%E6%98%AFpnp%E5%92%8Cnpc%E9%97%AE%E9%A2%98/" />
-            <id>https://rivtian.github.io/tech/%E4%BB%80%E4%B9%88%E6%98%AFpnp%E5%92%8Cnpc%E9%97%AE%E9%A2%98/</id>
-            <updated>2020-10-24T04:45:38&#43;00:00</updated>
+            <link rel="alternate" type="text/html" href="https://www.riotian.com/tech/%E4%BB%80%E4%B9%88%E6%98%AFpnp%E5%92%8Cnpc%E9%97%AE%E9%A2%98/" />
+            <id>https://www.riotian.com/tech/%E4%BB%80%E4%B9%88%E6%98%AFpnp%E5%92%8Cnpc%E9%97%AE%E9%A2%98/</id>
+            <updated>2020-10-24T05:36:43&#43;00:00</updated>
             <published>2020-08-14T15:11:47&#43;08:00</published>
             <author>
                     <name>RioTian</name>
-                    <uri>https://rivtian.github.io/</uri>
+                    <uri>https://www.riotian.com/</uri>
                     <email>kannajiahe@gmail.com</email>
                     </author>
             <rights>[CC BY-NC-SA 4.0](https://creativecommons.org/licenses/by-nc-sa/4.0/deed.zh)</rights><summary type="html">P问题，NP问题，NPC问题？这些都是计算机科学领域，关于算法方面的术语。在认识这些……</summary>
@@ -10351,7 +10351,7 @@ $$&lt;/p&gt;
                             
                             
                             
-                                <category scheme="https://rivtian.github.io/tags/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BB%84%E6%88%90%E5%9F%BA%E7%A1%80/" term="计算机组成基础" label="计算机组成基础" />
+                                <category scheme="https://www.riotian.com/tags/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BB%84%E6%88%90%E5%9F%BA%E7%A1%80/" term="计算机组成基础" label="计算机组成基础" />
                             
                         
                     
@@ -10361,13 +10361,13 @@ $$&lt;/p&gt;
     
         <entry>
             <title type="text">差分约束</title>
-            <link rel="alternate" type="text/html" href="https://rivtian.github.io/tech/%E5%B7%AE%E5%88%86%E7%BA%A6%E6%9D%9F/" />
-            <id>https://rivtian.github.io/tech/%E5%B7%AE%E5%88%86%E7%BA%A6%E6%9D%9F/</id>
-            <updated>2020-10-24T04:45:38&#43;00:00</updated>
+            <link rel="alternate" type="text/html" href="https://www.riotian.com/tech/%E5%B7%AE%E5%88%86%E7%BA%A6%E6%9D%9F/" />
+            <id>https://www.riotian.com/tech/%E5%B7%AE%E5%88%86%E7%BA%A6%E6%9D%9F/</id>
+            <updated>2020-10-24T05:36:43&#43;00:00</updated>
             <published>2020-08-13T15:09:33&#43;08:00</published>
             <author>
                     <name>RioTian</name>
-                    <uri>https://rivtian.github.io/</uri>
+                    <uri>https://www.riotian.com/</uri>
                     <email>kannajiahe@gmail.com</email>
                     </author>
             <rights>[CC BY-NC-SA 4.0](https://creativecommons.org/licenses/by-nc-sa/4.0/deed.zh)</rights><summary type="html">如果一个系统由 n 个变量和 m 个约束条件组成，每个约束条件形如 $x_j-x_i&amp;lt;=……</summary>
@@ -10665,13 +10665,13 @@ $$&lt;/p&gt;
                             
                             
                             
-                                <category scheme="https://rivtian.github.io/tags/%E6%95%B0%E8%AE%BA/" term="数论" label="数论" />
+                                <category scheme="https://www.riotian.com/tags/%E6%95%B0%E8%AE%BA/" term="数论" label="数论" />
                             
                         
                             
                             
                             
-                                <category scheme="https://rivtian.github.io/tags/%E5%B7%AE%E5%88%86%E7%BA%A6%E6%9D%9F/" term="差分约束" label="差分约束" />
+                                <category scheme="https://www.riotian.com/tags/%E5%B7%AE%E5%88%86%E7%BA%A6%E6%9D%9F/" term="差分约束" label="差分约束" />
                             
                         
                     
@@ -10681,13 +10681,13 @@ $$&lt;/p&gt;
     
         <entry>
             <title type="text">匈牙利算法</title>
-            <link rel="alternate" type="text/html" href="https://rivtian.github.io/tech/%E5%8C%88%E7%89%99%E5%88%A9%E7%AE%97%E6%B3%95/" />
-            <id>https://rivtian.github.io/tech/%E5%8C%88%E7%89%99%E5%88%A9%E7%AE%97%E6%B3%95/</id>
-            <updated>2020-10-24T04:45:38&#43;00:00</updated>
+            <link rel="alternate" type="text/html" href="https://www.riotian.com/tech/%E5%8C%88%E7%89%99%E5%88%A9%E7%AE%97%E6%B3%95/" />
+            <id>https://www.riotian.com/tech/%E5%8C%88%E7%89%99%E5%88%A9%E7%AE%97%E6%B3%95/</id>
+            <updated>2020-10-24T05:36:43&#43;00:00</updated>
             <published>2020-08-11T15:08:01&#43;08:00</published>
             <author>
                     <name>RioTian</name>
-                    <uri>https://rivtian.github.io/</uri>
+                    <uri>https://www.riotian.com/</uri>
                     <email>kannajiahe@gmail.com</email>
                     </author>
             <rights>[CC BY-NC-SA 4.0](https://creativecommons.org/licenses/by-nc-sa/4.0/deed.zh)</rights><summary type="html">匈牙利算法介绍 匈牙利算法（Hungarian algorithm）主要用于解决一些与二……</summary>
@@ -11115,13 +11115,13 @@ y为第y列
                             
                             
                             
-                                <category scheme="https://rivtian.github.io/tags/%E5%9B%BE%E8%AE%BA/" term="图论" label="图论" />
+                                <category scheme="https://www.riotian.com/tags/%E5%9B%BE%E8%AE%BA/" term="图论" label="图论" />
                             
                         
                             
                             
                             
-                                <category scheme="https://rivtian.github.io/tags/%E4%BA%8C%E5%88%86%E5%9B%BE/" term="二分图" label="二分图" />
+                                <category scheme="https://www.riotian.com/tags/%E4%BA%8C%E5%88%86%E5%9B%BE/" term="二分图" label="二分图" />
                             
                         
                     
@@ -11131,13 +11131,13 @@ y为第y列
     
         <entry>
             <title type="text">最近公共祖先</title>
-            <link rel="alternate" type="text/html" href="https://rivtian.github.io/tech/%E6%9C%80%E8%BF%91%E5%85%AC%E5%85%B1%E7%A5%96%E5%85%88/" />
-            <id>https://rivtian.github.io/tech/%E6%9C%80%E8%BF%91%E5%85%AC%E5%85%B1%E7%A5%96%E5%85%88/</id>
-            <updated>2020-10-24T04:45:38&#43;00:00</updated>
+            <link rel="alternate" type="text/html" href="https://www.riotian.com/tech/%E6%9C%80%E8%BF%91%E5%85%AC%E5%85%B1%E7%A5%96%E5%85%88/" />
+            <id>https://www.riotian.com/tech/%E6%9C%80%E8%BF%91%E5%85%AC%E5%85%B1%E7%A5%96%E5%85%88/</id>
+            <updated>2020-10-24T05:36:43&#43;00:00</updated>
             <published>2020-08-10T16:00:04&#43;08:00</published>
             <author>
                     <name>RioTian</name>
-                    <uri>https://rivtian.github.io/</uri>
+                    <uri>https://www.riotian.com/</uri>
                     <email>kannajiahe@gmail.com</email>
                     </author>
             <rights>[CC BY-NC-SA 4.0](https://creativecommons.org/licenses/by-nc-sa/4.0/deed.zh)</rights><summary type="html">当我们处理树上点与点关系的问题时（例如，最简单的，树上两点的距离），常常需要获知树上……</summary>
@@ -11328,13 +11328,13 @@ y为第y列
                             
                             
                             
-                                <category scheme="https://rivtian.github.io/tags/%E5%9B%BE%E8%AE%BA/" term="图论" label="图论" />
+                                <category scheme="https://www.riotian.com/tags/%E5%9B%BE%E8%AE%BA/" term="图论" label="图论" />
                             
                         
                             
                             
                             
-                                <category scheme="https://rivtian.github.io/tags/lca/" term="LCA" label="LCA" />
+                                <category scheme="https://www.riotian.com/tags/lca/" term="LCA" label="LCA" />
                             
                         
                     
@@ -11344,13 +11344,13 @@ y为第y列
     
         <entry>
             <title type="text">递归的机器实现</title>
-            <link rel="alternate" type="text/html" href="https://rivtian.github.io/tech/%E9%80%92%E5%BD%92%E7%9A%84%E6%9C%BA%E5%99%A8%E5%AE%9E%E7%8E%B0/" />
-            <id>https://rivtian.github.io/tech/%E9%80%92%E5%BD%92%E7%9A%84%E6%9C%BA%E5%99%A8%E5%AE%9E%E7%8E%B0/</id>
-            <updated>2020-10-24T04:45:38&#43;00:00</updated>
+            <link rel="alternate" type="text/html" href="https://www.riotian.com/tech/%E9%80%92%E5%BD%92%E7%9A%84%E6%9C%BA%E5%99%A8%E5%AE%9E%E7%8E%B0/" />
+            <id>https://www.riotian.com/tech/%E9%80%92%E5%BD%92%E7%9A%84%E6%9C%BA%E5%99%A8%E5%AE%9E%E7%8E%B0/</id>
+            <updated>2020-10-24T05:36:43&#43;00:00</updated>
             <published>2020-08-07T15:08:50&#43;08:00</published>
             <author>
                     <name>RioTian</name>
-                    <uri>https://rivtian.github.io/</uri>
+                    <uri>https://www.riotian.com/</uri>
                     <email>kannajiahe@gmail.com</email>
                     </author>
             <rights>[CC BY-NC-SA 4.0](https://creativecommons.org/licenses/by-nc-sa/4.0/deed.zh)</rights><summary type="html">递归的机器实现 递归在计算机中是如何实现的 ? 换句话说，它最终被编译成什么样的机器语言 ?……</summary>
@@ -11378,7 +11378,7 @@ y为第y列
                             
                             
                             
-                                <category scheme="https://rivtian.github.io/tags/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BB%84%E6%88%90%E5%9F%BA%E7%A1%80/" term="计算机组成基础" label="计算机组成基础" />
+                                <category scheme="https://www.riotian.com/tags/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BB%84%E6%88%90%E5%9F%BA%E7%A1%80/" term="计算机组成基础" label="计算机组成基础" />
                             
                         
                     
@@ -11388,13 +11388,13 @@ y为第y列
     
         <entry>
             <title type="text">连通图</title>
-            <link rel="alternate" type="text/html" href="https://rivtian.github.io/tech/%E8%BF%9E%E9%80%9A%E5%9B%BE/" />
-            <id>https://rivtian.github.io/tech/%E8%BF%9E%E9%80%9A%E5%9B%BE/</id>
-            <updated>2020-10-24T04:45:38&#43;00:00</updated>
+            <link rel="alternate" type="text/html" href="https://www.riotian.com/tech/%E8%BF%9E%E9%80%9A%E5%9B%BE/" />
+            <id>https://www.riotian.com/tech/%E8%BF%9E%E9%80%9A%E5%9B%BE/</id>
+            <updated>2020-10-24T05:36:43&#43;00:00</updated>
             <published>2020-08-06T15:10:55&#43;08:00</published>
             <author>
                     <name>RioTian</name>
-                    <uri>https://rivtian.github.io/</uri>
+                    <uri>https://www.riotian.com/</uri>
                     <email>kannajiahe@gmail.com</email>
                     </author>
             <rights>[CC BY-NC-SA 4.0](https://creativecommons.org/licenses/by-nc-sa/4.0/deed.zh)</rights><summary type="html">什么是连通图 ？ 在图论中，连通图基于连通的概念。在一个无向图 G 中，若从顶点 $i$ 到顶点 $j$ 有……</summary>
@@ -11894,13 +11894,13 @@ y为第y列
                             
                             
                             
-                                <category scheme="https://rivtian.github.io/tags/%E5%9B%BE%E8%AE%BA/" term="图论" label="图论" />
+                                <category scheme="https://www.riotian.com/tags/%E5%9B%BE%E8%AE%BA/" term="图论" label="图论" />
                             
                         
                             
                             
                             
-                                <category scheme="https://rivtian.github.io/tags/%E8%BF%9E%E9%80%9A%E5%9B%BE/" term="连通图" label="连通图" />
+                                <category scheme="https://www.riotian.com/tags/%E8%BF%9E%E9%80%9A%E5%9B%BE/" term="连通图" label="连通图" />
                             
                         
                     
@@ -11910,13 +11910,13 @@ y为第y列
     
         <entry>
             <title type="text">C&#43;&#43;与正则表达式</title>
-            <link rel="alternate" type="text/html" href="https://rivtian.github.io/tech/c&#43;&#43;%E4%B8%8E%E6%AD%A3%E5%88%99%E8%A1%A8%E8%BE%BE%E5%BC%8F/" />
-            <id>https://rivtian.github.io/tech/c&#43;&#43;%E4%B8%8E%E6%AD%A3%E5%88%99%E8%A1%A8%E8%BE%BE%E5%BC%8F/</id>
-            <updated>2020-10-24T04:45:38&#43;00:00</updated>
+            <link rel="alternate" type="text/html" href="https://www.riotian.com/tech/c&#43;&#43;%E4%B8%8E%E6%AD%A3%E5%88%99%E8%A1%A8%E8%BE%BE%E5%BC%8F/" />
+            <id>https://www.riotian.com/tech/c&#43;&#43;%E4%B8%8E%E6%AD%A3%E5%88%99%E8%A1%A8%E8%BE%BE%E5%BC%8F/</id>
+            <updated>2020-10-24T05:36:43&#43;00:00</updated>
             <published>2020-08-04T14:21:10&#43;08:00</published>
             <author>
                     <name>RioTian</name>
-                    <uri>https://rivtian.github.io/</uri>
+                    <uri>https://www.riotian.com/</uri>
                     <email>kannajiahe@gmail.com</email>
                     </author>
             <rights>[CC BY-NC-SA 4.0](https://creativecommons.org/licenses/by-nc-sa/4.0/deed.zh)</rights><summary type="html">什么是正则表达式? 正则表达式是一组由字母和符号组成的特殊文本, 当你想要判断许多字符串……</summary>
@@ -13234,7 +13234,7 @@ Is &#39;some birds&#39; match &#39;(?!some birds)some&#39;: NO
                             
                             
                             
-                                <category scheme="https://rivtian.github.io/tags/%E6%AD%A3%E5%88%99%E8%A1%A8%E8%BE%BE%E5%BC%8F/" term="正则表达式" label="正则表达式" />
+                                <category scheme="https://www.riotian.com/tags/%E6%AD%A3%E5%88%99%E8%A1%A8%E8%BE%BE%E5%BC%8F/" term="正则表达式" label="正则表达式" />
                             
                         
                     
@@ -13244,13 +13244,13 @@ Is &#39;some birds&#39; match &#39;(?!some birds)some&#39;: NO
     
         <entry>
             <title type="text">简单的日期正则表达式</title>
-            <link rel="alternate" type="text/html" href="https://rivtian.github.io/tech/%E7%AE%80%E5%8D%95%E7%9A%84%E6%97%A5%E6%9C%9F%E6%AD%A3%E5%88%99%E8%A1%A8%E8%BE%BE%E5%BC%8F/" />
-            <id>https://rivtian.github.io/tech/%E7%AE%80%E5%8D%95%E7%9A%84%E6%97%A5%E6%9C%9F%E6%AD%A3%E5%88%99%E8%A1%A8%E8%BE%BE%E5%BC%8F/</id>
-            <updated>2020-10-24T04:45:38&#43;00:00</updated>
+            <link rel="alternate" type="text/html" href="https://www.riotian.com/tech/%E7%AE%80%E5%8D%95%E7%9A%84%E6%97%A5%E6%9C%9F%E6%AD%A3%E5%88%99%E8%A1%A8%E8%BE%BE%E5%BC%8F/" />
+            <id>https://www.riotian.com/tech/%E7%AE%80%E5%8D%95%E7%9A%84%E6%97%A5%E6%9C%9F%E6%AD%A3%E5%88%99%E8%A1%A8%E8%BE%BE%E5%BC%8F/</id>
+            <updated>2020-10-24T05:36:43&#43;00:00</updated>
             <published>2020-08-03T14:28:53&#43;08:00</published>
             <author>
                     <name>RioTian</name>
-                    <uri>https://rivtian.github.io/</uri>
+                    <uri>https://www.riotian.com/</uri>
                     <email>kannajiahe@gmail.com</email>
                     </author>
             <rights>[CC BY-NC-SA 4.0](https://creativecommons.org/licenses/by-nc-sa/4.0/deed.zh)</rights><summary type="html">相关阅读：正则表达式入门 简单的日期正则表达式 一个简单的日期解析程序，从yyyy-mm……</summary>
@@ -13442,7 +13442,7 @@ Is &#39;some birds&#39; match &#39;(?!some birds)some&#39;: NO
                             
                             
                             
-                                <category scheme="https://rivtian.github.io/tags/%E6%AD%A3%E5%88%99%E8%A1%A8%E8%BE%BE%E5%BC%8F/" term="正则表达式" label="正则表达式" />
+                                <category scheme="https://www.riotian.com/tags/%E6%AD%A3%E5%88%99%E8%A1%A8%E8%BE%BE%E5%BC%8F/" term="正则表达式" label="正则表达式" />
                             
                         
                     
@@ -13452,13 +13452,13 @@ Is &#39;some birds&#39; match &#39;(?!some birds)some&#39;: NO
     
         <entry>
             <title type="text">离散化</title>
-            <link rel="alternate" type="text/html" href="https://rivtian.github.io/tech/%E7%A6%BB%E6%95%A3%E5%8C%96/" />
-            <id>https://rivtian.github.io/tech/%E7%A6%BB%E6%95%A3%E5%8C%96/</id>
-            <updated>2020-10-24T04:45:38&#43;00:00</updated>
+            <link rel="alternate" type="text/html" href="https://www.riotian.com/tech/%E7%A6%BB%E6%95%A3%E5%8C%96/" />
+            <id>https://www.riotian.com/tech/%E7%A6%BB%E6%95%A3%E5%8C%96/</id>
+            <updated>2020-10-24T05:36:43&#43;00:00</updated>
             <published>2020-08-01T15:10:10&#43;08:00</published>
             <author>
                     <name>RioTian</name>
-                    <uri>https://rivtian.github.io/</uri>
+                    <uri>https://www.riotian.com/</uri>
                     <email>kannajiahe@gmail.com</email>
                     </author>
             <rights>[CC BY-NC-SA 4.0](https://creativecommons.org/licenses/by-nc-sa/4.0/deed.zh)</rights><summary type="html">简介 离散化本质上可以看成是一种 哈希 ，其保证数据在哈希以后仍然保持原来的全/偏序关系。……</summary>
@@ -13527,13 +13527,13 @@ Is &#39;some birds&#39; match &#39;(?!some birds)some&#39;: NO
                             
                             
                             
-                                <category scheme="https://rivtian.github.io/tags/%E6%95%B0%E8%AE%BA/" term="数论" label="数论" />
+                                <category scheme="https://www.riotian.com/tags/%E6%95%B0%E8%AE%BA/" term="数论" label="数论" />
                             
                         
                             
                             
                             
-                                <category scheme="https://rivtian.github.io/tags/%E7%A6%BB%E6%95%A3%E5%8C%96/" term="离散化" label="离散化" />
+                                <category scheme="https://www.riotian.com/tags/%E7%A6%BB%E6%95%A3%E5%8C%96/" term="离散化" label="离散化" />
                             
                         
                     
@@ -13543,13 +13543,13 @@ Is &#39;some birds&#39; match &#39;(?!some birds)some&#39;: NO
     
         <entry>
             <title type="text">Typora写作</title>
-            <link rel="alternate" type="text/html" href="https://rivtian.github.io/tech/typora%E5%86%99%E4%BD%9C/" />
-            <id>https://rivtian.github.io/tech/typora%E5%86%99%E4%BD%9C/</id>
-            <updated>2020-10-24T04:45:38&#43;00:00</updated>
+            <link rel="alternate" type="text/html" href="https://www.riotian.com/tech/typora%E5%86%99%E4%BD%9C/" />
+            <id>https://www.riotian.com/tech/typora%E5%86%99%E4%BD%9C/</id>
+            <updated>2020-10-24T05:36:43&#43;00:00</updated>
             <published>2020-07-30T16:04:42&#43;08:00</published>
             <author>
                     <name>RioTian</name>
-                    <uri>https://rivtian.github.io/</uri>
+                    <uri>https://www.riotian.com/</uri>
                     <email>kannajiahe@gmail.com</email>
                     </author>
             <rights>[CC BY-NC-SA 4.0](https://creativecommons.org/licenses/by-nc-sa/4.0/deed.zh)</rights><summary type="html">参考： 如何高效地编写同步博客 官方文档 图片插入 我们在网页复制图片，或者插入本地图片，亦……</summary>
@@ -13584,7 +13584,7 @@ Is &#39;some birds&#39; match &#39;(?!some birds)some&#39;: NO
                             
                             
                             
-                                <category scheme="https://rivtian.github.io/tags/typora/" term="Typora" label="Typora" />
+                                <category scheme="https://www.riotian.com/tags/typora/" term="Typora" label="Typora" />
                             
                         
                     
@@ -13594,13 +13594,13 @@ Is &#39;some birds&#39; match &#39;(?!some birds)some&#39;: NO
     
         <entry>
             <title type="text">C&#43;&#43; String 字符串函数详解</title>
-            <link rel="alternate" type="text/html" href="https://rivtian.github.io/tech/c&#43;&#43;-string-%E5%AD%97%E7%AC%A6%E4%B8%B2%E5%87%BD%E6%95%B0%E8%AF%A6%E8%A7%A3/" />
-            <id>https://rivtian.github.io/tech/c&#43;&#43;-string-%E5%AD%97%E7%AC%A6%E4%B8%B2%E5%87%BD%E6%95%B0%E8%AF%A6%E8%A7%A3/</id>
-            <updated>2020-10-24T04:45:38&#43;00:00</updated>
+            <link rel="alternate" type="text/html" href="https://www.riotian.com/tech/c&#43;&#43;-string-%E5%AD%97%E7%AC%A6%E4%B8%B2%E5%87%BD%E6%95%B0%E8%AF%A6%E8%A7%A3/" />
+            <id>https://www.riotian.com/tech/c&#43;&#43;-string-%E5%AD%97%E7%AC%A6%E4%B8%B2%E5%87%BD%E6%95%B0%E8%AF%A6%E8%A7%A3/</id>
+            <updated>2020-10-24T05:36:43&#43;00:00</updated>
             <published>2020-07-23T14:56:57&#43;08:00</published>
             <author>
                     <name>RioTian</name>
-                    <uri>https://rivtian.github.io/</uri>
+                    <uri>https://www.riotian.com/</uri>
                     <email>kannajiahe@gmail.com</email>
                     </author>
             <rights>[CC BY-NC-SA 4.0](https://creativecommons.org/licenses/by-nc-sa/4.0/deed.zh)</rights><summary type="html">运算符重载 + 和 +=：连接字符串 =：字符串赋值 &amp;gt;、&amp;gt;=、&amp;lt; 和 &amp;lt;……</summary>
@@ -13869,19 +13869,19 @@ Is &#39;some birds&#39; match &#39;(?!some birds)some&#39;: NO
                             
                             
                             
-                                <category scheme="https://rivtian.github.io/tags/c-/" term="C&#43;&#43;" label="C&#43;&#43;" />
+                                <category scheme="https://www.riotian.com/tags/c-/" term="C&#43;&#43;" label="C&#43;&#43;" />
                             
                         
                             
                             
                             
-                                <category scheme="https://rivtian.github.io/tags/%E5%AD%97%E7%AC%A6%E4%B8%B2/" term="字符串" label="字符串" />
+                                <category scheme="https://www.riotian.com/tags/%E5%AD%97%E7%AC%A6%E4%B8%B2/" term="字符串" label="字符串" />
                             
                         
                             
                             
                             
-                                <category scheme="https://rivtian.github.io/tags/%E5%87%BD%E6%95%B0/" term="函数" label="函数" />
+                                <category scheme="https://www.riotian.com/tags/%E5%87%BD%E6%95%B0/" term="函数" label="函数" />
                             
                         
                     
@@ -13891,13 +13891,13 @@ Is &#39;some birds&#39; match &#39;(?!some birds)some&#39;: NO
     
         <entry>
             <title type="text">数据结构（4）：双指针技巧总结</title>
-            <link rel="alternate" type="text/html" href="https://rivtian.github.io/tech/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%844%E5%8F%8C%E6%8C%87%E9%92%88%E6%8A%80%E5%B7%A7%E6%80%BB%E7%BB%93/" />
-            <id>https://rivtian.github.io/tech/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%844%E5%8F%8C%E6%8C%87%E9%92%88%E6%8A%80%E5%B7%A7%E6%80%BB%E7%BB%93/</id>
-            <updated>2020-10-24T04:45:38&#43;00:00</updated>
+            <link rel="alternate" type="text/html" href="https://www.riotian.com/tech/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%844%E5%8F%8C%E6%8C%87%E9%92%88%E6%8A%80%E5%B7%A7%E6%80%BB%E7%BB%93/" />
+            <id>https://www.riotian.com/tech/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%844%E5%8F%8C%E6%8C%87%E9%92%88%E6%8A%80%E5%B7%A7%E6%80%BB%E7%BB%93/</id>
+            <updated>2020-10-24T05:36:43&#43;00:00</updated>
             <published>2020-07-13T15:05:29&#43;08:00</published>
             <author>
                     <name>RioTian</name>
-                    <uri>https://rivtian.github.io/</uri>
+                    <uri>https://www.riotian.com/</uri>
                     <email>kannajiahe@gmail.com</email>
                     </author>
             <rights>[CC BY-NC-SA 4.0](https://creativecommons.org/licenses/by-nc-sa/4.0/deed.zh)</rights><summary type="html">我把双指针技巧再分为两类，一类是「快慢指针」，一类是「左右指针」。前者解决主要解决链……</summary>
@@ -14290,13 +14290,13 @@ Is &#39;some birds&#39; match &#39;(?!some birds)some&#39;: NO
                             
                             
                             
-                                <category scheme="https://rivtian.github.io/tags/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84/" term="数据结构" label="数据结构" />
+                                <category scheme="https://www.riotian.com/tags/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84/" term="数据结构" label="数据结构" />
                             
                         
                             
                             
                             
-                                <category scheme="https://rivtian.github.io/tags/%E5%8F%8C%E6%8C%87%E9%92%88/" term="双指针" label="双指针" />
+                                <category scheme="https://www.riotian.com/tags/%E5%8F%8C%E6%8C%87%E9%92%88/" term="双指针" label="双指针" />
                             
                         
                     
@@ -14306,13 +14306,13 @@ Is &#39;some birds&#39; match &#39;(?!some birds)some&#39;: NO
     
         <entry>
             <title type="text">数据结构（3）：ST 表</title>
-            <link rel="alternate" type="text/html" href="https://rivtian.github.io/tech/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%843st-%E8%A1%A8/" />
-            <id>https://rivtian.github.io/tech/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%843st-%E8%A1%A8/</id>
-            <updated>2020-10-24T04:45:38&#43;00:00</updated>
+            <link rel="alternate" type="text/html" href="https://www.riotian.com/tech/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%843st-%E8%A1%A8/" />
+            <id>https://www.riotian.com/tech/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%843st-%E8%A1%A8/</id>
+            <updated>2020-10-24T05:36:43&#43;00:00</updated>
             <published>2020-07-04T15:03:45&#43;08:00</published>
             <author>
                     <name>RioTian</name>
-                    <uri>https://rivtian.github.io/</uri>
+                    <uri>https://www.riotian.com/</uri>
                     <email>kannajiahe@gmail.com</email>
                     </author>
             <rights>[CC BY-NC-SA 4.0](https://creativecommons.org/licenses/by-nc-sa/4.0/deed.zh)</rights><summary type="html">简介 ST 表是用于解决 可重复贡献问题 的数据结构。 什么是可重复贡献问题？ ​ 可重复贡献问题 是……</summary>
@@ -14478,13 +14478,13 @@ $$&lt;/p&gt;
                             
                             
                             
-                                <category scheme="https://rivtian.github.io/tags/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84/" term="数据结构" label="数据结构" />
+                                <category scheme="https://www.riotian.com/tags/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84/" term="数据结构" label="数据结构" />
                             
                         
                             
                             
                             
-                                <category scheme="https://rivtian.github.io/tags/rmq/" term="RMQ" label="RMQ" />
+                                <category scheme="https://www.riotian.com/tags/rmq/" term="RMQ" label="RMQ" />
                             
                         
                     
@@ -14494,13 +14494,13 @@ $$&lt;/p&gt;
     
         <entry>
             <title type="text">数据结构（2）：树状数组</title>
-            <link rel="alternate" type="text/html" href="https://rivtian.github.io/tech/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%842%E6%A0%91%E7%8A%B6%E6%95%B0%E7%BB%84/" />
-            <id>https://rivtian.github.io/tech/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%842%E6%A0%91%E7%8A%B6%E6%95%B0%E7%BB%84/</id>
-            <updated>2020-10-24T04:45:38&#43;00:00</updated>
+            <link rel="alternate" type="text/html" href="https://www.riotian.com/tech/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%842%E6%A0%91%E7%8A%B6%E6%95%B0%E7%BB%84/" />
+            <id>https://www.riotian.com/tech/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%842%E6%A0%91%E7%8A%B6%E6%95%B0%E7%BB%84/</id>
+            <updated>2020-10-24T05:36:43&#43;00:00</updated>
             <published>2020-07-03T15:02:46&#43;08:00</published>
             <author>
                     <name>RioTian</name>
-                    <uri>https://rivtian.github.io/</uri>
+                    <uri>https://www.riotian.com/</uri>
                     <email>kannajiahe@gmail.com</email>
                     </author>
             <rights>[CC BY-NC-SA 4.0](https://creativecommons.org/licenses/by-nc-sa/4.0/deed.zh)</rights><summary type="html">简介 树状数组和下面的 线段树 可是亲兄弟了，但他俩毕竟还有一些区别： 树状数组能有的操作，……</summary>
@@ -14872,19 +14872,19 @@ $$&lt;/p&gt;
                             
                             
                             
-                                <category scheme="https://rivtian.github.io/tags/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84/" term="数据结构" label="数据结构" />
+                                <category scheme="https://www.riotian.com/tags/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84/" term="数据结构" label="数据结构" />
                             
                         
                             
                             
                             
-                                <category scheme="https://rivtian.github.io/tags/%E7%BA%BF%E6%AE%B5%E6%A0%91/" term="线段树" label="线段树" />
+                                <category scheme="https://www.riotian.com/tags/%E7%BA%BF%E6%AE%B5%E6%A0%91/" term="线段树" label="线段树" />
                             
                         
                             
                             
                             
-                                <category scheme="https://rivtian.github.io/tags/%E6%A0%91%E7%8A%B6%E6%95%B0%E7%BB%84/" term="树状数组" label="树状数组" />
+                                <category scheme="https://www.riotian.com/tags/%E6%A0%91%E7%8A%B6%E6%95%B0%E7%BB%84/" term="树状数组" label="树状数组" />
                             
                         
                     
@@ -14894,13 +14894,13 @@ $$&lt;/p&gt;
     
         <entry>
             <title type="text">数据结构（1）：线段树</title>
-            <link rel="alternate" type="text/html" href="https://rivtian.github.io/tech/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%841%E7%BA%BF%E6%AE%B5%E6%A0%91/" />
-            <id>https://rivtian.github.io/tech/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%841%E7%BA%BF%E6%AE%B5%E6%A0%91/</id>
-            <updated>2020-10-24T04:45:38&#43;00:00</updated>
+            <link rel="alternate" type="text/html" href="https://www.riotian.com/tech/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%841%E7%BA%BF%E6%AE%B5%E6%A0%91/" />
+            <id>https://www.riotian.com/tech/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%841%E7%BA%BF%E6%AE%B5%E6%A0%91/</id>
+            <updated>2020-10-24T05:36:43&#43;00:00</updated>
             <published>2020-07-02T15:01:34&#43;08:00</published>
             <author>
                     <name>RioTian</name>
-                    <uri>https://rivtian.github.io/</uri>
+                    <uri>https://www.riotian.com/</uri>
                     <email>kannajiahe@gmail.com</email>
                     </author>
             <rights>[CC BY-NC-SA 4.0](https://creativecommons.org/licenses/by-nc-sa/4.0/deed.zh)</rights><summary type="html">线段树是算法竞赛中常用的用来维护 区间信息 的数据结构。 相关阅读：树状数组 线段树可以在 $O(\log……</summary>
@@ -15364,19 +15364,19 @@ $$&lt;/p&gt;
                             
                             
                             
-                                <category scheme="https://rivtian.github.io/tags/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84/" term="数据结构" label="数据结构" />
+                                <category scheme="https://www.riotian.com/tags/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84/" term="数据结构" label="数据结构" />
                             
                         
                             
                             
                             
-                                <category scheme="https://rivtian.github.io/tags/%E7%BA%BF%E6%AE%B5%E6%A0%91/" term="线段树" label="线段树" />
+                                <category scheme="https://www.riotian.com/tags/%E7%BA%BF%E6%AE%B5%E6%A0%91/" term="线段树" label="线段树" />
                             
                         
                             
                             
                             
-                                <category scheme="https://rivtian.github.io/tags/%E6%A0%91%E7%8A%B6%E6%95%B0%E7%BB%84/" term="树状数组" label="树状数组" />
+                                <category scheme="https://www.riotian.com/tags/%E6%A0%91%E7%8A%B6%E6%95%B0%E7%BB%84/" term="树状数组" label="树状数组" />
                             
                         
                     
@@ -15386,13 +15386,13 @@ $$&lt;/p&gt;
     
         <entry>
             <title type="text">博弈论入门</title>
-            <link rel="alternate" type="text/html" href="https://rivtian.github.io/tech/%E5%8D%9A%E5%BC%88%E8%AE%BA%E5%85%A5%E9%97%A8/" />
-            <id>https://rivtian.github.io/tech/%E5%8D%9A%E5%BC%88%E8%AE%BA%E5%85%A5%E9%97%A8/</id>
-            <updated>2020-10-24T04:45:38&#43;00:00</updated>
+            <link rel="alternate" type="text/html" href="https://www.riotian.com/tech/%E5%8D%9A%E5%BC%88%E8%AE%BA%E5%85%A5%E9%97%A8/" />
+            <id>https://www.riotian.com/tech/%E5%8D%9A%E5%BC%88%E8%AE%BA%E5%85%A5%E9%97%A8/</id>
+            <updated>2020-10-24T05:36:43&#43;00:00</updated>
             <published>2020-06-16T14:55:31&#43;08:00</published>
             <author>
                     <name>RioTian</name>
-                    <uri>https://rivtian.github.io/</uri>
+                    <uri>https://www.riotian.com/</uri>
                     <email>kannajiahe@gmail.com</email>
                     </author>
             <rights>[CC BY-NC-SA 4.0](https://creativecommons.org/licenses/by-nc-sa/4.0/deed.zh)</rights><summary type="html">古语有云，“笑人情似纸，世事如棋”。生活中每个人如同棋手，其每一个行为如同在一张看不……</summary>
@@ -16280,7 +16280,7 @@ $$&lt;/p&gt;
 &lt;p&gt;&lt;a href=&#34;&#34;&gt;ACM集训队讲解&lt;/a&gt;&lt;/p&gt;
 &lt;hr&gt;
 &lt;p&gt;&lt;a href=&#34;https://www.bilibili.com/video/av25404551/&#34;&gt;李永乐老师对三姬分金视频讲解&lt;/a&gt;&lt;/p&gt;
-&lt;div  class=&#34;video&#34;&gt; &lt;iframe src=&#34;https://rivtian.github.io//player.bilibili.com/player.html?aid=25404551&amp;bvid=BV1zs41177xQ&amp;cid=43173266&amp;page=1&#34; scrolling=&#34;no&#34; border=&#34;0&#34; frameborder=&#34;no&#34; framespacing=&#34;0&#34; allowfullscreen=&#34;true&#34;&gt; &lt;/iframe&gt;&lt;/div&gt;</content>
+&lt;div  class=&#34;video&#34;&gt; &lt;iframe src=&#34;https://www.riotian.com//player.bilibili.com/player.html?aid=25404551&amp;bvid=BV1zs41177xQ&amp;cid=43173266&amp;page=1&#34; scrolling=&#34;no&#34; border=&#34;0&#34; frameborder=&#34;no&#34; framespacing=&#34;0&#34; allowfullscreen=&#34;true&#34;&gt; &lt;/iframe&gt;&lt;/div&gt;</content>
             
             
             
@@ -16294,7 +16294,7 @@ $$&lt;/p&gt;
                             
                             
                             
-                                <category scheme="https://rivtian.github.io/tags/%E5%8D%9A%E5%BC%88%E8%AE%BA/" term="博弈论" label="博弈论" />
+                                <category scheme="https://www.riotian.com/tags/%E5%8D%9A%E5%BC%88%E8%AE%BA/" term="博弈论" label="博弈论" />
                             
                         
                     
@@ -16304,13 +16304,13 @@ $$&lt;/p&gt;
     
         <entry>
             <title type="text">最大子序列和问题</title>
-            <link rel="alternate" type="text/html" href="https://rivtian.github.io/tech/%E6%9C%80%E5%A4%A7%E5%AD%90%E5%BA%8F%E5%88%97%E5%92%8C%E9%97%AE%E9%A2%98/" />
-            <id>https://rivtian.github.io/tech/%E6%9C%80%E5%A4%A7%E5%AD%90%E5%BA%8F%E5%88%97%E5%92%8C%E9%97%AE%E9%A2%98/</id>
-            <updated>2020-10-24T04:45:38&#43;00:00</updated>
+            <link rel="alternate" type="text/html" href="https://www.riotian.com/tech/%E6%9C%80%E5%A4%A7%E5%AD%90%E5%BA%8F%E5%88%97%E5%92%8C%E9%97%AE%E9%A2%98/" />
+            <id>https://www.riotian.com/tech/%E6%9C%80%E5%A4%A7%E5%AD%90%E5%BA%8F%E5%88%97%E5%92%8C%E9%97%AE%E9%A2%98/</id>
+            <updated>2020-10-24T05:36:43&#43;00:00</updated>
             <published>2020-06-11T14:54:35&#43;08:00</published>
             <author>
                     <name>RioTian</name>
-                    <uri>https://rivtian.github.io/</uri>
+                    <uri>https://www.riotian.com/</uri>
                     <email>kannajiahe@gmail.com</email>
                     </author>
             <rights>[CC BY-NC-SA 4.0](https://creativecommons.org/licenses/by-nc-sa/4.0/deed.zh)</rights><summary type="html">引言 在做KB的基础DP练习题的时候遇到了最大子序列和的变种问题，突然发现自己以前没做……</summary>
@@ -16718,7 +16718,7 @@ $$&lt;/p&gt;
                             
                             
                             
-                                <category scheme="https://rivtian.github.io/tags/%E5%8A%A8%E6%80%81%E8%A7%84%E5%88%92/" term="动态规划" label="动态规划" />
+                                <category scheme="https://www.riotian.com/tags/%E5%8A%A8%E6%80%81%E8%A7%84%E5%88%92/" term="动态规划" label="动态规划" />
                             
                         
                     
@@ -16728,13 +16728,13 @@ $$&lt;/p&gt;
     
         <entry>
             <title type="text">字符串转换成整数</title>
-            <link rel="alternate" type="text/html" href="https://rivtian.github.io/tech/%E5%AD%97%E7%AC%A6%E4%B8%B2%E8%BD%AC%E6%8D%A2%E6%88%90%E6%95%B4%E6%95%B0/" />
-            <id>https://rivtian.github.io/tech/%E5%AD%97%E7%AC%A6%E4%B8%B2%E8%BD%AC%E6%8D%A2%E6%88%90%E6%95%B4%E6%95%B0/</id>
-            <updated>2020-10-24T04:45:38&#43;00:00</updated>
+            <link rel="alternate" type="text/html" href="https://www.riotian.com/tech/%E5%AD%97%E7%AC%A6%E4%B8%B2%E8%BD%AC%E6%8D%A2%E6%88%90%E6%95%B4%E6%95%B0/" />
+            <id>https://www.riotian.com/tech/%E5%AD%97%E7%AC%A6%E4%B8%B2%E8%BD%AC%E6%8D%A2%E6%88%90%E6%95%B4%E6%95%B0/</id>
+            <updated>2020-10-24T05:36:43&#43;00:00</updated>
             <published>2020-06-11T14:53:23&#43;08:00</published>
             <author>
                     <name>RioTian</name>
-                    <uri>https://rivtian.github.io/</uri>
+                    <uri>https://www.riotian.com/</uri>
                     <email>kannajiahe@gmail.com</email>
                     </author>
             <rights>[CC BY-NC-SA 4.0](https://creativecommons.org/licenses/by-nc-sa/4.0/deed.zh)</rights><summary type="html">题目描述 输入一个由数字组成的字符串，把它转换成整数并输出。例如：输入字符串&amp;quot……</summary>
@@ -17004,7 +17004,7 @@ $$&lt;/p&gt;
                             
                             
                             
-                                <category scheme="https://rivtian.github.io/tags/%E5%AD%97%E7%AC%A6%E4%B8%B2/" term="字符串" label="字符串" />
+                                <category scheme="https://www.riotian.com/tags/%E5%AD%97%E7%AC%A6%E4%B8%B2/" term="字符串" label="字符串" />
                             
                         
                     
@@ -17014,13 +17014,13 @@ $$&lt;/p&gt;
     
         <entry>
             <title type="text">递归 &amp; 分治算法深度理解</title>
-            <link rel="alternate" type="text/html" href="https://rivtian.github.io/tech/%E9%80%92%E5%BD%92-%E5%88%86%E6%B2%BB%E7%AE%97%E6%B3%95%E6%B7%B1%E5%BA%A6%E7%90%86%E8%A7%A3/" />
-            <id>https://rivtian.github.io/tech/%E9%80%92%E5%BD%92-%E5%88%86%E6%B2%BB%E7%AE%97%E6%B3%95%E6%B7%B1%E5%BA%A6%E7%90%86%E8%A7%A3/</id>
-            <updated>2020-10-24T04:45:38&#43;00:00</updated>
+            <link rel="alternate" type="text/html" href="https://www.riotian.com/tech/%E9%80%92%E5%BD%92-%E5%88%86%E6%B2%BB%E7%AE%97%E6%B3%95%E6%B7%B1%E5%BA%A6%E7%90%86%E8%A7%A3/" />
+            <id>https://www.riotian.com/tech/%E9%80%92%E5%BD%92-%E5%88%86%E6%B2%BB%E7%AE%97%E6%B3%95%E6%B7%B1%E5%BA%A6%E7%90%86%E8%A7%A3/</id>
+            <updated>2020-10-24T05:36:43&#43;00:00</updated>
             <published>2020-06-01T14:50:15&#43;08:00</published>
             <author>
                     <name>RioTian</name>
-                    <uri>https://rivtian.github.io/</uri>
+                    <uri>https://www.riotian.com/</uri>
                     <email>kannajiahe@gmail.com</email>
                     </author>
             <rights>[CC BY-NC-SA 4.0](https://creativecommons.org/licenses/by-nc-sa/4.0/deed.zh)</rights><summary type="html">首先简单阐述一下递归，分治算法，动态规划，贪心算法这几个东西的区别和联系，心里有个印……</summary>
@@ -17308,7 +17308,7 @@ Return 3. The paths that sum to 8 are:
                             
                             
                             
-                                <category scheme="https://rivtian.github.io/tags/%E6%80%9D%E7%BB%B4/" term="思维" label="思维" />
+                                <category scheme="https://www.riotian.com/tags/%E6%80%9D%E7%BB%B4/" term="思维" label="思维" />
                             
                         
                     
@@ -17318,13 +17318,13 @@ Return 3. The paths that sum to 8 are:
     
         <entry>
             <title type="text">前缀和与差分</title>
-            <link rel="alternate" type="text/html" href="https://rivtian.github.io/tech/%E5%89%8D%E7%BC%80%E5%92%8C%E4%B8%8E%E5%B7%AE%E5%88%86/" />
-            <id>https://rivtian.github.io/tech/%E5%89%8D%E7%BC%80%E5%92%8C%E4%B8%8E%E5%B7%AE%E5%88%86/</id>
-            <updated>2020-10-24T04:45:38&#43;00:00</updated>
+            <link rel="alternate" type="text/html" href="https://www.riotian.com/tech/%E5%89%8D%E7%BC%80%E5%92%8C%E4%B8%8E%E5%B7%AE%E5%88%86/" />
+            <id>https://www.riotian.com/tech/%E5%89%8D%E7%BC%80%E5%92%8C%E4%B8%8E%E5%B7%AE%E5%88%86/</id>
+            <updated>2020-10-24T05:36:43&#43;00:00</updated>
             <published>2020-05-12T14:48:52&#43;08:00</published>
             <author>
                     <name>RioTian</name>
-                    <uri>https://rivtian.github.io/</uri>
+                    <uri>https://www.riotian.com/</uri>
                     <email>kannajiahe@gmail.com</email>
                     </author>
             <rights>[CC BY-NC-SA 4.0](https://creativecommons.org/licenses/by-nc-sa/4.0/deed.zh)</rights><summary type="html">前缀和与差分是算法中常用的技巧，可以有效的降低算法复杂度，一些题目看似是线段树的问题……</summary>
@@ -17523,7 +17523,7 @@ for (int i = 1; i &amp;lt; count.length; i++)
                             
                             
                             
-                                <category scheme="https://rivtian.github.io/tags/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84/" term="数据结构" label="数据结构" />
+                                <category scheme="https://www.riotian.com/tags/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84/" term="数据结构" label="数据结构" />
                             
                         
                     
@@ -17533,13 +17533,13 @@ for (int i = 1; i &amp;lt; count.length; i++)
     
         <entry>
             <title type="text">Sunday算法</title>
-            <link rel="alternate" type="text/html" href="https://rivtian.github.io/tech/sunday%E7%AE%97%E6%B3%95/" />
-            <id>https://rivtian.github.io/tech/sunday%E7%AE%97%E6%B3%95/</id>
-            <updated>2020-10-24T04:45:38&#43;00:00</updated>
+            <link rel="alternate" type="text/html" href="https://www.riotian.com/tech/sunday%E7%AE%97%E6%B3%95/" />
+            <id>https://www.riotian.com/tech/sunday%E7%AE%97%E6%B3%95/</id>
+            <updated>2020-10-24T05:36:43&#43;00:00</updated>
             <published>2020-05-03T14:46:33&#43;08:00</published>
             <author>
                     <name>RioTian</name>
-                    <uri>https://rivtian.github.io/</uri>
+                    <uri>https://www.riotian.com/</uri>
                     <email>kannajiahe@gmail.com</email>
                     </author>
             <rights>[CC BY-NC-SA 4.0](https://creativecommons.org/licenses/by-nc-sa/4.0/deed.zh)</rights><summary type="html">背景 我们第一次接触字符串匹配，想到的肯定是直接用2个循环来遍历，这样代码虽然简单，但……</summary>
@@ -17774,7 +17774,7 @@ for (int i = 1; i &amp;lt; count.length; i++)
                             
                             
                             
-                                <category scheme="https://rivtian.github.io/tags/%E5%AD%97%E7%AC%A6%E4%B8%B2/" term="字符串" label="字符串" />
+                                <category scheme="https://www.riotian.com/tags/%E5%AD%97%E7%AC%A6%E4%B8%B2/" term="字符串" label="字符串" />
                             
                         
                     
@@ -17784,13 +17784,13 @@ for (int i = 1; i &amp;lt; count.length; i++)
     
         <entry>
             <title type="text">BFPRT 算法 ( TOP K 问题 )</title>
-            <link rel="alternate" type="text/html" href="https://rivtian.github.io/tech/bfprt-%E7%AE%97%E6%B3%95-top-k-%E9%97%AE%E9%A2%98-/" />
-            <id>https://rivtian.github.io/tech/bfprt-%E7%AE%97%E6%B3%95-top-k-%E9%97%AE%E9%A2%98-/</id>
-            <updated>2020-10-24T04:45:38&#43;00:00</updated>
+            <link rel="alternate" type="text/html" href="https://www.riotian.com/tech/bfprt-%E7%AE%97%E6%B3%95-top-k-%E9%97%AE%E9%A2%98-/" />
+            <id>https://www.riotian.com/tech/bfprt-%E7%AE%97%E6%B3%95-top-k-%E9%97%AE%E9%A2%98-/</id>
+            <updated>2020-10-24T05:36:43&#43;00:00</updated>
             <published>2020-04-10T14:45:25&#43;08:00</published>
             <author>
                     <name>RioTian</name>
-                    <uri>https://rivtian.github.io/</uri>
+                    <uri>https://www.riotian.com/</uri>
                     <email>kannajiahe@gmail.com</email>
                     </author>
             <rights>[CC BY-NC-SA 4.0](https://creativecommons.org/licenses/by-nc-sa/4.0/deed.zh)</rights><summary type="html">在一堆数中求其前 k 大或前 k 小的问题，简称 TOP-K 问题。而目前解决 TOP-K 问题最有效的算法即是 BFPRT 算……</summary>
@@ -18124,7 +18124,7 @@ $$&lt;/p&gt;
                             
                             
                             
-                                <category scheme="https://rivtian.github.io/tags/%E7%BB%8F%E5%85%B8%E7%AE%97%E6%B3%95/" term="经典算法" label="经典算法" />
+                                <category scheme="https://www.riotian.com/tags/%E7%BB%8F%E5%85%B8%E7%AE%97%E6%B3%95/" term="经典算法" label="经典算法" />
                             
                         
                     
@@ -18134,13 +18134,13 @@ $$&lt;/p&gt;
     
         <entry>
             <title type="text">素数筛</title>
-            <link rel="alternate" type="text/html" href="https://rivtian.github.io/tech/%E7%B4%A0%E6%95%B0%E7%AD%9B/" />
-            <id>https://rivtian.github.io/tech/%E7%B4%A0%E6%95%B0%E7%AD%9B/</id>
-            <updated>2020-10-24T04:45:38&#43;00:00</updated>
+            <link rel="alternate" type="text/html" href="https://www.riotian.com/tech/%E7%B4%A0%E6%95%B0%E7%AD%9B/" />
+            <id>https://www.riotian.com/tech/%E7%B4%A0%E6%95%B0%E7%AD%9B/</id>
+            <updated>2020-10-24T05:36:43&#43;00:00</updated>
             <published>2020-04-08T14:39:59&#43;08:00</published>
             <author>
                     <name>RioTian</name>
-                    <uri>https://rivtian.github.io/</uri>
+                    <uri>https://www.riotian.com/</uri>
                     <email>kannajiahe@gmail.com</email>
                     </author>
             <rights>[CC BY-NC-SA 4.0](https://creativecommons.org/licenses/by-nc-sa/4.0/deed.zh)</rights><summary type="html">素数筛法，是一种快速“筛”出2~n之间所有素数的方法。朴素的筛法叫埃氏筛（the Sieve of……</summary>
@@ -18261,7 +18261,7 @@ $$&lt;/p&gt;
                             
                             
                             
-                                <category scheme="https://rivtian.github.io/tags/%E6%95%B0%E8%AE%BA/" term="数论" label="数论" />
+                                <category scheme="https://www.riotian.com/tags/%E6%95%B0%E8%AE%BA/" term="数论" label="数论" />
                             
                         
                     
@@ -18271,13 +18271,13 @@ $$&lt;/p&gt;
     
         <entry>
             <title type="text">拓扑排序</title>
-            <link rel="alternate" type="text/html" href="https://rivtian.github.io/tech/%E6%8B%93%E6%89%91%E6%8E%92%E5%BA%8F/" />
-            <id>https://rivtian.github.io/tech/%E6%8B%93%E6%89%91%E6%8E%92%E5%BA%8F/</id>
-            <updated>2020-10-24T04:45:38&#43;00:00</updated>
+            <link rel="alternate" type="text/html" href="https://www.riotian.com/tech/%E6%8B%93%E6%89%91%E6%8E%92%E5%BA%8F/" />
+            <id>https://www.riotian.com/tech/%E6%8B%93%E6%89%91%E6%8E%92%E5%BA%8F/</id>
+            <updated>2020-10-24T05:36:43&#43;00:00</updated>
             <published>2020-04-05T14:40:44&#43;08:00</published>
             <author>
                     <name>RioTian</name>
-                    <uri>https://rivtian.github.io/</uri>
+                    <uri>https://www.riotian.com/</uri>
                     <email>kannajiahe@gmail.com</email>
                     </author>
             <rights>[CC BY-NC-SA 4.0](https://creativecommons.org/licenses/by-nc-sa/4.0/deed.zh)</rights><summary type="html">定义 拓扑排序的英文名是 Topological sorting 。 拓扑排序要解决的问题是给一个图的所有节点排序。 我们可以拿……</summary>
@@ -18461,7 +18461,7 @@ else
                             
                             
                             
-                                <category scheme="https://rivtian.github.io/tags/%E5%9B%BE%E8%AE%BA/" term="图论" label="图论" />
+                                <category scheme="https://www.riotian.com/tags/%E5%9B%BE%E8%AE%BA/" term="图论" label="图论" />
                             
                         
                     
@@ -18471,13 +18471,13 @@ else
     
         <entry>
             <title type="text">图的存储</title>
-            <link rel="alternate" type="text/html" href="https://rivtian.github.io/tech/%E5%9B%BE%E7%9A%84%E5%AD%98%E5%82%A8/" />
-            <id>https://rivtian.github.io/tech/%E5%9B%BE%E7%9A%84%E5%AD%98%E5%82%A8/</id>
-            <updated>2020-10-24T04:45:38&#43;00:00</updated>
+            <link rel="alternate" type="text/html" href="https://www.riotian.com/tech/%E5%9B%BE%E7%9A%84%E5%AD%98%E5%82%A8/" />
+            <id>https://www.riotian.com/tech/%E5%9B%BE%E7%9A%84%E5%AD%98%E5%82%A8/</id>
+            <updated>2020-10-24T05:36:43&#43;00:00</updated>
             <published>2020-04-02T14:39:07&#43;08:00</published>
             <author>
                     <name>RioTian</name>
-                    <uri>https://rivtian.github.io/</uri>
+                    <uri>https://www.riotian.com/</uri>
                     <email>kannajiahe@gmail.com</email>
                     </author>
             <rights>[CC BY-NC-SA 4.0](https://creativecommons.org/licenses/by-nc-sa/4.0/deed.zh)</rights><summary type="html">在 OI 中，想要对图进行操作，就需要先学习图的存储方式。 约定 在本文中，用 $n$ 代指图的点数，……</summary>
@@ -18914,7 +18914,7 @@ else
                             
                             
                             
-                                <category scheme="https://rivtian.github.io/tags/%E5%9B%BE%E8%AE%BA/" term="图论" label="图论" />
+                                <category scheme="https://www.riotian.com/tags/%E5%9B%BE%E8%AE%BA/" term="图论" label="图论" />
                             
                         
                     
@@ -18924,13 +18924,13 @@ else
     
         <entry>
             <title type="text">最短路算法</title>
-            <link rel="alternate" type="text/html" href="https://rivtian.github.io/tech/%E6%9C%80%E7%9F%AD%E8%B7%AF%E7%AE%97%E6%B3%95/" />
-            <id>https://rivtian.github.io/tech/%E6%9C%80%E7%9F%AD%E8%B7%AF%E7%AE%97%E6%B3%95/</id>
-            <updated>2020-10-24T04:45:38&#43;00:00</updated>
+            <link rel="alternate" type="text/html" href="https://www.riotian.com/tech/%E6%9C%80%E7%9F%AD%E8%B7%AF%E7%AE%97%E6%B3%95/" />
+            <id>https://www.riotian.com/tech/%E6%9C%80%E7%9F%AD%E8%B7%AF%E7%AE%97%E6%B3%95/</id>
+            <updated>2020-10-24T05:36:43&#43;00:00</updated>
             <published>2020-04-02T14:38:16&#43;08:00</published>
             <author>
                     <name>RioTian</name>
-                    <uri>https://rivtian.github.io/</uri>
+                    <uri>https://www.riotian.com/</uri>
                     <email>kannajiahe@gmail.com</email>
                     </author>
             <rights>[CC BY-NC-SA 4.0](https://creativecommons.org/licenses/by-nc-sa/4.0/deed.zh)</rights><summary type="html">定义 （还记得这些定义吗？如果对 图的概念 和 存储 不了解请点击链接） 路径 最短路 有向图中的最……</summary>
@@ -19256,7 +19256,7 @@ else
                             
                             
                             
-                                <category scheme="https://rivtian.github.io/tags/%E5%9B%BE%E8%AE%BA/" term="图论" label="图论" />
+                                <category scheme="https://www.riotian.com/tags/%E5%9B%BE%E8%AE%BA/" term="图论" label="图论" />
                             
                         
                     
