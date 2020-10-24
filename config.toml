@@ -2,7 +2,7 @@
 # 站点配置
 
 #baseURL = "https://example.com/"
-baseURL = "https://rivtian.github.io/"
+baseURL = "https://www.riotian.com/"
 title = "RioTianの小窝"
 languageCode = "zh-CN"
 hasCJKLanguage = true
@@ -101,7 +101,7 @@ uglyURLs = false
     # 头像
     avatar = "/icons/Rio"
     # 网站（默认值：baseURL）
-    website = "https://rivtian.github.io/"
+    website = "https://www.riotian.com/"
     # 推特
     twitter = "shirahasaigao"
 
@@ -646,9 +646,9 @@ uglyURLs = false
 
     ## Valine
     enableValine = true
-    valineAppId = ""
-    valineAppKey = ""
-    valinePlaceholder = "Just go go"
+    valineAppId = "R1hGV8vEyQaCLsQ6GkEWLXEx-gzGzoHsz"
+    valineAppKey = "MFHJrr5y4S4WnVDFeNKy2JyO"
+    valinePlaceholder = "真的不说两句吗？φ(゜▽゜*)♪"
     valinePath = ""
     valineAvatar = "mm"
     valineMeta = ["nick", "mail", "link"]
