@@ -11,6 +11,8 @@ gitinfo: true
 > 感谢OI wiki对本文的帮助[^1] 
 >
 > 脚注测试
+>
+> demo
 
 分割线测试
 

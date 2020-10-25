@@ -1099,7 +1099,7 @@ uglyURLs = false
     # 仓库地址
     repoURL = "https://github.com/RivTian/My_blog"
     # 编辑地址
-    repoEditURL = "https://github.com/RivTian/My_blog/blob/develop"
+    repoEditURL = ""
 
     # Git 的图标
     gitIcon = "code-branch"
@@ -1119,7 +1119,7 @@ uglyURLs = false
     feedbackText = "Feedback"
 
     # 是否显示编辑链接
-    displayEditLink = true
+    displayEditLink = false
     # 编辑链接的图标
     editIcon = "edit"
     # 编辑链接的文本
