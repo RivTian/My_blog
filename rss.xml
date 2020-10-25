@@ -9,7 +9,7 @@
     <channel>
         <title>RioTianの小窝</title>
         <link>https://www.riotian.com/</link>
-        <description>MemE 是一个强大且可高度定制的 GoHugo 博客主题，专为个人博客设计。</description>
+        <description>RioTianの小窝，一个让人放松的地方</description>
         <generator>Hugo 0.76.5 https://gohugo.io/</generator>
         
             <language>zh-CN</language>
@@ -23,7 +23,7 @@
         
             <copyright>[CC BY-NC-SA 4.0](https://creativecommons.org/licenses/by-nc-sa/4.0/deed.zh)</copyright>
         
-        <lastBuildDate>Sun, 25 Oct 2020 10:57:27 &#43;0000</lastBuildDate>
+        <lastBuildDate>Sun, 25 Oct 2020 11:16:28 &#43;0000</lastBuildDate>
         
             <atom:link rel="self" type="application/rss&#43;xml" href="https://www.riotian.com/rss.xml" />
         
