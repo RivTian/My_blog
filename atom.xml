@@ -4,7 +4,7 @@
 <feed xmlns="http://www.w3.org/2005/Atom" xml:lang="zh-CN">
     <title type="text">RioTianの小窝</title>
     <subtitle type="html">MemE 是一个强大且可高度定制的 GoHugo 博客主题，专为个人博客设计。</subtitle>
-    <updated>2020-10-25T06:33:02&#43;00:00</updated>
+    <updated>2020-10-25T10:35:31&#43;00:00</updated>
     <id>https://www.riotian.com/</id>
     <link rel="alternate" type="text/html" href="https://www.riotian.com/" />
     <link rel="self" type="application/atom&#43;xml" href="https://www.riotian.com/atom.xml" />
@@ -20,7 +20,7 @@
             <title type="text">如何为没有目录的 PDF 电子书添加目录</title>
             <link rel="alternate" type="text/html" href="https://www.riotian.com/tech/%E5%A6%82%E4%BD%95%E4%B8%BA%E6%B2%A1%E6%9C%89%E7%9B%AE%E5%BD%95%E7%9A%84-pdf-%E7%94%B5%E5%AD%90%E4%B9%A6%E6%B7%BB%E5%8A%A0%E7%9B%AE%E5%BD%95/" />
             <id>https://www.riotian.com/tech/%E5%A6%82%E4%BD%95%E4%B8%BA%E6%B2%A1%E6%9C%89%E7%9B%AE%E5%BD%95%E7%9A%84-pdf-%E7%94%B5%E5%AD%90%E4%B9%A6%E6%B7%BB%E5%8A%A0%E7%9B%AE%E5%BD%95/</id>
-            <updated>2020-10-25T06:32:56&#43;00:00</updated>
+            <updated>2020-10-25T10:35:27&#43;00:00</updated>
             <published>2020-10-25T14:31:12&#43;08:00</published>
             <author>
                     <name>RioTian</name>
@@ -98,7 +98,7 @@
             <title type="text">使用Hugo&#43;Github Actions实现自动化部署博客</title>
             <link rel="alternate" type="text/html" href="https://www.riotian.com/tech/%E4%BD%BF%E7%94%A8hugo&#43;github-actions%E5%AE%9E%E7%8E%B0%E8%87%AA%E5%8A%A8%E5%8C%96%E9%83%A8%E7%BD%B2%E5%8D%9A%E5%AE%A2/" />
             <id>https://www.riotian.com/tech/%E4%BD%BF%E7%94%A8hugo&#43;github-actions%E5%AE%9E%E7%8E%B0%E8%87%AA%E5%8A%A8%E5%8C%96%E9%83%A8%E7%BD%B2%E5%8D%9A%E5%AE%A2/</id>
-            <updated>2020-10-25T06:32:56&#43;00:00</updated>
+            <updated>2020-10-25T10:35:27&#43;00:00</updated>
             <published>2020-10-24T14:16:45&#43;08:00</published>
             <author>
                     <name>RioTian</name>
@@ -226,7 +226,7 @@ jobs:
             <title type="text">GitHub Pages 绑定域名</title>
             <link rel="alternate" type="text/html" href="https://www.riotian.com/tech/github-pages-%E7%BB%91%E5%AE%9A%E5%9F%9F%E5%90%8D/" />
             <id>https://www.riotian.com/tech/github-pages-%E7%BB%91%E5%AE%9A%E5%9F%9F%E5%90%8D/</id>
-            <updated>2020-10-25T06:32:56&#43;00:00</updated>
+            <updated>2020-10-25T10:35:27&#43;00:00</updated>
             <published>2020-10-24T14:15:47&#43;08:00</published>
             <author>
                     <name>RioTian</name>
@@ -323,7 +323,7 @@ www CNAME username.github.io
             <title type="text">数据结构（5）：主席树</title>
             <link rel="alternate" type="text/html" href="https://www.riotian.com/tech/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%845%E4%B8%BB%E5%B8%AD%E6%A0%91/" />
             <id>https://www.riotian.com/tech/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%845%E4%B8%BB%E5%B8%AD%E6%A0%91/</id>
-            <updated>2020-10-25T06:32:56&#43;00:00</updated>
+            <updated>2020-10-25T10:35:27&#43;00:00</updated>
             <published>2020-10-23T15:57:47&#43;08:00</published>
             <author>
                     <name>RioTian</name>
@@ -686,7 +686,7 @@ summary: 本文介绍如何基于hugo搭建自己的个人blog，包括blog的�
             <title type="text">【计算几何 05】Pick定理</title>
             <link rel="alternate" type="text/html" href="https://www.riotian.com/tech/%E8%AE%A1%E7%AE%97%E5%87%A0%E4%BD%95-05pick%E5%AE%9A%E7%90%86/" />
             <id>https://www.riotian.com/tech/%E8%AE%A1%E7%AE%97%E5%87%A0%E4%BD%95-05pick%E5%AE%9A%E7%90%86/</id>
-            <updated>2020-10-25T06:32:56&#43;00:00</updated>
+            <updated>2020-10-25T10:35:27&#43;00:00</updated>
             <published>2020-10-20T15:30:46&#43;08:00</published>
             <author>
                     <name>RioTian</name>
@@ -826,7 +826,7 @@ summary: 本文介绍如何基于hugo搭建自己的个人blog，包括blog的�
             <title type="text">VS Code 代码格式化工具clang Format</title>
             <link rel="alternate" type="text/html" href="https://www.riotian.com/tech/vs-code-%E4%BB%A3%E7%A0%81%E6%A0%BC%E5%BC%8F%E5%8C%96%E5%B7%A5%E5%85%B7clang-format/" />
             <id>https://www.riotian.com/tech/vs-code-%E4%BB%A3%E7%A0%81%E6%A0%BC%E5%BC%8F%E5%8C%96%E5%B7%A5%E5%85%B7clang-format/</id>
-            <updated>2020-10-25T06:32:56&#43;00:00</updated>
+            <updated>2020-10-25T10:35:27&#43;00:00</updated>
             <published>2020-10-15T16:03:45&#43;08:00</published>
             <author>
                     <name>RioTian</name>
@@ -1176,7 +1176,7 @@ UseTab:	Never
             <title type="text">Windows vs Code 配置 C&#43;&#43; 开发环境</title>
             <link rel="alternate" type="text/html" href="https://www.riotian.com/tech/windows-vs-code-%E9%85%8D%E7%BD%AE-c&#43;&#43;-%E5%BC%80%E5%8F%91%E7%8E%AF%E5%A2%83/" />
             <id>https://www.riotian.com/tech/windows-vs-code-%E9%85%8D%E7%BD%AE-c&#43;&#43;-%E5%BC%80%E5%8F%91%E7%8E%AF%E5%A2%83/</id>
-            <updated>2020-10-25T06:32:56&#43;00:00</updated>
+            <updated>2020-10-25T10:35:27&#43;00:00</updated>
             <published>2020-10-14T16:02:55&#43;08:00</published>
             <author>
                     <name>RioTian</name>
@@ -1651,7 +1651,7 @@ UseTab:	Never
             <title type="text">【字符串算法】字典树(Trie树)</title>
             <link rel="alternate" type="text/html" href="https://www.riotian.com/tech/%E5%AD%97%E7%AC%A6%E4%B8%B2%E7%AE%97%E6%B3%95%E5%AD%97%E5%85%B8%E6%A0%91trie%E6%A0%91/" />
             <id>https://www.riotian.com/tech/%E5%AD%97%E7%AC%A6%E4%B8%B2%E7%AE%97%E6%B3%95%E5%AD%97%E5%85%B8%E6%A0%91trie%E6%A0%91/</id>
-            <updated>2020-10-25T06:32:56&#43;00:00</updated>
+            <updated>2020-10-25T10:35:27&#43;00:00</updated>
             <published>2020-10-08T15:55:42&#43;08:00</published>
             <author>
                     <name>RioTian</name>
@@ -1948,7 +1948,7 @@ HDU1800&lt;/p&gt;
             <title type="text">【字符串算法】AC自动机</title>
             <link rel="alternate" type="text/html" href="https://www.riotian.com/tech/%E5%AD%97%E7%AC%A6%E4%B8%B2%E7%AE%97%E6%B3%95ac%E8%87%AA%E5%8A%A8%E6%9C%BA/" />
             <id>https://www.riotian.com/tech/%E5%AD%97%E7%AC%A6%E4%B8%B2%E7%AE%97%E6%B3%95ac%E8%87%AA%E5%8A%A8%E6%9C%BA/</id>
-            <updated>2020-10-25T06:32:56&#43;00:00</updated>
+            <updated>2020-10-25T10:35:27&#43;00:00</updated>
             <published>2020-10-08T15:51:00&#43;08:00</published>
             <author>
                     <name>RioTian</name>
@@ -2604,7 +2604,7 @@ subtask2[50pts]:∑length(模式串)&amp;lt;=10^6,length(文本串)&amp;lt;=10^6
             <title type="text">神奇的字符串匹配：扩展KMP算法</title>
             <link rel="alternate" type="text/html" href="https://www.riotian.com/tech/%E7%A5%9E%E5%A5%87%E7%9A%84%E5%AD%97%E7%AC%A6%E4%B8%B2%E5%8C%B9%E9%85%8D%E6%89%A9%E5%B1%95kmp%E7%AE%97%E6%B3%95/" />
             <id>https://www.riotian.com/tech/%E7%A5%9E%E5%A5%87%E7%9A%84%E5%AD%97%E7%AC%A6%E4%B8%B2%E5%8C%B9%E9%85%8D%E6%89%A9%E5%B1%95kmp%E7%AE%97%E6%B3%95/</id>
-            <updated>2020-10-25T06:32:56&#43;00:00</updated>
+            <updated>2020-10-25T10:35:27&#43;00:00</updated>
             <published>2020-10-05T15:56:37&#43;08:00</published>
             <author>
                     <name>RioTian</name>
@@ -2935,7 +2935,7 @@ extend: 0 0 0
             <title type="text">【计算几何 04】距离计算</title>
             <link rel="alternate" type="text/html" href="https://www.riotian.com/tech/%E8%AE%A1%E7%AE%97%E5%87%A0%E4%BD%95-04%E8%B7%9D%E7%A6%BB%E8%AE%A1%E7%AE%97/" />
             <id>https://www.riotian.com/tech/%E8%AE%A1%E7%AE%97%E5%87%A0%E4%BD%95-04%E8%B7%9D%E7%A6%BB%E8%AE%A1%E7%AE%97/</id>
-            <updated>2020-10-25T06:32:56&#43;00:00</updated>
+            <updated>2020-10-25T10:35:27&#43;00:00</updated>
             <published>2020-10-01T15:29:22&#43;08:00</published>
             <author>
                     <name>RioTian</name>
@@ -3227,7 +3227,7 @@ int main() {
             <title type="text">数论（8）：min_25 筛（扩展埃氏筛）</title>
             <link rel="alternate" type="text/html" href="https://www.riotian.com/tech/%E6%95%B0%E8%AE%BA8min_25-%E7%AD%9B%E6%89%A9%E5%B1%95%E5%9F%83%E6%B0%8F%E7%AD%9B/" />
             <id>https://www.riotian.com/tech/%E6%95%B0%E8%AE%BA8min_25-%E7%AD%9B%E6%89%A9%E5%B1%95%E5%9F%83%E6%B0%8F%E7%AD%9B/</id>
-            <updated>2020-10-25T06:32:56&#43;00:00</updated>
+            <updated>2020-10-25T10:35:27&#43;00:00</updated>
             <published>2020-09-30T15:42:19&#43;08:00</published>
             <author>
                     <name>RioTian</name>
@@ -3581,7 +3581,7 @@ $$
             <title type="text">数论（7）：康托展开&amp;逆康托展开</title>
             <link rel="alternate" type="text/html" href="https://www.riotian.com/tech/%E6%95%B0%E8%AE%BA7%E5%BA%B7%E6%89%98%E5%B1%95%E5%BC%80%E9%80%86%E5%BA%B7%E6%89%98%E5%B1%95%E5%BC%80/" />
             <id>https://www.riotian.com/tech/%E6%95%B0%E8%AE%BA7%E5%BA%B7%E6%89%98%E5%B1%95%E5%BC%80%E9%80%86%E5%BA%B7%E6%89%98%E5%B1%95%E5%BC%80/</id>
-            <updated>2020-10-25T06:32:56&#43;00:00</updated>
+            <updated>2020-10-25T10:35:27&#43;00:00</updated>
             <published>2020-09-29T15:41:40&#43;08:00</published>
             <author>
                     <name>RioTian</name>
@@ -3751,7 +3751,7 @@ $$&lt;/p&gt;
             <title type="text">如何使用 Python 進行字串格式化</title>
             <link rel="alternate" type="text/html" href="https://www.riotian.com/tech/%E5%A6%82%E4%BD%95%E4%BD%BF%E7%94%A8-python-%E9%80%B2%E8%A1%8C%E5%AD%97%E4%B8%B2%E6%A0%BC%E5%BC%8F%E5%8C%96/" />
             <id>https://www.riotian.com/tech/%E5%A6%82%E4%BD%95%E4%BD%BF%E7%94%A8-python-%E9%80%B2%E8%A1%8C%E5%AD%97%E4%B8%B2%E6%A0%BC%E5%BC%8F%E5%8C%96/</id>
-            <updated>2020-10-25T06:32:56&#43;00:00</updated>
+            <updated>2020-10-25T10:35:27&#43;00:00</updated>
             <published>2020-09-27T14:17:55&#43;08:00</published>
             <author>
                     <name>RioTian</name>
@@ -4050,7 +4050,7 @@ $$&lt;/p&gt;
             <title type="text">【计算几何 03】旋转卡壳算法</title>
             <link rel="alternate" type="text/html" href="https://www.riotian.com/tech/%E8%AE%A1%E7%AE%97%E5%87%A0%E4%BD%95-03%E6%97%8B%E8%BD%AC%E5%8D%A1%E5%A3%B3%E7%AE%97%E6%B3%95/" />
             <id>https://www.riotian.com/tech/%E8%AE%A1%E7%AE%97%E5%87%A0%E4%BD%95-03%E6%97%8B%E8%BD%AC%E5%8D%A1%E5%A3%B3%E7%AE%97%E6%B3%95/</id>
-            <updated>2020-10-25T06:32:56&#43;00:00</updated>
+            <updated>2020-10-25T10:35:27&#43;00:00</updated>
             <published>2020-09-25T15:28:16&#43;08:00</published>
             <author>
                     <name>RioTian</name>
@@ -4322,7 +4322,7 @@ $$&lt;/p&gt;
             <title type="text">Python 之父为什么嫌弃 Lambda 匿名函数？</title>
             <link rel="alternate" type="text/html" href="https://www.riotian.com/tech/python-%E4%B9%8B%E7%88%B6%E4%B8%BA%E4%BB%80%E4%B9%88%E5%AB%8C%E5%BC%83-lambda-%E5%8C%BF%E5%90%8D%E5%87%BD%E6%95%B0/" />
             <id>https://www.riotian.com/tech/python-%E4%B9%8B%E7%88%B6%E4%B8%BA%E4%BB%80%E4%B9%88%E5%AB%8C%E5%BC%83-lambda-%E5%8C%BF%E5%90%8D%E5%87%BD%E6%95%B0/</id>
-            <updated>2020-10-25T06:32:56&#43;00:00</updated>
+            <updated>2020-10-25T10:35:27&#43;00:00</updated>
             <published>2020-09-23T15:45:12&#43;08:00</published>
             <author>
                     <name>RioTian</name>
@@ -4518,7 +4518,7 @@ $$&lt;/p&gt;
             <title type="text">【计算几何 02】凸包问题</title>
             <link rel="alternate" type="text/html" href="https://www.riotian.com/tech/%E8%AE%A1%E7%AE%97%E5%87%A0%E4%BD%95-02%E5%87%B8%E5%8C%85%E9%97%AE%E9%A2%98/" />
             <id>https://www.riotian.com/tech/%E8%AE%A1%E7%AE%97%E5%87%A0%E4%BD%95-02%E5%87%B8%E5%8C%85%E9%97%AE%E9%A2%98/</id>
-            <updated>2020-10-25T06:32:56&#43;00:00</updated>
+            <updated>2020-10-25T10:35:27&#43;00:00</updated>
             <published>2020-09-23T15:27:26&#43;08:00</published>
             <author>
                     <name>RioTian</name>
@@ -4769,7 +4769,7 @@ $$&lt;/p&gt;
             <title type="text">数论（6）：卡特兰数</title>
             <link rel="alternate" type="text/html" href="https://www.riotian.com/tech/%E6%95%B0%E8%AE%BA6%E5%8D%A1%E7%89%B9%E5%85%B0%E6%95%B0/" />
             <id>https://www.riotian.com/tech/%E6%95%B0%E8%AE%BA6%E5%8D%A1%E7%89%B9%E5%85%B0%E6%95%B0/</id>
-            <updated>2020-10-25T06:32:56&#43;00:00</updated>
+            <updated>2020-10-25T10:35:27&#43;00:00</updated>
             <published>2020-09-21T15:40:51&#43;08:00</published>
             <author>
                     <name>RioTian</name>
@@ -4906,7 +4906,7 @@ $$&lt;/p&gt;
             <title type="text">【计算几何 01】叉积</title>
             <link rel="alternate" type="text/html" href="https://www.riotian.com/tech/%E8%AE%A1%E7%AE%97%E5%87%A0%E4%BD%95-01%E5%8F%89%E7%A7%AF/" />
             <id>https://www.riotian.com/tech/%E8%AE%A1%E7%AE%97%E5%87%A0%E4%BD%95-01%E5%8F%89%E7%A7%AF/</id>
-            <updated>2020-10-25T06:32:56&#43;00:00</updated>
+            <updated>2020-10-25T10:35:27&#43;00:00</updated>
             <published>2020-09-21T15:13:32&#43;08:00</published>
             <author>
                     <name>RioTian</name>
@@ -5322,7 +5322,7 @@ int main()
             <title type="text">Web开发初探（二）：JavaScript 快速入门</title>
             <link rel="alternate" type="text/html" href="https://www.riotian.com/tech/web%E5%BC%80%E5%8F%91%E5%88%9D%E6%8E%A2%E4%BA%8Cjavascript-%E5%BF%AB%E9%80%9F%E5%85%A5%E9%97%A8/" />
             <id>https://www.riotian.com/tech/web%E5%BC%80%E5%8F%91%E5%88%9D%E6%8E%A2%E4%BA%8Cjavascript-%E5%BF%AB%E9%80%9F%E5%85%A5%E9%97%A8/</id>
-            <updated>2020-10-25T06:32:56&#43;00:00</updated>
+            <updated>2020-10-25T10:35:27&#43;00:00</updated>
             <published>2020-09-15T14:11:19&#43;08:00</published>
             <author>
                     <name>RioTian</name>
@@ -6003,7 +6003,7 @@ int main()
             <title type="text">Web开发初探</title>
             <link rel="alternate" type="text/html" href="https://www.riotian.com/tech/web%E5%BC%80%E5%8F%91%E5%88%9D%E6%8E%A2/" />
             <id>https://www.riotian.com/tech/web%E5%BC%80%E5%8F%91%E5%88%9D%E6%8E%A2/</id>
-            <updated>2020-10-25T06:32:56&#43;00:00</updated>
+            <updated>2020-10-25T10:35:27&#43;00:00</updated>
             <published>2020-09-14T14:07:58&#43;08:00</published>
             <author>
                     <name>RioTian</name>
@@ -7400,7 +7400,7 @@ int main()
             <title type="text">位运算の奇技淫巧(二)</title>
             <link rel="alternate" type="text/html" href="https://www.riotian.com/tech/%E4%BD%8D%E8%BF%90%E7%AE%97%E3%81%AE%E5%A5%87%E6%8A%80%E6%B7%AB%E5%B7%A7%E4%BA%8C/" />
             <id>https://www.riotian.com/tech/%E4%BD%8D%E8%BF%90%E7%AE%97%E3%81%AE%E5%A5%87%E6%8A%80%E6%B7%AB%E5%B7%A7%E4%BA%8C/</id>
-            <updated>2020-10-25T06:32:56&#43;00:00</updated>
+            <updated>2020-10-25T10:35:27&#43;00:00</updated>
             <published>2020-09-13T14:11:19&#43;08:00</published>
             <author>
                     <name>RioTian</name>
@@ -7622,7 +7622,7 @@ int main()
             <title type="text">博弈论经典模型解析（入门级）</title>
             <link rel="alternate" type="text/html" href="https://www.riotian.com/tech/%E5%8D%9A%E5%BC%88%E8%AE%BA%E7%BB%8F%E5%85%B8%E6%A8%A1%E5%9E%8B%E8%A7%A3%E6%9E%90%E5%85%A5%E9%97%A8%E7%BA%A7/" />
             <id>https://www.riotian.com/tech/%E5%8D%9A%E5%BC%88%E8%AE%BA%E7%BB%8F%E5%85%B8%E6%A8%A1%E5%9E%8B%E8%A7%A3%E6%9E%90%E5%85%A5%E9%97%A8%E7%BA%A7/</id>
-            <updated>2020-10-25T06:32:56&#43;00:00</updated>
+            <updated>2020-10-25T10:35:27&#43;00:00</updated>
             <published>2020-09-02T14:34:30&#43;08:00</published>
             <author>
                     <name>RioTian</name>
@@ -7809,7 +7809,7 @@ int main()
             <title type="text">位运算の奇技淫巧</title>
             <link rel="alternate" type="text/html" href="https://www.riotian.com/tech/%E4%BD%8D%E8%BF%90%E7%AE%97%E3%81%AE%E5%A5%87%E6%8A%80%E6%B7%AB%E5%B7%A7/" />
             <id>https://www.riotian.com/tech/%E4%BD%8D%E8%BF%90%E7%AE%97%E3%81%AE%E5%A5%87%E6%8A%80%E6%B7%AB%E5%B7%A7/</id>
-            <updated>2020-10-25T06:32:56&#43;00:00</updated>
+            <updated>2020-10-25T10:35:27&#43;00:00</updated>
             <published>2020-09-02T14:11:19&#43;08:00</published>
             <author>
                     <name>RioTian</name>
@@ -8163,7 +8163,7 @@ $$&lt;/p&gt;
             <title type="text">01 分数规划技巧</title>
             <link rel="alternate" type="text/html" href="https://www.riotian.com/tech/01-%E5%88%86%E6%95%B0%E8%A7%84%E5%88%92%E6%8A%80%E5%B7%A7/" />
             <id>https://www.riotian.com/tech/01-%E5%88%86%E6%95%B0%E8%A7%84%E5%88%92%E6%8A%80%E5%B7%A7/</id>
-            <updated>2020-10-25T06:32:56&#43;00:00</updated>
+            <updated>2020-10-25T10:35:27&#43;00:00</updated>
             <published>2020-09-01T15:45:55&#43;08:00</published>
             <author>
                     <name>RioTian</name>
@@ -8473,7 +8473,7 @@ $$&lt;/p&gt;
             <title type="text">组合数学（1）：棋盘完美覆盖数(小规模)</title>
             <link rel="alternate" type="text/html" href="https://www.riotian.com/tech/%E7%BB%84%E5%90%88%E6%95%B0%E5%AD%A61%E6%A3%8B%E7%9B%98%E5%AE%8C%E7%BE%8E%E8%A6%86%E7%9B%96%E6%95%B0%E5%B0%8F%E8%A7%84%E6%A8%A1/" />
             <id>https://www.riotian.com/tech/%E7%BB%84%E5%90%88%E6%95%B0%E5%AD%A61%E6%A3%8B%E7%9B%98%E5%AE%8C%E7%BE%8E%E8%A6%86%E7%9B%96%E6%95%B0%E5%B0%8F%E8%A7%84%E6%A8%A1/</id>
-            <updated>2020-10-25T06:32:56&#43;00:00</updated>
+            <updated>2020-10-25T10:35:27&#43;00:00</updated>
             <published>2020-08-30T15:46:33&#43;08:00</published>
             <author>
                     <name>RioTian</name>
@@ -8535,7 +8535,7 @@ $$&lt;/p&gt;
             <title type="text">数论（5）：中国剩余定理</title>
             <link rel="alternate" type="text/html" href="https://www.riotian.com/tech/%E6%95%B0%E8%AE%BA5%E4%B8%AD%E5%9B%BD%E5%89%A9%E4%BD%99%E5%AE%9A%E7%90%86/" />
             <id>https://www.riotian.com/tech/%E6%95%B0%E8%AE%BA5%E4%B8%AD%E5%9B%BD%E5%89%A9%E4%BD%99%E5%AE%9A%E7%90%86/</id>
-            <updated>2020-10-25T06:32:56&#43;00:00</updated>
+            <updated>2020-10-25T10:35:27&#43;00:00</updated>
             <published>2020-08-24T15:35:39&#43;08:00</published>
             <author>
                     <name>RioTian</name>
@@ -8695,7 +8695,7 @@ $$&lt;/p&gt;
             <title type="text">数论（4）：类欧几里德算法</title>
             <link rel="alternate" type="text/html" href="https://www.riotian.com/tech/%E6%95%B0%E8%AE%BA4%E7%B1%BB%E6%AC%A7%E5%87%A0%E9%87%8C%E5%BE%B7%E7%AE%97%E6%B3%95/" />
             <id>https://www.riotian.com/tech/%E6%95%B0%E8%AE%BA4%E7%B1%BB%E6%AC%A7%E5%87%A0%E9%87%8C%E5%BE%B7%E7%AE%97%E6%B3%95/</id>
-            <updated>2020-10-25T06:32:56&#43;00:00</updated>
+            <updated>2020-10-25T10:35:27&#43;00:00</updated>
             <published>2020-08-23T15:34:50&#43;08:00</published>
             <author>
                     <name>RioTian</name>
@@ -8981,7 +8981,7 @@ $$&lt;/p&gt;
             <title type="text">网络流（4）：最小费用最大流</title>
             <link rel="alternate" type="text/html" href="https://www.riotian.com/tech/%E7%BD%91%E7%BB%9C%E6%B5%814%E6%9C%80%E5%B0%8F%E8%B4%B9%E7%94%A8%E6%9C%80%E5%A4%A7%E6%B5%81/" />
             <id>https://www.riotian.com/tech/%E7%BD%91%E7%BB%9C%E6%B5%814%E6%9C%80%E5%B0%8F%E8%B4%B9%E7%94%A8%E6%9C%80%E5%A4%A7%E6%B5%81/</id>
-            <updated>2020-10-25T06:32:56&#43;00:00</updated>
+            <updated>2020-10-25T10:35:27&#43;00:00</updated>
             <published>2020-08-20T15:50:12&#43;08:00</published>
             <author>
                     <name>RioTian</name>
@@ -9171,7 +9171,7 @@ add(y, x, 0, -c);
             <title type="text">数论（3）：欧拉函数与费马小定理</title>
             <link rel="alternate" type="text/html" href="https://www.riotian.com/tech/%E6%95%B0%E8%AE%BA3%E6%AC%A7%E6%8B%89%E5%87%BD%E6%95%B0/" />
             <id>https://www.riotian.com/tech/%E6%95%B0%E8%AE%BA3%E6%AC%A7%E6%8B%89%E5%87%BD%E6%95%B0/</id>
-            <updated>2020-10-25T06:32:56&#43;00:00</updated>
+            <updated>2020-10-25T10:35:27&#43;00:00</updated>
             <published>2020-08-20T15:33:02&#43;08:00</published>
             <author>
                     <name>RioTian</name>
@@ -9347,7 +9347,7 @@ $$&lt;/p&gt;
             <title type="text">网络流（3）：路径覆盖问题</title>
             <link rel="alternate" type="text/html" href="https://www.riotian.com/tech/%E7%BD%91%E7%BB%9C%E6%B5%813%E8%B7%AF%E5%BE%84%E8%A6%86%E7%9B%96%E9%97%AE%E9%A2%98/" />
             <id>https://www.riotian.com/tech/%E7%BD%91%E7%BB%9C%E6%B5%813%E8%B7%AF%E5%BE%84%E8%A6%86%E7%9B%96%E9%97%AE%E9%A2%98/</id>
-            <updated>2020-10-25T06:32:56&#43;00:00</updated>
+            <updated>2020-10-25T10:35:27&#43;00:00</updated>
             <published>2020-08-18T15:49:21&#43;08:00</published>
             <author>
                     <name>RioTian</name>
@@ -9494,7 +9494,7 @@ $$&lt;/p&gt;
             <title type="text">网络流（2）：最大流</title>
             <link rel="alternate" type="text/html" href="https://www.riotian.com/tech/%E7%BD%91%E7%BB%9C%E6%B5%812%E6%9C%80%E5%A4%A7%E6%B5%81/" />
             <id>https://www.riotian.com/tech/%E7%BD%91%E7%BB%9C%E6%B5%812%E6%9C%80%E5%A4%A7%E6%B5%81/</id>
-            <updated>2020-10-25T06:32:56&#43;00:00</updated>
+            <updated>2020-10-25T10:35:27&#43;00:00</updated>
             <published>2020-08-17T15:48:31&#43;08:00</published>
             <author>
                     <name>RioTian</name>
@@ -9846,7 +9846,7 @@ $$&lt;/p&gt;
             <title type="text">网络流（1）：入门简介</title>
             <link rel="alternate" type="text/html" href="https://www.riotian.com/tech/%E7%BD%91%E7%BB%9C%E6%B5%811%E5%85%A5%E9%97%A8%E7%AE%80%E4%BB%8B/" />
             <id>https://www.riotian.com/tech/%E7%BD%91%E7%BB%9C%E6%B5%811%E5%85%A5%E9%97%A8%E7%AE%80%E4%BB%8B/</id>
-            <updated>2020-10-25T06:32:56&#43;00:00</updated>
+            <updated>2020-10-25T10:35:27&#43;00:00</updated>
             <published>2020-08-17T15:47:20&#43;08:00</published>
             <author>
                     <name>RioTian</name>
@@ -9926,7 +9926,7 @@ $$&lt;/p&gt;
             <title type="text">数论（2）：最大公约数</title>
             <link rel="alternate" type="text/html" href="https://www.riotian.com/tech/%E6%95%B0%E8%AE%BA2%E6%9C%80%E5%A4%A7%E5%85%AC%E7%BA%A6%E6%95%B0/" />
             <id>https://www.riotian.com/tech/%E6%95%B0%E8%AE%BA2%E6%9C%80%E5%A4%A7%E5%85%AC%E7%BA%A6%E6%95%B0/</id>
-            <updated>2020-10-25T06:32:56&#43;00:00</updated>
+            <updated>2020-10-25T10:35:27&#43;00:00</updated>
             <published>2020-08-15T15:32:24&#43;08:00</published>
             <author>
                     <name>RioTian</name>
@@ -10108,7 +10108,7 @@ $$&lt;/p&gt;
             <title type="text">数论（1）：素数</title>
             <link rel="alternate" type="text/html" href="https://www.riotian.com/tech/%E6%95%B0%E8%AE%BA1%E7%B4%A0%E6%95%B0/" />
             <id>https://www.riotian.com/tech/%E6%95%B0%E8%AE%BA1%E7%B4%A0%E6%95%B0/</id>
-            <updated>2020-10-25T06:32:56&#43;00:00</updated>
+            <updated>2020-10-25T10:35:27&#43;00:00</updated>
             <published>2020-08-14T15:31:22&#43;08:00</published>
             <author>
                     <name>RioTian</name>
@@ -10583,7 +10583,7 @@ $$&lt;/p&gt;
             <title type="text">什么是P，NP和NPC问题？</title>
             <link rel="alternate" type="text/html" href="https://www.riotian.com/tech/%E4%BB%80%E4%B9%88%E6%98%AFpnp%E5%92%8Cnpc%E9%97%AE%E9%A2%98/" />
             <id>https://www.riotian.com/tech/%E4%BB%80%E4%B9%88%E6%98%AFpnp%E5%92%8Cnpc%E9%97%AE%E9%A2%98/</id>
-            <updated>2020-10-25T06:32:56&#43;00:00</updated>
+            <updated>2020-10-25T10:35:27&#43;00:00</updated>
             <published>2020-08-14T15:11:47&#43;08:00</published>
             <author>
                     <name>RioTian</name>
@@ -10666,7 +10666,7 @@ $$&lt;/p&gt;
             <title type="text">差分约束</title>
             <link rel="alternate" type="text/html" href="https://www.riotian.com/tech/%E5%B7%AE%E5%88%86%E7%BA%A6%E6%9D%9F/" />
             <id>https://www.riotian.com/tech/%E5%B7%AE%E5%88%86%E7%BA%A6%E6%9D%9F/</id>
-            <updated>2020-10-25T06:32:56&#43;00:00</updated>
+            <updated>2020-10-25T10:35:27&#43;00:00</updated>
             <published>2020-08-13T15:09:33&#43;08:00</published>
             <author>
                     <name>RioTian</name>
@@ -10986,7 +10986,7 @@ $$&lt;/p&gt;
             <title type="text">匈牙利算法</title>
             <link rel="alternate" type="text/html" href="https://www.riotian.com/tech/%E5%8C%88%E7%89%99%E5%88%A9%E7%AE%97%E6%B3%95/" />
             <id>https://www.riotian.com/tech/%E5%8C%88%E7%89%99%E5%88%A9%E7%AE%97%E6%B3%95/</id>
-            <updated>2020-10-25T06:32:56&#43;00:00</updated>
+            <updated>2020-10-25T10:35:27&#43;00:00</updated>
             <published>2020-08-11T15:08:01&#43;08:00</published>
             <author>
                     <name>RioTian</name>
@@ -11436,7 +11436,7 @@ y为第y列
             <title type="text">最近公共祖先</title>
             <link rel="alternate" type="text/html" href="https://www.riotian.com/tech/%E6%9C%80%E8%BF%91%E5%85%AC%E5%85%B1%E7%A5%96%E5%85%88/" />
             <id>https://www.riotian.com/tech/%E6%9C%80%E8%BF%91%E5%85%AC%E5%85%B1%E7%A5%96%E5%85%88/</id>
-            <updated>2020-10-25T06:32:56&#43;00:00</updated>
+            <updated>2020-10-25T10:35:27&#43;00:00</updated>
             <published>2020-08-10T16:00:04&#43;08:00</published>
             <author>
                     <name>RioTian</name>
@@ -11649,7 +11649,7 @@ y为第y列
             <title type="text">递归的机器实现</title>
             <link rel="alternate" type="text/html" href="https://www.riotian.com/tech/%E9%80%92%E5%BD%92%E7%9A%84%E6%9C%BA%E5%99%A8%E5%AE%9E%E7%8E%B0/" />
             <id>https://www.riotian.com/tech/%E9%80%92%E5%BD%92%E7%9A%84%E6%9C%BA%E5%99%A8%E5%AE%9E%E7%8E%B0/</id>
-            <updated>2020-10-25T06:32:56&#43;00:00</updated>
+            <updated>2020-10-25T10:35:27&#43;00:00</updated>
             <published>2020-08-07T15:08:50&#43;08:00</published>
             <author>
                     <name>RioTian</name>
@@ -11693,7 +11693,7 @@ y为第y列
             <title type="text">连通图</title>
             <link rel="alternate" type="text/html" href="https://www.riotian.com/tech/%E8%BF%9E%E9%80%9A%E5%9B%BE/" />
             <id>https://www.riotian.com/tech/%E8%BF%9E%E9%80%9A%E5%9B%BE/</id>
-            <updated>2020-10-25T06:32:56&#43;00:00</updated>
+            <updated>2020-10-25T10:35:27&#43;00:00</updated>
             <published>2020-08-06T15:10:55&#43;08:00</published>
             <author>
                     <name>RioTian</name>
@@ -12215,7 +12215,7 @@ y为第y列
             <title type="text">C&#43;&#43;与正则表达式</title>
             <link rel="alternate" type="text/html" href="https://www.riotian.com/tech/c&#43;&#43;%E4%B8%8E%E6%AD%A3%E5%88%99%E8%A1%A8%E8%BE%BE%E5%BC%8F/" />
             <id>https://www.riotian.com/tech/c&#43;&#43;%E4%B8%8E%E6%AD%A3%E5%88%99%E8%A1%A8%E8%BE%BE%E5%BC%8F/</id>
-            <updated>2020-10-25T06:32:56&#43;00:00</updated>
+            <updated>2020-10-25T10:35:27&#43;00:00</updated>
             <published>2020-08-04T14:21:10&#43;08:00</published>
             <author>
                     <name>RioTian</name>
@@ -13549,7 +13549,7 @@ Is &#39;some birds&#39; match &#39;(?!some birds)some&#39;: NO
             <title type="text">简单的日期正则表达式</title>
             <link rel="alternate" type="text/html" href="https://www.riotian.com/tech/%E7%AE%80%E5%8D%95%E7%9A%84%E6%97%A5%E6%9C%9F%E6%AD%A3%E5%88%99%E8%A1%A8%E8%BE%BE%E5%BC%8F/" />
             <id>https://www.riotian.com/tech/%E7%AE%80%E5%8D%95%E7%9A%84%E6%97%A5%E6%9C%9F%E6%AD%A3%E5%88%99%E8%A1%A8%E8%BE%BE%E5%BC%8F/</id>
-            <updated>2020-10-25T06:32:56&#43;00:00</updated>
+            <updated>2020-10-25T10:35:27&#43;00:00</updated>
             <published>2020-08-03T14:28:53&#43;08:00</published>
             <author>
                     <name>RioTian</name>
@@ -13757,7 +13757,7 @@ Is &#39;some birds&#39; match &#39;(?!some birds)some&#39;: NO
             <title type="text">离散化</title>
             <link rel="alternate" type="text/html" href="https://www.riotian.com/tech/%E7%A6%BB%E6%95%A3%E5%8C%96/" />
             <id>https://www.riotian.com/tech/%E7%A6%BB%E6%95%A3%E5%8C%96/</id>
-            <updated>2020-10-25T06:32:56&#43;00:00</updated>
+            <updated>2020-10-25T10:35:27&#43;00:00</updated>
             <published>2020-08-01T15:10:10&#43;08:00</published>
             <author>
                     <name>RioTian</name>
@@ -13848,7 +13848,7 @@ Is &#39;some birds&#39; match &#39;(?!some birds)some&#39;: NO
             <title type="text">Typora写作</title>
             <link rel="alternate" type="text/html" href="https://www.riotian.com/tech/typora%E5%86%99%E4%BD%9C/" />
             <id>https://www.riotian.com/tech/typora%E5%86%99%E4%BD%9C/</id>
-            <updated>2020-10-25T06:32:56&#43;00:00</updated>
+            <updated>2020-10-25T10:35:27&#43;00:00</updated>
             <published>2020-07-30T16:04:42&#43;08:00</published>
             <author>
                     <name>RioTian</name>
@@ -13899,7 +13899,7 @@ Is &#39;some birds&#39; match &#39;(?!some birds)some&#39;: NO
             <title type="text">C&#43;&#43; String 字符串函数详解</title>
             <link rel="alternate" type="text/html" href="https://www.riotian.com/tech/c&#43;&#43;-string-%E5%AD%97%E7%AC%A6%E4%B8%B2%E5%87%BD%E6%95%B0%E8%AF%A6%E8%A7%A3/" />
             <id>https://www.riotian.com/tech/c&#43;&#43;-string-%E5%AD%97%E7%AC%A6%E4%B8%B2%E5%87%BD%E6%95%B0%E8%AF%A6%E8%A7%A3/</id>
-            <updated>2020-10-25T06:32:56&#43;00:00</updated>
+            <updated>2020-10-25T10:35:27&#43;00:00</updated>
             <published>2020-07-23T14:56:57&#43;08:00</published>
             <author>
                     <name>RioTian</name>
@@ -14196,7 +14196,7 @@ Is &#39;some birds&#39; match &#39;(?!some birds)some&#39;: NO
             <title type="text">数据结构（4）：双指针技巧总结</title>
             <link rel="alternate" type="text/html" href="https://www.riotian.com/tech/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%844%E5%8F%8C%E6%8C%87%E9%92%88%E6%8A%80%E5%B7%A7%E6%80%BB%E7%BB%93/" />
             <id>https://www.riotian.com/tech/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%844%E5%8F%8C%E6%8C%87%E9%92%88%E6%8A%80%E5%B7%A7%E6%80%BB%E7%BB%93/</id>
-            <updated>2020-10-25T06:32:56&#43;00:00</updated>
+            <updated>2020-10-25T10:35:27&#43;00:00</updated>
             <published>2020-07-13T15:05:29&#43;08:00</published>
             <author>
                     <name>RioTian</name>
@@ -14611,7 +14611,7 @@ Is &#39;some birds&#39; match &#39;(?!some birds)some&#39;: NO
             <title type="text">数据结构（3）：ST 表</title>
             <link rel="alternate" type="text/html" href="https://www.riotian.com/tech/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%843st-%E8%A1%A8/" />
             <id>https://www.riotian.com/tech/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%843st-%E8%A1%A8/</id>
-            <updated>2020-10-25T06:32:56&#43;00:00</updated>
+            <updated>2020-10-25T10:35:27&#43;00:00</updated>
             <published>2020-07-04T15:03:45&#43;08:00</published>
             <author>
                     <name>RioTian</name>
@@ -14799,7 +14799,7 @@ $$&lt;/p&gt;
             <title type="text">数据结构（2）：树状数组</title>
             <link rel="alternate" type="text/html" href="https://www.riotian.com/tech/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%842%E6%A0%91%E7%8A%B6%E6%95%B0%E7%BB%84/" />
             <id>https://www.riotian.com/tech/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%842%E6%A0%91%E7%8A%B6%E6%95%B0%E7%BB%84/</id>
-            <updated>2020-10-25T06:32:56&#43;00:00</updated>
+            <updated>2020-10-25T10:35:27&#43;00:00</updated>
             <published>2020-07-03T15:02:46&#43;08:00</published>
             <author>
                     <name>RioTian</name>
@@ -15199,7 +15199,7 @@ $$&lt;/p&gt;
             <title type="text">数据结构（1）：线段树</title>
             <link rel="alternate" type="text/html" href="https://www.riotian.com/tech/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%841%E7%BA%BF%E6%AE%B5%E6%A0%91/" />
             <id>https://www.riotian.com/tech/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%841%E7%BA%BF%E6%AE%B5%E6%A0%91/</id>
-            <updated>2020-10-25T06:32:56&#43;00:00</updated>
+            <updated>2020-10-25T10:35:27&#43;00:00</updated>
             <published>2020-07-02T15:01:34&#43;08:00</published>
             <author>
                     <name>RioTian</name>
@@ -15691,7 +15691,7 @@ $$&lt;/p&gt;
             <title type="text">博弈论入门</title>
             <link rel="alternate" type="text/html" href="https://www.riotian.com/tech/%E5%8D%9A%E5%BC%88%E8%AE%BA%E5%85%A5%E9%97%A8/" />
             <id>https://www.riotian.com/tech/%E5%8D%9A%E5%BC%88%E8%AE%BA%E5%85%A5%E9%97%A8/</id>
-            <updated>2020-10-25T06:32:56&#43;00:00</updated>
+            <updated>2020-10-25T10:35:27&#43;00:00</updated>
             <published>2020-06-16T14:55:31&#43;08:00</published>
             <author>
                     <name>RioTian</name>
@@ -16609,7 +16609,7 @@ $$&lt;/p&gt;
             <title type="text">最大子序列和问题</title>
             <link rel="alternate" type="text/html" href="https://www.riotian.com/tech/%E6%9C%80%E5%A4%A7%E5%AD%90%E5%BA%8F%E5%88%97%E5%92%8C%E9%97%AE%E9%A2%98/" />
             <id>https://www.riotian.com/tech/%E6%9C%80%E5%A4%A7%E5%AD%90%E5%BA%8F%E5%88%97%E5%92%8C%E9%97%AE%E9%A2%98/</id>
-            <updated>2020-10-25T06:32:56&#43;00:00</updated>
+            <updated>2020-10-25T10:35:27&#43;00:00</updated>
             <published>2020-06-11T14:54:35&#43;08:00</published>
             <author>
                     <name>RioTian</name>
@@ -17033,7 +17033,7 @@ $$&lt;/p&gt;
             <title type="text">字符串转换成整数</title>
             <link rel="alternate" type="text/html" href="https://www.riotian.com/tech/%E5%AD%97%E7%AC%A6%E4%B8%B2%E8%BD%AC%E6%8D%A2%E6%88%90%E6%95%B4%E6%95%B0/" />
             <id>https://www.riotian.com/tech/%E5%AD%97%E7%AC%A6%E4%B8%B2%E8%BD%AC%E6%8D%A2%E6%88%90%E6%95%B4%E6%95%B0/</id>
-            <updated>2020-10-25T06:32:56&#43;00:00</updated>
+            <updated>2020-10-25T10:35:27&#43;00:00</updated>
             <published>2020-06-11T14:53:23&#43;08:00</published>
             <author>
                     <name>RioTian</name>
@@ -17319,7 +17319,7 @@ $$&lt;/p&gt;
             <title type="text">递归 &amp; 分治算法深度理解</title>
             <link rel="alternate" type="text/html" href="https://www.riotian.com/tech/%E9%80%92%E5%BD%92-%E5%88%86%E6%B2%BB%E7%AE%97%E6%B3%95%E6%B7%B1%E5%BA%A6%E7%90%86%E8%A7%A3/" />
             <id>https://www.riotian.com/tech/%E9%80%92%E5%BD%92-%E5%88%86%E6%B2%BB%E7%AE%97%E6%B3%95%E6%B7%B1%E5%BA%A6%E7%90%86%E8%A7%A3/</id>
-            <updated>2020-10-25T06:32:56&#43;00:00</updated>
+            <updated>2020-10-25T10:35:27&#43;00:00</updated>
             <published>2020-06-01T14:50:15&#43;08:00</published>
             <author>
                     <name>RioTian</name>
@@ -17623,7 +17623,7 @@ Return 3. The paths that sum to 8 are:
             <title type="text">前缀和与差分</title>
             <link rel="alternate" type="text/html" href="https://www.riotian.com/tech/%E5%89%8D%E7%BC%80%E5%92%8C%E4%B8%8E%E5%B7%AE%E5%88%86/" />
             <id>https://www.riotian.com/tech/%E5%89%8D%E7%BC%80%E5%92%8C%E4%B8%8E%E5%B7%AE%E5%88%86/</id>
-            <updated>2020-10-25T06:32:56&#43;00:00</updated>
+            <updated>2020-10-25T10:35:27&#43;00:00</updated>
             <published>2020-05-12T14:48:52&#43;08:00</published>
             <author>
                     <name>RioTian</name>
@@ -17838,7 +17838,7 @@ for (int i = 1; i &amp;lt; count.length; i++)
             <title type="text">Sunday算法</title>
             <link rel="alternate" type="text/html" href="https://www.riotian.com/tech/sunday%E7%AE%97%E6%B3%95/" />
             <id>https://www.riotian.com/tech/sunday%E7%AE%97%E6%B3%95/</id>
-            <updated>2020-10-25T06:32:56&#43;00:00</updated>
+            <updated>2020-10-25T10:35:27&#43;00:00</updated>
             <published>2020-05-03T14:46:33&#43;08:00</published>
             <author>
                     <name>RioTian</name>
@@ -18089,7 +18089,7 @@ for (int i = 1; i &amp;lt; count.length; i++)
             <title type="text">BFPRT 算法 ( TOP K 问题 )</title>
             <link rel="alternate" type="text/html" href="https://www.riotian.com/tech/bfprt-%E7%AE%97%E6%B3%95-top-k-%E9%97%AE%E9%A2%98-/" />
             <id>https://www.riotian.com/tech/bfprt-%E7%AE%97%E6%B3%95-top-k-%E9%97%AE%E9%A2%98-/</id>
-            <updated>2020-10-25T06:32:56&#43;00:00</updated>
+            <updated>2020-10-25T10:35:27&#43;00:00</updated>
             <published>2020-04-10T14:45:25&#43;08:00</published>
             <author>
                     <name>RioTian</name>
@@ -18436,147 +18436,10 @@ $$&lt;/p&gt;
         </entry>
     
         <entry>
-            <title type="text">素数筛</title>
-            <link rel="alternate" type="text/html" href="https://www.riotian.com/tech/%E7%B4%A0%E6%95%B0%E7%AD%9B/" />
-            <id>https://www.riotian.com/tech/%E7%B4%A0%E6%95%B0%E7%AD%9B/</id>
-            <updated>2020-10-25T06:32:56&#43;00:00</updated>
-            <published>2020-04-08T14:39:59&#43;08:00</published>
-            <author>
-                    <name>RioTian</name>
-                    <uri>https://www.riotian.com/</uri>
-                    <email>kannajiahe@gmail.com</email>
-                    </author>
-            <rights>[CC BY-NC-SA 4.0](https://creativecommons.org/licenses/by-nc-sa/4.0/deed.zh)</rights><summary type="html">素数筛法，是一种快速“筛”出2~n之间所有素数的方法。朴素的筛法叫埃氏筛（the Sieve of……</summary>
-            
-                <content type="html">&lt;p&gt;&lt;strong&gt;素数筛法&lt;/strong&gt;，是一种快速“筛”出2~n之间所有素数的方法。朴素的筛法叫&lt;strong&gt;埃氏筛&lt;/strong&gt;（the Sieve of *Eratosthenes，*&lt;strong&gt;埃拉托色尼筛&lt;/strong&gt;），它的过程是这样的：&lt;/p&gt;
-&lt;p&gt;我们把2~n的数按顺序写出来：&lt;/p&gt;
-&lt;p&gt;&lt;img src=&#34;https://www.zhihu.com/equation?tex=%5Cbegin%7Bmatrix%7D2%263%264%265%266%267%268%269%2610%2611%2612%2613%2614%2615%2616%5Cend%7Bmatrix%7D&#34; alt=&#34;[公式]&#34;&gt;&lt;/p&gt;
-&lt;p&gt;从前往后看，找到第一个未被划掉的数，2，这说明它是质数。然后把2的倍数（不包括2）划掉：&lt;/p&gt;
-&lt;p&gt;&lt;img src=&#34;https://www.zhihu.com/equation?tex=%5Cbegin%7Bmatrix%7D%5Ccolor%7Bblue%7D%7B2%7D%263%26%5Ccancel4%265%26%5Ccancel6%267%26%5Ccancel8%269%26%5Ccancel%7B10%7D%2611%26%5Ccancel%7B12%7D%2613%26%5Ccancel%7B14%7D%2615%26%5Ccancel%7B16%7D%5Cend%7Bmatrix%7D&#34; alt=&#34;[公式]&#34;&gt;&lt;/p&gt;
-&lt;p&gt;下一个未被划掉的数是3，它是质数，把3的倍数划掉：&lt;/p&gt;
-&lt;p&gt;&lt;img src=&#34;https://www.zhihu.com/equation?tex=%5Cbegin%7Bmatrix%7D%5Ccolor%7Bblue%7D2%26%5Ccolor%7Bblue%7D3%26%5Ccancel4%265%26%5Ccancel6%267%26%5Ccancel8%26%5Ccancel%7B9%7D%26%5Ccancel%7B10%7D%2611%26%5Ccancel%7B12%7D%2613%26%5Ccancel%7B14%7D%26%5Ccancel%7B15%7D%26%5Ccancel%7B16%7D%5Cend%7Bmatrix%7D&#34; alt=&#34;[公式]&#34;&gt;&lt;/p&gt;
-&lt;p&gt;接下来应该是5，但是5已经超过 &lt;img src=&#34;https://www.zhihu.com/equation?tex=%5Csqrt%7B16%7D&#34; alt=&#34;[公式]&#34;&gt; 了，所以遍历结束，剩下未被划掉的都是素数：&lt;/p&gt;
-&lt;p&gt;&lt;img src=&#34;https://www.zhihu.com/equation?tex=%5Cbegin%7Bmatrix%7D%5Ccolor%7Bblue%7D2%26%5Ccolor%7Bblue%7D3%26%5Ccancel4%26%5Ccolor%7Bblue%7D5%26%5Ccancel6%26%5Ccolor%7Bblue%7D7%26%5Ccancel8%26%5Ccancel%7B9%7D%26%5Ccancel%7B10%7D%26%5Ccolor%7Bblue%7D%7B11%7D%26%5Ccancel%7B12%7D%26%5Ccolor%7Bblue%7D%7B13%7D%26%5Ccancel%7B14%7D%26%5Ccancel%7B15%7D%26%5Ccancel%7B16%7D%5Cend%7Bmatrix%7D&#34; alt=&#34;[公式]&#34;&gt;&lt;/p&gt;
-&lt;p&gt;如何？是不是比一个一个判断快多了？这个过程写成代码就是：&lt;/p&gt;
-&lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
-&lt;table class=&#34;lntable&#34;&gt;&lt;tr&gt;&lt;td class=&#34;lntd&#34;&gt;
-&lt;pre class=&#34;chroma&#34;&gt;&lt;code&gt;&lt;span class=&#34;lnt&#34;&gt;1
-&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;2
-&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;3
-&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;4
-&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;5
-&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;6
-&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;7
-&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;8
-&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
-&lt;td class=&#34;lntd&#34;&gt;
-&lt;pre class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-cpp&#34; data-lang=&#34;cpp&#34;&gt;&lt;span class=&#34;kt&#34;&gt;bool&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;isnp&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;[&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;MAXN&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;];&lt;/span&gt; &lt;span class=&#34;c1&#34;&gt;// is not prime: 不是素数
-&lt;/span&gt;&lt;span class=&#34;c1&#34;&gt;&lt;/span&gt;&lt;span class=&#34;kt&#34;&gt;void&lt;/span&gt; &lt;span class=&#34;nf&#34;&gt;init&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;kt&#34;&gt;int&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;n&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;)&lt;/span&gt;
-&lt;span class=&#34;p&#34;&gt;{&lt;/span&gt;
-    &lt;span class=&#34;k&#34;&gt;for&lt;/span&gt; &lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;kt&#34;&gt;int&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;i&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;mi&#34;&gt;2&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;;&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;i&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;*&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;i&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;&amp;lt;=&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;n&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;;&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;i&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;++&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;)&lt;/span&gt;
-        &lt;span class=&#34;k&#34;&gt;if&lt;/span&gt; &lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;!&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;isnp&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;[&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;i&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;])&lt;/span&gt;
-            &lt;span class=&#34;k&#34;&gt;for&lt;/span&gt; &lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;kt&#34;&gt;int&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;j&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;i&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;*&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;i&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;;&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;j&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;&amp;lt;=&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;n&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;;&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;j&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;+=&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;i&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;)&lt;/span&gt;
-                &lt;span class=&#34;n&#34;&gt;isnp&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;[&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;j&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;]&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;mi&#34;&gt;1&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;;&lt;/span&gt;
-&lt;span class=&#34;p&#34;&gt;}&lt;/span&gt;
-&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
-&lt;/div&gt;
-&lt;/div&gt;&lt;p&gt;代码也很简洁。这个算法的复杂度是 &lt;img src=&#34;https://www.zhihu.com/equation?tex=O%28n%5Clog%5Clog+n%29+&#34; alt=&#34;[公式]&#34;&gt; ，还是非常优秀了。但是我们可能会发现，在筛的过程中我们会重复筛到同一个数，例如12同时被2和3筛到，30同时被2、3和5筛到。所以我们引入&lt;strong&gt;欧拉筛&lt;/strong&gt;，也叫&lt;strong&gt;线性筛&lt;/strong&gt;，可以在 &lt;img src=&#34;https://www.zhihu.com/equation?tex=O%28n%29&#34; alt=&#34;[公式]&#34;&gt; 时间内完成对2~n的筛选。它的核心思想是：&lt;strong&gt;让每一个合数被其最小质因数筛到&lt;/strong&gt;。&lt;/p&gt;
-&lt;hr&gt;
-&lt;p&gt;我们这次除了把2~n列出来，还维护一个&lt;strong&gt;质数表&lt;/strong&gt;：&lt;/p&gt;
-&lt;p&gt;&lt;img src=&#34;https://www.zhihu.com/equation?tex=%5Cbegin%7Bmatrix%7D2%263%264%265%266%267%268%269%2610%2611%2612%2613%2614%2615%2616%5Cend%7Bmatrix%7D+%5C%5C%5Ctext%7Bprimes%3A%7D%5C%3B%28%29&#34; alt=&#34;[公式]&#34;&gt;&lt;/p&gt;
-&lt;p&gt;还是从头到尾遍历，第一个数是2，未被划掉，把它放进质数表：&lt;/p&gt;
-&lt;p&gt;&lt;img src=&#34;https://www.zhihu.com/equation?tex=%5Cbegin%7Bmatrix%7D%5Ccolor%7Bblue%7D2%263%264%265%266%267%268%269%2610%2611%2612%2613%2614%2615%2616%5Cend%7Bmatrix%7D+%5C%5C%5Ctext%7Bprimes%3A%7D%5C%3B%282%2C%29&#34; alt=&#34;[公式]&#34;&gt;&lt;/p&gt;
-&lt;p&gt;然后我们用2去乘质数表里的每个数，划掉它们：&lt;/p&gt;
-&lt;p&gt;&lt;img src=&#34;https://www.zhihu.com/equation?tex=%5Cbegin%7Bmatrix%7D%5Ccolor%7Bblue%7D2%263%26%5Ccancel4%265%266%267%268%269%2610%2611%2612%2613%2614%2615%2616%5Cend%7Bmatrix%7D+%5C%5C%5Ctext%7Bprimes%3A%7D%5C%3B%282%2C%29&#34; alt=&#34;[公式]&#34;&gt;&lt;/p&gt;
-&lt;p&gt;下一个是3，加入质数表，划掉6、9：&lt;/p&gt;
-&lt;p&gt;&lt;img src=&#34;https://www.zhihu.com/equation?tex=%5Cbegin%7Bmatrix%7D%5Ccolor%7Bblue%7D2%26%5Ccolor%7Bblue%7D3%26%5Ccancel4%265%26%5Ccancel6%267%268%26%5Ccancel9%2610%2611%2612%2613%2614%2615%2616%5Cend%7Bmatrix%7D+%5C%5C%5Ctext%7Bprimes%3A%7D%5C%3B%282%2C3%2C%29&#34; alt=&#34;[公式]&#34;&gt;&lt;/p&gt;
-&lt;p&gt;下一个是4（注意这里划掉的数也要遍历，只是不加入质数表），先划掉8，但我们不划掉12，因为12 &lt;img src=&#34;https://www.zhihu.com/equation?tex=%2812%3D2%5Ctimes6%3D3%5Ctimes4%29&#34; alt=&#34;[公式]&#34;&gt; 应该由它的最小质因数2筛掉，而不是3。&lt;/p&gt;
-&lt;p&gt;&lt;img src=&#34;https://www.zhihu.com/equation?tex=%5Cbegin%7Bmatrix%7D%5Ccolor%7Bblue%7D2%26%5Ccolor%7Bblue%7D3%26%5Ccancel4%265%26%5Ccancel6%267%26%5Ccancel8%26%5Ccancel9%2610%2611%2612%2613%2614%2615%2616%5Cend%7Bmatrix%7D+%5C%5C%5Ctext%7Bprimes%3A%7D%5C%3B%282%2C3%2C%29&#34; alt=&#34;[公式]&#34;&gt;&lt;/p&gt;
-&lt;p&gt;实际上，对于 &lt;img src=&#34;https://www.zhihu.com/equation?tex=x&#34; alt=&#34;[公式]&#34;&gt; ，我们遍历到质数表中的 &lt;img src=&#34;https://www.zhihu.com/equation?tex=p&#34; alt=&#34;[公式]&#34;&gt; ，且发现 &lt;img src=&#34;https://www.zhihu.com/equation?tex=p%7Cx&#34; alt=&#34;[公式]&#34;&gt; 时，就应当停止遍历质数表。因为：设 &lt;img src=&#34;https://www.zhihu.com/equation?tex=x%3Dpr%28r%5Cge+p%29&#34; alt=&#34;[公式]&#34;&gt; （ &lt;img src=&#34;https://www.zhihu.com/equation?tex=p&#34; alt=&#34;[公式]&#34;&gt; 本身是 &lt;img src=&#34;https://www.zhihu.com/equation?tex=x&#34; alt=&#34;[公式]&#34;&gt; 的最小质因数），那么对于任意 &lt;img src=&#34;https://www.zhihu.com/equation?tex=p%27%3Ep&#34; alt=&#34;[公式]&#34;&gt; ，有 &lt;img src=&#34;https://www.zhihu.com/equation?tex=p%27x%3Dpp%27r%3Dp%28p%27r%29&#34; alt=&#34;[公式]&#34;&gt; ，说明 &lt;img src=&#34;https://www.zhihu.com/equation?tex=p%27x&#34; alt=&#34;[公式]&#34;&gt; 的最小质因数不是 &lt;img src=&#34;https://www.zhihu.com/equation?tex=p%27&#34; alt=&#34;[公式]&#34;&gt; ，我们不应该在此划掉它。&lt;/p&gt;
-&lt;p&gt;这么说有点抽象，具体地说，如这里的2能被4整除，则 &lt;img src=&#34;https://www.zhihu.com/equation?tex=4%3D2%5Ctimes2&#34; alt=&#34;[公式]&#34;&gt; ，那么对于任何大于2的质数 &lt;img src=&#34;https://www.zhihu.com/equation?tex=p&#34; alt=&#34;[公式]&#34;&gt; ，都有 &lt;img src=&#34;https://www.zhihu.com/equation?tex=4p%3D2%5Ctimes2p&#34; alt=&#34;[公式]&#34;&gt; ，其中2是一个比 &lt;img src=&#34;https://www.zhihu.com/equation?tex=p&#34; alt=&#34;[公式]&#34;&gt; 更小的质数，所以 &lt;img src=&#34;https://www.zhihu.com/equation?tex=4p&#34; alt=&#34;[公式]&#34;&gt; 应该被2筛掉而不是被 &lt;img src=&#34;https://www.zhihu.com/equation?tex=p&#34; alt=&#34;[公式]&#34;&gt; 筛掉。&lt;/p&gt;
-&lt;p&gt;下一个是5，加入质数表，划掉10，15：&lt;/p&gt;
-&lt;p&gt;&lt;img src=&#34;https://www.zhihu.com/equation?tex=%5Cbegin%7Bmatrix%7D%5Ccolor%7Bblue%7D2%26%5Ccolor%7Bblue%7D3%26%5Ccancel4%26%5Ccolor%7Bblue%7D5%26%5Ccancel6%267%26%5Ccancel8%26%5Ccancel9%26%5Ccancel%7B10%7D%2611%2612%2613%2614%26%5Ccancel%7B15%7D%2616%5Cend%7Bmatrix%7D+%5C%5C%5Ctext%7Bprimes%3A%7D%5C%3B%282%2C3%2C5%2C%29&#34; alt=&#34;[公式]&#34;&gt;&lt;/p&gt;
-&lt;p&gt;下一个是6，划掉12，6被2整除，跳过。&lt;/p&gt;
-&lt;p&gt;……&lt;/p&gt;
-&lt;p&gt;按这样的步骤进行下去，可以筛掉所有的合数，并得到一张质数表。&lt;/p&gt;
-&lt;p&gt;&lt;img src=&#34;https://www.zhihu.com/equation?tex=%5Cbegin%7Bmatrix%7D%5Ccolor%7Bblue%7D2%26%5Ccolor%7Bblue%7D3%26%5Ccancel4%26%5Ccolor%7Bblue%7D5%26%5Ccancel6%26%5Ccolor%7Bblue%7D7%26%5Ccancel8%26%5Ccancel9%26%5Ccancel%7B10%7D%26%5Ccolor%7Bblue%7D%7B11%7D%26%5Ccancel%7B12%7D%26%5Ccolor%7Bblue%7D%7B13%7D%26%5Ccancel%7B14%7D%26%5Ccancel%7B15%7D%26%5Ccancel%7B16%7D%5Cend%7Bmatrix%7D+%5C%5C%5Ctext%7Bprimes%3A%7D%5C%3B%282%2C3%2C5%2C7%2C11%2C13%29&#34; alt=&#34;[公式]&#34;&gt;&lt;/p&gt;
-&lt;p&gt;我们可以保证每个合数都被筛过，设任意合数 &lt;img src=&#34;https://www.zhihu.com/equation?tex=x%3Dpr%28r%5Cge+p%29&#34; alt=&#34;[公式]&#34;&gt; ，其中 &lt;img src=&#34;https://www.zhihu.com/equation?tex=p&#34; alt=&#34;[公式]&#34;&gt; 是 &lt;img src=&#34;https://www.zhihu.com/equation?tex=x&#34; alt=&#34;[公式]&#34;&gt; 的最小质因数，又设 &lt;img src=&#34;https://www.zhihu.com/equation?tex=r%3Dp%27r%27%28r%27%5Cge+p%27%29&#34; alt=&#34;[公式]&#34;&gt; ， &lt;img src=&#34;https://www.zhihu.com/equation?tex=p%27&#34; alt=&#34;[公式]&#34;&gt; 是 &lt;img src=&#34;https://www.zhihu.com/equation?tex=r&#34; alt=&#34;[公式]&#34;&gt; 的最小质因数。在处理 &lt;img src=&#34;https://www.zhihu.com/equation?tex=r&#34; alt=&#34;[公式]&#34;&gt; 时，要遍历质数表，直到遇到 &lt;img src=&#34;https://www.zhihu.com/equation?tex=p%27&#34; alt=&#34;[公式]&#34;&gt; 时才结束，所以任意小于等于 &lt;img src=&#34;https://www.zhihu.com/equation?tex=p%27&#34; alt=&#34;[公式]&#34;&gt; 的质数与 &lt;img src=&#34;https://www.zhihu.com/equation?tex=r&#34; alt=&#34;[公式]&#34;&gt; 的乘积，都会在此时被筛掉。&lt;/p&gt;
-&lt;p&gt;而由于一定有 &lt;img src=&#34;https://www.zhihu.com/equation?tex=p%5Cle+p%27&#34; alt=&#34;[公式]&#34;&gt; （因为 &lt;img src=&#34;https://www.zhihu.com/equation?tex=x&#34; alt=&#34;[公式]&#34;&gt; 的最小质因数是 &lt;img src=&#34;https://www.zhihu.com/equation?tex=p&#34; alt=&#34;[公式]&#34;&gt; ，而不是 &lt;img src=&#34;https://www.zhihu.com/equation?tex=p%27&#34; alt=&#34;[公式]&#34;&gt; ），所以在处理到 &lt;img src=&#34;https://www.zhihu.com/equation?tex=r&#34; alt=&#34;[公式]&#34;&gt; 时， &lt;img src=&#34;https://www.zhihu.com/equation?tex=rp&#34; alt=&#34;[公式]&#34;&gt; 一定会被筛到。&lt;/p&gt;
-&lt;p&gt;代码如下（C++11风格）：&lt;/p&gt;
-&lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
-&lt;table class=&#34;lntable&#34;&gt;&lt;tr&gt;&lt;td class=&#34;lntd&#34;&gt;
-&lt;pre class=&#34;chroma&#34;&gt;&lt;code&gt;&lt;span class=&#34;lnt&#34;&gt; 1
-&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 2
-&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 3
-&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 4
-&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 5
-&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 6
-&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 7
-&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 8
-&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 9
-&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;10
-&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;11
-&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;12
-&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;13
-&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;14
-&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;15
-&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;16
-&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;17
-&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;18
-&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
-&lt;td class=&#34;lntd&#34;&gt;
-&lt;pre class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-cpp&#34; data-lang=&#34;cpp&#34;&gt;&lt;span class=&#34;kt&#34;&gt;bool&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;isnp&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;[&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;MAXN&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;];&lt;/span&gt;
-&lt;span class=&#34;n&#34;&gt;vector&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;&amp;lt;&lt;/span&gt;&lt;span class=&#34;kt&#34;&gt;int&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;&amp;gt;&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;primes&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;;&lt;/span&gt; &lt;span class=&#34;c1&#34;&gt;// 质数表
-&lt;/span&gt;&lt;span class=&#34;c1&#34;&gt;&lt;/span&gt;&lt;span class=&#34;kt&#34;&gt;void&lt;/span&gt; &lt;span class=&#34;nf&#34;&gt;init&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;kt&#34;&gt;int&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;n&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;)&lt;/span&gt;
-&lt;span class=&#34;p&#34;&gt;{&lt;/span&gt;
-    &lt;span class=&#34;k&#34;&gt;for&lt;/span&gt; &lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;kt&#34;&gt;int&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;i&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;mi&#34;&gt;2&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;;&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;i&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;&amp;lt;=&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;n&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;;&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;i&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;++&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;)&lt;/span&gt;
-    &lt;span class=&#34;p&#34;&gt;{&lt;/span&gt;
-        &lt;span class=&#34;k&#34;&gt;if&lt;/span&gt; &lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;!&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;isnp&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;[&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;i&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;])&lt;/span&gt;
-            &lt;span class=&#34;n&#34;&gt;primes&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;push_back&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;i&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;);&lt;/span&gt;
-        &lt;span class=&#34;k&#34;&gt;for&lt;/span&gt; &lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;kt&#34;&gt;int&lt;/span&gt; &lt;span class=&#34;nl&#34;&gt;p&lt;/span&gt; &lt;span class=&#34;p&#34;&gt;:&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;primes&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;)&lt;/span&gt;
-        &lt;span class=&#34;p&#34;&gt;{&lt;/span&gt;
-            &lt;span class=&#34;k&#34;&gt;if&lt;/span&gt; &lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;p&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;*&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;i&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;&amp;gt;&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;n&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;)&lt;/span&gt;
-                &lt;span class=&#34;k&#34;&gt;break&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;;&lt;/span&gt;
-            &lt;span class=&#34;n&#34;&gt;isnp&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;[&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;p&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;*&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;i&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;]&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;mi&#34;&gt;1&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;;&lt;/span&gt;
-            &lt;span class=&#34;k&#34;&gt;if&lt;/span&gt; &lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;i&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;%&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;p&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;==&lt;/span&gt; &lt;span class=&#34;mi&#34;&gt;0&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;)&lt;/span&gt;
-                &lt;span class=&#34;k&#34;&gt;break&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;;&lt;/span&gt;
-        &lt;span class=&#34;p&#34;&gt;}&lt;/span&gt;
-    &lt;span class=&#34;p&#34;&gt;}&lt;/span&gt;
-&lt;span class=&#34;p&#34;&gt;}&lt;/span&gt;
-&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
-&lt;/div&gt;
-&lt;/div&gt;&lt;p&gt;注意判断越界那里最好使用乘法而不是除法，一般不会溢出，计算机算除法比乘法要慢得多。&lt;/p&gt;
-&lt;p&gt;欧拉筛除了解决一些卡埃氏筛的毒瘤题（比如&lt;a href=&#34;https://link.zhihu.com/?target=https%3A//www.luogu.com.cn/problem/P3383&#34;&gt;洛谷P3383&lt;/a&gt;，线性筛模板）外，在后续一些数论算法中还有更多的应用。&lt;/p&gt;
-&lt;hr&gt;
-&lt;p&gt;最后附上一张动态演示图&lt;/p&gt;
-&lt;p&gt;&lt;img src=&#34;https://img2020.cnblogs.com/blog/1849509/202005/1849509-20200508212424569-398056644.gif&#34; alt=&#34;&#34;&gt;&lt;/p&gt;
-</content>
-            
-            
-            
-            
-            
-                
-                    
-                
-                    
-                        
-                            
-                            
-                            
-                                <category scheme="https://www.riotian.com/tags/%E6%95%B0%E8%AE%BA/" term="数论" label="数论" />
-                            
-                        
-                    
-                
-            
-        </entry>
-    
-        <entry>
             <title type="text">拓扑排序</title>
             <link rel="alternate" type="text/html" href="https://www.riotian.com/tech/%E6%8B%93%E6%89%91%E6%8E%92%E5%BA%8F/" />
             <id>https://www.riotian.com/tech/%E6%8B%93%E6%89%91%E6%8E%92%E5%BA%8F/</id>
-            <updated>2020-10-25T06:32:56&#43;00:00</updated>
+            <updated>2020-10-25T10:35:27&#43;00:00</updated>
             <published>2020-04-05T14:40:44&#43;08:00</published>
             <author>
                     <name>RioTian</name>
@@ -18776,7 +18639,7 @@ else
             <title type="text">图的存储</title>
             <link rel="alternate" type="text/html" href="https://www.riotian.com/tech/%E5%9B%BE%E7%9A%84%E5%AD%98%E5%82%A8/" />
             <id>https://www.riotian.com/tech/%E5%9B%BE%E7%9A%84%E5%AD%98%E5%82%A8/</id>
-            <updated>2020-10-25T06:32:56&#43;00:00</updated>
+            <updated>2020-10-25T10:35:27&#43;00:00</updated>
             <published>2020-04-02T14:39:07&#43;08:00</published>
             <author>
                     <name>RioTian</name>
@@ -19229,7 +19092,7 @@ else
             <title type="text">最短路算法</title>
             <link rel="alternate" type="text/html" href="https://www.riotian.com/tech/%E6%9C%80%E7%9F%AD%E8%B7%AF%E7%AE%97%E6%B3%95/" />
             <id>https://www.riotian.com/tech/%E6%9C%80%E7%9F%AD%E8%B7%AF%E7%AE%97%E6%B3%95/</id>
-            <updated>2020-10-25T06:32:56&#43;00:00</updated>
+            <updated>2020-10-25T10:35:27&#43;00:00</updated>
             <published>2020-04-02T14:38:16&#43;08:00</published>
             <author>
                     <name>RioTian</name>
