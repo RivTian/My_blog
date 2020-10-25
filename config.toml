@@ -1367,3 +1367,18 @@ uglyURLs = false
     fofVideoWebm = ""
     fofVideoMp4 = ""
     # 说明：视频地址可留空（""）
+
+    ######################################
+    #  Front Matter说明
+    # slug      文章url     String
+    # toc       目录        Boolean
+    # gitinfo   文章Git信息  Boolean
+    # dropCap   首字下沉     Boolean
+    # displayCopyright 版权信息 Boolean
+    # align     位置        'center' ['normal', 'justify', 'center']
+    # comments  评论        Boolean
+    # badge     更新日期     Boolean
+    # meta      文章信息     Boolean
+    # indent    首行缩进     Boolean
+    # share     文章分享     Boolean
+    # tocNum    目录是否显示数字  Boolean
