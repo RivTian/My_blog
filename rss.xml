@@ -23,7 +23,7 @@
         
             <copyright>[CC BY-NC-SA 4.0](https://creativecommons.org/licenses/by-nc-sa/4.0/deed.zh)</copyright>
         
-        <lastBuildDate>Sun, 25 Oct 2020 11:30:10 &#43;0000</lastBuildDate>
+        <lastBuildDate>Sun, 25 Oct 2020 12:30:56 &#43;0000</lastBuildDate>
         
             <atom:link rel="self" type="application/rss&#43;xml" href="https://www.riotian.com/rss.xml" />
         
@@ -639,7 +639,11 @@ summary: 本文介绍如何基于hugo搭建自己的个人blog，包括blog的�
 &lt;/code&gt;&lt;/pre&gt;&lt;p&gt;可以看到front matter使用toml，支持字典与数组来描述各个属性。具体的写法也很好理解，没必要啰嗦了。&lt;/p&gt;
 &lt;h3 id=&#34;使用hugo-new命令创建blog内容模板&#34;&gt;使用hugo new命令创建blog内容模板&lt;/h3&gt;
 &lt;p&gt;如果每次创建都需要啰哩啰嗦写一些通用头比较麻烦，因此hugo给我们提供了一个&lt;code&gt;hugo new XXX&lt;/code&gt;的命令，通过这个命令，可以生成一个包含front matter的md文件，至此我们就可以打开自己喜欢的markdown编辑器，开心的写blog了！&lt;/p&gt;
-&lt;hr&gt;
+&lt;p&gt;如果遇到使用gitinfo无法显示git信息的时候请使用&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;git config --global core.quotePath false
+&lt;/code&gt;&lt;/pre&gt;&lt;p&gt;或者&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;git config --global core.precomposeunicode true
+&lt;/code&gt;&lt;/pre&gt;&lt;hr&gt;
 &lt;section class=&#34;footnotes&#34; role=&#34;doc-endnotes&#34;&gt;
 &lt;hr&gt;
 &lt;ol&gt;
