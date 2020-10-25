@@ -23,7 +23,7 @@
         
             <copyright>[CC BY-NC-SA 4.0](https://creativecommons.org/licenses/by-nc-sa/4.0/deed.zh)</copyright>
         
-        <lastBuildDate>Sun, 25 Oct 2020 11:16:28 &#43;0000</lastBuildDate>
+        <lastBuildDate>Sun, 25 Oct 2020 11:30:10 &#43;0000</lastBuildDate>
         
             <atom:link rel="self" type="application/rss&#43;xml" href="https://www.riotian.com/rss.xml" />
         
@@ -18931,7 +18931,7 @@ else
                 <copyright>[CC BY-NC-SA 4.0](https://creativecommons.org/licenses/by-nc-sa/4.0/deed.zh)</copyright>
                 
                     <description>&lt;h2 id=&#34;定义&#34;&gt;定义&lt;/h2&gt;
-&lt;p&gt;（还记得这些定义吗？如果对 &lt;a href=&#34;https://zh.wikipedia.org/zh-hans/%E5%9B%BE%E8%AE%BA&#34;&gt;图的概念 &lt;/a&gt;和 &lt;a href=&#34;./%E5%9B%BE%E7%9A%84%E5%AD%98%E5%82%A8.md&#34;&gt;存储&lt;/a&gt; 不了解请点击链接）&lt;/p&gt;
+&lt;p&gt;（还记得这些定义吗？如果对 &lt;a href=&#34;https://zh.wikipedia.org/zh-hans/%E5%9B%BE%E8%AE%BA&#34;&gt;图的概念 &lt;/a&gt;和 &lt;a href=&#34;.../%E5%9B%BE%E7%9A%84%E5%AD%98%E5%82%A8.md&#34;&gt;存储&lt;/a&gt; 不了解请点击链接）&lt;/p&gt;
 &lt;ul&gt;
 &lt;li&gt;路径&lt;/li&gt;
 &lt;li&gt;最短路&lt;/li&gt;
