@@ -4,7 +4,6 @@ date: {{ .Date }}
 draft: false
 tags:
   - 
-topics:
-  - 
+gitinfo: true
 ---
 

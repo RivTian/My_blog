@@ -5,10 +5,7 @@ draft: false
 tags:
   - hugo
   - blog
-topics:
-  - blog
-  - hugo
-  - personal
+gitinfo: true
 ---
 
 > 感谢OI wiki对本文的帮助[^1] 
