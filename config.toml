@@ -35,7 +35,7 @@ footnoteReturnLinkContents = "↩"
 enableGitInfo = true
 
 # 是否生成 robots.txt 文件
-enableRobotsTXT = true
+enableRobotsTXT = false
 
 # 每一分页的文章数（仅对「文章摘要」首页布局有效）
 paginate = 6
@@ -191,14 +191,21 @@ uglyURLs = false
     #    weight = 2
     #    pre = "internal"
     #    post = "archive"
-    
-    
+    #[[menu.main]]
+    #    url = "/archives/"
+    #    name = "归档"
+    #    weight = 4
+    #    pre = "internal"
+    #   post = "archive"
+    ##[[menu.main]]
+    #    url = "/categories/"
+    #    name = "分类"
+    #    weight = 5
+    #    pre = "internal"
+    #    post = "th"
 
 
-    # [[menu.main]]
-    #     weight = 8
-    #     identifier = "search"
-    #     post = "search"
+    
     [[menu.main]]
         url = "/life/"
         name = "生活"
@@ -212,58 +219,66 @@ uglyURLs = false
         weight = 3
         pre = "internal"
     #    post = "wpexplorer"
-        identifier = "tech"
-    
-    [[menu.main]]
-        url = "/archives/"
-        name = "归档"
-        weight = 4
-        pre = "internal"
-    #   post = "archive"
-
-    [[menu.main]]
-        url = "/categories/"
-        name = "分类"
-        weight = 5
-        pre = "internal"
-    #    post = "th"
+        identifier = "tech" 
     
     [[menu.main]]
         url = "/tags/"
         name = "标签"
-        weight = 6
+        weight = 4
         pre = "internal"
     #    post = "tags"
 
     [[menu.main]]
         url = "/about/"
         name = "关于"
-        weight = 7
+        weight = 5
         pre = "internal"
     #    post = "user-circle"
         identifier = "about"
 
     [[menu.main]]
-        weight = 8
+        weight = 6
         identifier = "theme-switcher"
+
+    [[menu.main]]
+        weight = 8
+        identifier = "search"
+        post = "search"
+    
     #[[menu.main]]
     #    weight = 8
     #    identifier = "lang-switcher"
 
+    ## 社交栏
+    #[[menu.socials]]
+    #    url = "https://github.com/RivTian"
+    #    name = "GitHub"
+    #    weight = 1
+    #    pre = "external"
+    #[[menu.socials]]
+    #    url = "https://t.me/#"
+    #    name = "Telegram"
+    #    weight = 2
+    #    pre = "external"
+    #[[menu.socials]]
+    #    url = "https://twitter.com/shirahasaigao"
+    #    name = "Twitter"
+    #    weight = 3
+    #    pre = "external"
 
     ## 首页的底部链接
-    # [[menu.home]]
-    #     url = "/life/"
-    #     weight = 1
-    #     pre = "internal"
+    [[menu.home]]
+         url = "/life/"
+         weight = 1
+         pre = "internal"
     #     post = "grav"
-    #     identifier = "life"
-    # [[menu.home]]
-    #     url = "/tech/"
-    #     weight = 2
-    #     pre = "internal"
+         identifier = "life"
+    [[menu.home]]
+         url = "/tech/"
+         weight = 2
+         pre = "internal"
     #     post = "wpexplorer"
-    #     identifier = "tech"
+         identifier = "tech"
     # [[menu.home]]
     #     url = "/about/"
     #     weight = 3
@@ -374,12 +389,12 @@ uglyURLs = false
     # 说明：用于 JSON-LD、Open Graph
 
     # 站点的描述
-    siteDescription = "MemE 是一个强大且可高度定制的 GoHugo 博客主题，专为个人博客设计。"
+    siteDescription = "RioTianの小窝，一个让人放松的地方"
     # 说明：用于 HTML 的头部元数据、JSON-LD、
     #      Open Graph、Atom、RSS
 
     # 站点的创建时间
-    siteCreatedTime = "2020-01-01T20:17:43+00:00"
+    siteCreatedTime = "2020-10-20T20:17:43+00:00"
     # 注意：请保持此格式，更改数字
 
     # 站点的推特帐号
@@ -1084,7 +1099,7 @@ uglyURLs = false
     # 仓库地址
     repoURL = "https://github.com/RivTian/My_blog"
     # 编辑地址
-    repoEditURL = "https://github.com/RivTian/My_blog/blob/gh-pages"
+    repoEditURL = "https://github.com/RivTian/My_blog/blob/develop"
 
     # Git 的图标
     gitIcon = "code-branch"
@@ -1186,7 +1201,7 @@ uglyURLs = false
 
     # 是否开启
     enableMinimalFooter = true
-    enableVerticalBarStructure = false
+    enableVerticalBarStructure = true
     # 说明：如果开启此项，显示在右边的部类或分区
     #      将会包含全部的第一级部类或分区，并且
     #      以竖线（|）分隔开来。
