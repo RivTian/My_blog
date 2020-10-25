@@ -191,36 +191,9 @@ uglyURLs = false
     #    weight = 2
     #    pre = "internal"
     #    post = "archive"
-    [[menu.main]]
-        url = "/archives/"
-        name = "归档"
-        weight = 4
-        pre = "internal"
-    #   post = "archive"
-    ##[[menu.main]]
-    #    url = "/categories/"
-    #    name = "分类"
-    #    weight = 5
-    #    pre = "internal"
-    #    post = "th"
-    ##[[menu.main]]
-    #    url = "/tags/"
-    #    name = "标签"
-    #    weight = 5
-    #    pre = "internal"
-    #    post = "tags"
-    #[[menu.main]]
-    #    url = "/about/"
-    #    name = "关于"
-    #    weight = 6
-    #    pre = "internal"
-    #    post = "user-circle"
-    #[[menu.main]]
-    #    weight = 7
-    #    identifier = "theme-switcher"
-    #[[menu.main]]
-    #    weight = 8
-    #    identifier = "lang-switcher"
+    
+    
+
 
     # [[menu.main]]
     #     weight = 8
@@ -240,20 +213,42 @@ uglyURLs = false
         pre = "internal"
     #    post = "wpexplorer"
         identifier = "tech"
+    
+    [[menu.main]]
+        url = "/archives/"
+        name = "归档"
+        weight = 4
+        pre = "internal"
+    #   post = "archive"
+
+    [[menu.main]]
+        url = "/categories/"
+        name = "分类"
+        weight = 5
+        pre = "internal"
+    #    post = "th"
+    
+    [[menu.main]]
+        url = "/tags/"
+        name = "标签"
+        weight = 6
+        pre = "internal"
+    #    post = "tags"
+
     [[menu.main]]
         url = "/about/"
         name = "关于"
-        weight = 6
+        weight = 7
         pre = "internal"
     #    post = "user-circle"
         identifier = "about"
 
     [[menu.main]]
-        weight = 6
+        weight = 8
         identifier = "theme-switcher"
-    [[menu.main]]
-        weight = 7
-        identifier = "lang-switcher"
+    #[[menu.main]]
+    #    weight = 8
+    #    identifier = "lang-switcher"
 
 
     ## 首页的底部链接
@@ -764,7 +759,7 @@ uglyURLs = false
     publishedDateIcon = "calendar-alt"
 
     # 是否显示修改时间
-    displayModifiedDate = true
+    displayModifiedDate = false
     # 修改时间的图标
     modifiedDateIcon = "calendar-check"
 
@@ -1065,7 +1060,7 @@ uglyURLs = false
     enablePostUpdatedBadge = false
 
     # 是否显示（全局设置）
-    displayUpdatedBadge = true
+    displayUpdatedBadge = false
     # 说明：文章的 Front Matter 中的 `badge`
     #      的优先级高于此处
 
@@ -1082,14 +1077,14 @@ uglyURLs = false
     enablePostGitInfo = true
 
     # 是否显示（全局设置）
-    displayPostGitInfo = false
+    displayPostGitInfo = true
     # 说明：文章的 Front Matter 中的 `gitinfo`
     #      的优先级高于此处
 
     # 仓库地址
     repoURL = "https://github.com/RivTian/My_blog"
     # 编辑地址
-    repoEditURL = "https://github.com/RivTian/My_blog/blob/develop"
+    repoEditURL = "https://github.com/RivTian/My_blog/blob/gh-pages"
 
     # Git 的图标
     gitIcon = "code-branch"
@@ -1163,7 +1158,7 @@ uglyURLs = false
     # 文章的标签
 
     # 是否开启
-    enablePostTags = true
+    enablePostTags = false
 
     # 标签的图标
     postTagsIcon = "tag"
