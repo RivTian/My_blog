@@ -12,7 +12,6 @@ gitinfo: true
 >
 > 脚注测试
 >
-> demo
 
 分割线测试
 
