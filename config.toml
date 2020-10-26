@@ -35,10 +35,10 @@ footnoteReturnLinkContents = "↩"
 enableGitInfo = true
 
 # 是否生成 robots.txt 文件
-enableRobotsTXT = true
+enableRobotsTXT = false
 
 # 每一分页的文章数（仅对「文章摘要」首页布局有效）
-paginate = 6
+paginate = 5
 
 # URL 相关
 disablePathToLower = false
@@ -207,6 +207,13 @@ uglyURLs = false
 
     
     [[menu.main]]
+        url = "https://riotian.gitee.io/"
+        name = "主页"
+        weight = 2
+        pre = "external"
+    #    post = "grav"
+        identifier = "主页"
+    [[menu.main]]
         url = "/life/"
         name = "生活"
         weight = 2
@@ -364,7 +371,7 @@ uglyURLs = false
 
     ## 「诗意人生」
     # 诗句，支持 Markdown
-    homePoetry = ["你是一个什么样的人，就会听到什么样的歌","看到什么样的文，写出什么样的字，遇到什么样的人","你能听到治愈的歌，看到温暖的文，写着倔强的字，遇到正好的人","你会相信那些信念，温暖，梦想和坚持这些早就老掉牙的字眼；是因为你就是这样的人"]
+    homePoetry = ["你是一个什么样的人，就会听到什么样的歌","看到什么样的文，写出什么样的字，遇到什么样的人","你能听到治愈的歌，看到温暖的文，写着倔强的字，遇到正好的人","你会相信那些信念，温暖，梦想和坚持这些早就老掉牙的字眼","因为你就是这样的人"]
     # 底部链接的内间距，单位：em
     homeLinksPadding = 1
 
