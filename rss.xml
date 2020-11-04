@@ -23,7 +23,7 @@
         
             <copyright>[CC BY-NC-SA 4.0](https://creativecommons.org/licenses/by-nc-sa/4.0/deed.zh)</copyright>
         
-        <lastBuildDate>Wed, 04 Nov 2020 13:49:50 &#43;0000</lastBuildDate>
+        <lastBuildDate>Wed, 04 Nov 2020 13:58:32 &#43;0000</lastBuildDate>
         
             <atom:link rel="self" type="application/rss&#43;xml" href="https://www.riotian.com/rss.xml" />
         
@@ -38,7 +38,7 @@
                 
                 <copyright>[CC BY-NC-SA 4.0](https://creativecommons.org/licenses/by-nc-sa/4.0/deed.zh)</copyright>
                 
-                    <description>&lt;p&gt;&lt;strong&gt;Pollard-Rho&lt;/strong&gt; 是一个很神奇的算法，用于在 $O(n^{\frac{1}4}) $的期望时间复杂度内计算合数 n 的某个非平凡因子（除了1和它本身以外能整除它的数）。事书上给出的复杂度是 $O(\sqrt{p})$ ， p 是 n 的某个最小因子，满足 p 与 n/p 互质。虽然是随机的，但 Pollard &lt;strong&gt;RhoPollard Rho&lt;/strong&gt; 算法在实际环境中运行的相当不错，不会被卡。&lt;/p&gt;
+                    <description>&lt;p&gt;&lt;strong&gt;Pollard-Rho&lt;/strong&gt; 是一个很神奇的算法，用于在 $O(n^{\frac{1}4}) $的期望时间复杂度内计算合数 n 的某个非平凡因子（除了1和它本身以外能整除它的数）。事书上给出的复杂度是 $O(\sqrt{p})$ ， p 是 n 的某个最小因子，满足 p 与 n/p 互质。虽然是随机的，但 &lt;strong&gt;Pollard Rho&lt;/strong&gt; 算法在实际环境中运行的相当不错，不会被卡。&lt;/p&gt;
 &lt;blockquote&gt;
 &lt;p&gt;简单来说：&lt;strong&gt;Pollard-Rho算法&lt;/strong&gt;是 &lt;strong&gt;John Pollard&lt;/strong&gt;发明的一种能 &lt;u&gt;快速找到大整数的一个非1、非自身的因子&lt;/u&gt; 的算法。&lt;/p&gt;
 &lt;/blockquote&gt;
