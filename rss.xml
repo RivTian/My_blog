@@ -10,7 +10,7 @@
         <title>RioTianの小窝</title>
         <link>https://www.riotian.com/</link>
         <description>RioTianの小窝，一个让人放松的地方</description>
-        <generator>Hugo 0.78.0 https://gohugo.io/</generator>
+        <generator>Hugo 0.78.1 https://gohugo.io/</generator>
         
             <language>zh-CN</language>
         
@@ -23,7 +23,7 @@
         
             <copyright>[CC BY-NC-SA 4.0](https://creativecommons.org/licenses/by-nc-sa/4.0/deed.zh)</copyright>
         
-        <lastBuildDate>Thu, 05 Nov 2020 11:13:56 &#43;0000</lastBuildDate>
+        <lastBuildDate>Thu, 05 Nov 2020 15:10:01 &#43;0000</lastBuildDate>
         
             <atom:link rel="self" type="application/rss&#43;xml" href="https://www.riotian.com/rss.xml" />
         
@@ -38,8 +38,9 @@
                 
                 <copyright>[CC BY-NC-SA 4.0](https://creativecommons.org/licenses/by-nc-sa/4.0/deed.zh)</copyright>
                 
-                    <description>&lt;h2 id=&#34;引言&#34;&gt;引言&lt;/h2&gt;
+                    <description>&lt;blockquote&gt;
 &lt;p&gt;尽管目前使用的VS code可以使用插件一键构建和运行程序，但GDB作为调试利器，还是值得花时间去学习的。&lt;/p&gt;
+&lt;/blockquote&gt;
 &lt;p&gt;&lt;strong&gt;概述&lt;/strong&gt;&lt;/p&gt;
 &lt;p&gt;&lt;strong&gt;GDB(GNU Debugger)&lt;/strong&gt; 是一个由GNU开源组织发布的、UNIX/LINUX操作系统下的、基于命令行的、功能强大的程序调试工具。&lt;/p&gt;
 &lt;p&gt;参考: &lt;a href=&#34;https://linuxtools-rst.readthedocs.io/zh_CN/latest/tool/gdb.html&#34;&gt;gdb调试利器&lt;/a&gt;&lt;/p&gt;
@@ -165,7 +166,9 @@ b hello.cpp:2017
 &lt;/ul&gt;
 &lt;p&gt;例：&lt;/p&gt;
 &lt;pre&gt;&lt;code&gt;l 1,30  // 从第0行显示到第30行的内容
-&lt;/code&gt;&lt;/pre&gt;</description>
+&lt;/code&gt;&lt;/pre&gt;&lt;hr&gt;
+&lt;p&gt;关于GDB调试的相关文章：https://www.cnblogs.com/acceptedzhs/p/13161213.html&lt;/p&gt;
+</description>
                 
                 
                 
