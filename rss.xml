@@ -23,10 +23,175 @@
         
             <copyright>[CC BY-NC-SA 4.0](https://creativecommons.org/licenses/by-nc-sa/4.0/deed.zh)</copyright>
         
-        <lastBuildDate>Wed, 04 Nov 2020 15:13:23 &#43;0000</lastBuildDate>
+        <lastBuildDate>Thu, 05 Nov 2020 11:13:56 &#43;0000</lastBuildDate>
         
             <atom:link rel="self" type="application/rss&#43;xml" href="https://www.riotian.com/rss.xml" />
         
+        
+            <item>
+                <title>GDB调试基础使用方法</title>
+                <link>https://www.riotian.com/tech/gdb%E8%B0%83%E8%AF%95%E5%9F%BA%E7%A1%80%E4%BD%BF%E7%94%A8%E6%96%B9%E6%B3%95/</link>
+                <guid isPermaLink="true">https://www.riotian.com/tech/gdb%E8%B0%83%E8%AF%95%E5%9F%BA%E7%A1%80%E4%BD%BF%E7%94%A8%E6%96%B9%E6%B3%95/</guid>
+                <pubDate>Thu, 05 Nov 2020 12:50:32 &#43;0800</pubDate>
+                
+                    <author>kannajiahe@gmail.com (RioTian)</author>
+                
+                <copyright>[CC BY-NC-SA 4.0](https://creativecommons.org/licenses/by-nc-sa/4.0/deed.zh)</copyright>
+                
+                    <description>&lt;h2 id=&#34;引言&#34;&gt;引言&lt;/h2&gt;
+&lt;p&gt;尽管目前使用的VS code可以使用插件一键构建和运行程序，但GDB作为调试利器，还是值得花时间去学习的。&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;概述&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;GDB(GNU Debugger)&lt;/strong&gt; 是一个由GNU开源组织发布的、UNIX/LINUX操作系统下的、基于命令行的、功能强大的程序调试工具。&lt;/p&gt;
+&lt;p&gt;参考: &lt;a href=&#34;https://linuxtools-rst.readthedocs.io/zh_CN/latest/tool/gdb.html&#34;&gt;gdb调试利器&lt;/a&gt;&lt;/p&gt;
+&lt;h2 id=&#34;进入gdb环境调试&#34;&gt;进入GDB环境调试&lt;/h2&gt;
+&lt;h3 id=&#34;加载编译选项-g&#34;&gt;加载编译选项” –g”&lt;/h3&gt;
+&lt;p&gt;以便在GDB调试环境中能够显示出具体的错误位置。&lt;/p&gt;
+&lt;p&gt;例：&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;g++ filename.cpp –g –o filename
+&lt;/code&gt;&lt;/pre&gt;&lt;p&gt;在cmake编译中，可以通过可选项 &lt;code&gt;-DCMAKE_VERBOSE_MAKEFILE=1&lt;/code&gt; ,具体显示编译过程，保证-g选项在编译过程中使用。&lt;/p&gt;
+&lt;h3 id=&#34;加载可执行文件到gdb中&#34;&gt;加载可执行文件到GDB中&lt;/h3&gt;
+&lt;p&gt;在执行文件所在文件夹里，使用 &lt;code&gt;gdb&lt;/code&gt; 命令进入到GDB调试环境中。之后使用 &lt;code&gt;file filename&lt;/code&gt;
+或者使用 &lt;code&gt;gdb filename&lt;/code&gt; （filename可执行文件名）。&lt;/p&gt;
+&lt;h3 id=&#34;对执行文件进行输入参数的设置&#34;&gt;对执行文件进行输入参数的设置&lt;/h3&gt;
+&lt;p&gt;使用命令 &lt;code&gt;set args parameter&lt;/code&gt; (parameter为输入的参数)，加载运行所需的参数。通过 &lt;code&gt;show args&lt;/code&gt; 查看加载参数的情况。&lt;/p&gt;
+&lt;p&gt;例：&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;set args /home/hello.png 2016 12
+&lt;/code&gt;&lt;/pre&gt;&lt;p&gt;使用’show args’后:&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;/home/hello.png 2016 12
+&lt;/code&gt;&lt;/pre&gt;&lt;h3 id=&#34;gdb内使用make&#34;&gt;GDB内使用make&lt;/h3&gt;
+&lt;p&gt;外部文件有修改的情况下，直接在GDB环境中使用“make”进行编译。&lt;/p&gt;
+&lt;h3 id=&#34;文件执行&#34;&gt;文件执行&lt;/h3&gt;
+&lt;p&gt;使用 &lt;code&gt;r&lt;/code&gt; 即可对文件进行执行。&lt;/p&gt;
+&lt;h3 id=&#34;退出gdb调试环境&#34;&gt;退出GDB调试环境&lt;/h3&gt;
+&lt;p&gt;使用 &lt;code&gt;q&lt;/code&gt; 退出调试环境。&lt;/p&gt;
+&lt;h2 id=&#34;断点设置&#34;&gt;断点设置&lt;/h2&gt;
+&lt;h3 id=&#34;断点设置的方法&#34;&gt;断点设置的方法&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;使用行号：&lt;code&gt;b linenumber&lt;/code&gt; 例：“b 2017”&lt;/li&gt;
+&lt;li&gt;使用函数名 &lt;code&gt;b function&lt;/code&gt; 例：“b hello”&lt;/li&gt;
+&lt;li&gt;使用地址 &lt;code&gt;b *address&lt;/code&gt; 例：“b *0x404”&lt;/li&gt;
+&lt;/ul&gt;
+&lt;blockquote&gt;
+&lt;p&gt;若在不同文件上打断点，在行号或函数名前加上文件名和冒号“filename:”。&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;例：&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;b hello.cpp:hello 
+b hello.cpp:2017
+&lt;/code&gt;&lt;/pre&gt;&lt;h3 id=&#34;条件断点&#34;&gt;条件断点&lt;/h3&gt;
+&lt;p&gt;在1小点方法后面加入条件，断点在条件成立时起停止作用。&lt;/p&gt;
+&lt;p&gt;例:&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;b 12 if x &amp;gt; y  // 在x &amp;gt; y情况下，断点起作用。
+&lt;/code&gt;&lt;/pre&gt;&lt;h3 id=&#34;断点条件更改&#34;&gt;断点条件更改&lt;/h3&gt;
+&lt;p&gt;将指定断点号的条件进行修改:&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;condition breakpointnumber expression
+&lt;/code&gt;&lt;/pre&gt;&lt;p&gt;例：&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;condition 12 if x = y
+&lt;/code&gt;&lt;/pre&gt;&lt;blockquote&gt;
+&lt;p&gt;&lt;code&gt;condition breakpointnumber&lt;/code&gt; 停止使用条件，断点不受条件限制使用。&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;例：&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;condition 12
+&lt;/code&gt;&lt;/pre&gt;&lt;h3 id=&#34;断点信息查看&#34;&gt;断点信息查看&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;查看所有的断点信息: &lt;code&gt;info b&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;查看指定断点号断点信息: &lt;code&gt;info b number&lt;/code&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3 id=&#34;断点的使能&#34;&gt;断点的使能&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;停止该号断点。但未删除: &lt;code&gt;dis breakpointnumber&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;使能改号断点: &lt;code&gt;enable breakpointnumber&lt;/code&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&#34;调试的方式&#34;&gt;调试的方式&lt;/h2&gt;
+&lt;h3 id=&#34;打印变量-p&#34;&gt;打印变量 &lt;code&gt;p&lt;/code&gt;&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;打印变量值：&lt;code&gt;p variable&lt;/code&gt; 例: “p x”&lt;/li&gt;
+&lt;li&gt;打印变量地址：&lt;code&gt;p &amp;amp;variable&lt;/code&gt; 例: “p &amp;amp;x”&lt;/li&gt;
+&lt;li&gt;打印指针内容：&lt;code&gt;p *point&lt;/code&gt; 例: “p *pData”&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3 id=&#34;单步调试-s&#34;&gt;单步调试 &lt;code&gt;s&lt;/code&gt;&lt;/h3&gt;
+&lt;p&gt;类似于 &lt;strong&gt;step in&lt;/strong&gt;&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;单步执行，遇到函数，进入到函数内部执行。
+&lt;code&gt;s number&lt;/code&gt; 进行多步执行&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3 id=&#34;单步执行-n&#34;&gt;单步执行 &lt;code&gt;n&lt;/code&gt;&lt;/h3&gt;
+&lt;p&gt;类似 &lt;strong&gt;step over&lt;/strong&gt; 执行，遇到函数，不进入函数内部，直接执行完函数。&lt;/p&gt;
+&lt;p&gt;&lt;code&gt;n number&lt;/code&gt; 进行多步执行&lt;/p&gt;
+&lt;h3 id=&#34;继续执行-c&#34;&gt;继续执行 &lt;code&gt;c&lt;/code&gt;&lt;/h3&gt;
+&lt;p&gt;在程序在执行中遇到断点后，使用 &lt;code&gt;c&lt;/code&gt; 继续执行&lt;/p&gt;
+&lt;h3 id=&#34;执行完当前函数并打印出信息-finish&#34;&gt;执行完当前函数并打印出信息 &lt;code&gt;finish&lt;/code&gt;&lt;/h3&gt;
+&lt;p&gt;在函数内部使用 &lt;code&gt;finish&lt;/code&gt; ，执行完当前整个函数打印返回信息&lt;/p&gt;
+&lt;h3 id=&#34;设置变量值调试&#34;&gt;设置变量值调试&lt;/h3&gt;
+&lt;p&gt;&lt;code&gt;set var variable = x&lt;/code&gt; 将变量设置为x后进行调试&lt;/p&gt;
+&lt;p&gt;例：&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;set var tmp = 5
+&lt;/code&gt;&lt;/pre&gt;&lt;p&gt;将变量 tmp 设置为5，var关键词确保不产生冲突&lt;/p&gt;
+&lt;h2 id=&#34;段错误的查找&#34;&gt;段错误的查找&lt;/h2&gt;
+&lt;h3 id=&#34;段回溯-bt&#34;&gt;段回溯 &lt;code&gt;bt&lt;/code&gt;&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;在出现 segment fault 时，使用命令进行段错误的查看。&lt;/li&gt;
+&lt;li&gt;可以得到错误坐在的函数。像得到某人家庭地址。&lt;/li&gt;
+&lt;li&gt;也可使用 &lt;code&gt;where&lt;/code&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3 id=&#34;进入错误段&#34;&gt;进入错误段&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;在查看到错误的位置之后，使用 &lt;code&gt;frame number&lt;/code&gt; 进入到该段内部。&lt;/li&gt;
+&lt;li&gt;进入内部之后便可以进行局部变量的打印调试。&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;例：&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;frame 5
+&lt;/code&gt;&lt;/pre&gt;&lt;p&gt;就进入到段5.&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;切换到上一层段: &lt;code&gt;up&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;切换到下一层段: &lt;code&gt;down&lt;/code&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3 id=&#34;代码显示&#34;&gt;代码显示&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;显示当前代码: &lt;code&gt;l&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;显示当前之前的代码: &lt;code&gt;l -&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;显示该行周围代码: &lt;code&gt;l number&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;显示该函数周围代码: &lt;code&gt;l function&lt;/code&gt; （C++代码需要在函数名前加类名，重载函数需要在函数内加参数类型）&lt;/li&gt;
+&lt;li&gt;显示指定文件指定行周围代码: &lt;code&gt;l filename:linenumber&lt;/code&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;例:&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;l hello.cpp:1   // 从hello.cpp第一行开始显示
+&lt;/code&gt;&lt;/pre&gt;&lt;ul&gt;
+&lt;li&gt;显示指定文件指定函数周围代码: &lt;code&gt;l filename:function&lt;/code&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;例：&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;l hello.cpp:Util::hello    // 显示hello.cpp文件下，Util类的函数hello
+&lt;/code&gt;&lt;/pre&gt;&lt;ul&gt;
+&lt;li&gt;显示起始终止行内代码: &lt;code&gt;l fisrt,last&lt;/code&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;例：&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;l 1,30  // 从第0行显示到第30行的内容
+&lt;/code&gt;&lt;/pre&gt;</description>
+                
+                
+                
+                
+                
+                    
+                        
+                    
+                        
+                            
+                                
+                                
+                                
+                                    <category domain="https://www.riotian.com/tags/c-/">C&#43;&#43;</category>
+                                
+                            
+                                
+                                
+                                
+                                    <category domain="https://www.riotian.com/tags/gdb/">GDB</category>
+                                
+                            
+                        
+                    
+                
+            </item>
         
             <item>
                 <title>Pollard Rho算法</title>
@@ -853,9 +1018,9 @@
 &lt;/div&gt;
 &lt;/div&gt;&lt;p&gt;在保证运算不会爆 $long\ long$ 的前提下，我们可以尽量优化其复杂度，就像上述代码在模数小于 $10^{12}$ 的情况下完全变成了 $O(1)$ 级别，在某些题目中会十分优秀！&lt;/p&gt;
 &lt;h2 id=&#34;5-一些经常需要快速乘的算法&#34;&gt;5. 一些经常需要快速乘的算法：&lt;/h2&gt;
-&lt;p&gt;&lt;strong&gt;Miller rabinMiller rabin 判大质数&lt;/strong&gt;&lt;/p&gt;
-&lt;p&gt;&lt;strong&gt;Pollard RhoPollard Rho 大数因子寻找&lt;/strong&gt;&lt;/p&gt;
-&lt;p&gt;&lt;strong&gt;BSGSBSGS 大步小步算法&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;Miller rabin 判大质数&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;Pollard Rho 大数因子寻找&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;BSGS 大步小步算法&lt;/strong&gt;&lt;/p&gt;
 </description>
                 
                 
