@@ -6,11 +6,11 @@ tags:
   - C++
   - GDB
 gitinfo: true
+
+
 ---
 
-## 引言
-
-尽管目前使用的VS code可以使用插件一键构建和运行程序，但GDB作为调试利器，还是值得花时间去学习的。
+> 尽管目前使用的VS code可以使用插件一键构建和运行程序，但GDB作为调试利器，还是值得花时间去学习的。
 
 **概述**
 
@@ -218,3 +218,7 @@ l hello.cpp:Util::hello    // 显示hello.cpp文件下，Util类的函数hello
 ```
 l 1,30  // 从第0行显示到第30行的内容
 ```
+
+---
+
+关于GDB调试的相关文章：https://www.cnblogs.com/acceptedzhs/p/13161213.html
